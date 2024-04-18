@@ -39,7 +39,35 @@ As AI systems increasingly rely on user and enterprise data to function, it's cr
 
 ## Towards Trustworthy and Accountable Personal AI Agents
 
-Coming soon ...
+The Semantic Web has long envisioned a future where autonomous AI agents work on behalf of users, assisting them with various tasks and decision-making processes. By leveraging Semantic Web technologies, we can build the groundwork protocols that enable conversational agents to negotiate and transact over the web which contain features such as:
+1. Mechanism for describing the origin and provenance of exchanged data
+2. Mechanisms to determine the "trustworthiness" of data by modelling which sources / individuals / organisations are reliable, and which are not.
+3. Unambiguous description of usage restrictions on exchanged data to protect privacy allowing conversational LLM-agents can become more trustworthy, accountable, and compliant with data protection regulations such as GDPR.
+4. Clear definition of dialogue outcomes that require agreement or transaction
+5. The ability to discover AI representitives of individuals & organisations using [Web Identities](https://en.wikipedia.org/wiki/WebID).
+
+<!-- The protocol also incorporates the concept of WebID, allowing real-world entities (humans, organizations, or devices) to be represented on the web and authorize conversational agents to act on their behalf.
+
+When an LLM-agent is tasked with performing an action, it follows a series of steps:
+
+1. Establish which external entities it needs to converse with and what information needs to be disclosed
+2. Discover the external conversational LLM-agents using WebID-Profiles
+3. Negotiate terms of use for shared data using structured data formats (e.g., RDF, ODRL)
+4. Exchange "packaged data" and conclude the dialogue with an agreed-upon structured result
+
+The proposed protocol offers several key features, including well-defined discovery of conversation agents via WebIDs, declaration of usage and sharing requirements, proof and provenance for establishing data trustworthiness, and the use of RDF to ensure unambiguous outcomes.
+
+The novelty of this approach lies in its ability to express trust between agents, provide a provenance track for trust expressions, package data with provenance and data terms of use expressions, and use RDF to verify outcomes. By implementing this protocol, conversational LLM-agents can become more trustworthy, accountable, and compliant with data protection regulations such as GDPR. -->
+
+
+## Conclusion
+
+The Semantic Web, with its rich history and powerful technologies, holds the key to building better AI systems in the age of LLMs. By grounding LLMs with knowledge graphs, ensuring ethical data usage through explicit policies, and laying the foundation for trustworthy personal AI agents, the Semantic Web complements and enhances the capabilities of modern AI. As we continue to push the boundaries of what's possible with AI, it's essential to look to the past and leverage the insights and technologies developed by the Semantic Web community. By combining the old and the new, we can create AI systems that are not only powerful but also accountable, transparent, and aligned with human values.
+
+<!-- These agents can communicate with each other using standardized protocols, exchange data securely, and make decisions based on user preferences and policies. The use of WebIDs, which are HTTP URIs that denote an agent and resolve to a profile document describing the agent's capabilities and authorization to act on behalf of an entity, facilitates the discovery and identity management of AI agents [11]. -->
+
+
+<!-- Coming soon ... -->
 
 <!-- This approach, known as Retrieval Augmented Generation (RAG), has proven effective in enhancing the performance of conversational AI systems [2]. Recent studies have shown that 30% of teams participating in a memory hackathon were explicitly looking to implement knowledge graphs into their architecture, with teams using knowledge graphs performing well in the judging process [3]. Furthermore, the synergy between RAG and knowledge graphs has been explored in various contexts, such as using GraphDBs' natural language interface to interact with content [4] and leveraging Cypher search in LangChain [5].
 
