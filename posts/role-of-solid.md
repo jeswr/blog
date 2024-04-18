@@ -1,7 +1,7 @@
 ---
 title: "Reclaiming data autonomy: The role of Solid in a safer Web"
 date: 2024-02-06
-permalink: /blog/2024/02/06/role-of-solid/
+permalink: /2024/02/06/role-of-solid/
 ---
 
 **This article was originally for the Oxford University department of Computer Science as part of the [DPhil the future](https://www.cs.ox.ac.uk/news/2287-full.html) series.**

@@ -1,14 +1,14 @@
 ---
 title: "The Old and the New - Using Semantic Web Technologies to Build Better AI"
 date: 2024-04-18
-permalink: /blog/2024/04/18/better-ai/
+permalink: /2024/04/18/better-ai/
 ---
 
 <!-- **Introduction** -->
 
 ## Introduction
 
-As artificial intelligence (AI) continues to advance at a breakneck pace, particularly with the rise of large language models (LLMs), it is imperative to ensure that these systems are truthful, trustworthy, accountable, and robust. Without such properties, current LLM-style AI systems will struggle to move beyond their roles as [sophisticated search engines](https://www.forbes.com/sites/rashishrivastava/2024/04/11/inside-the-buzzy-ai-startup-coming-for-googles-lunch/) and [writing assistants](./better-ai.md), hindering their ability to autonomously perform tasks such as acting as [web services or agents](https://link.springer.com/journal/10458).
+As artificial intelligence (AI) continues to advance at a breakneck pace, particularly with the rise of large language models (LLMs), it is imperative to ensure that these systems are truthful, trustworthy, accountable, and robust. Without such properties, current LLM-style AI systems will struggle to move beyond their roles as [sophisticated search engines](https://www.forbes.com/sites/rashishrivastava/2024/04/11/inside-the-buzzy-ai-startup-coming-for-googles-lunch/) and [writing assistants](/2024/04/18/better-ai/), hindering their ability to autonomously perform tasks such as acting as [web services or agents](https://link.springer.com/journal/10458).
 
 Enter the Semantic Web, a long-standing vision of a machine-readable web that enables agents to understand and interact with data in a meaningful way ([Berners-Lee et al., 2001](https://www.scientificamerican.com/article/the-semantic-web/)). To learn about the original architectural vision of the Semantic Web, see [this design issue](https://www.w3.org/DesignIssues/Semantic.html). In this blog post, we'll explore how Semantic Web technologies can be leveraged to build better AI systems that are more reliable, accountable, and aligned with human values.
 
@@ -31,7 +31,11 @@ One of the key challenges with LLMs is ensuring the quality and truthfulness of 
 ## Protecting User Privacy and Ensuring Ethical Data Usage
 
 <!-- Coming soon ... -->
-As AI systems increasingly rely on user data to function, it's crucial to ensure that this data is used ethically and in compliance with legal governance frameworks. 
+As AI systems increasingly rely on user and enterprise data to function, it's crucial to ensure that this data is used ethically and in compliance with legal governance frameworks. Semantic Web, and satellite technologies such as [Solid](/2024/02/06/role-of-solid/) offer strategies [for attaching access controls, and usage agreements](https://ruben.verborgh.org/blog/2023/11/10/no-more-raw-data/) to data in order to [support responsible data usage](https://www.inrupt.com/blog/safe-ai-101).
+
+<!-- https://www.inrupt.com/blog/safe-ai-101 -->
+
+ <!-- - https://ruben.verborgh.org/blog/2023/11/10/no-more-raw-data/ -->
 
 ## Towards Trustworthy and Accountable Personal AI Agents
 
