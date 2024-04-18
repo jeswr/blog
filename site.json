@@ -8,6 +8,9 @@
   "social": {
     "github": "jeswr"
   },
+  "newsletter": {
+    "showTwitterBanner": false
+  },
   "seo": {
     "title": "Jesse Wright",
     "description": "Blog of a Software Engineer and Researcher",
