@@ -31,7 +31,7 @@ One of the key challenges with LLMs is ensuring the quality and truthfulness of 
 ## Protecting User Privacy and Ensuring Ethical Data Usage
 
 <!-- Coming soon ... -->
-As AI systems increasingly rely on user and enterprise data to function, it's crucial to ensure that this data is used ethically and in compliance with legal governance frameworks. Semantic Web, and satellite technologies such as [Solid](/2024/02/06/role-of-solid/) offer strategies [for attaching access controls, and usage agreements](https://ruben.verborgh.org/blog/2023/11/10/no-more-raw-data/) to data in order to [support responsible data usage](https://www.inrupt.com/blog/safe-ai-101).
+As AI systems increasingly rely on user and enterprise data to function, it's crucial to ensure that this data is used ethically and in compliance with legal governance frameworks. Semantic Web, and satellite technologies such as [Solid](/2024/02/06/role-of-solid) offer strategies [for attaching access controls, and usage agreements](https://ruben.verborgh.org/blog/2023/11/10/no-more-raw-data/) to data in order to [support responsible data usage](https://www.inrupt.com/blog/safe-ai-101).
 
 <!-- https://www.inrupt.com/blog/safe-ai-101 -->
 
