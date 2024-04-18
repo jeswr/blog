@@ -30,7 +30,8 @@ One of the key challenges with LLMs is ensuring the quality and truthfulness of 
 
 ## Protecting User Privacy and Ensuring Ethical Data Usage
 
-Coming soon ...
+<!-- Coming soon ... -->
+As AI systems increasingly rely on user data to function, it's crucial to ensure that this data is used ethically and in compliance with legal governance frameworks. 
 
 ## Towards Trustworthy and Accountable Personal AI Agents
 
