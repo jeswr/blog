@@ -46,6 +46,8 @@ The Semantic Web has long envisioned a future where autonomous AI agents work on
 4. Clear definition of dialogue outcomes that require agreement or transaction
 5. The ability to discover AI representitives of individuals & organisations using [Web Identities](https://en.wikipedia.org/wiki/WebID).
 
+More on this topic soon ...
+
 <!-- The protocol also incorporates the concept of WebID, allowing real-world entities (humans, organizations, or devices) to be represented on the web and authorize conversational agents to act on their behalf.
 
 When an LLM-agent is tasked with performing an action, it follows a series of steps:
