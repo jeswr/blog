@@ -1,12 +1,9 @@
 <p class="about__head">
-    Engineering Manager at <a href="https://tradeling.com" target="_blank">tradeling</a>. Tech guy with an
-    entrepreneurial spirit and knack for getting things done. Currently building <a href="https://roadmap.sh">roadmap.sh</a>.
+    Doctoral Student at the <a href="https://www.cs.ox.ac.uk/people/jesse.wright/" target="_blank">University of Oxford</a>. Software Engineer building software and standards for a more ethical Web.
 </p>
 
-I'm an experienced developer with a demonstrated history of working on large scale enterprise solutions. Additionally, I have a strong penchant to build and manage high-functioning development teams using my strong problem-solving and people skills.
+Jesse is currently pursuing his doctoral studies in the Human-Centred Computing group at the University of Oxford's Department of Computer Science. He is passionate about creating technologies that ensure individuals' data and devices serve their best interests.
 
-Over my 8+ years of experience, I have heavily focused my attention on full-stack development, fostering agile practices, patterns of enterprise application architecture, managing complexity in the systems, delivering solutions that are future proof, maintainable, and easily scalable, building and growing teams and mentoring the developers. I'm a quick learner who has a strong interest in emerging technologies and exceptional analytical/problem-solving skills.
+He is actively involved in the [EWADA project](https://ewada.ox.ac.uk/), led by Sir Nigel Shadbolt and Sir Tim Berners-Lee. The project focuses on developing new social and technical structures to foster a more equitable Web. His main research revolves around designing architectures that enable decentralized agents to autonomously negotiate and make decisions, thereby establishing a logical framework for [Solid](https://solidproject.org/). In addition, Jesse is dedicated to the creation of a structured web-based graph of human knowledge.
 
-Moreover, I try to make a positive impact and lift the tech community globally with my open-source work and educational material. I am quite active on GitHub where I have accumulated around 250k stars on my projects and one of my projects is among the top ten most starred projects on GitHub. GitHub recently recognized my OpenSource and community contributions and selected me as a "GitHub Star". Also, I love teaching and educating others; I recently started my YouTube channel which has around 85k subscribers at the moment.
-
-Feel free to reach out if you would like to learn more about me or just say hi; I love stumbling across the messages from the strangers in my inbox.
+Holding a Bachelor of Philosophy (Science) (Honours) from the [Australian National University](https://www.anu.edu.au/), Jesse majored in pure mathematics and computer science. His exceptional research on "Performant Interoperable Reasoning on a Decentralised Semantic Web" earned him the prestigious university medal.
