@@ -8,7 +8,7 @@ permalink: /blog/2024/04/18/better-ai/
 
 ## Introduction
 
-As artificial intelligence (AI) continues to advance at a breakneck pace, particularly with the rise of large language models (LLMs), it is imperative to ensure that these systems are truthful, trustworthy, accountable, and robust. Without such properties, current LLM-style AI systems will struggle to move beyond their roles as [sophisticated search engines](https://www.forbes.com/sites/rashishrivastava/2024/04/11/inside-the-buzzy-ai-startup-coming-for-googles-lunch/) and writing assistants[^1], hindering their ability to autonomously perform tasks such as acting as [web services or agents](https://link.springer.com/journal/10458).
+As artificial intelligence (AI) continues to advance at a breakneck pace, particularly with the rise of large language models (LLMs), it is imperative to ensure that these systems are truthful, trustworthy, accountable, and robust. Without such properties, current LLM-style AI systems will struggle to move beyond their roles as [sophisticated search engines](https://www.forbes.com/sites/rashishrivastava/2024/04/11/inside-the-buzzy-ai-startup-coming-for-googles-lunch/) and [writing assistants](./better-ai.md), hindering their ability to autonomously perform tasks such as acting as [web services or agents](https://link.springer.com/journal/10458).
 
 Enter the Semantic Web, a long-standing vision of a machine-readable web that enables agents to understand and interact with data in a meaningful way ([Berners-Lee et al., 2001](https://www.scientificamerican.com/article/the-semantic-web/)). To learn about the original architectural vision of the Semantic Web, see [this design issue](https://www.w3.org/DesignIssues/Semantic.html). In this blog post, we'll explore how Semantic Web technologies can be leveraged to build better AI systems that are more reliable, accountable, and aligned with human values.
 
@@ -48,7 +48,7 @@ The Semantic Web has long envisioned a future where autonomous AI agents work on
 Conclusion:
 The Semantic Web, with its rich history and powerful technologies, holds the key to building better AI systems in the age of LLMs. By grounding LLMs with knowledge graphs, ensuring ethical data usage through explicit policies, and laying the foundation for trustworthy personal AI agents, the Semantic Web complements and enhances the capabilities of modern AI. As we continue to push the boundaries of what's possible with AI, it's essential to look to the past and leverage the insights and technologies developed by the Semantic Web community. By combining the old and the new, we can create AI systems that are not only powerful but also accountable, transparent, and aligned with human values. -->
 
-[^1] I even used one to assist in writing this article!
+<!-- [^1] I even used one to assist in writing this article! -->
 
 <!-- References:
 [1] Berners-Lee, T., Hendler, J., & Lassila, O. (2001). The Semantic Web. Scientific American, 284(5), 34-43. https://www.scientificamerican.com/article/the-semantic-web/
