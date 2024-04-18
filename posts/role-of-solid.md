@@ -5,11 +5,10 @@ permalink: /blog/2024/02/06/role-of-solid/
 ---
 
 **This article was originally for the Oxford University department of Computer Science as part of the [DPhil the future](https://www.cs.ox.ac.uk/news/2287-full.html) series.**
-ic online world.**  
 
 The modern Web has seen a significant erosion of data privacy and control. User-generated data, stored in [centralised data silos](https://www.w3.org/DesignIssues/CloudStorage.html), is often used without the knowledge or control of the individuals it belongs to.
 
-> In the age of AI and Big Data, this lack of data autonomy becomes increasingly detrimental to both individuals and society.  DPhil student Jesse Wright
+> In the age of AI and Big Data, this lack of data autonomy becomes increasingly detrimental to both individuals and society.
 
 A striking example is a recent [lawsuit](https://www.nytimes.com/2023/10/24/technology/states-lawsuit-children-instagram-facebook.html) against Meta by U.S. states, alleging the unlawful collection of minors' personal data without parental consent and exposing them to harmful content. This is but a glimpse into the dangers posed by emerging technologies such as [personal AI agents](https://ruben.verborgh.org/blog/2013/01/31/what-web-agents-want/) if they are not designed to “legally, ethically and algorithmically” work for you and with data you control ([Charlie works for Bob](https://www.w3.org/DesignIssues/Charlie.html), Berners-Lee 2023).
 
@@ -27,7 +26,7 @@ At Solid's core is the ‘pod’ - a personal online data store. Utilising the [
 
 Together, these pods form a decentralised Solid ecosystem, from which applications can directly integrate data from people’s Solid pods, after receiving their permission. Solid applications are encouraged to store data using the [RDF](https://www.w3.org/RDF/) data model of the [Semantic Web](https://www.w3.org/DesignIssues/Semantic.html) (I strongly recommend reading the [design issue](https://www.w3.org/DesignIssues/Semantic.html) if you’ve not heard of it before) - and serialised in a syntax such as JSON-LD or [Turtle](https://www.inrupt.com/videos/readable-turtle). By having applications read/write data with explicit [semantics](https://en.wikipedia.org/wiki/Semantic_Web) rather than using the typical smorgasbord of JSON, GraphQL and other platform-specific API’s [that modern Web developers are accustomed to](https://www.datasciencecentral.com/why-json-users-should-learn-turtle/) it becomes possible for applications to re-use one another's data. 
 
-Such applications include [BBC Together](https://www.bbc.co.uk/together), [itsme](https://www.itsme-id.com/), [Umai](https://umai.noeldemartin.com/), [Solid Focus](https://noeldemartin.github.io/solid-focus/), [KNoodle](https://github.com/KNowledgeOnWebScale/knoodle) and [SolidFlix,](https://github.com/OxfordHCC/solid-media/) which was developed here at Oxford. 
+Such applications include [BBC Together](https://www.bbc.co.uk/together), [itsme](https://www.itsme-id.com/), [Umai](https://umai.noeldemartin.com/), [Solid Focus](https://noeldemartin.github.io/solid-focus/), [KNoodle](https://github.com/KNowledgeOnWebScale/knoodle) and [SolidFlix,](https://github.com/OxfordHCC/solid-media/). 
 
 To learn more about the anatomy of a _pod_ - see [What is a Solid Pod](https://www.inrupt.com/videos/what-is-a-solid-pod)? 
 
