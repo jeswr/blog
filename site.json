@@ -1,29 +1,25 @@
 {
-  "title": "Kamran Ahmed",
-  "subtitle": "Lead engineer at tradeling — tech guy with an entrepreneurial spirit and knack for getting things done",
+  "title": "Jesse Wright",
+  "subtitle": "Researcher at the university of Oxford, Software Engineer",
   "owner": {
-    "name": "Kamran Ahmed",
-    "email": "kamranahmed.se@gmail.com"
+    "name": "Jesse Wright",
+    "email": "jesse.wright@cs.ox.ac.uk"
   },
   "social": {
-    "github": "kamranahmedse",
-    "medium": "kamranahmedse",
-    "twitter": "kamranahmedse"
-  },
-  "newsletter": {
-    "showTwitterBanner": true,
-    "currentCount": "2,000",
-    "revueUsername": "roadmapsh"
+    "github": "jeswr"
   },
   "seo": {
-    "title": "Kamran Ahmed",
-    "description": "Blog of a Software Engineer",
-    "author": "Kamran Ahmed",
+    "title": "Jesse Wright",
+    "description": "Blog of a Software Engineer and Researcher",
+    "author": "Jesse Wright",
     "keywords": [
       "blog",
       "developer blog",
-      "engineering blog"
+      "engineering blog",
+      "research blog",
+      "oxford",
+      "oxford university"
     ]
   },
-  "cname": "kamranahmed.info"
+  "cname": "jeswr.github.io"
 }

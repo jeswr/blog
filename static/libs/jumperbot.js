@@ -60,7 +60,7 @@ var JumperBot = function () {
         bot.posY = canvas.height - bot.height - 50;
 
         botImg = new Image();
-        botImg.src = "http://kamranahmed.info/img/bot.svg";
+        // botImg.src = "http://kamranahmed.info/img/bot.svg";
     }
 
     /**
