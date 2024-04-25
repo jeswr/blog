@@ -10,7 +10,7 @@ In his seminal 2001 article "The Semantic Web", Berners-Lee claimed that "Proper
 
 ![](/tim-pane.png)
 
-Knowledge representation is a decades-old area of research, originally developed with symbolic reasoning in mind. However, [as I've previously discussed](/2024/04/18/better-ai/), knowledge graphs are now playing a crucial role in system 1 reasoning systems, in particular being used to ground LLM queries using Retrieval Augmented Generation (RAG).
+Knowledge representation is a decades-old area of research, originally developed with symbolic reasoning in mind. However, [as I've previously discussed](/2024/04/18/better-ai), knowledge graphs are now playing a crucial role in system 1 reasoning systems, in particular being used to ground LLM queries using Retrieval Augmented Generation (RAG).
 
 This only works if we have knowledge graphs in the first place. Enterprises have been throwing resources at building out structured databases from which they can generate knowledge graphs for decades. However, in some parts of academia, we are not doing this job so well. It's time to follow the lead of biomedical domains and start modeling our research and results so that humans and machines can better understand what knowledge we, as humanity, have discovered.
 
