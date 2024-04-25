@@ -8,7 +8,7 @@ Sir Tim Berners-Lee's invention of the Web was a dramatic milestone in the infor
 
 In his seminal 2001 article "The Semantic Web", Berners-Lee claimed that "Properly designed, the Semantic Web can assist the evolution of human knowledge as a whole". While this vision has been proven true in limited contexts, from powering [Google's Knowledge Panel](https://www.google.com/search?channel=fs&client=ubuntu-sn&q=sir+tim-berners+lee) (example shown below) to enabling biomedical discoveries, the full potential of the Semantic Web for capturing and organizing human knowledge remains largely unrealized.
 
-![](/static/tim-pane.png)
+![](/tim-pane.png)
 
 Knowledge representation is a decades-old area of research, originally developed with symbolic reasoning in mind. However, [as I've previously discussed](/2024/04/18/better-ai/), knowledge graphs are now playing a crucial role in system 1 reasoning systems, in particular being used to ground LLM queries using Retrieval Augmented Generation (RAG).
 
