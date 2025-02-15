@@ -130,6 +130,12 @@ Now this is a battle that we have seen played out *many* time historically. Past
 
 So - what different formats are there? How do they compare?
 
+### The (big) missing piece
+
+Websites for instance need HTML to tell you how a Website is displayed - but also need HTTP(S) to tell your browser *where* that website document is, and how to get it.
+
+
+
 ### A push for alignment
 
 The [Open Wallet Foundation](https://openwallet.foundation), hosted by the [Linux Foundation](https://www.linuxfoundation.org) has a mission to facilitate global interoperability of verifiable credentials.
