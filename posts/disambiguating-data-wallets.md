@@ -130,6 +130,22 @@ Now this is a battle that we have seen played out *many* time historically. Past
 
 So - what different formats are there? How do they compare?
 
+ - W3C
+   - VC 2.0
+ - ISO
+   - mDL (ISO/IEC 18013-5:2021)
+   - 
+ - IETF
+   - https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-03.html
+
+
+In fact, multiple alternatives exist for credential data formats (e.g. ISO mDL and W3C), protocols (e.g. OpenID for Verifiable Credentials, DIDComm and ISO mDL), wallets, and verifiable data registries.
+
+https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-03.html
+
+... and then there is OpenID4VP (https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html) which supports all(?) of them
+https://openid.net/specs/openid4vc-high-assurance-interoperability-profile-sd-jwt-vc-1_0-00.html
+
 ### The (big) missing piece
 
 Websites for instance need HTML to tell you how a Website is displayed - but also need HTTP(S) to tell your browser *where* that website document is, and how to get it.
@@ -186,6 +202,13 @@ I [lead work](https://theodi.org/profile/jesse-wright/) on Solid at the [Open Da
 ![](../static/sparql.webp)
 
 Let me again present my bias' upfront. The last 5 years of my work and research have revolved around [Semantic Web Technologies](https://en.wikipedia.org/wiki/Semantic_Web) - and my current research is on the very topic of [Queryable Credentials](https://github.com/jeswr/queryable-credentials).
+
+## Further Reading
+
+In producing this article I came across a number of useful materials, here is my top selection for further reading:
+ - [Auth0's take on Verifable Credentials](https://auth0.com/blog/our-take-on-verifiable-credentials/)
+ - [Verifiable Credentials and ISO/IEC 18013-5 Based Credentials](https://collateral-library-production.s3.amazonaws.com/uploads/asset_file/attachment/36416/CS676613_-_Digital_Credentials_promotion_campaign-White_Paper_R3.pdf)
+ - [Verifiable Credential Formats in the EUDI Wallet: W3C VC DM and ISO 18013-5 mDL/mDoc](https://www.linkedin.com/pulse/verifiable-credential-formats-eudi-wallet-w3c-vc-dm-iso-18013-5-kbcmf/)
 
 [^1]: Trust me - Software Engineers will think about becoming a farmer at least once a day.
 [^2]: ^^ Yes, really.
