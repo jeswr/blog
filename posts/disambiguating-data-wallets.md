@@ -130,6 +130,39 @@ Now this is a battle that we have seen played out *many* time historically. Past
 
 So - what different formats are there? How do they compare?
 
+W3C Timeline:
+ - [August 2014 - W3C Credentials Community Group Gets Chartered](https://www.w3.org/community/credentials/)
+ - [April 2017 - Verifiable Credentials WG gets Chartered](https://www.w3.org/2017/vc/WG/charter.html#history)
+ - [May 2017 - Community Group Creates the final "Verifiable Claims Data Model and Representations 1.0" report](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/)
+ - [Jan 2020 - Verifiable Credentials WG gets renewed](https://www.w3.org/2020/01/vc-wg-charter.html)
+ - [October 2024 - New W3C Verfiable Credentials charter created](https://www.w3.org/2024/10/vc-wg-charter.html)
+
+ISO Timeline:
+ - 
+
+Note the following from the 2020 WG Charter
+
+Internet Engineering Task Force
+The Working Group will seek security review from the IETF, coordinated through the Liaison.
+
+Decentralized Identity Foundation Interoperability Working Group
+To coordinate on broad horizontal review and integration of the specifications developed by the Working Group into the Decentralized Identity Foundation's ecosystem.
+
+European Telecommunications Standards Institute - Electronic Signatures and Infrastructure Technical Committee
+To coordinate in ensuring that eIDAS-compliant systems can be built on top of the specifications developed by the Working Group.
+
+ISO/IEC JTC 1/SC 17/WG 10
+Ensure that the mobile driving licenses being modeled and expressed by the ISO SC17 WG10 community are compatible with the work of the Verifiable Credentials WG.
+
+ISO/IEC JTC 1/SC 17/WG 4
+Ensure that the 23220-2 data model expressed by the ISO SC17 WG4 community is compatible with the work of the Verifiable Credentials WG.
+
+
+
+Other W3C Notables:
+ - [Jan 2025 - W3C Verifiable Credentials for Education Task Force](https://w3c-ccg.github.io/vc-ed/charter/) begins work on chartering
+
+
  - W3C
    - VC 2.0
  - ISO
@@ -145,6 +178,8 @@ https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-03.html
 
 ... and then there is OpenID4VP (https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html) which supports all(?) of them
 https://openid.net/specs/openid4vc-high-assurance-interoperability-profile-sd-jwt-vc-1_0-00.html
+
+https://openid.net/wg/digital-credentials-protocols/charter/
 
 ### The (big) missing piece
 
