@@ -91,7 +91,7 @@ S30WAvQCCo2yU1orfgqr41mM70MBAgMBAAE=
 -----END RSA PUBLIC KEY-----
 ```
 
-What is special about the letters and numbers in these two files, is that a [special mathematical function](https://cryptobook.nakov.com/digital-signatures/rsa-signatures) can be used to combine the private key and the hash to generate a *signature* like this one:
+What is special about the letters and numbers in these two files, is that a [mathematical function](https://cryptobook.nakov.com/digital-signatures/rsa-signatures) can be used to combine the private key and the hash to generate a *signature* like this one:
 
 ```
 z58DAdFfa9SkqZMVPxAQp...jQCrfFPP2oumHKtz
@@ -112,7 +112,7 @@ The *issuer* keeps the private key a secret so that no-one can forge the signatu
 
 How does this help the *verifier* (my prospective farming employer) confirm that my DPhil Award Credential was *actually* stated by the *issuer* (Oxford)?
 
-The *verifier* can use different mathematical function to convert a signature into a hash. If that hash, is the same as the hash of my DPhil Award Credential, then they know that the award *must* have been signed by the private key that the *issuer* (Oxford) created.
+The *verifier* can use different mathematical function to convert a signature and public key into a hash. If that hash, is the same as the hash of my DPhil Award Credential, then they know that the award *must* have been signed by the private key that the *issuer* (Oxford) created.
 
 #### Selective disclosure
 
@@ -126,7 +126,16 @@ To enable this, some Verifiable Credentials are built with the capacity to perfo
 
 Well that all makes sense ... so what on earth is there to dispute? Quite a bit as it turns out!
 
-Now this is a battle that we have seen played out *many* time historically. Past [format wars](https://en.wikipedia.org/wiki/Format_war#:~:text=A%20format%20war%20is%20a,recording%20formats%20for%20electronic%20media.) include [VHS vs. BetaMax](https://en.wikipedia.org/wiki/Videotape_format_war), [Blu-Ray vs. HD DVD](https://en.wikipedia.org/wiki/HD_DVD#:~:text=Much%20like%20the%20videotape%20format,format%2C%20Blu%2Dray%20Disc.), and, if we dare venture back to the 1800's wars over the [size of the rail gauge](https://en.wikipedia.org/wiki/Track_gauge) and [type of electrical current](https://en.wikipedia.org/wiki/War_of_the_currents) we should use.
+Broadly speaking the debate is around:
+ - What the *format* of the information inside the digital credential should be
+ - How the *hash* of the digital credential should be created, and
+ - What mathematical function should be used for creatiing the signature
+
+
+Include discussion fo JSON-LD vs. CBOR
+
+
+These are the kinds of battles that that we have seen played out *many* time historically. Past [format wars](https://en.wikipedia.org/wiki/Format_war#:~:text=A%20format%20war%20is%20a,recording%20formats%20for%20electronic%20media.) include [VHS vs. BetaMax](https://en.wikipedia.org/wiki/Videotape_format_war), [Blu-Ray vs. HD DVD](https://en.wikipedia.org/wiki/HD_DVD#:~:text=Much%20like%20the%20videotape%20format,format%2C%20Blu%2Dray%20Disc.), and, if we dare venture back to the 1800's - wars over the [size of the rail gauge](https://en.wikipedia.org/wiki/Track_gauge) and [type of electrical current](https://en.wikipedia.org/wiki/War_of_the_currents) we should use.
 
 So - what different formats are there? How do they compare?
 
@@ -167,12 +176,22 @@ Other W3C Notables:
    - VC 2.0
  - ISO
    - mDL (ISO/IEC 18013-5:2021)
-   - 
+    - To achieve
+this, the mDL contains age attestation identifiers. An age attestation identifier has the format age_over_
+NN where NN is a value from 00 to 99. The value of an age attestation identifier can be TRUE or FALSE.
+   - MDL *does specify some transmission mechanisms, e.g., via NFC, BLE/GATT, WIFI Aware and QR code*
+   - ISO/IEC touches upon *many* layers of the networking stack; e.g. touching upon discussion of which TLS method required.
+   - ISO/IEC DTS 23220-4:
+     - Defines largely domain specific attributes
+     - Also has the ability to include biometric information
+     - Also *repeats* information from the mDL specification; e.g., for age attestation
+
  - IETF
    - https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-03.html
 
 
 In fact, multiple alternatives exist for credential data formats (e.g. ISO mDL and W3C), protocols (e.g. OpenID for Verifiable Credentials, DIDComm and ISO mDL), wallets, and verifiable data registries.
+
 
 https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-03.html
 
@@ -199,7 +218,32 @@ The [Open Wallet Foundation](https://openwallet.foundation), hosted by the [Linu
 
 Inlude discussion of eIDAS popularit
 
+Qualified Electronic Attestation of Attributes (QEAA)
+
+(Q)EAA schema providers publish schemas and vocabularies describing (Q)EAA structure and semantics
+
+PID = Personal Identification Data | A set of data enabling the identity of a natural person to be established.
+
+[Architecture and Reference Framework](https://digital-strategy.ec.europa.eu/en/library/european-digital-identity-wallet-architecture-and-reference-framework)
+
+"Note that Flows 3 and 4 from section 6.4 mandarte the ability to transfer credentials over the internet"
+
+6.5.1
+
+**Ideally this means a very small number of technical solutions to limit complexity**
+
+Last page points to main relevant specs
+
+[GitHub of Reference Framework](https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/1.1.0/arf/#4114-qualified-and-non-qualified-electronic-attestation-of-attributes-schema-providers)
+
+Note that 
+
 ![](../static/eidas.png)
+
+https://www.criipto.com/blog/verifiable-credentials-vs-iso-18013-5#:~:text=The%20Verifiable%20Credential%20Data%20Model,%2C%20financial%20transactions%2C%20and%20more.
+"""
+The upcoming European Digital Identity (EUDI) wallet will support use cases across sectors like education, social security, financial transactions, and more. The wallet will leverage the VC Data Model, and its Architecture and Reference Framework explicitly mentions the W3C and ISO standards as part of its vision for a unified digital identity ecosystem.
+"""
 
 ### DUAB
 
@@ -222,7 +266,7 @@ Inlude discussion of eIDAS popularit
 
 [Solid](https://solidproject.org) is a standard for data storage on the Web - primarily created to allow *individuals* to store their personal data *separately* from websites. This enables re-use of data across platforms, and better control over consent management. Solid is now becoming an official W3C Standard under the [Linked Web Storage Working Group](https://www.w3.org/groups/wg/lws/).
 
-Solid has three key features: [Solid-OIDC](https://solidproject.org/TR/oidc) enabling Single Sign On similar to the way we "Sign in with Google", , and [access controls](https://solidproject.org/TR/protocol#auxiliary-resources-web-access-control) so users can manage *who* can read and write data to their Pod.
+Solid has three key features: [Solid-OIDC](https://solidproject.org/TR/oidc) enabling Single Sign On similar to the way we "Sign in with Google", a [standard interface](https://solidproject.org/TR/protocol#storage-resource) for applications to read and write data to a Personal Online Datastore (Pod), and [access controls](https://solidproject.org/TR/protocol#auxiliary-resources-web-access-control) so users can manage *who* can read and write data to their Pod.
 
 ### The Disclaimer
 
