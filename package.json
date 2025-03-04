@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:mermaid": "mmdc -i ./raw-posts/disambiguating-data-wallets.md -o ./raw-posts/disambiguating-data-wallets.md -a ./static/generated/"
+    "build:mermaid": "mmdc -i ./raw-posts/disambiguating-data-wallets.md -o ./posts/disambiguating-data-wallets.md -a ./static/generated/"
   },
   "keywords": [],
   "author": "",
