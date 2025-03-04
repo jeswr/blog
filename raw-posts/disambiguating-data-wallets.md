@@ -137,35 +137,37 @@ Include discussion fo JSON-LD vs. CBOR
 
 These are the kinds of battles that that we have seen played out *many* time historically. Past [format wars](https://en.wikipedia.org/wiki/Format_war#:~:text=A%20format%20war%20is%20a,recording%20formats%20for%20electronic%20media.) include [VHS vs. BetaMax](https://en.wikipedia.org/wiki/Videotape_format_war), [Blu-Ray vs. HD DVD](https://en.wikipedia.org/wiki/HD_DVD#:~:text=Much%20like%20the%20videotape%20format,format%2C%20Blu%2Dray%20Disc.), and, if we dare venture back to the 1800's - wars over the [size of the rail gauge](https://en.wikipedia.org/wiki/Track_gauge) and [type of electrical current](https://en.wikipedia.org/wiki/War_of_the_currents) we should use.
 
-```mermaid
-sequenceDiagram
-Alice->>John: Hello John, how are you?
-loop HealthCheck
-    John->>John: Fight against hypochondria
-end
-Note right of John: Rational thoughts!
-John-->>Alice: Great!
-John->>Bob: How about you?
-Bob-->>John: Jolly good!
-```
 So - what different formats are there? How do they compare?
 
 W3C Timeline:
 ```mermaid
 timeline
-  Aug 2014: [hello world](http://example.org)
-  Apr 2017: Verifiable Credentials WG Chartered
-  May 2017: "Verifiable Claims Data Model 1.0" Report
-  Jan 2020: Verifiable Credentials WG Renewed
-  Oct 2024: New Verifiable Credentials Charter
+  %% Aug 
+  2014: [__W3C__<br/> Credentials Community Group](https://www.w3.org/community/credentials/) is chartered
+  %% Apr 
+  2017: [__W3C__<br/> Verifiable Credentials Working Group](https://www.w3.org/2017/vc/WG/charter.html#history) is chartered
+  %% May 2017
+  : [__W3C__<br/> Credentials Community Group](https://www.w3.org/community/credentials/) creates the final [Verifiable Claims Data Model and Representations 1.0](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/) report
+  %% Jan 
+  %% 2020: [__W3C__<br/> Verifiable Credentials Working Group](https://www.w3.org/2020/01/vc-wg-charter.html) is renewed
+  2019: [__W3C__<br/> Verifiable Credentials Working Group](https://www.w3.org/2020/01/vc-wg-charter.html) publishes [Verifiable Credentials Data Model 1.0](https://www.w3.org/TR/2019/REC-vc-data-model-20191119/)
+  %% Sep 
+  2021: [__ISO__<br/> Mobile driving licence (mDL)](https://www.iso.org/standard/69084.html) standard published
+  %% Feb 
+  2023: [__ISO__<br/> Cards and security devices for personal identification ](https://www.iso.org/standard/74910.html) standard published
+  %% Oct 2023
+  : [__IETF__<br/> Web Authorization Protocol Working Group](https://datatracker.ietf.org/wg/oauth/about/) publishes [SD-JWT-based Verifiable Credentials](https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-01.html)
+  %% Feb 
+  2024: [__W3C__<br/> Verifiable Credentials Working Group](https://www.w3.org/2020/01/vc-wg-charter.html) creates [Verifiable Credentials Data Model v2.0 candidate recommendation](https://www.w3.org/TR/2024/CR-vc-data-model-2.0-20240201/)
+  %% Oct 2024
+  : [__W3C__<br/> Verifiable Credentials Working Group](https://www.w3.org/2020/01/vc-wg-charter.html) creates new charter
+  %% Jan 
+  2025: [__W3C__<br/> Verifiable Credentials for Education Task Force](https://w3c-ccg.github.io/vc-ed/charter/) begins to create charter
 ```
 
-W3C Timeline:
- - [August 2014 - W3C Credentials Community Group Gets Chartered](https://www.w3.org/community/credentials/)
- - [April 2017 - Verifiable Credentials WG gets Chartered](https://www.w3.org/2017/vc/WG/charter.html#history)
- - [May 2017 - Community Group Creates the final "Verifiable Claims Data Model and Representations 1.0" report](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/)
- - [Jan 2020 - Verifiable Credentials WG gets renewed](https://www.w3.org/2020/01/vc-wg-charter.html)
- - [October 2024 - New W3C Verfiable Credentials charter created](https://www.w3.org/2024/10/vc-wg-charter.html)
+Cards and security devices for personal
+identification — Building blocks for identity
+management via mobile devices
 
 ISO Timeline:
  - 
@@ -299,7 +301,7 @@ At the time
 
 [Solid](https://solidproject.org) is a standard for data storage on the Web - primarily created to allow *individuals* to store their personal data *separately* from websites. This enables re-use of data across platforms, and better control over consent management. Solid is now becoming an official W3C Standard under the [Linked Web Storage Working Group](https://www.w3.org/groups/wg/lws/).
 
-Solid has three key features: [Solid-OIDC](https://solidproject.org/TR/oidc) enabling Single Sign On similar to the way we "Sign in with Google", a [standard interface](https://solidproject.org/TR/protocol#storage-resource) for applications to read and write data to a Personal Online Datastore (Pod), and [access controls](https://solidproject.org/TR/protocol#auxiliary-resources-web-access-control) so users can manage *who* can read and write data to their Pod.
+Solid has three key features: [Solid-OIDC](https://solidproject.org/TR/oidc) enabling Single Sign On similar to the way we "Sign in with Google", a [standard HTTP interface](https://solidproject.org/TR/protocol#storage-resource) for applications to read and write data to a Personal Online Datastore (Pod), and [access controls](https://solidproject.org/TR/protocol#auxiliary-resources-web-access-control) so users can manage *who* can read and write data to their Pod.
 
 ### The Disclaimer
 
@@ -308,6 +310,12 @@ Now let me be upfront about the bias here. I work with Solid - *a lot*.
 I [lead work](https://theodi.org/profile/jesse-wright/) on Solid at the [Open Data Institute](https://theodi.org) which [stewards](https://theodi.org/news-and-events/news/odi-and-solid-come-together-to-give-individuals-greater-control-over-personal-data/) all opensource work on the Solid Project, am a [Doctoral Student](https://www.cs.ox.ac.uk/people/jesse.wright/) in the [Ethical Web and Data Architectures (EWADA)](https://ewada.ox.ac.uk) Group at the [University of Oxford](https://www.ox.ac.uk), independently contribute to [opensource projects](https://github.com/jeswr) for Solid technologies, and formerly worked as an Enterprise Software Engineer at [Inrupt](https://www.inrupt.com) - a commercial implementor of Solid.
 
 ### Solid as a Credential Holder
+
+#### Standard Web interface for transferring credentials
+
+#### Standard Web interface for requesting access to credentials
+
+#### Portability of credentials
 
 ## Queryability of Verifiable Credentials
 
