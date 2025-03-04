@@ -1,3 +1,5 @@
 .DS_Store
 Thumbs.db
 .idea
+static/generated
+node_modules/

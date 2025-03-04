@@ -137,7 +137,28 @@ Include discussion fo JSON-LD vs. CBOR
 
 These are the kinds of battles that that we have seen played out *many* time historically. Past [format wars](https://en.wikipedia.org/wiki/Format_war#:~:text=A%20format%20war%20is%20a,recording%20formats%20for%20electronic%20media.) include [VHS vs. BetaMax](https://en.wikipedia.org/wiki/Videotape_format_war), [Blu-Ray vs. HD DVD](https://en.wikipedia.org/wiki/HD_DVD#:~:text=Much%20like%20the%20videotape%20format,format%2C%20Blu%2Dray%20Disc.), and, if we dare venture back to the 1800's - wars over the [size of the rail gauge](https://en.wikipedia.org/wiki/Track_gauge) and [type of electrical current](https://en.wikipedia.org/wiki/War_of_the_currents) we should use.
 
+```mermaid
+sequenceDiagram
+Alice->>John: Hello John, how are you?
+loop HealthCheck
+    John->>John: Fight against hypochondria
+end
+Note right of John: Rational thoughts!
+John-->>Alice: Great!
+John->>Bob: How about you?
+Bob-->>John: Jolly good!
+```
 So - what different formats are there? How do they compare?
+
+W3C Timeline:
+```mermaid
+timeline
+  Aug 2014: [hello world](http://example.org)
+  Apr 2017: Verifiable Credentials WG Chartered
+  May 2017: "Verifiable Claims Data Model 1.0" Report
+  Jan 2020: Verifiable Credentials WG Renewed
+  Oct 2024: New Verifiable Credentials Charter
+```
 
 W3C Timeline:
  - [August 2014 - W3C Credentials Community Group Gets Chartered](https://www.w3.org/community/credentials/)
@@ -245,9 +266,21 @@ https://www.criipto.com/blog/verifiable-credentials-vs-iso-18013-5#:~:text=The%2
 The upcoming European Digital Identity (EUDI) wallet will support use cases across sectors like education, social security, financial transactions, and more. The wallet will leverage the VC Data Model, and its Architecture and Reference Framework explicitly mentions the W3C and ISO standards as part of its vision for a unified digital identity ecosystem.
 """
 
-### DUAB
+### Data (Use and Access) Bill
+
+The [Data Use and Access Bill](https://bills.parliament.uk/bills/3825/) is proposed legislation currently at committee stage in the House of Commons. One mandate of the bill is to create a Digital Verification Services Trust Framework - driven by the Secretary of State maintaining a register of *service providers* accredited to provide some "digital verification services" in the UK. 
+
+The [Digital Identity and Attributes Framework (DIATF)](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04)
+
+![](../static/daub.jpg)
+
+Source: https://enablingdigitalidentity.blog.gov.uk/2024/10/28/what-the-data-bill-means-for-digital-identity/
+
+### UK Digital Driver's License
 
 ![](../static/govuk.png)
+
+At the time 
 
 ### Whatever is happening in Australia
 

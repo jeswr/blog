@@ -1,0 +1,16 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "My personal blog created using [github-pages-blog-action](https://github.com/kamranahmedse/github-pages-blog-action)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:mermaid": "mmdc -i ./raw-posts/disambiguating-data-wallets.md -o ./raw-posts/disambiguating-data-wallets.md -a ./static/generated/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@jeswr/mermaid-cli": "^11.4.2"
+  }
+}
