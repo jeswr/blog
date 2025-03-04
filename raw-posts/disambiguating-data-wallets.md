@@ -211,7 +211,8 @@ NN where NN is a value from 00 to 99. The value of an age attestation identifier
 
  - IETF
    - https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-03.html
-
+  - OpenID
+    - OIDC4VP
 
 In fact, multiple alternatives exist for credential data formats (e.g. ISO mDL and W3C), protocols (e.g. OpenID for Verifiable Credentials, DIDComm and ISO mDL), wallets, and verifiable data registries.
 
