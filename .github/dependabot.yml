@@ -4,6 +4,17 @@
 # https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
 
 version: 2
+  - package-ecosystem: "npm" # See documentation for possible values
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "daily"
+    labels:
+      - "dependencies"
+    groups:
+      minor:
+        update-types:
+        - "minor"
+        - "patch"
   - package-ecosystem: "github-actions"
     directory: "/" # Location of package manifests
     schedule:
