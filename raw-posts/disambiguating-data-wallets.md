@@ -153,6 +153,7 @@ timeline
   2019: [__W3C__<br/> Verifiable Credentials Working Group](https://www.w3.org/2020/01/vc-wg-charter.html) publishes [Verifiable Credentials Data Model 1.0](https://www.w3.org/TR/2019/REC-vc-data-model-20191119/)
   %% Sep 
   2021: [__ISO__<br/> Mobile driving licence (mDL)](https://www.iso.org/standard/69084.html) standard published
+  : [__OPENID__<br/> produces the first working group draft of OpenID Connect for Verifiable Presentations (OIDC4VP)](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html)
   %% Feb 
   2023: [__ISO__<br/> Cards and security devices for personal identification ](https://www.iso.org/standard/74910.html) standard published
   %% Oct 2023
@@ -164,6 +165,9 @@ timeline
   %% Jan 
   2025: [__W3C__<br/> Verifiable Credentials for Education Task Force](https://w3c-ccg.github.io/vc-ed/charter/) begins to create charter
 ```
+
+"Late 2022: International adoption plans emerge. The European Digital Identity Wallet Architecture and Reference Framework (ARF) draft (by the EU’s eIDAS expert group) lists OID4VP, OID4VCI, and SIOPv2 as required protocols for certain digital identity use cases ￼."
+
 
 Cards and security devices for personal
 identification — Building blocks for identity
@@ -213,6 +217,18 @@ NN where NN is a value from 00 to 99. The value of an age attestation identifier
    - https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-03.html
   - OpenID
     - OIDC4VP
+    - OIDC4VCI
+    - 
+
+OpenID4VCI:
+ - https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html
+ - 
+
+
+SIOPv2:
+ - https://openid.net/specs/openid-connect-self-issued-v2-1_0.html
+
+
 
 In fact, multiple alternatives exist for credential data formats (e.g. ISO mDL and W3C), protocols (e.g. OpenID for Verifiable Credentials, DIDComm and ISO mDL), wallets, and verifiable data registries.
 
@@ -227,8 +243,6 @@ https://openid.net/wg/digital-credentials-protocols/charter/
 ### The (big) missing piece
 
 Websites for instance need HTML to tell you how a Website is displayed - but also need HTTP(S) to tell your browser *where* that website document is, and how to get it.
-
-
 
 ### A push for alignment
 
@@ -294,7 +308,7 @@ At the time
 
 ## Options for holders
 
-## Why Solid as a Holder should be taken seriously
+## Why Solid as a Holder Service should be taken seriously
 
 ![](../static/solid.svg)
 
@@ -312,17 +326,86 @@ I [lead work](https://theodi.org/profile/jesse-wright/) on Solid at the [Open Da
 
 ### Solid as a Credential Holder
 
+I am of the view that the Solid Pods are ideal for use as *holder services* in the verifiable credential ecosystem, it is certainly *possible* as a [Solid Wallet](https://github.com/openwallet-foundation-labs/solid-data-wallet) has already been donated to the [Open Wallet Foundation](https://openwallet.foundation) demonstrating how this can be implemented.
+
+
+The advantages of using Solid as a Holder service are as follows:
+
+<!-- Solid specification is ideally placed to act as a *holder
+
+In direct relation to Solid/LWS, we recommended that it should be possible for holder storages and holder applications to be distinct services, this would allow implementations of the Solid/LWS specification to be certified against the framework without necessarily needing to be the implementor of the user-facing application for managing consent of the credentials. -->
+
+#### Portability of credentials
+
+![](../static/simondseconoart-small.png)
+
+[Socially Aware Cloud Storage, Design Issues, Tim Berners-Lee](https://www.w3.org/DesignIssues/CloudStorage.html)
+
+We've become accustomed to living in a world of [data silo's](https://www.w3.org/DesignIssues/CloudStorage.html) - so much so that we barely notice it anymore. On most websites we find ourselves entering and re-entering the same basic mobile, email and date-of-birth to every website that we visit; and we find ourselves reconstructing the same set of contacts across Instagram, Facebook, Twitter, LinkedIn, Whatsapp, the list goes on ...
+
+Solid was created to solve this problem, providing a standard way of reading and writing data to personal cloud storage. The way it works is simple: when you log in to a Solid-compatible website with Single Sign On - all the personal data that you create gets saved to the store - and are made accessible to any other Solid-compatible applications that you use the second you hit "consent for data usage." Much easier!
+
+The existing Apple Wallet gives us a pretty good sense of the current trajectory for digital wallets and credentials, which is:
+ - I buy a GWR train ticket on my [GWR App](https://www.gwr.com/your-tickets/smart-tickets/mobile-app),
+ - I click *add to my Apple Wallet*
+
+Easy! But what if I:
+ - Bought the ticket with a PC, and saved it to Google Wallet instead? or,
+ - Your phone dies, and you want to access the ticket from a friends phone?
+
+Then life is going to be a lot more difficult, because companies such as Apple want to keep these tickets closed within their ecosystem - just as they don't want your contacts or photo's to leave their ecosystem.
+
+![](../static/apple-wallet.png)
+
+The good news :tada: is that the Solid specification can be used here too - so we have a chance to intervene before this even becomes a problem.
+
 #### Standard Web interface for transferring credentials
+
+There are a *lot* of ways that credentials can be transferred. 
 
 #### Standard Web interface for requesting access to credentials
 
-#### Portability of credentials
+Important Questions to answer:
+ - Why don't we just use DCQL to fetch the credentials "Digital Credentials Query Language (DCQL) as an alternative, simpler mechanism to request specific credentials, alongside the existing Presentation Exchange format."
+ - 
 
 ## Queryability of Verifiable Credentials
 
 ![](../static/sparql.webp)
 
-Let me again present my bias' upfront. The last 5 years of my work and research have revolved around [Semantic Web Technologies](https://en.wikipedia.org/wiki/Semantic_Web) - and my current research is on the very topic of [Queryable Credentials](https://github.com/jeswr/queryable-credentials).
+Let me again present my bias' upfront. The last 5 years of my work and research have revolved around [Semantic Web Technologies](https://en.wikipedia.org/wiki/Semantic_Web) - and my current research is on the very topic of [Queryable Credentials](https://github.com/jeswr/queryable-credentials), and I recently [gave a talk on this topic at FOSDEM](https://fosdem.org/2025/schedule/event/fosdem-2025-5970-are-current-standards-enough-towards-verifiable-credentials-with-expressive-zero-knowledge-query/) (video below).
+
+So when I heard that there was a [Digital Credentials Query Language (DCQL)](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html#name-digital-credentials-query-l) as part of the [OID4VP](https://openid.net/sg/openid4vc/) specification I was thrilled - but sadly that was short-lived. This is because the expressivity of DQCL is largely restricted to filtering operations to determine:
+ - Which Verifiable Credentials to include as part of a [Verifiable Presentation](https://www.w3.org/TR/vc-data-model-2.0/#presentations)
+ - Which subset of attributes to from those Credentials to include in the Verifiable Presentation
+
+Ok, but surely there must be a little more capability to the current specifications than this - after all, it is promised that you can prove your age without revealing your date of birth when using digital drivers licenses - so there must be some way of querying for age ...
+
+... right?
+
+**Wrong**. Taking a deeper look at the [ISO Mobile driving license (mDL)](https://www.iso.org/standard/69084.html) reveals that the **issuer** (e.g. the DVLA) has to *explicitly sign statements* about your age; so my digital drivers license might look something like this:
+
+```json
+{
+  ...
+  age: "00-00-2000",
+  is_over_18: true,
+  is_over_21: true,
+  is_over_65: false,
+  ...
+}
+```
+
+This means that:
+ - I have to tell the issuer (DVLA) that I want to prove I'm over 18 - when this isn't something they need to know.
+ - I am *reliant* on the *issuer* (DVLA) to issue these statements - so if my driving authority doesn't want to issue `is_over_21` statements; I may be forced to reveal my age. Whilst this is less problematic - and less likely - in the case of age; it is an issue when trying to any *non-standard* derivation. For example, proving non-caucasian ethnicity, without revealaing the minority population that you belong to.
+ - I cannot tell the verifier (e.g. my future employer at the tomato farm) about information that can be derived from multiple credentials. Want to prove to a car hire agency that you can drive in the UK without giving them details from your license, visa and passport; then you're out of luck! 
+
+This is a far cry from the kind of derivations that can be performed using the [semantic reasoning and query engines](https://rubenverborgh.github.io/Semantic-Web-Reasoning/). The good news is that it is technically feasible for the *holder* (you) to do these kinds of derivations and then hand them to the *verifier* - that's what the [below talk](https://video.fosdem.org/2025/aw1126/fosdem-2025-5970-are-current-standards-enough-towards-verifiable-credentials-with-expressive-zero-knowledge-query.mp4) is about. The bigger challenge is now to get the technology production ready and standardised.
+
+<video controls>
+  <source src="https://video.fosdem.org/2025/aw1126/fosdem-2025-5970-are-current-standards-enough-towards-verifiable-credentials-with-expressive-zero-knowledge-query.mp4" type="video/mp4">
+</video>
 
 ## Further Reading
 
