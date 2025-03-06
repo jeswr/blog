@@ -129,11 +129,7 @@ Well that all makes sense ... so what on earth is there to dispute? Quite a bit 
 Broadly speaking the debate is around:
  - What the *format* of the information inside the digital credential should be
  - How the *hash* of the digital credential should be created, and
- - What mathematical function should be used for creatiing the signature
-
-
-Include discussion fo JSON-LD vs. CBOR
-
+ - What mathematical function should be used for creating the signature
 
 These are the kinds of battles that that we have seen played out *many* time historically. Past [format wars](https://en.wikipedia.org/wiki/Format_war#:~:text=A%20format%20war%20is%20a,recording%20formats%20for%20electronic%20media.) include [VHS vs. BetaMax](https://en.wikipedia.org/wiki/Videotape_format_war), [Blu-Ray vs. HD DVD](https://en.wikipedia.org/wiki/HD_DVD#:~:text=Much%20like%20the%20videotape%20format,format%2C%20Blu%2Dray%20Disc.), and, if we dare venture back to the 1800's - wars over the [size of the rail gauge](https://en.wikipedia.org/wiki/Track_gauge) and [type of electrical current](https://en.wikipedia.org/wiki/War_of_the_currents) we should use.
 
@@ -165,6 +161,10 @@ timeline
   %% Jan 
   2025: [__W3C__<br/> Verifiable Credentials for Education Task Force](https://w3c-ccg.github.io/vc-ed/charter/) begins to create charter
 ```
+
+There are three key players in the space: The [World Wide Web Consortium (W3C)](https://www.w3.org), the [International Standards Organisation (ISO)](https://www.iso.org/home.html), and the [Internet Engineering Task Force (IETF)](https://www.ietf.org/).
+
+
 
 "Late 2022: International adoption plans emerge. The European Digital Identity Wallet Architecture and Reference Framework (ARF) draft (by the EU’s eIDAS expert group) lists OID4VP, OID4VCI, and SIOPv2 as required protocols for certain digital identity use cases ￼."
 
@@ -219,6 +219,8 @@ NN where NN is a value from 00 to 99. The value of an age attestation identifier
     - OIDC4VP
     - OIDC4VCI
     - 
+
+Include discussion fo JSON-LD vs. CBOR
 
 OpenID4VCI:
  - https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html
@@ -287,24 +289,32 @@ The upcoming European Digital Identity (EUDI) wallet will support use cases acro
 
 The [Data Use and Access Bill](https://bills.parliament.uk/bills/3825/) is proposed legislation currently at committee stage in the House of Commons. One mandate of the bill is to create a Digital Verification Services Trust Framework - driven by the Secretary of State maintaining a register of *service providers* accredited to provide some "digital verification services" in the UK. 
 
-The [Digital Identity and Attributes Framework (DIATF)](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04)
+The [Digital Identity and Attributes Framework (DIATF)](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04) has been created by the [Department of Science and Technology (DSIT)](https://www.gov.uk/government/organisations/department-for-science-innovation-and-technology) in the UK, as a framework defining the *services* that different service providers in the UK can implement and become registered as a DVS service. In the latest iteration of this framework, 5 service providers were defined:
+ - [Identity Service Providers](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04/uk-digital-identity-and-attributes-trust-framework-gamma-04-pre-release#rules-for-identity-service-providers)
+ - [Attribute Service Providers](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04/uk-digital-identity-and-attributes-trust-framework-gamma-04-pre-release#rules-for-attribute-service-providers)
+  - [Holder Service Providers](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04/uk-digital-identity-and-attributes-trust-framework-gamma-04-pre-release#rules-for-holder-service-providers)
+  - [Orchestration Service Providers](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04/uk-digital-identity-and-attributes-trust-framework-gamma-04-pre-release#rules-for-orchestration-service-providers), and
+  - [Component Service Providers](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04/uk-digital-identity-and-attributes-trust-framework-gamma-04-pre-release#rules-for-component-service-providers)
 
 ![](../static/daub.jpg)
 
-Source: https://enablingdigitalidentity.blog.gov.uk/2024/10/28/what-the-data-bill-means-for-digital-identity/
+Source: [GOV.UK: What the data bill means for digital identity](https://enablingdigitalidentity.blog.gov.uk/2024/10/28/what-the-data-bill-means-for-digital-identity/)
 
 ### UK Digital Driver's License
 
 ![](../static/govuk.png)
 
-At the time 
+Source: [GOV.UK: Digital driving license coming this year](https://www.gov.uk/government/news/digital-driving-licence-coming-this-year)
+
+In January, the UK announced the [Digital Driver's License](https://www.gov.uk/government/news/digital-driving-licence-coming-this-year) that will be made available through a new [GOV.UK](https://www.gov.uk) App - planned to launch in the summer of 2025. Further, it is expected that there will be a digital form of *all* UK documents made available by 2027.
+
+The core infrastructure backing this will be the [ISO mobile Driver's License (MDL)](https://www.iso.org/standard/69084.html) standard.
 
 ### Whatever is happening in Australia
 
 ![](../static/auswallet.jpg)
 
- - https://www.qld.gov.au/transport/projects/digital-licence/about
-
+Meanwhile, Australia has just ... gotten on with the job, in most states you can download their digital driver's license *today* - in [Queensland](https://www.qld.gov.au/transport/projects/digital-licence/about) the license was being piloted back in 2020, and has been available statewide since [November 2023](https://www.abc.net.au/news/2023-11-01/digital-queensland-drivers-licences-statewide-security-testing/103046186). South Australia, the first in the country to launch a digital driver's licence - has had once [since 2017](https://www.thalesgroup.com/en/markets/digital-identity-and-security/government/driving-licence/digital-driver-license)!
 
 ## Options for holders
 
