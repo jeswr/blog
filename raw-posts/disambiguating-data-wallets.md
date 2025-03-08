@@ -55,7 +55,7 @@ But there is one problem, *I just made this up*. So how is this supposed to be u
 
 Well, what would help is for Oxford to *digitally sign* this credential.
 
-The concept of digital signatures has existed for *decades* and whether you're aware of it or not - is already in many parts of your digital life, including being the backbone of the HTTPS security. More recently, if you've found yourself using passkeys to log into websites lately - then you've been using digital signatures to *sign* a message saying "I own this account", please let me in!
+The concept of digital signatures has existed for *decades* and whether you're aware of it or not - is already in many parts of your digital life, including being the backbone of the HTTPS security. More recently, if you've found yourself using passkeys to log into websites - then you've been using digital signatures to *sign* a message saying "I own this account, please let me in!"
 
 ![](../static/passkey.jpg)
 
@@ -124,16 +124,15 @@ To enable this, some Verifiable Credentials are built with the capacity to perfo
 
 ### Standards Wars
 
-Well that all makes sense ... so what on earth is there to dispute? Quite a bit as it turns out!
-
-Broadly speaking the debate is around:
+Well that all makes sense ... so what on earth is there to dispute? Quite a bit as it turns out! Broadly speaking the debate is around:
  - What the *format* of the information inside the digital credential should be
+ - What mathematical function should be used for creating the signature,
  - How the *hash* of the digital credential should be created, and
- - What mathematical function should be used for creating the signature
+ - How to specify what attributes are described within a credential
 
 These are the kinds of battles that that we have seen played out *many* time historically. Past [format wars](https://en.wikipedia.org/wiki/Format_war#:~:text=A%20format%20war%20is%20a,recording%20formats%20for%20electronic%20media.) include [VHS vs. BetaMax](https://en.wikipedia.org/wiki/Videotape_format_war), [Blu-Ray vs. HD DVD](https://en.wikipedia.org/wiki/HD_DVD#:~:text=Much%20like%20the%20videotape%20format,format%2C%20Blu%2Dray%20Disc.), and, if we dare venture back to the 1800's - wars over the [size of the rail gauge](https://en.wikipedia.org/wiki/Track_gauge) and [type of electrical current](https://en.wikipedia.org/wiki/War_of_the_currents) we should use.
 
-So - what different formats are there? How do they compare?
+So - what different formats are there? Who is backing them? How do they compare?
 
 W3C Timeline:
 ```mermaid
