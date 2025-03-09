@@ -21,3 +21,7 @@ I expect (hope) we will see a number of iterative improvements over the next vie
 As I briefly touched upon in [this post](/2024/04/25/raw-data-now/); my view is that we can go *much further* than this by curating a Web of precise and trusted data - where possible using formal semantics, such as in a (RDF) Knowledge Graph. This seems sound given that:
  - Graphrag is still increasing popularity for grounding models; including to ground Gemini's answers in google queries, and
  - LLMs are getting better at supporting text to structured data conversions
+
+Beyond soundness - a couple of reasons this is *necessary* include:
+ - We can be clearer about the [semantic commitments](https://player.vimeo.com/video/186094848?h=87a4e916e7) we're making, and
+ - We can search for data rather than pages
