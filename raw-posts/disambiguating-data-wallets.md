@@ -251,6 +251,13 @@ The [Open Wallet Foundation](https://openwallet.foundation), hosted by the [Linu
 
 ![](../static/openwallet.png)
 
+Also to note:
+
+ISO/IEC 23220-2: ISO/IEC 23220-2 defines a data model for interoperability between mobile eID-systems via data format translation. For example, -2 lists a Common Development and Distribution License data model mapping fields across different data formats used by mobile driver's licenses, JSON, W3C Verifiable Credentials and Verifiable Presentations, etc. This standard is still in draft form.
+
+This kind of governance yields very stable, vetted standards but not very agile in response to new tech – which is why ISO is now looking to incorporate things like W3C’s work after the fact.
+
+
 ## Regulation Driving Data Wallets
 
 ### eIDAS
@@ -374,8 +381,25 @@ There are a *lot* of ways that credentials can be transferred.
 
 #### Standard Web interface for requesting access to credentials
 
+A key throughline should be:
+ - Things like DCQL __very specifically__ target access of credentials; Solid is built with the view of supporting an arbitrary range of data types and we should be doing that ""furure proofing
+
 Important Questions to answer:
  - Why don't we just use DCQL to fetch the credentials "Digital Credentials Query Language (DCQL) as an alternative, simpler mechanism to request specific credentials, alongside the existing Presentation Exchange format."
+ - 
+
+ https://tac.openwallet.foundation/projects/dcql-ts/
+
+**The Digital Credentials Query Language (DCQL, pronounced [ˈdakl̩]) is a JSON-encoded query language that allows the Verifier to request Verifiable Presentations that match the query. The Verifier MAY encode constraints on the combinations of credentials and claims that are requested. The Wallet evaluates the query against the Verifiable Credentials it holds and returns Verifiable Presentations matching the query.**
+
+
+
+#### Standardised consent flows
+
+#### Async flows
+
+E.g.
+ - AI agents managing credentials on your behalf
  - 
 
 ## Queryability of Verifiable Credentials
@@ -422,6 +446,7 @@ In producing this article I came across a number of useful materials, here is my
  - [Auth0's take on Verifable Credentials](https://auth0.com/blog/our-take-on-verifiable-credentials/)
  - [Verifiable Credentials and ISO/IEC 18013-5 Based Credentials](https://collateral-library-production.s3.amazonaws.com/uploads/asset_file/attachment/36416/CS676613_-_Digital_Credentials_promotion_campaign-White_Paper_R3.pdf)
  - [Verifiable Credential Formats in the EUDI Wallet: W3C VC DM and ISO 18013-5 mDL/mDoc](https://www.linkedin.com/pulse/verifiable-credential-formats-eudi-wallet-w3c-vc-dm-iso-18013-5-kbcmf/)
+ - [GPT 4.5 Researchers' take on the topic](https://chatgpt.com/share/67cdaacf-5728-800c-ac59-137d7d1aeec9)
 
 [^1]: Trust me - Software Engineers will think about becoming a farmer at least once a day.
 [^2]: ^^ Yes, really.
