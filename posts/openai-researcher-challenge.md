@@ -5,6 +5,8 @@ permalink: /2025/03/09/researcher-agent-challenge/
 status: Draft / mood-post-written-in-10-minutes
 ---
 
+<i>Draft / mood-post-written-in-10-minutes</i>
+
 ![](/static/deep-research.png)
 
 I've spent the last few days using [OpenAI's Deep Research agent](https://openai.com/index/introducing-deep-research/) with ChatGPT 4.5. I'm quite impressed with the results it produces; and definitely reduces what would have previously been a few hours of browsing - to a 10-minute coffee break whilst I wait for the Researcher Agent to do its thing.
