@@ -63,7 +63,7 @@ The concept of digital signatures has existed for *decades* and whether you're a
 
 So how do these signatures actually work? 
 
-First, a *hash* of the the digital credential document is created - and is a unique fingerprint :feet: for the document. For the DPhil Award Credential, this is what the hash looks like:
+First, a *hash* of the digital credential document is created - and is a unique fingerprint :feet: for the document. For the DPhil Award Credential, this is what the hash looks like:
 
 ```
 4sSXDN7iEw2niW96vPWNPJVeiwWe6VR77jl+wRnA6bk=
@@ -130,13 +130,29 @@ Well that all makes sense ... so what on earth is there to dispute? Quite a bit 
  - How the *hash* of the digital credential should be created, and
  - How to specify what attributes are described within a credential
 
-These are the kinds of battles that that we have seen played out *many* time historically. Past [format wars](https://en.wikipedia.org/wiki/Format_war#:~:text=A%20format%20war%20is%20a,recording%20formats%20for%20electronic%20media.) include [VHS vs. BetaMax](https://en.wikipedia.org/wiki/Videotape_format_war), [Blu-Ray vs. HD DVD](https://en.wikipedia.org/wiki/HD_DVD#:~:text=Much%20like%20the%20videotape%20format,format%2C%20Blu%2Dray%20Disc.), and, if we dare venture back to the 1800's - wars over the [size of the rail gauge](https://en.wikipedia.org/wiki/Track_gauge) and [type of electrical current](https://en.wikipedia.org/wiki/War_of_the_currents) we should use.
+These are the kinds of battles that we have seen played out *many* times historically. Past [format wars](https://en.wikipedia.org/wiki/Format_war#:~:text=A%20format%20war%20is%20a,recording%20formats%20for%20electronic%20media.) include [VHS vs. BetaMax](https://en.wikipedia.org/wiki/Videotape_format_war), [Blu-Ray vs. HD DVD](https://en.wikipedia.org/wiki/HD_DVD#:~:text=Much%20like%20the%20videotape%20format,format%2C%20Blu%2Dray%20Disc.), and, if we dare venture back to the 1800's - wars over the [size of the rail gauge](https://en.wikipedia.org/wiki/Track_gauge) and [type of electrical current](https://en.wikipedia.org/wiki/War_of_the_currents) we should use.
 
 So - what different formats are there? Who is backing them? How do they compare?
 
 There are three key players in the space: The [World Wide Web Consortium (W3C)](https://www.w3.org), the [International Standards Organisation (ISO)](https://www.iso.org/home.html), and the [Internet Engineering Task Force (IETF)](https://www.ietf.org/).
 
-The W3C were first to work on many standards around Digital Credentials, after the formation of a [Credentials Community Group](https://www.w3.org/community/credentials/) in 2014. 
+The W3C were first to work on many standards around Digital Credentials, after the formation of a [Credentials Community Group](https://www.w3.org/community/credentials/) in 2014. By 2017, this group had published their [Verifiable Claims Data Model and Representations 1.0](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/) which [defined how to express signed credentials](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-expressing-identity-credentials-in-json-ld) similar to the one shown in our earlier discussion of [the tech](#the-tech). This specification was prescriptive of core functionality such as *how to sign* credentials, describe core "metadata" such as *who issued the credential*, *when the credential was issued* and *who the credential is about*. The specification intentionally left the task of defining the data structures of domain specific credentials - such as a *diploma credential* or *digital driver's license* out of scope. Instead, allowing arbitrary credential [`type`s](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-identity-profile-model) to be listed.
+
+Even within this specification there is a tension in the *format* that should be used to describe the content of credentials. The specification provided a description of how to describe credentials using both [JSON](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#expressing-identity-profiles-entity-credentials-and-verifiable-claims-in-json) and [JSON-LD](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-expressing-identity-credentials-in-json-ld) ... TODO "There is a crucial distinction" ...
+
+How did this come to be? These credential specifications were largely driven by members of communities with distinctive priorities and training; in particular, the [Linked Data / Semantic Web community]() and the [Security / Cryptography]() community. 
+
+Please help me finish this paragraph discussing the different priorities of the Linked Data and Security communities, and the advantages / disadvantages that each see with the JSON and JSON-LD versions of the specification
+
+---
+
+The W3C were first to work on many standards around Digital Credentials, after the formation of a [Credentials Community Group](https://www.w3.org/community/credentials/) in 2014. By 2017, this group had published their [Verifiable Claims Data Model and Representations 1.0](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/) which [defined how to express signed credentials](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-expressing-identity-credentials-in-json-ld) similar to the one shown in our earlier discussion of [the tech](#the-tech). This specification was prescriptive of core functionality such as *how to sign* credentials, describe core "metadata" such as *who issued the credential*, *when the credential was issued* and *who the credential is about*. The specification intentionally left the task of defining the data structures of domain specific credentials - such as a *diploma credential* or *digital driver's license* out of scope. Instead, allowing arbitrary credential [`type`s](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-identity-profile-model) to be listed.
+
+Even within this specification there is a tension in the *format* that should be used to describe the content of credentials. The specification provided a description of how to describe credentials using both [JSON](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#expressing-identity-profiles-entity-credentials-and-verifiable-claims-in-json) and [JSON-LD](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-expressing-identity-credentials-in-json-ld) ... TODO "There is a crucial distinction" ...
+
+<!-- Even within this specification, there is tension concerning the format used to describe the content of credentials. The specification provided descriptions for expressing credentials using both JSON and JSON-LD. There is a crucial distinction: JSON-LD, rooted in Linked Data principles, prioritizes semantic interoperability, data reuse, and linking entities across diverse contexts, leveraging URIs to create meaningful connections on the Semantic Web. Conversely, the Security and Cryptography community favors simpler, less ambiguous serializations such as plain JSON, focusing on straightforward cryptographic operations, minimal complexity, and robust security guarantees. The JSON-LD approach provides rich semantics and extensibility at the cost of additional complexity in processing and increased potential for implementation errors, whereas plain JSON offers simplicity, ease of cryptographic verification, and better predictability, but at the expense of reduced semantic clarity and interoperability across heterogeneous systems. These distinct priorities have led to ongoing discussions and occasional friction within the credential standards communities. -->
+
+<!-- Proposed by: https://chatgpt.com/share/67d188e2-58a4-800c-98ab-dc5e40c55d68 -->
 
 W3C Timeline:
 ```mermaid
@@ -453,7 +469,7 @@ E.g.
 
 Let me again present my bias' upfront. The last 5 years of my work and research have revolved around [Semantic Web Technologies](https://en.wikipedia.org/wiki/Semantic_Web) - and my current research is on the very topic of [Queryable Credentials](https://github.com/jeswr/queryable-credentials), and I recently [gave a talk on this topic at FOSDEM](https://fosdem.org/2025/schedule/event/fosdem-2025-5970-are-current-standards-enough-towards-verifiable-credentials-with-expressive-zero-knowledge-query/) (video below).
 
-So when I heard that there was a [Digital Credentials Query Language (DCQL)](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html#name-digital-credentials-query-l) as part of the [OID4VP](https://openid.net/sg/openid4vc/) specification I was thrilled - but sadly that was short-lived. This is because the expressivity of DQCL is largely restricted to filtering operations to determine:
+So [when I heard](https://github.com/jeswr/queryable-credentials?tab=readme-ov-file#but-dont-query-apis-for-credentials-already-exist) that there was a [Digital Credentials Query Language (DCQL)](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html#name-digital-credentials-query-l) as part of the [OID4VP](https://openid.net/sg/openid4vc/) specification I was thrilled - but sadly that was short-lived. This is because the expressivity of DQCL is largely restricted to filtering operations to determine:
  - Which Verifiable Credentials to include as part of a [Verifiable Presentation](https://www.w3.org/TR/vc-data-model-2.0/#presentations)
  - Which subset of attributes to from those Credentials to include in the Verifiable Presentation
 
