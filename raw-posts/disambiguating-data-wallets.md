@@ -18,7 +18,7 @@ Don't worry - the tech is *not hard to understand*. As you'll soon see the confu
 ![](../static/vc.webp)
 *Credit: [dock.io](https://www.dock.io/post/verifiable-credentials)*
 
-The common goal of data wallets is to allow you to prove that a *someone* said *something* - for instance that the *University of Oxford* says that you earned a DPhil in Computer Science, or that *TicketMaster* says they issued you with a valid ticked for tonights Taylor Swift concert. 
+The common goal of data wallets is to allow you to prove that *someone* said *something* - for instance that the *University of Oxford* says that you earned a DPhil in Computer Science, or that *TicketMaster* says they issued you with a valid ticked for tonights Taylor Swift concert. 
 
 To do this the *someone* (which we will now call an *issuer*) gives you, or more specifically an application on your device like Google Wallet (which we will call the *holder*) a digital Verifiable Credential. Examples include the [UK digital drivers license](https://www.gov.uk/government/news/digital-driving-licence-coming-this-year) :credit_card: and [Digital Student Certificates](https://athumi.be/en/blog/news/athumi-and-itsme-launch-groundbreaking-digital-student-certificate-first-implemented-by-dibbs-en-be).
 
@@ -49,7 +49,7 @@ Here is an example using *one* of the credential standards, specifically [W3C Ve
 ```
 *A [JSON-LD](https://json-ld.org) representation of a [W3C Verifiable Credential](https://www.w3.org/TR/vc-data-model-2.0/) for a DPhil Award*
 
-But there is one problem, *I just made this up*. So how is this supposed to be useful in my job application to become a farm hand.[^2]
+But there is one problem, *I just made this up*. So how is this supposed to be useful in my job application to become a farm hand[^2].
 
 <!-- TODO: Survey whether this section helps or adds confusion -->
 
@@ -133,6 +133,10 @@ Well that all makes sense ... so what on earth is there to dispute? Quite a bit 
 These are the kinds of battles that that we have seen played out *many* time historically. Past [format wars](https://en.wikipedia.org/wiki/Format_war#:~:text=A%20format%20war%20is%20a,recording%20formats%20for%20electronic%20media.) include [VHS vs. BetaMax](https://en.wikipedia.org/wiki/Videotape_format_war), [Blu-Ray vs. HD DVD](https://en.wikipedia.org/wiki/HD_DVD#:~:text=Much%20like%20the%20videotape%20format,format%2C%20Blu%2Dray%20Disc.), and, if we dare venture back to the 1800's - wars over the [size of the rail gauge](https://en.wikipedia.org/wiki/Track_gauge) and [type of electrical current](https://en.wikipedia.org/wiki/War_of_the_currents) we should use.
 
 So - what different formats are there? Who is backing them? How do they compare?
+
+There are three key players in the space: The [World Wide Web Consortium (W3C)](https://www.w3.org), the [International Standards Organisation (ISO)](https://www.iso.org/home.html), and the [Internet Engineering Task Force (IETF)](https://www.ietf.org/).
+
+The W3C were first to work on many standards around Digital Credentials, after the formation of a [Credentials Community Group](https://www.w3.org/community/credentials/) in 2014. 
 
 W3C Timeline:
 ```mermaid
@@ -342,6 +346,8 @@ I [lead work](https://theodi.org/profile/jesse-wright/) on Solid at the [Open Da
 
 ### Solid as a Credential Holder
 
+<!-- Throughline for all 3 of these sections needs to be that Solid is /simpler/ and /extensible to other datatypes/ -->
+
 I am of the view that the Solid Pods are ideal for use as *holder services* in the verifiable credential ecosystem, it is certainly *possible* as a [Solid Wallet](https://github.com/openwallet-foundation-labs/solid-data-wallet) has already been donated to the [Open Wallet Foundation](https://openwallet.foundation) demonstrating how this can be implemented.
 
 
@@ -377,7 +383,11 @@ The good news :tada: is that the Solid specification can be used here too - so w
 
 #### Standard Web interface for transferring credentials
 
-There are a *lot* of ways that credentials can be transferred. 
+
+
+There are a *lot* of ways that credentials can be transferred.
+ - re-iterate all the bespoke options from mdl and corresponding ISO standards,
+ - 
 
 #### Standard Web interface for requesting access to credentials
 
@@ -393,6 +403,41 @@ Important Questions to answer:
 **The Digital Credentials Query Language (DCQL, pronounced [ˈdakl̩]) is a JSON-encoded query language that allows the Verifier to request Verifiable Presentations that match the query. The Verifier MAY encode constraints on the combinations of credentials and claims that are requested. The Wallet evaluates the query against the Verifiable Credentials it holds and returns Verifiable Presentations matching the query.**
 
 
+**The W3C has a Credentials Community Group exploring Browser APIs (so web pages can request VCs from the browser, like how WebAuthn works) and better ways to do secure QR code scans. DIF has the Presentation Exchange format to standardize how verifiers ask for credentials (so that a wallet can automatically find the right credential to respond with). The CHAPI (Credential Handler API) is another browser-based approach to let users pick a wallet to use on a website.**
+
+The [W3C Credentials API Specification](https://w3c-ccg.github.io/vc-api/#design-goals-and-rationale) "provides a set of HTTP Application Programming Interfaces (HTTP APIs) and protocols for issuing, verifying, presenting, and managing Verifiable Credentials" and has a similar goal to "increase market competition and reduce vendor lock-in and switching costs."
+
+For holders, the [following API's are defined](https://w3c-ccg.github.io/vc-api/#holder-service)
+
+TL;DR: THE DCQL is used within the request to the `/presentations` endpoint of a holder service.
+
+---
+
+The following is not VC speciifc, defines an API for managing a number of credentials from VC's to otp's and passwords, and defines when to e.g. use those credentials for autocompletion
+
+[Credential Management Level 1](https://www.w3.org/TR/credential-management-1/) "This specification describes an imperative API enabling a website to request a user’s credentials from a user agent, and to help the user agent correctly store user credentials for future use."
+
+---
+
+TODO: Clarify where CHAPI sits in the picture:
+ - https://chatgpt.com/share/67d16c12-3b14-800c-abd8-2ba65480d542
+ - https://w3c-ccg.github.io/credential-handler-api/#oncredentialrequest-attribute
+
+It seems that CHAPI describes *browser API's* that allows access to credentials managed within the browser.
+
+---
+
+https://wicg.github.io/digital-credentials/ then seems to be an attempt to replace CHAPI.
+
+So the play here in the shorter term is:
+ - Credentials live in Solid Pod which allows you to view the credentials,
+ - *an exchange protocol* is either fetching data using the Solid API's; or a `derive` endpoint as an addition to a Pod
+ - a Websites JS code can request those credentials using the Digital Credentials API which under the hood uses [Credential Management Level 1](https://www.w3.org/TR/credential-management-1/)
+ - Because the credentials live in an online data store - the credential also does not need to be passed directly using the browser; instead the credential can be transferred *directly* from the Pod to the Server.
+
+Thus:
+ - Solid is *compatible* with the emergent credential handling interfaces where it is assumed the holder is on the browser / or device
+ - Solid provides better consent management options in cases where the credentials are to be transferred directly between webservers (this is the async flows point)
 
 #### Standardised consent flows
 
@@ -431,14 +476,22 @@ Ok, but surely there must be a little more capability to the current specificati
 
 This means that:
  - I have to tell the issuer (DVLA) that I want to prove I'm over 18 - when this isn't something they need to know.
- - I am *reliant* on the *issuer* (DVLA) to issue these statements - so if my driving authority doesn't want to issue `is_over_21` statements; I may be forced to reveal my age. Whilst this is less problematic - and less likely - in the case of age; it is an issue when trying to any *non-standard* derivation. For example, proving non-caucasian ethnicity, without revealaing the minority population that you belong to.
+ - I am *reliant* on the *issuer* (DVLA) to issue these statements - so if my driving authority doesn't want to issue `is_over_21` statements; I may be forced to reveal my age. Whilst this is less problematic - and less likely - in the case of age; it is an issue when trying to any *non-standard* derivation. For example, proving non-caucasian ethnicity, without revealing the minority population that you belong to.
  - I cannot tell the verifier (e.g. my future employer at the tomato farm) about information that can be derived from multiple credentials. Want to prove to a car hire agency that you can drive in the UK without giving them details from your license, visa and passport; then you're out of luck! 
 
-This is a far cry from the kind of derivations that can be performed using the [semantic reasoning and query engines](https://rubenverborgh.github.io/Semantic-Web-Reasoning/). The good news is that it is technically feasible for the *holder* (you) to do these kinds of derivations and then hand them to the *verifier* - that's what the [below talk](https://video.fosdem.org/2025/aw1126/fosdem-2025-5970-are-current-standards-enough-towards-verifiable-credentials-with-expressive-zero-knowledge-query.mp4) is about. The bigger challenge is now to get the technology production ready and standardised.
+This is a far cry from the kind of derivations that can be performed using the [semantic reasoning and query engines](https://rubenverborgh.github.io/Semantic-Web-Reasoning/). The good news is that it is technically feasible for the *holder* (you) to do deriviations such as [this one](https://github.com/jeswr/queryable-credentials?tab=readme-ov-file#initial-design-thoughts-for-a-queryable-api) and then hand them to the *verifier* - that's what the [below talk](https://video.fosdem.org/2025/aw1126/fosdem-2025-5970-are-current-standards-enough-towards-verifiable-credentials-with-expressive-zero-knowledge-query.mp4) is about.
+
+The bigger challenge is now to get the technology production ready and standardized.
 
 <video controls>
   <source src="https://video.fosdem.org/2025/aw1126/fosdem-2025-5970-are-current-standards-enough-towards-verifiable-credentials-with-expressive-zero-knowledge-query.mp4" type="video/mp4">
 </video>
+
+### Does it even make sense to be talking about credentials?
+
+As I discuss further [here](https://github.com/jeswr/queryable-credentials?tab=readme-ov-file#on-abstractions) - whilst it is sensible to talk about credentials to end-users of applications; it is my position that credentials are the wrong object to be working with at a standards level - such as within IEEE and W3C specifications. Instead, we should be talking about [datasets of facts](https://github.com/jeswr/queryable-credentials?tab=readme-ov-file#initial-design-thoughts-for-a-queryable-api), with metadata such as signatures and proofs that attest to their integrity.
+
+<!-- TODO: Elaborate -->
 
 ## Further Reading
 
