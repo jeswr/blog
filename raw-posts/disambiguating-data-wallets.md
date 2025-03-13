@@ -138,21 +138,86 @@ There are three key players in the space: The [World Wide Web Consortium (W3C)](
 
 The W3C were first to work on many standards around Digital Credentials, after the formation of a [Credentials Community Group](https://www.w3.org/community/credentials/) in 2014. By 2017, this group had published their [Verifiable Claims Data Model and Representations 1.0](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/) which [defined how to express signed credentials](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-expressing-identity-credentials-in-json-ld) similar to the one shown in our earlier discussion of [the tech](#the-tech). This specification was prescriptive of core functionality such as *how to sign* credentials, describe core "metadata" such as *who issued the credential*, *when the credential was issued* and *who the credential is about*. The specification intentionally left the task of defining the data structures of domain specific credentials - such as a *diploma credential* or *digital driver's license* out of scope. Instead, allowing arbitrary credential [`type`s](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-identity-profile-model) to be listed.
 
-Even within this specification there is a tension in the *format* that should be used to describe the content of credentials. The specification provided a description of how to describe credentials using both [JSON](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#expressing-identity-profiles-entity-credentials-and-verifiable-claims-in-json) and [JSON-LD](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-expressing-identity-credentials-in-json-ld) ... TODO "There is a crucial distinction" ...
+Even *within* this [W3C](https://www.w3.org) specification there is a tension in the *format* that should be used to describe the content of credentials. The specification provided a description of how to describe credentials using both [JSON](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#expressing-identity-profiles-entity-credentials-and-verifiable-claims-in-json) and [JSON-LD](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-expressing-identity-credentials-in-json-ld). The [Linked Data](https://www.ontotext.com/knowledgehub/fundamentals/linked-data-linked-open-data/) community advocated for the use of an [RDF](https://en.wikipedia.org/wiki/Resource_Description_Framework) data model for its semantic richness, extensibility, and [interoperability](https://noeldemartin.com/blog/interoperable-serendipity), aligning credentials with the broader [Semantic Web vision](https://www.ontotext.com/knowledgehub/fundamentals/what-is-the-semantic-web/) - and compromised to use JSON-LD as the encoding for this data model. 
+
+This data model is what backs [Enterprise Knowledge Graphs](https://www.stardog.com/knowledge-graph/) such as the [Google Knowledge Graph](https://support.google.com/knowledgepanel/answer/9787176?hl=en). A key feature of this data model, is that it supports *contextual understanding*. Suppose I have the [following credential](https://www.w3.org/TR/vc-data-model-2.0/#example-a-verifiable-credential-with-a-custom-extension):
+
+```json
+{
+  ...
+  "type": ["VerifiableCredential", "CustomExt12"],
+  "referenceNumber": 83294847,
+  ...
+}
+```
+
+This reference number could refer to any number of things; a customer support ticket, a product identifier, or a transaction receipt. So in order to understand how to use this information, I need to have a pre-defined understanding of what a `CustomExt12` credential describes. This also makes it difficult to *integrate* information from multiple credentials; as we need to keep track of the contextual information of which credential they were extracted from.
+
+The use of RDF - encoded as JSON-LD - within Verifiable Credential standards provides another option. Here, all of this context is applied to the `referenceNumber` term - in JSON-LD this can be done as follows:
+
+```json
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://www.w3.org/ns/credentials/examples/v2",
+    "https://extension.example/my-contexts/v1"
+  ],
+  ...
+  "type": ["VerifiableCredential", "CustomExt12"],
+  "referenceNumber": 83294847,
+  ...
+}
+```
+
+The effect of adding this `@context` is to establish a *URI* defining `referenceNumber`, e.g. http://example.org/schema/receipts/tesco/referenceNumber. This URL can be *dereferenced* (looked up) to discover a contextual description e.g.:
+
+```ttl
+@prefix tesco: <http://example.org/schema/receipts/tesco/> .
+@prefix recepits: <http://example.org/schema/receipts/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+tesco:referenceNumber rdfs:subClassOf receipts:referenceNumber ;
+  rdfs:name "Tesco Receipt Reference Number" ;
+  rdfs:description "A unique reference number for receipt of purchasing a set of products at tesco" ;
+  rdfs:domain tesco:purchase ;
+  rdfs:range xsd:int .
+```
+
+This built in contextual information is especially useful when, for instance, we want to integrate data from many credentials that each may use the term `referenceNumber` to discuss different concepts (e.g. reference numbers from different types of purchases, shops etc.)
+
+Conversely, the Security and Cryptography community pushed for plain JSON with JWT (JSON Web Tokens), to reduce implementation complexity and ease security analyses. 
+
+
+
+GPT-4.5 does an decent job of providing a slightly longer presentation of this history - which you can find [here](/static/gpt-jsonld-vs-json.md).
+
+
+
+
+
+
+<!-- Even within this specification there is a tension in the *format* that should be used to describe the content of credentials. The specification provided a description of how to describe credentials using both [JSON](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#expressing-identity-profiles-entity-credentials-and-verifiable-claims-in-json) and [JSON-LD](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-expressing-identity-credentials-in-json-ld) ... TODO "There is a crucial distinction" ...
 
 How did this come to be? These credential specifications were largely driven by members of communities with distinctive priorities and training; in particular, the [Linked Data / Semantic Web community]() and the [Security / Cryptography]() community. 
 
-Please help me finish this paragraph discussing the different priorities of the Linked Data and Security communities, and the advantages / disadvantages that each see with the JSON and JSON-LD versions of the specification
+Please help me finish this paragraph discussing the different priorities of the Linked Data and Security communities, and the advantages / disadvantages that each see with the JSON and JSON-LD versions of the specification -->
 
----
+<!-- ---
 
 The W3C were first to work on many standards around Digital Credentials, after the formation of a [Credentials Community Group](https://www.w3.org/community/credentials/) in 2014. By 2017, this group had published their [Verifiable Claims Data Model and Representations 1.0](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/) which [defined how to express signed credentials](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-expressing-identity-credentials-in-json-ld) similar to the one shown in our earlier discussion of [the tech](#the-tech). This specification was prescriptive of core functionality such as *how to sign* credentials, describe core "metadata" such as *who issued the credential*, *when the credential was issued* and *who the credential is about*. The specification intentionally left the task of defining the data structures of domain specific credentials - such as a *diploma credential* or *digital driver's license* out of scope. Instead, allowing arbitrary credential [`type`s](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-identity-profile-model) to be listed.
 
-Even within this specification there is a tension in the *format* that should be used to describe the content of credentials. The specification provided a description of how to describe credentials using both [JSON](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#expressing-identity-profiles-entity-credentials-and-verifiable-claims-in-json) and [JSON-LD](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-expressing-identity-credentials-in-json-ld) ... TODO "There is a crucial distinction" ...
+Even within this specification there is a tension in the *format* that should be used to describe the content of credentials. The specification provided a description of how to describe credentials using both [JSON](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#expressing-identity-profiles-entity-credentials-and-verifiable-claims-in-json) and [JSON-LD](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-expressing-identity-credentials-in-json-ld). The [Linked Data](https://www.ontotext.com/knowledgehub/fundamentals/linked-data-linked-open-data/) community advocated JSON-LD for its semantic richness, extensibility, and [interoperability](https://noeldemartin.com/blog/interoperable-serendipity), aligning credentials with the broader [Semantic Web vision](https://www.ontotext.com/knowledgehub/fundamentals/what-is-the-semantic-web/). JSON-LD enabled decentralized extensions of credential schemas, essential for diverse and evolving credential ecosystems. Conversely, the Security and Cryptography community emphasized the simplicity, clarity, and robustness of plain JSON with JWT (JSON Web Tokens), highlighting its straightforward cryptographic verification and reduced implementation complexity. Historical discussions in W3C mailing lists reveal significant concerns about JSON-LD's complexity in signature canonicalization, reminiscent of XML signature challenges, and practical adoption issues due to limited tooling. This fundamental divergence in priorities—semantic interoperability versus simplicity and security—ultimately resulted in a dual-path approach, legitimizing both JSON-LD credentials with Linked Data proofs and simpler JWT-secured JSON credentials, allowing developers to select the approach best suited to their needs. -->
 
 <!-- Even within this specification, there is tension concerning the format used to describe the content of credentials. The specification provided descriptions for expressing credentials using both JSON and JSON-LD. There is a crucial distinction: JSON-LD, rooted in Linked Data principles, prioritizes semantic interoperability, data reuse, and linking entities across diverse contexts, leveraging URIs to create meaningful connections on the Semantic Web. Conversely, the Security and Cryptography community favors simpler, less ambiguous serializations such as plain JSON, focusing on straightforward cryptographic operations, minimal complexity, and robust security guarantees. The JSON-LD approach provides rich semantics and extensibility at the cost of additional complexity in processing and increased potential for implementation errors, whereas plain JSON offers simplicity, ease of cryptographic verification, and better predictability, but at the expense of reduced semantic clarity and interoperability across heterogeneous systems. These distinct priorities have led to ongoing discussions and occasional friction within the credential standards communities. -->
 
 <!-- Proposed by: https://chatgpt.com/share/67d188e2-58a4-800c-98ab-dc5e40c55d68 -->
+<!-- 
+The W3C was among the first to establish standards around Digital Credentials, starting with the formation of a [Credentials Community Group](https://www.w3.org/community/credentials/) in 2014. By 2017, this group published the [Verifiable Claims Data Model and Representations 1.0](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/), defining core functionality such as credential signing, metadata describing the issuer, issuance date, and credential subject. The data structures for specific credentials like diplomas or driver's licenses were intentionally left out of scope, allowing flexibility through arbitrary credential [`type`s](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-identity-profile-model).
+
+From the outset, a significant tension existed regarding the credential content formats—JSON versus JSON-LD. The Linked Data community advocated JSON-LD for its semantic richness, extensibility, and interoperability, aligning credentials with the broader Semantic Web vision. JSON-LD enabled decentralized extensions of credential schemas, essential for diverse and evolving credential ecosystems. Conversely, the Security and Cryptography community emphasized the simplicity, clarity, and robustness of plain JSON with JWT (JSON Web Tokens), highlighting its straightforward cryptographic verification and reduced implementation complexity. Historical discussions in W3C mailing lists reveal significant concerns about JSON-LD's complexity in signature canonicalization, reminiscent of XML signature challenges, and practical adoption issues due to limited tooling. This fundamental divergence in priorities—semantic interoperability versus simplicity and security—ultimately resulted in a dual-path approach, legitimizing both JSON-LD credentials with Linked Data proofs and simpler JWT-secured JSON credentials, allowing developers to select the approach best suited to their needs.
+ -->
+
+<!-- GPT-4.5 does an ok job of providing a slightly longer presentation of this history - which you can find [here](/static/gpt-jsonld-vs-json.md). -->
 
 W3C Timeline:
 ```mermaid
@@ -267,20 +332,46 @@ Websites for instance need HTML to tell you how a Website is displayed - but als
 
 ### A push for alignment
 
-The [Open Wallet Foundation](https://openwallet.foundation), hosted by the [Linux Foundation](https://www.linuxfoundation.org) has a mission to facilitate global interoperability of verifiable credentials.
-
 ![](../static/openwallet.png)
 
-Also to note:
+The [Open Wallet Foundation](https://openwallet.foundation), hosted by the [Linux Foundation](https://www.linuxfoundation.org) has a mission to facilitate global interoperability of verifiable credentials.
 
-ISO/IEC 23220-2: ISO/IEC 23220-2 defines a data model for interoperability between mobile eID-systems via data format translation. For example, -2 lists a Common Development and Distribution License data model mapping fields across different data formats used by mobile driver's licenses, JSON, W3C Verifiable Credentials and Verifiable Presentations, etc. This standard is still in draft form.
+To this end, the Open Wallet Foundation has [been chartered to](https://cdn.platform.linuxfoundation.org/agreements/openwalletfoundation.pdf):
+> - develop and maintain open source code for wallets to enable and ensure wallet
+interoperability,
+> - advocate for the adoption of the interoperable digital wallet technology, and
+> - collaborate with Standards Development Organizations (SDOs) in the development and
+proliferation of open standards related to digital wallets
+The OWF will not publish a publicly available wallet (including into any application stores).
 
-This kind of governance yields very stable, vetted standards but not very agile in response to new tech – which is why ISO is now looking to incorporate things like W3C’s work after the fact.
+OWF, has also taken on around two dozen [open source codebases](https://github.com/orgs/openwallet-foundation/repositories?q=visibility%3Apublic+archived%3Afalse) in support of this mission.
+
+A number of other alignment/harmonization efforts are also under way within standards organisations. [The draft ISO/IEC 23220-2 specification](https://www.iso.org/standard/86782.html), for instance, defines a "Common Development and Distribution License data model" to support mapping ISO defined credentials to the W3C Verifiable Credentials format.
+
+<!-- Note that ISO has a very  -->
+
+<!-- Also to note:
+
+ISO/IEC 23220-2: ISO/IEC 23220-2 defines a data model for interoperability between mobile eID-systems via data format translation. For example, -2 lists a Common Development and Distribution License data model mapping fields across different data formats used by mobile driver's licenses, JSON, W3C Verifiable Credentials and Verifiable Presentations, etc. This standard is still in draft form. -->
+
+<!-- TODO: Potentially comment on ISO governance -->
+
+<!-- This kind of governance yields very stable, vetted standards but not very agile in response to new tech – which is why ISO is now looking to incorporate things like W3C’s work after the fact. -->
 
 
 ## Regulation Driving Data Wallets
 
-### eIDAS
+### European Digital Identity (EUDI) Regulation
+
+The EUDI (European Digital Identity) regulation officially came into force on May 20, 2024.
+
+
+
+electronic identification, authentication, and trust services (eIDAS)
+
+
+
+
 
 Inlude discussion of eIDAS popularit
 
@@ -399,11 +490,23 @@ The good news :tada: is that the Solid specification can be used here too - so w
 
 #### Standard Web interface for transferring credentials
 
+There are a *lot* of ways that credentials can be transferred. The [ISO Mobile driving licence (mDL)](https://www.iso.org/standard/69084.html) standard alone defines the following credential exchange mechanisms within its standards document:
+ - [QR Code](https://en.wikipedia.org/wiki/QR_code)
+ - [Near-field communication (NFC)](https://en.wikipedia.org/wiki/Near-field_communication)
+ - [Bluetooth Low Energy (BLE)](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy)
+ - [Wi-Fi Aware](https://www.wi-fi.org/file/wi-fi-aware-specification)
+ - [OpenID Connect (OIDC)](https://openid.net/developers/how-connect-works/), or
+ - WebAPI - an HTTP interface defined within the mobile Drivers License (mDL) specification, specifically defining how these mobile Drivers License's can be transported.
 
+Additionally, the [OpenID Foundation](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html) has defined flows for credential issuance ([OID4VCI](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html)) - which supports *issuers* sending data to *holders*; and presentation ([OID4VP](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html)) - which defines how *verifiers* can request credentials from *holders*. These OpenID flows are designed to support the transfer *any* form of W3C or ISO Verifiable Credential.
 
-There are a *lot* of ways that credentials can be transferred.
- - re-iterate all the bespoke options from mdl and corresponding ISO standards,
- - 
+The [OID4VP](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html) specification even supports the [Digital Credentials Query Language (DCQL)](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html#name-digital-credentials-query-l) to allow the *verifier* to query for and filter the contents of credentials - producing a particular [*presentation*](https://www.w3.org/TR/vc-data-model-2.0/#presentations) that confroms to the verifiers query.
+
+... thats a lot of standards!
+
+Whilst this has been happening, W3C groups have also been busy defining better ways for browsers to operate with your confidential data - including digital credentials. The [Credential Management Level 1](https://www.w3.org/TR/credential-management-1/) (creative naming!) "describes an imperative API enabling a website to request a user’s credentials from a user agent, and to help the user agent correctly store user credentials for future use" the credentials in scope for this group include *passwords*, *one time passcodes* and *digital credentials* such as Verifiable Credentials.
+
+On top of this API specifications such as the [Credentials Handling API (CHAPI)](https://w3c-ccg.github.io/credential-handler-api/#oncredentialrequest-attribute) are being developed 
 
 #### Standard Web interface for requesting access to credentials
 
@@ -515,6 +618,7 @@ In producing this article I came across a number of useful materials, here is my
  - [Auth0's take on Verifable Credentials](https://auth0.com/blog/our-take-on-verifiable-credentials/)
  - [Verifiable Credentials and ISO/IEC 18013-5 Based Credentials](https://collateral-library-production.s3.amazonaws.com/uploads/asset_file/attachment/36416/CS676613_-_Digital_Credentials_promotion_campaign-White_Paper_R3.pdf)
  - [Verifiable Credential Formats in the EUDI Wallet: W3C VC DM and ISO 18013-5 mDL/mDoc](https://www.linkedin.com/pulse/verifiable-credential-formats-eudi-wallet-w3c-vc-dm-iso-18013-5-kbcmf/)
+ - [Decentralized Identity Standards, PingIdentity](https://www.pingidentity.com/en/resources/identity-fundamentals/decentralized-identity-management/decentralized-identity-standards.html)
  - [GPT 4.5 Researchers' take on the topic](https://chatgpt.com/share/67cdaacf-5728-800c-ac59-137d7d1aeec9)
 
 [^1]: Trust me - Software Engineers will think about becoming a farmer at least once a day.
