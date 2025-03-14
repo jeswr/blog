@@ -1,6 +1,6 @@
 ---
 title: "Data Governance in Data Wallets"
-date: 2025-02-14
+date: 2025-03-14
 permalink: /2025/02/14/wallet-governance/
 status: Draft
 ---
