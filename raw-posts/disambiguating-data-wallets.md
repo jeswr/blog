@@ -136,6 +136,34 @@ So - what different formats are there? Who is backing them? How do they compare?
 
 There are three key players in the space: The [World Wide Web Consortium (W3C)](https://www.w3.org), the [International Standards Organisation (ISO)](https://www.iso.org/home.html), and the [Internet Engineering Task Force (IETF)](https://www.ietf.org/).
 
+```mermaid
+timeline
+  %% Aug 
+  2014: [__W3C__<br/> Credentials Community Group](https://www.w3.org/community/credentials/) is chartered
+  %% Apr 
+  2017: [__W3C__<br/> Verifiable Credentials Working Group](https://www.w3.org/2017/vc/WG/charter.html#history) is chartered
+  %% May 2017
+  : [__W3C__<br/> Credentials Community Group](https://www.w3.org/community/credentials/) creates the final [Verifiable Claims Data Model and Representations 1.0](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/) report
+  %% Jan 
+  %% 2020: [__W3C__<br/> Verifiable Credentials Working Group](https://www.w3.org/2020/01/vc-wg-charter.html) is renewed
+  2019: [__W3C__<br/> Verifiable Credentials Working Group](https://www.w3.org/2020/01/vc-wg-charter.html) publishes [Verifiable Credentials Data Model 1.0](https://www.w3.org/TR/2019/REC-vc-data-model-20191119/)
+  %% Sep 
+  2021: [__ISO__<br/> Mobile driving licence (mDL)](https://www.iso.org/standard/69084.html) standard published
+  : [__OPENID__<br/> produces the first working group draft of OpenID Connect for Verifiable Presentations (OIDC4VP)](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html)
+  %% Feb 
+  2023: [__ISO__<br/> Cards and security devices for personal identification ](https://www.iso.org/standard/74910.html) standard published
+  %% Oct 2023
+  : [__IETF__<br/> Web Authorization Protocol Working Group](https://datatracker.ietf.org/wg/oauth/about/) publishes [SD-JWT-based Verifiable Credentials](https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-01.html)
+  %% Feb 
+  2024: [__W3C__<br/> Verifiable Credentials Working Group](https://www.w3.org/2020/01/vc-wg-charter.html) creates [Verifiable Credentials Data Model v2.0 candidate recommendation](https://www.w3.org/TR/2024/CR-vc-data-model-2.0-20240201/)
+  %% Oct 2024
+  : [__W3C__<br/> Verifiable Credentials Working Group](https://www.w3.org/2020/01/vc-wg-charter.html) creates new charter
+  %% Jan 
+  2025: [__W3C__<br/> Verifiable Credentials for Education Task Force](https://w3c-ccg.github.io/vc-ed/charter/) begins to create charter
+```
+
+#### W3C Specifications
+
 The W3C were first to work on many standards around Digital Credentials, after the formation of a [Credentials Community Group](https://www.w3.org/community/credentials/) in 2014. By 2017, this group had published their [Verifiable Claims Data Model and Representations 1.0](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/) which [defined how to express signed credentials](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-expressing-identity-credentials-in-json-ld) similar to the one shown in our earlier discussion of [the tech](#the-tech). This specification was prescriptive of core functionality such as *how to sign* credentials, describe core "metadata" such as *who issued the credential*, *when the credential was issued* and *who the credential is about*. The specification intentionally left the task of defining the data structures of domain specific credentials - such as a *diploma credential* or *digital driver's license* out of scope. Instead, allowing arbitrary credential [`type`s](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-identity-profile-model) to be listed.
 
 Even *within* this [W3C](https://www.w3.org) specification there is a tension in the *format* that should be used to describe the content of credentials. The specification provided a description of how to describe credentials using both [JSON](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#expressing-identity-profiles-entity-credentials-and-verifiable-claims-in-json) and [JSON-LD](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-expressing-identity-credentials-in-json-ld). The [Linked Data](https://www.ontotext.com/knowledgehub/fundamentals/linked-data-linked-open-data/) community advocated for the use of an [RDF](https://en.wikipedia.org/wiki/Resource_Description_Framework) data model for its semantic richness, extensibility, and [interoperability](https://noeldemartin.com/blog/interoperable-serendipity), aligning credentials with the broader [Semantic Web vision](https://www.ontotext.com/knowledgehub/fundamentals/what-is-the-semantic-web/) - and compromised to use JSON-LD as the encoding for this data model. 
@@ -183,13 +211,15 @@ tesco:referenceNumber rdfs:subClassOf receipts:referenceNumber ;
   rdfs:range xsd:int .
 ```
 
-This built in contextual information is especially useful when, for instance, we want to integrate data from many credentials that each may use the term `referenceNumber` to discuss different concepts (e.g. reference numbers from different types of purchases, shops etc.)
+This built in contextual information is especially useful when, for instance, we want to integrate data from many credentials that each may use the term `referenceNumber` to discuss different concepts (e.g. reference numbers from different types of purchases, shops etc.).
 
 Conversely, the Security and Cryptography community pushed for plain JSON with JWT (JSON Web Tokens), to reduce implementation complexity and ease security analyses. 
 
+> GPT-4.5 does a decent job of providing a slightly longer presentation of this history - which you can find [here](/static/gpt-jsonld-vs-json.md).
 
+By 2019 this work had evolved to having the formation of a W3C endorsed working group which produced the [Verifiable Credentials Data Model 1.0](https://www.w3.org/TR/2019/REC-vc-data-model-20191119/). This specification struck a *new compromise* to the data model; in particular requiring all credentials to be JSON-LD with a *particular framing* so that the document could be parsed both [as RDF](https://www.w3.org/TR/json-ld11/) or as plain JSON. [This approach comes with its own set of challenges](https://github.com/w3c/vc-data-model/issues/929).
 
-GPT-4.5 does an decent job of providing a slightly longer presentation of this history - which you can find [here](/static/gpt-jsonld-vs-json.md).
+<!-- ### ISO Specifications -->
 
 
 
@@ -219,32 +249,7 @@ From the outset, a significant tension existed regarding the credential content 
 
 <!-- GPT-4.5 does an ok job of providing a slightly longer presentation of this history - which you can find [here](/static/gpt-jsonld-vs-json.md). -->
 
-W3C Timeline:
-```mermaid
-timeline
-  %% Aug 
-  2014: [__W3C__<br/> Credentials Community Group](https://www.w3.org/community/credentials/) is chartered
-  %% Apr 
-  2017: [__W3C__<br/> Verifiable Credentials Working Group](https://www.w3.org/2017/vc/WG/charter.html#history) is chartered
-  %% May 2017
-  : [__W3C__<br/> Credentials Community Group](https://www.w3.org/community/credentials/) creates the final [Verifiable Claims Data Model and Representations 1.0](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/) report
-  %% Jan 
-  %% 2020: [__W3C__<br/> Verifiable Credentials Working Group](https://www.w3.org/2020/01/vc-wg-charter.html) is renewed
-  2019: [__W3C__<br/> Verifiable Credentials Working Group](https://www.w3.org/2020/01/vc-wg-charter.html) publishes [Verifiable Credentials Data Model 1.0](https://www.w3.org/TR/2019/REC-vc-data-model-20191119/)
-  %% Sep 
-  2021: [__ISO__<br/> Mobile driving licence (mDL)](https://www.iso.org/standard/69084.html) standard published
-  : [__OPENID__<br/> produces the first working group draft of OpenID Connect for Verifiable Presentations (OIDC4VP)](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html)
-  %% Feb 
-  2023: [__ISO__<br/> Cards and security devices for personal identification ](https://www.iso.org/standard/74910.html) standard published
-  %% Oct 2023
-  : [__IETF__<br/> Web Authorization Protocol Working Group](https://datatracker.ietf.org/wg/oauth/about/) publishes [SD-JWT-based Verifiable Credentials](https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-01.html)
-  %% Feb 
-  2024: [__W3C__<br/> Verifiable Credentials Working Group](https://www.w3.org/2020/01/vc-wg-charter.html) creates [Verifiable Credentials Data Model v2.0 candidate recommendation](https://www.w3.org/TR/2024/CR-vc-data-model-2.0-20240201/)
-  %% Oct 2024
-  : [__W3C__<br/> Verifiable Credentials Working Group](https://www.w3.org/2020/01/vc-wg-charter.html) creates new charter
-  %% Jan 
-  2025: [__W3C__<br/> Verifiable Credentials for Education Task Force](https://w3c-ccg.github.io/vc-ed/charter/) begins to create charter
-```
+<!-- W3C Timeline:
 
 There are three key players in the space: The [World Wide Web Consortium (W3C)](https://www.w3.org), the [International Standards Organisation (ISO)](https://www.iso.org/home.html), and the [Internet Engineering Task Force (IETF)](https://www.ietf.org/).
 
@@ -328,7 +333,7 @@ https://openid.net/wg/digital-credentials-protocols/charter/
 
 ### The (big) missing piece
 
-Websites for instance need HTML to tell you how a Website is displayed - but also need HTTP(S) to tell your browser *where* that website document is, and how to get it.
+Websites for instance need HTML to tell you how a Website is displayed - but also need HTTP(S) to tell your browser *where* that website document is, and how to get it. -->
 
 ### A push for alignment
 
@@ -360,7 +365,7 @@ ISO/IEC 23220-2: ISO/IEC 23220-2 defines a data model for interoperability betwe
 
 
 ## Regulation Driving Data Wallets
-
+<!-- 
 ### European Digital Identity (EUDI) Regulation
 
 The EUDI (European Digital Identity) regulation officially came into force on May 20, 2024.
@@ -400,7 +405,7 @@ Note that
 https://www.criipto.com/blog/verifiable-credentials-vs-iso-18013-5#:~:text=The%20Verifiable%20Credential%20Data%20Model,%2C%20financial%20transactions%2C%20and%20more.
 """
 The upcoming European Digital Identity (EUDI) wallet will support use cases across sectors like education, social security, financial transactions, and more. The wallet will leverage the VC Data Model, and its Architecture and Reference Framework explicitly mentions the W3C and ISO standards as part of its vision for a unified digital identity ecosystem.
-"""
+""" -->
 
 ### Data (Use and Access) Bill
 
@@ -506,9 +511,9 @@ The [OID4VP](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html
 
 Whilst this has been happening, W3C groups have also been busy defining better ways for browsers to operate with your confidential data - including digital credentials. The [Credential Management Level 1](https://www.w3.org/TR/credential-management-1/) (creative naming!) "describes an imperative API enabling a website to request a user’s credentials from a user agent, and to help the user agent correctly store user credentials for future use" the credentials in scope for this group include *passwords*, *one time passcodes* and *digital credentials* such as Verifiable Credentials.
 
-On top of this API specifications such as the [Credentials Handling API (CHAPI)](https://w3c-ccg.github.io/credential-handler-api/#oncredentialrequest-attribute) are being developed 
+On top of this API specifications such as the [Credentials Handling API (CHAPI)](https://w3c-ccg.github.io/credential-handler-api/#oncredentialrequest-attribute) are being developed.
 
-#### Standard Web interface for requesting access to credentials
+<!-- #### Standard Web interface for requesting access to credentials
 
 A key throughline should be:
  - Things like DCQL __very specifically__ target access of credentials; Solid is built with the view of supporting an arbitrary range of data types and we should be doing that ""furure proofing
@@ -546,25 +551,36 @@ It seems that CHAPI describes *browser API's* that allows access to credentials 
 
 ---
 
-https://wicg.github.io/digital-credentials/ then seems to be an attempt to replace CHAPI.
+https://wicg.github.io/digital-credentials/ then seems to be an attempt to replace CHAPI. -->
 
-So the play here in the shorter term is:
+Given this diaspora of transfer standards for digital credentials - it begs the question - why should we propose Solid as yet another set of interfaces for transferring data to and from holder services?
+
+<!-- TODO: Improve this seciton -->
+
+Well there are a few:
+1. The Solid APIs are symmetric with the file system. This means that you can view your credentials through a file-system like interface - whilst they are living in cloud storage that you manage.
+2. Whilst credentials can be made available both through the Credentials Handling API in the browser - they can also be accessed directly from personal cloud storage by service providers who have been granted consent to access the credential. 
+3. Solid provides a means to completely decouple consent management interfaces from the holder of credentials - because of the standardised Access Control mechanisms that it has. 
+
+<!-- So the play here in the shorter term is:
  - Credentials live in Solid Pod which allows you to view the credentials,
  - *an exchange protocol* is either fetching data using the Solid API's; or a `derive` endpoint as an addition to a Pod
  - a Websites JS code can request those credentials using the Digital Credentials API which under the hood uses [Credential Management Level 1](https://www.w3.org/TR/credential-management-1/)
- - Because the credentials live in an online data store - the credential also does not need to be passed directly using the browser; instead the credential can be transferred *directly* from the Pod to the Server.
+ - Because the credentials live in an online data store - the credential also does not need to be passed directly using the browser; instead the credential can be transferred *directly* from the Pod to the Server. -->
 
-Thus:
+<!-- TODO: re introduce this "thus part into the article" -->
+
+<!-- Thus:
  - Solid is *compatible* with the emergent credential handling interfaces where it is assumed the holder is on the browser / or device
- - Solid provides better consent management options in cases where the credentials are to be transferred directly between webservers (this is the async flows point)
+ - Solid provides better consent management options in cases where the credentials are to be transferred directly between webservers (this is the async flows point) -->
 
-#### Standardised consent flows
+<!-- #### Standardised consent flows
 
 #### Async flows
 
 E.g.
  - AI agents managing credentials on your behalf
- - 
+ -  -->
 
 ## Queryability of Verifiable Credentials
 
