@@ -17,6 +17,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Generate Mermaid Diagrams
+        run: |
+          npm i
+          npm run build:mermaid
+
       - name: Deploy
         uses: jeswr/github-pages-blog-action@v0.1.1-alpha.2
         with:
