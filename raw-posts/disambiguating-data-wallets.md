@@ -15,7 +15,7 @@ Don't worry - the tech is *not hard to understand*. As you'll soon see the confu
 
 ### The goal
 
-![](../static/vc.webp)
+![](/static/vc.webp)
 *Credit: [dock.io](https://www.dock.io/post/verifiable-credentials)*
 
 The common goal of data wallets is to allow you to prove that *someone* said *something* - for instance that the *University of Oxford* says that you earned a DPhil in Computer Science, or that *TicketMaster* says they issued you with a valid ticked for tonights Taylor Swift concert. 
@@ -57,7 +57,7 @@ Well, what would help is for Oxford to *digitally sign* this credential.
 
 The concept of digital signatures has existed for *decades* and whether you're aware of it or not - is already in many parts of your digital life, including being the backbone of the HTTPS security. More recently, if you've found yourself using passkeys to log into websites - then you've been using digital signatures to *sign* a message saying "I own this account, please let me in!"
 
-![](../static/passkey.jpg)
+![](/static/passkey.jpg)
 
 #### Signatures
 
@@ -116,7 +116,7 @@ The *verifier* can use different mathematical function to convert a signature an
 
 #### Selective disclosure
 
-![](../static/document.svg)
+![](/static/document.svg)
 
 Many headlines surrounding digital credentials - such as [this UK press release](https://www.gov.uk/government/news/pubgoers-given-choice-to-prove-age-with-phones-next-year-in-boost-for-high-street-and-hospitality-sectors) - promise the ability to "prove your age without revealing any other information."
 
@@ -337,7 +337,7 @@ Websites for instance need HTML to tell you how a Website is displayed - but als
 
 ### A push for alignment
 
-![](../static/openwallet.png)
+![](/static/openwallet.png)
 
 The [Open Wallet Foundation](https://openwallet.foundation), hosted by the [Linux Foundation](https://www.linuxfoundation.org) has a mission to facilitate global interoperability of verifiable credentials.
 
@@ -400,7 +400,7 @@ Last page points to main relevant specs
 
 Note that 
 
-![](../static/eidas.png)
+![](/static/eidas.png)
 
 https://www.criipto.com/blog/verifiable-credentials-vs-iso-18013-5#:~:text=The%20Verifiable%20Credential%20Data%20Model,%2C%20financial%20transactions%2C%20and%20more.
 """
@@ -418,13 +418,13 @@ The [Digital Identity and Attributes Framework (DIATF)](https://www.gov.uk/gover
   - [Orchestration Service Providers](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04/uk-digital-identity-and-attributes-trust-framework-gamma-04-pre-release#rules-for-orchestration-service-providers), and
   - [Component Service Providers](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04/uk-digital-identity-and-attributes-trust-framework-gamma-04-pre-release#rules-for-component-service-providers)
 
-![](../static/daub.jpg)
+![](/static/daub.jpg)
 
 Source: [GOV.UK: What the data bill means for digital identity](https://enablingdigitalidentity.blog.gov.uk/2024/10/28/what-the-data-bill-means-for-digital-identity/)
 
 ### UK Digital Driver's License
 
-![](../static/govuk.png)
+![](/static/govuk.png)
 
 Source: [GOV.UK: Digital driving license coming this year](https://www.gov.uk/government/news/digital-driving-licence-coming-this-year)
 
@@ -434,7 +434,7 @@ The core infrastructure backing this will be the [ISO mobile Driver's License (M
 
 ### Whatever is happening in Australia
 
-![](../static/auswallet.jpg)
+![](/static/auswallet.jpg)
 
 Meanwhile, Australia has just ... gotten on with the job, in most states you can download their digital driver's license *today* - in [Queensland](https://www.qld.gov.au/transport/projects/digital-licence/about) the license was being piloted back in 2020, and has been available statewide since [November 2023](https://www.abc.net.au/news/2023-11-01/digital-queensland-drivers-licences-statewide-security-testing/103046186). South Australia, the first in the country to launch a digital driver's licence - has had once [since 2017](https://www.thalesgroup.com/en/markets/digital-identity-and-security/government/driving-licence/digital-driver-license)!
 
@@ -442,7 +442,7 @@ Meanwhile, Australia has just ... gotten on with the job, in most states you can
 
 ## Why Solid as a Holder Service should be taken seriously
 
-![](../static/solid.svg)
+![](/static/solid.svg)
 
 ### What is Solid
 
@@ -471,7 +471,7 @@ In direct relation to Solid/LWS, we recommended that it should be possible for h
 
 #### Portability of credentials
 
-![](../static/simondseconoart-small.png)
+![](/static/simondseconoart-small.png)
 
 [Socially Aware Cloud Storage, Design Issues, Tim Berners-Lee](https://www.w3.org/DesignIssues/CloudStorage.html)
 
@@ -489,7 +489,7 @@ Easy! But what if I:
 
 Then life is going to be a lot more difficult, because companies such as Apple want to keep these tickets closed within their ecosystem - just as they don't want your contacts or photo's to leave their ecosystem.
 
-![](../static/apple-wallet.png)
+![](/static/apple-wallet.png)
 
 The good news :tada: is that the Solid specification can be used here too - so we have a chance to intervene before this even becomes a problem.
 
@@ -584,7 +584,7 @@ E.g.
 
 ## Queryability of Verifiable Credentials
 
-![](../static/sparql.webp)
+![](/static/sparql.webp)
 
 Let me again present my bias' upfront. The last 5 years of my work and research have revolved around [Semantic Web Technologies](https://en.wikipedia.org/wiki/Semantic_Web) - and my current research is on the very topic of [Queryable Credentials](https://github.com/jeswr/queryable-credentials), and I recently [gave a talk on this topic at FOSDEM](https://fosdem.org/2025/schedule/event/fosdem-2025-5970-are-current-standards-enough-towards-verifiable-credentials-with-expressive-zero-knowledge-query/) (video below).
 
