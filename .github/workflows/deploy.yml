@@ -22,12 +22,22 @@ jobs:
         with:
           node-version: 22
 
+      - name: Install Chrome for Puppeteer
+        run: |
+          wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+          echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
+
       - name: Generate Mermaid Diagrams
+        env:
+          PUPPETEER_ARGS: "--no-sandbox --disable-setuid-sandbox"
         run: |
           npm i
           npm run build:mermaid
 
       - name: Deploy
+        # Custom fork of the action which supports RSS Feeds
         uses: jeswr/github-pages-blog-action@v0.1.1-alpha.2
         with:
           branch: gh-pages # Optional branch for GitHub Pages
