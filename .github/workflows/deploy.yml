@@ -32,6 +32,7 @@ jobs:
       - name: Generate Mermaid Diagrams
         env:
           PUPPETEER_ARGS: "--no-sandbox --disable-setuid-sandbox"
+          CHROME_DEVEL_SANDBOX: "/opt/google/chrome/chrome-sandbox"
         run: |
           npm i
           npm run build:mermaid
