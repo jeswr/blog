@@ -5,7 +5,7 @@ permalink: /2025/02/14/wallet-governance/
 status: Draft
 ---
 
-![](../static/cookie.webp)
+![](/cookie.webp)
 
 We are about to create another cookie problem :cookie: - with Digital Credentials in Data Wallets.
 
