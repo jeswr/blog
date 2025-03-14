@@ -15,7 +15,7 @@ Don't worry - the tech is *not hard to understand*. As you'll soon see the confu
 
 ### The goal
 
-![](/static/vc.webp)
+![](/vc.webp)
 *Credit: [dock.io](https://www.dock.io/post/verifiable-credentials)*
 
 The common goal of data wallets is to allow you to prove that *someone* said *something* - for instance that the *University of Oxford* says that you earned a DPhil in Computer Science, or that *TicketMaster* says they issued you with a valid ticked for tonights Taylor Swift concert. 
@@ -57,7 +57,7 @@ Well, what would help is for Oxford to *digitally sign* this credential.
 
 The concept of digital signatures has existed for *decades* and whether you're aware of it or not - is already in many parts of your digital life, including being the backbone of the HTTPS security. More recently, if you've found yourself using passkeys to log into websites - then you've been using digital signatures to *sign* a message saying "I own this account, please let me in!"
 
-![](/static/passkey.jpg)
+![](/passkey.jpg)
 
 #### Signatures
 
@@ -116,7 +116,7 @@ The *verifier* can use different mathematical function to convert a signature an
 
 #### Selective disclosure
 
-![](/static/document.svg)
+![](/document.svg)
 
 Many headlines surrounding digital credentials - such as [this UK press release](https://www.gov.uk/government/news/pubgoers-given-choice-to-prove-age-with-phones-next-year-in-boost-for-high-street-and-hospitality-sectors) - promise the ability to "prove your age without revealing any other information."
 
@@ -215,7 +215,7 @@ This built in contextual information is especially useful when, for instance, we
 
 Conversely, the Security and Cryptography community pushed for plain JSON with JWT (JSON Web Tokens), to reduce implementation complexity and ease security analyses. 
 
-> GPT-4.5 does a decent job of providing a slightly longer presentation of this history - which you can find [here](/static/gpt-jsonld-vs-json.md).
+> GPT-4.5 does a decent job of providing a slightly longer presentation of this history - which you can find [here](/gpt-jsonld-vs-json.md).
 
 By 2019 this work had evolved to having the formation of a W3C endorsed working group which produced the [Verifiable Credentials Data Model 1.0](https://www.w3.org/TR/2019/REC-vc-data-model-20191119/). This specification struck a *new compromise* to the data model; in particular requiring all credentials to be JSON-LD with a *particular framing* so that the document could be parsed both [as RDF](https://www.w3.org/TR/json-ld11/) or as plain JSON. [This approach comes with its own set of challenges](https://github.com/w3c/vc-data-model/issues/929).
 
@@ -247,7 +247,7 @@ The W3C was among the first to establish standards around Digital Credentials, s
 From the outset, a significant tension existed regarding the credential content formats—JSON versus JSON-LD. The Linked Data community advocated JSON-LD for its semantic richness, extensibility, and interoperability, aligning credentials with the broader Semantic Web vision. JSON-LD enabled decentralized extensions of credential schemas, essential for diverse and evolving credential ecosystems. Conversely, the Security and Cryptography community emphasized the simplicity, clarity, and robustness of plain JSON with JWT (JSON Web Tokens), highlighting its straightforward cryptographic verification and reduced implementation complexity. Historical discussions in W3C mailing lists reveal significant concerns about JSON-LD's complexity in signature canonicalization, reminiscent of XML signature challenges, and practical adoption issues due to limited tooling. This fundamental divergence in priorities—semantic interoperability versus simplicity and security—ultimately resulted in a dual-path approach, legitimizing both JSON-LD credentials with Linked Data proofs and simpler JWT-secured JSON credentials, allowing developers to select the approach best suited to their needs.
  -->
 
-<!-- GPT-4.5 does an ok job of providing a slightly longer presentation of this history - which you can find [here](/static/gpt-jsonld-vs-json.md). -->
+<!-- GPT-4.5 does an ok job of providing a slightly longer presentation of this history - which you can find [here](/gpt-jsonld-vs-json.md). -->
 
 <!-- W3C Timeline:
 
@@ -337,7 +337,7 @@ Websites for instance need HTML to tell you how a Website is displayed - but als
 
 ### A push for alignment
 
-![](/static/openwallet.png)
+![](/openwallet.png)
 
 The [Open Wallet Foundation](https://openwallet.foundation), hosted by the [Linux Foundation](https://www.linuxfoundation.org) has a mission to facilitate global interoperability of verifiable credentials.
 
@@ -400,7 +400,7 @@ Last page points to main relevant specs
 
 Note that 
 
-![](/static/eidas.png)
+![](/eidas.png)
 
 https://www.criipto.com/blog/verifiable-credentials-vs-iso-18013-5#:~:text=The%20Verifiable%20Credential%20Data%20Model,%2C%20financial%20transactions%2C%20and%20more.
 """
@@ -418,13 +418,13 @@ The [Digital Identity and Attributes Framework (DIATF)](https://www.gov.uk/gover
   - [Orchestration Service Providers](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04/uk-digital-identity-and-attributes-trust-framework-gamma-04-pre-release#rules-for-orchestration-service-providers), and
   - [Component Service Providers](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04/uk-digital-identity-and-attributes-trust-framework-gamma-04-pre-release#rules-for-component-service-providers)
 
-![](/static/daub.jpg)
+![](/daub.jpg)
 
 Source: [GOV.UK: What the data bill means for digital identity](https://enablingdigitalidentity.blog.gov.uk/2024/10/28/what-the-data-bill-means-for-digital-identity/)
 
 ### UK Digital Driver's License
 
-![](/static/govuk.png)
+![](/govuk.png)
 
 Source: [GOV.UK: Digital driving license coming this year](https://www.gov.uk/government/news/digital-driving-licence-coming-this-year)
 
@@ -434,7 +434,7 @@ The core infrastructure backing this will be the [ISO mobile Driver's License (M
 
 ### Whatever is happening in Australia
 
-![](/static/auswallet.jpg)
+![](/auswallet.jpg)
 
 Meanwhile, Australia has just ... gotten on with the job, in most states you can download their digital driver's license *today* - in [Queensland](https://www.qld.gov.au/transport/projects/digital-licence/about) the license was being piloted back in 2020, and has been available statewide since [November 2023](https://www.abc.net.au/news/2023-11-01/digital-queensland-drivers-licences-statewide-security-testing/103046186). South Australia, the first in the country to launch a digital driver's licence - has had once [since 2017](https://www.thalesgroup.com/en/markets/digital-identity-and-security/government/driving-licence/digital-driver-license)!
 
@@ -442,7 +442,7 @@ Meanwhile, Australia has just ... gotten on with the job, in most states you can
 
 ## Why Solid as a Holder Service should be taken seriously
 
-![](/static/solid.svg)
+![](/solid.svg)
 
 ### What is Solid
 
@@ -471,7 +471,7 @@ In direct relation to Solid/LWS, we recommended that it should be possible for h
 
 #### Portability of credentials
 
-![](/static/simondseconoart-small.png)
+![](/simondseconoart-small.png)
 
 [Socially Aware Cloud Storage, Design Issues, Tim Berners-Lee](https://www.w3.org/DesignIssues/CloudStorage.html)
 
@@ -489,7 +489,7 @@ Easy! But what if I:
 
 Then life is going to be a lot more difficult, because companies such as Apple want to keep these tickets closed within their ecosystem - just as they don't want your contacts or photo's to leave their ecosystem.
 
-![](/static/apple-wallet.png)
+![](/apple-wallet.png)
 
 The good news :tada: is that the Solid specification can be used here too - so we have a chance to intervene before this even becomes a problem.
 
@@ -584,7 +584,7 @@ E.g.
 
 ## Queryability of Verifiable Credentials
 
-![](/static/sparql.webp)
+![](/sparql.webp)
 
 Let me again present my bias' upfront. The last 5 years of my work and research have revolved around [Semantic Web Technologies](https://en.wikipedia.org/wiki/Semantic_Web) - and my current research is on the very topic of [Queryable Credentials](https://github.com/jeswr/queryable-credentials), and I recently [gave a talk on this topic at FOSDEM](https://fosdem.org/2025/schedule/event/fosdem-2025-5970-are-current-standards-enough-towards-verifiable-credentials-with-expressive-zero-knowledge-query/) (video below).
 
