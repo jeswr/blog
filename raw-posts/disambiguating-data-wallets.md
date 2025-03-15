@@ -219,9 +219,19 @@ Conversely, the Security and Cryptography community pushed for plain JSON with J
 
 By 2019 this work had evolved to having the formation of a W3C endorsed working group which produced the [Verifiable Credentials Data Model 1.0](https://www.w3.org/TR/2019/REC-vc-data-model-20191119/). This specification struck a *new compromise* to the data model; in particular requiring all credentials to be JSON-LD with a *particular framing* so that the document could be parsed both [as RDF](https://www.w3.org/TR/json-ld11/) or as plain JSON. [This approach comes with its own set of challenges](https://github.com/w3c/vc-data-model/issues/929).
 
-<!-- ### ISO Specifications
+### ISO Specifications
 
-Instead of defining generic credential formats, ISO has instead taken the approach of defining credentials for specific domains. In the []()  -->
+Instead of defining generic credential formats, ISO has instead taken the approach of defining credentials for specific domains. 
+
+The first Verifiable Credential specification published by ISO is the [Mobile driving license (mDL)](https://www.iso.org/standard/69084.html) specification - published in 2021. This specification defines a fixed schema for describing approximately 30 attributes in digital driver's license's - such as the drivers `name`, `address`, `date of birth` and the `expiry date` of the license. The specification expects attributes to be serialized using JSON or [CBOR](https://cbor.io) and thus lacks the out-of-the-box interoperability that comes with linked-data formats.
+
+As we shall discuss in later sections, this digital driver's license specification also defines a series of bespoke *transmission* and *query* mechanisms.
+
+This means that it is very well-defined how to build an infrastructure specifically for mDL licenses. The trade-off is that implementors need to build custom transmission flows, and query engines to support the specification. This both increases implementation burden, and hinders interoperability with non-mDL credentials.
+
+ISO is also working on several other Verifiable Credential standards - including [Cards and security devices for personal identification](https://www.iso.org/standard/74910.html) designed to standardize core features for electronic identity document including drivers licenses, passports, residency permits, and building passes. The underlying goal of the standard is to support interoperability between electronic identity (eID) systems. This standard also defines a range of attributes that may be required in different eID systems - extending those attributes found in the mDL license with attributes such as `Business Name`, `Profession`, and `Academic Title` to support workplace passes, as well as other attributes such as `telephone number` and `email address`. This specification also targets JSON and CBOR formats for encoding data in credentials - meaning that there are still interoperability challenges with systems that need to define attributes that are not defined within this document.  
+
+<!-- ### IEEE / IETF Specifications -->
 
 
 
