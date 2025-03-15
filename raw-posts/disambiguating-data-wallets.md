@@ -251,6 +251,8 @@ As the [Internet Engineering Task Force (IETF)](https://www.ietf.org) is respons
 | **Hashing Mechanisms** | Various supported (SHA-256, etc.) depending on proof type | Defined within ISO specifications | SHA-256 and other algorithms supported by JWT |
 | **Attribute Specification** | Semantic, extensible via RDF/JSON-LD context definitions | Fixed schema with predefined attributes | JSON claims with selective disclosure support |
 | **Selective Disclosure** | Supported through various methods (BBS+, etc.) | Limited to predefined attributes (e.g., age verification) | Native support through SD-JWT mechanisms |
+
+*This table was generated with the assistance of claude-3.7-sonnet-thinking*
 <!-- | **Credential Structure** | Generic model with extensible types and context-aware attributes | Domain-specific fixed schemas with predefined attributes | JWT-based structure supporting selective disclosure | -->
 <!-- | **Interoperability** | High semantic interoperability across domains | Excellent within specific domains (e.g., mDL), limited across domains | Good integration with existing web infrastructure | -->
 <!-- | **Web Integration** | Strong alignment with Semantic Web principles | Limited web-native capabilities | Strong integration with OAuth/OIDC flows | -->
