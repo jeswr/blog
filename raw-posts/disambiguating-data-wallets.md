@@ -219,9 +219,9 @@ Conversely, the Security and Cryptography community pushed for plain JSON with J
 
 By 2019 this work had evolved to having the formation of a W3C endorsed working group which produced the [Verifiable Credentials Data Model 1.0](https://www.w3.org/TR/2019/REC-vc-data-model-20191119/). This specification struck a *new compromise* to the data model; in particular requiring all credentials to be JSON-LD with a *particular framing* so that the document could be parsed both [as RDF](https://www.w3.org/TR/json-ld11/) or as plain JSON. [This approach comes with its own set of challenges](https://github.com/w3c/vc-data-model/issues/929).
 
-<!-- ### ISO Specifications -->
+<!-- ### ISO Specifications
 
-
+Instead of defining generic credential formats, ISO has instead taken the approach of defining credentials for specific domains. In the []()  -->
 
 
 
