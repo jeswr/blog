@@ -435,14 +435,23 @@ ISO/IEC 23220-2: ISO/IEC 23220-2 defines a data model for interoperability betwe
 
 
 ## Regulation Driving Data Wallets
-<!-- 
+
 ### European Digital Identity (EUDI) Regulation
 
-The EUDI (European Digital Identity) regulation officially came into force on May 20, 2024.
+After [three years in the making](https://commission.europa.eu/strategy-and-policy/priorities-2019-2024/europe-fit-digital-age/european-digital-identity_en), the EUDI (European Digital Identity) wallet officially came into force on May 20, 2024 - through the eIDAS (Electronic Identification, Authentication, and Trust Services) 2 regulation. EUDI promises to make "EU Digital Identity [...] available to EU citizens, residents, and businesses who want to identify themselves or provide confirmation of certain personal information." By 2026, every EU Member State will be [required to make](https://ec.europa.eu/digital-building-blocks/sites/display/EUDIGITALIDENTITYWALLET/The+Digital+Identity+Regulation+Enters+into+Force) at least one Digital Identity Wallet available to all citizens and residents.
+
+There are three core types of credentials that are to be made available under eIDAS 2 regulation:
+ - Electronic Attestation of Attributes (EAA) - which can be issued by *any* organisation that wants to make statements about a particular entity (e.g., they have a concert ticket, gym membership, or student card)
+ - Qualified Electronic Attestation of Attributes (QEAA) - which can be issued *only* by [Qualified Trust Service Providers](https://eidas.ec.europa.eu/efda/trust-services/browse/eidas/tls) to create legally binding credentials such as professional qualifications, birth cetificates, marriage licenses, property deeds and business operating licenses. 
+ - Personal Identification Data (PID) - which can be issued *only* by government authorities and serve as a proof of identity.
+
+The European Union has produced an [Architecture and Reference Framework](https://digital-strategy.ec.europa.eu/en/library/european-digital-identity-wallet-architecture-and-reference-framework), details of which are available [here](https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/1.1.0/arf/#4114-qualified-and-non-qualified-electronic-attestation-of-attributes-schema-providers). This reference architecture specifies:
+ - [How to issue PID data](https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/1.1.0/annexes/annex-06-pid-rulebook.pdf) using both the ISO mDL specification and the IEEE SD-JWT specification can be used to format the data, and how verifiers can request data using [OID4VP](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html).
+ - That (Q)EAA's [MUST be issued](https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/1.1.0/arf/#631-issuing-requirements-for-qeaa) in accordance with either the ISO mDL data model or the W3C Verifiable Credential Data Model.
 
 
 
-electronic identification, authentication, and trust services (eIDAS)
+<!-- electronic identification, authentication, and trust services (eIDAS)
 
 
 
@@ -468,20 +477,24 @@ Last page points to main relevant specs
 
 [GitHub of Reference Framework](https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/1.1.0/arf/#4114-qualified-and-non-qualified-electronic-attestation-of-attributes-schema-providers)
 
-Note that 
+Note that  -->
 
 ![](/eidas.png)
 
-https://www.criipto.com/blog/verifiable-credentials-vs-iso-18013-5#:~:text=The%20Verifiable%20Credential%20Data%20Model,%2C%20financial%20transactions%2C%20and%20more.
+<!-- https://www.criipto.com/blog/verifiable-credentials-vs-iso-18013-5#:~:text=The%20Verifiable%20Credential%20Data%20Model,%2C%20financial%20transactions%2C%20and%20more.
 """
 The upcoming European Digital Identity (EUDI) wallet will support use cases across sectors like education, social security, financial transactions, and more. The wallet will leverage the VC Data Model, and its Architecture and Reference Framework explicitly mentions the W3C and ISO standards as part of its vision for a unified digital identity ecosystem.
 """ -->
 
 ### Data (Use and Access) Bill
 
-The [Data Use and Access Bill](https://bills.parliament.uk/bills/3825/) is proposed legislation currently at committee stage in the House of Commons. One mandate of the bill is to create a Digital Verification Services Trust Framework - driven by the Secretary of State maintaining a register of *service providers* accredited to provide some "digital verification services" in the UK. 
+The [Data Use and Access Bill](https://bills.parliament.uk/bills/3825/) is proposed legislation currently at committee stage in the House of Commons. One mandate of the bill is to create a Digital Verification Services (DVS) Trust Framework - driven by the Secretary of State maintaining a register of *service providers* accredited to provide some "digital verification services" in the UK. 
 
-The [Digital Identity and Attributes Framework (DIATF)](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04) has been created by the [Department of Science and Technology (DSIT)](https://www.gov.uk/government/organisations/department-for-science-innovation-and-technology) in the UK, as a framework defining the *services* that different service providers in the UK can implement and become registered as a DVS service. In the latest iteration of this framework, 5 service providers were defined:
+The [Digital Identity and Attributes Framework (DIATF)](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04) has been created by the [Department of Science and Technology (DSIT)](https://www.gov.uk/government/organisations/department-for-science-innovation-and-technology) in the UK, as a framework defining the *services* that different service providers in the UK can implement and become registered as a DVS service. 
+
+The DVS may be seen as the UK's equivalent to eIDAS regulation, whilst the DIATF may be seen as requivalent to the EU's [Architecture and Reference Framework](https://digital-strategy.ec.europa.eu/en/library/european-digital-identity-wallet-architecture-and-reference-framework).
+
+Notably, the DIATF is less prescriptive of which standards must be used - and places more of a focus on the roles of different service providers. In the latest iteration of this framework, 5 service providers were defined:
  - [Identity Service Providers](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04/uk-digital-identity-and-attributes-trust-framework-gamma-04-pre-release#rules-for-identity-service-providers)
  - [Attribute Service Providers](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04/uk-digital-identity-and-attributes-trust-framework-gamma-04-pre-release#rules-for-attribute-service-providers)
   - [Holder Service Providers](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04/uk-digital-identity-and-attributes-trust-framework-gamma-04-pre-release#rules-for-holder-service-providers)
@@ -696,6 +709,8 @@ The bigger challenge is now to get the technology production ready and standardi
 
 As I discuss further [here](https://github.com/jeswr/queryable-credentials?tab=readme-ov-file#on-abstractions) - whilst it is sensible to talk about credentials to end-users of applications; it is my position that credentials are the wrong object to be working with at a standards level - such as within IEEE and W3C specifications. Instead, we should be talking about [datasets of facts](https://github.com/jeswr/queryable-credentials?tab=readme-ov-file#initial-design-thoughts-for-a-queryable-api), with metadata such as signatures and proofs that attest to their integrity.
 
+<!-- TODO: Elaborate -->
+
 ## Further Reading
 
 In producing this article I came across a number of useful materials, here is my top selection for further reading:
@@ -703,6 +718,7 @@ In producing this article I came across a number of useful materials, here is my
  - [Verifiable Credentials and ISO/IEC 18013-5 Based Credentials](https://collateral-library-production.s3.amazonaws.com/uploads/asset_file/attachment/36416/CS676613_-_Digital_Credentials_promotion_campaign-White_Paper_R3.pdf)
  - [Verifiable Credential Formats in the EUDI Wallet: W3C VC DM and ISO 18013-5 mDL/mDoc](https://www.linkedin.com/pulse/verifiable-credential-formats-eudi-wallet-w3c-vc-dm-iso-18013-5-kbcmf/)
  - [Decentralized Identity Standards, PingIdentity](https://www.pingidentity.com/en/resources/identity-fundamentals/decentralized-identity-management/decentralized-identity-standards.html)
+ - [EUDI Wallet and eIDAS 2](https://talao.io/blog/eudi-wallet-understanding-credentials-in-eidas-2-eaa-qeaa-and-pid/)
  - [GPT 4.5 Researchers' take on the topic](https://chatgpt.com/share/67cdaacf-5728-800c-ac59-137d7d1aeec9)
 
 [^1]: Trust me - Software Engineers will think about becoming a farmer at least once a day.
