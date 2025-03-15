@@ -21,7 +21,7 @@ The common goal of data wallets is to allow you to prove that *someone* said *so
 
 To do this the *someone* (which we will now call an *issuer*) gives you, or more specifically an application on your device like Google Wallet (which we will call the *holder*) a digital Verifiable Credential. Examples include the [UK digital drivers license](https://www.gov.uk/government/news/digital-driving-licence-coming-this-year) 💳 and [Digital Student Certificates](https://athumi.be/en/blog/news/athumi-and-itsme-launch-groundbreaking-digital-student-certificate-first-implemented-by-dibbs-en-be).
 
-This digital credential can then be forwarded to someone else (which we call a *verifier*) - such as an employer who wants to confirm that you have a valid Doctorate. Et. ✨voila✨ you now have that dream job [growing cherry tomatoes](https://engineerdog.com/2023/05/29/why-do-so-many-programmers-want-to-be-farmers-how-to-build-a-corrugated-steel-garden-box/) [^1].
+This digital credential can then be forwarded to someone else (which we call a *verifier*) - such as an employer who wants to confirm that you have a valid Doctorate. Et. ✨voila✨ you now have that dream job [growing cherry tomatoes](https://engineerdog.com/2023/05/29/why-do-so-many-programmers-want-to-be-farmers-how-to-build-a-corrugated-steel-garden-box/) <sup id="footnote1-ref"><a href="#footnote1" aria-label="Read footnote">1</a></sup>.
 
 ### The tech
 
@@ -49,7 +49,7 @@ Here is an example using *one* of the credential standards, specifically [W3C Ve
 
 *A [JSON-LD](https://json-ld.org) representation of a [W3C Verifiable Credential](https://www.w3.org/TR/vc-data-model-2.0/) for a DPhil Award*
 
-But there is one problem, *I just made this up*. So how is this supposed to be useful in my job application to become a farm hand [^2].
+But there is one problem, *I just made this up*. So how is this supposed to be useful in my job application to become a farm hand<sup id="footnote2-ref"><a href="#footnote2" aria-label="Read footnote">2</a></sup>.
 
 <!-- TODO: Survey whether this section helps or adds confusion -->
 
@@ -733,6 +733,16 @@ In producing this article I came across a number of useful materials, here is my
 - [EUDI Wallet and eIDAS 2](https://talao.io/blog/eudi-wallet-understanding-credentials-in-eidas-2-eaa-qeaa-and-pid/)
 - [GPT 4.5 Researchers&#39; take on the topic](https://chatgpt.com/share/67cdaacf-5728-800c-ac59-137d7d1aeec9)
 
-[^1]: Trust me - Software Engineers will think about becoming a farmer at least once a day.
-    
-[^2]: ^^ Yes, really.
+<div class="footnotes">
+  <hr>
+  <ol>
+    <li id="footnote1">
+      Trust me - Software Engineers will think about becoming a farmer at least once a day.
+      <a href="#footnote1-ref" aria-label="Back to content">↩</a>
+    </li>
+    <li id="footnote2">
+      ^^ Yes, really.
+      <a href="#footnote2-ref" aria-label="Back to content">↩</a>
+    </li>
+  </ol>
+</div>
