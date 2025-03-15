@@ -4,8 +4,7 @@ date: 2025-03-13
 permalink: /2025/02/14/data-wallets/
 status: Draft
 ---
-
-Data wallets are becoming popular, as this happens the term is becoming increasingly *overloaded* and *confused*. This post is a digestable disambgiuation :ramen: of the standards :card_index:, regulation :black_nib:, implementors :screwdriver:, and other players :raising_hand: in the space.
+Data wallets are becoming popular, as this happens the term is becoming increasingly *overloaded* and *confused*. This post is a digestable disambgiuation 🍜 of the standards 📇, regulation ✒️, implementors :screwdriver:, and other players 🙋 in the space.
 
 ## The Standards
 
@@ -18,11 +17,11 @@ Don't worry - the tech is *not hard to understand*. As you'll soon see the confu
 ![](/vc.webp)
 *Credit: [dock.io](https://www.dock.io/post/verifiable-credentials)*
 
-The common goal of data wallets is to allow you to prove that *someone* said *something* - for instance that the *University of Oxford* says that you earned a DPhil in Computer Science, or that *TicketMaster* says they issued you with a valid ticked for tonights Taylor Swift concert. 
+The common goal of data wallets is to allow you to prove that *someone* said *something* - for instance that the *University of Oxford* says that you earned a DPhil in Computer Science, or that *TicketMaster* says they issued you with a valid ticked for tonights Taylor Swift concert.
 
-To do this the *someone* (which we will now call an *issuer*) gives you, or more specifically an application on your device like Google Wallet (which we will call the *holder*) a digital Verifiable Credential. Examples include the [UK digital drivers license](https://www.gov.uk/government/news/digital-driving-licence-coming-this-year) :credit_card: and [Digital Student Certificates](https://athumi.be/en/blog/news/athumi-and-itsme-launch-groundbreaking-digital-student-certificate-first-implemented-by-dibbs-en-be).
+To do this the *someone* (which we will now call an *issuer*) gives you, or more specifically an application on your device like Google Wallet (which we will call the *holder*) a digital Verifiable Credential. Examples include the [UK digital drivers license](https://www.gov.uk/government/news/digital-driving-licence-coming-this-year) 💳 and [Digital Student Certificates](https://athumi.be/en/blog/news/athumi-and-itsme-launch-groundbreaking-digital-student-certificate-first-implemented-by-dibbs-en-be).
 
-This digital credential can then be forwarded to someone else (which we call a *verifier*) - such as an employer who wants to confirm that you have a valid Doctorate. Et. :sparkles:voila:sparkles: you now have that dream job [growing cherry tomatoes](https://engineerdog.com/2023/05/29/why-do-so-many-programmers-want-to-be-farmers-how-to-build-a-corrugated-steel-garden-box/) [^1].
+This digital credential can then be forwarded to someone else (which we call a *verifier*) - such as an employer who wants to confirm that you have a valid Doctorate. Et. ✨voila✨ you now have that dream job [growing cherry tomatoes](https://engineerdog.com/2023/05/29/why-do-so-many-programmers-want-to-be-farmers-how-to-build-a-corrugated-steel-garden-box/) [^1].
 
 ### The tech
 
@@ -47,6 +46,7 @@ Here is an example using *one* of the credential standards, specifically [W3C Ve
   }
 }
 ```
+
 *A [JSON-LD](https://json-ld.org) representation of a [W3C Verifiable Credential](https://www.w3.org/TR/vc-data-model-2.0/) for a DPhil Award*
 
 But there is one problem, *I just made this up*. So how is this supposed to be useful in my job application to become a farm hand [^2].
@@ -61,9 +61,9 @@ The concept of digital signatures has existed for *decades* and whether you're a
 
 #### Signatures
 
-So how do these signatures actually work? 
+So how do these signatures actually work?
 
-First, a *hash* of the digital credential document is created - and is a unique fingerprint :feet: for the document. For the DPhil Award Credential, this is what the hash looks like:
+First, a *hash* of the digital credential document is created - and is a unique fingerprint 🐾 for the document. For the DPhil Award Credential, this is what the hash looks like:
 
 ```
 4sSXDN7iEw2niW96vPWNPJVeiwWe6VR77jl+wRnA6bk=
@@ -72,6 +72,7 @@ First, a *hash* of the digital credential document is created - and is a unique 
 You can try generating it for yourself [here](https://emn178.github.io/online-tools/sha256.html?input=%7B%0A%20%20%22%40context%22%3A%20%22https%3A%2F%2Fwww.w3.org%2Fns%2Fcredentials%2Fv2%22%2C%0A%20%20%22id%22%3A%20%22http%3A%2F%2Fwww.ox.ac.uk%2Fcredentials%2F58473%22%2C%0A%20%20%22type%22%3A%20%5B%22VerifiableCredential%22%2C%20%22DPhilAwardCredential%22%5D%2C%0A%20%20%22issuer%22%3A%20%22http%3A%2F%2Fwww.ox.ac.uk%2F%22%2C%0A%20%20%22credentialSubject%22%3A%20%7B%0A%20%20%20%20%22id%22%3A%20%22https%3A%2F%2Fwww.jeswr.org%2F%23me%22%2C%0A%20%20%20%20%22awarded%22%3A%20%7B%0A%20%20%20%20%20%20%22id%22%3A%20%22http%3A%2F%2Fwww.cs.ox.ac.uk%2Fawards%2FDPhil%22%2C%0A%20%20%20%20%20%20%22name%22%3A%20%22DPhil%20in%20Computer%20Science%22%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D&input_type=utf-8&output_type=base64&hmac_enabled=0&hmac_input_type=utf-8). It is not important for this article to understand *how* this hash is generated, but if you're curious - [look here](https://blog.boot.dev/cryptography/how-sha-2-works-step-by-step-sha-256/#how-does-the-sha-256-algorithm-work).
 
 The *issuer* (i.e. Oxford) then *signs* this hash using something called public-private key cryptography. The way this works is that the *issuer* uses some [mathemagic](https://en.wikipedia.org/wiki/Public-key_cryptography) to generate a pair of files - one of which is called a **public key**, and the other which is called a **private key**. Below are real examples of these files:
+
 ```
 -----BEGIN RSA PRIVATE KEY-----
 MIIBOgIBAAJBAKj34GkxFhD90vcNLYLInFEX6Ppy1tPf9Cnzj4p4WGeKLs1Pt8Qu
@@ -125,12 +126,13 @@ To enable this, some Verifiable Credentials are built with the capacity to perfo
 ### Standards Wars
 
 Well that all makes sense ... so what on earth is there to dispute? Quite a bit as it turns out! Broadly speaking the debate is around:
- - What the *format* of the information inside the digital credential should be
- - What mathematical function should be used for creating the signature,
- - How the *hash* of the digital credential should be created, and
- - How to specify what attributes are described within a credential
 
-These are the kinds of battles that we have seen played out *many* times historically. 
+- What the *format* of the information inside the digital credential should be
+- What mathematical function should be used for creating the signature,
+- How the *hash* of the digital credential should be created, and
+- How to specify what attributes are described within a credential
+
+These are the kinds of battles that we have seen played out *many* times historically.
 
 Past [format wars](https://en.wikipedia.org/wiki/Format_war#:~:text=A%20format%20war%20is%20a,recording%20formats%20for%20electronic%20media.) include [VHS vs. BetaMax](https://en.wikipedia.org/wiki/Videotape_format_war), [Blu-Ray vs. HD DVD](https://en.wikipedia.org/wiki/HD_DVD#:~:text=Much%20like%20the%20videotape%20format,format%2C%20Blu%2Dray%20Disc.), and, if we dare venture back to the 1800's - wars over the [size of the rail gauge](https://en.wikipedia.org/wiki/Track_gauge) and [type of electrical current](https://en.wikipedia.org/wiki/War_of_the_currents) we should use.
 
@@ -168,7 +170,7 @@ timeline
 
 The W3C were first to work on many standards around Digital Credentials, after the formation of a [Credentials Community Group](https://www.w3.org/community/credentials/) in 2014. By 2017, this group had published their [Verifiable Claims Data Model and Representations 1.0](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/) which [defined how to express signed credentials](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-expressing-identity-credentials-in-json-ld) similar to the one shown in our earlier discussion of [the tech](#the-tech). This specification was prescriptive of core functionality such as *how to sign* credentials, describe core "metadata" such as *who issued the credential*, *when the credential was issued* and *who the credential is about*. The specification intentionally left the task of defining the data structures of domain specific credentials - such as a *diploma credential* or *digital driver's license* out of scope. Instead, allowing arbitrary credential [`type`s](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-identity-profile-model) to be listed.
 
-Even *within* this [W3C](https://www.w3.org) specification there is a tension in the *format* that should be used to describe the content of credentials. The specification provided a description of how to describe credentials using both [JSON](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#expressing-identity-profiles-entity-credentials-and-verifiable-claims-in-json) and [JSON-LD](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-expressing-identity-credentials-in-json-ld). The [Linked Data](https://www.ontotext.com/knowledgehub/fundamentals/linked-data-linked-open-data/) community advocated for the use of an [RDF](https://en.wikipedia.org/wiki/Resource_Description_Framework) data model for its semantic richness, extensibility, and [interoperability](https://noeldemartin.com/blog/interoperable-serendipity), aligning credentials with the broader [Semantic Web vision](https://www.ontotext.com/knowledgehub/fundamentals/what-is-the-semantic-web/) - and compromised to use JSON-LD as the encoding for this data model. 
+Even *within* this [W3C](https://www.w3.org) specification there is a tension in the *format* that should be used to describe the content of credentials. The specification provided a description of how to describe credentials using both [JSON](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#expressing-identity-profiles-entity-credentials-and-verifiable-claims-in-json) and [JSON-LD](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-expressing-identity-credentials-in-json-ld). The [Linked Data](https://www.ontotext.com/knowledgehub/fundamentals/linked-data-linked-open-data/) community advocated for the use of an [RDF](https://en.wikipedia.org/wiki/Resource_Description_Framework) data model for its semantic richness, extensibility, and [interoperability](https://noeldemartin.com/blog/interoperable-serendipity), aligning credentials with the broader [Semantic Web vision](https://www.ontotext.com/knowledgehub/fundamentals/what-is-the-semantic-web/) - and compromised to use JSON-LD as the encoding for this data model.
 
 This data model is what backs [Enterprise Knowledge Graphs](https://www.stardog.com/knowledge-graph/) such as the [Google Knowledge Graph](https://support.google.com/knowledgepanel/answer/9787176?hl=en). A key feature of this data model, is that it supports *contextual understanding*. Suppose I have the [following credential](https://www.w3.org/TR/vc-data-model-2.0/#example-a-verifiable-credential-with-a-custom-extension):
 
@@ -215,7 +217,7 @@ tesco:referenceNumber rdfs:subClassOf receipts:referenceNumber ;
 
 This built in contextual information is especially useful when, for instance, we want to integrate data from many credentials that each may use the term `referenceNumber` to discuss different concepts (e.g. reference numbers from different types of purchases, shops etc.).
 
-Conversely, the Security and Cryptography community pushed for plain JSON with JWT (JSON Web Tokens), to reduce implementation complexity and ease security analyses. 
+Conversely, the Security and Cryptography community pushed for plain JSON with JWT (JSON Web Tokens), to reduce implementation complexity and ease security analyses.
 
 > GPT-4.5 does a decent job of providing a slightly longer presentation of this history - which you can find [here](/gpt-jsonld-vs-json.md).
 
@@ -223,7 +225,7 @@ By 2019 this work had evolved to having the formation of a W3C endorsed working 
 
 ### ISO Specifications
 
-Instead of defining generic credential formats, ISO has instead taken the approach of defining credentials for specific domains. 
+Instead of defining generic credential formats, ISO has instead taken the approach of defining credentials for specific domains.
 
 The first Verifiable Credential specification published by ISO is the [Mobile driving license (mDL)](https://www.iso.org/standard/69084.html) specification - published in 2021. This specification defines a fixed schema for describing approximately 30 attributes in digital driver's license's - such as the drivers `name`, `address`, `date of birth` and the `expiry date` of the license. The specification expects attributes to be serialized using JSON or [CBOR](https://cbor.io) and thus lacks the out-of-the-box interoperability that comes with linked-data formats.
 
@@ -231,11 +233,11 @@ As we shall discuss in later sections, this digital driver's license specificati
 
 This means that it is very well-defined how to build an infrastructure specifically for mDL licenses. The trade-off is that implementors need to build custom transmission flows, and query engines to support the specification. This both increases implementation burden, and hinders interoperability with non-mDL credentials.
 
-ISO is also working on several other Verifiable Credential standards - including [Cards and security devices for personal identification](https://www.iso.org/standard/74910.html) designed to standardize core features for electronic identity document including drivers licenses, passports, residency permits, and building passes. The underlying goal of the standard is to support interoperability between electronic identity (eID) systems. This standard also defines a range of attributes that may be required in different eID systems - extending those attributes found in the mDL license with attributes such as `Business Name`, `Profession`, and `Academic Title` to support workplace passes, as well as other attributes such as `telephone number` and `email address`. This specification also targets JSON and CBOR formats for encoding data in credentials - meaning that there are still interoperability challenges with systems that need to define attributes that are not defined within this document.  
+ISO is also working on several other Verifiable Credential standards - including [Cards and security devices for personal identification](https://www.iso.org/standard/74910.html) designed to standardize core features for electronic identity document including drivers licenses, passports, residency permits, and building passes. The underlying goal of the standard is to support interoperability between electronic identity (eID) systems. This standard also defines a range of attributes that may be required in different eID systems - extending those attributes found in the mDL license with attributes such as `Business Name`, `Profession`, and `Academic Title` to support workplace passes, as well as other attributes such as `telephone number` and `email address`. This specification also targets JSON and CBOR formats for encoding data in credentials - meaning that there are still interoperability challenges with systems that need to define attributes that are not defined within this document.
 
 ### IETF Specifications
 
-The IETF is also producing a set of JSON based verifiable credentials called [SD-JWT-based Verifiable Credentials](https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-03.html). 
+The IETF is also producing a set of JSON based verifiable credentials called [SD-JWT-based Verifiable Credentials](https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-03.html).
 
 JSON Web Tokens (JWT's) are commonly used on the Web today for a range of tasks requiring signed data - for instance they are often used to prove to a website that you are logged in and allowed to access private information on a website.
 
@@ -287,14 +289,16 @@ As the [Internet Engineering Task Force (IETF)](https://www.ietf.org) is respons
 </table>
 
 *This table was generated with the assistance of claude-3.7-sonnet-thinking*
+
 <!-- | **Credential Structure** | Generic model with extensible types and context-aware attributes | Domain-specific fixed schemas with predefined attributes | JWT-based structure supporting selective disclosure | -->
+
 <!-- | **Interoperability** | High semantic interoperability across domains | Excellent within specific domains (e.g., mDL), limited across domains | Good integration with existing web infrastructure | -->
+
 <!-- | **Web Integration** | Strong alignment with Semantic Web principles | Limited web-native capabilities | Strong integration with OAuth/OIDC flows | -->
+
 <!-- | **Complexity** | Higher complexity due to RDF/JSON-LD features | Moderate complexity within domain boundaries | Moderate complexity, leverages existing JWT knowledge | -->
+
 <!-- | **Adoption** | Growing across various sectors | Strong in government ID (driver's licenses) | Growing in enterprise settings | -->
-
-
-
 
 <!-- Even within this specification there is a tension in the *format* that should be used to describe the content of credentials. The specification provided a description of how to describe credentials using both [JSON](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#expressing-identity-profiles-entity-credentials-and-verifiable-claims-in-json) and [JSON-LD](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-expressing-identity-credentials-in-json-ld) ... TODO "There is a crucial distinction" ...
 
@@ -311,6 +315,7 @@ Even within this specification there is a tension in the *format* that should be
 <!-- Even within this specification, there is tension concerning the format used to describe the content of credentials. The specification provided descriptions for expressing credentials using both JSON and JSON-LD. There is a crucial distinction: JSON-LD, rooted in Linked Data principles, prioritizes semantic interoperability, data reuse, and linking entities across diverse contexts, leveraging URIs to create meaningful connections on the Semantic Web. Conversely, the Security and Cryptography community favors simpler, less ambiguous serializations such as plain JSON, focusing on straightforward cryptographic operations, minimal complexity, and robust security guarantees. The JSON-LD approach provides rich semantics and extensibility at the cost of additional complexity in processing and increased potential for implementation errors, whereas plain JSON offers simplicity, ease of cryptographic verification, and better predictability, but at the expense of reduced semantic clarity and interoperability across heterogeneous systems. These distinct priorities have led to ongoing discussions and occasional friction within the credential standards communities. -->
 
 <!-- Proposed by: https://chatgpt.com/share/67d188e2-58a4-800c-98ab-dc5e40c55d68 -->
+
 <!-- 
 The W3C was among the first to establish standards around Digital Credentials, starting with the formation of a [Credentials Community Group](https://www.w3.org/community/credentials/) in 2014. By 2017, this group published the [Verifiable Claims Data Model and Representations 1.0](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/), defining core functionality such as credential signing, metadata describing the issuer, issuance date, and credential subject. The data structures for specific credentials like diplomas or driver's licenses were intentionally left out of scope, allowing flexibility through arbitrary credential [`type`s](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-identity-profile-model).
 
@@ -412,12 +417,13 @@ Websites for instance need HTML to tell you how a Website is displayed - but als
 The [Open Wallet Foundation](https://openwallet.foundation), hosted by the [Linux Foundation](https://www.linuxfoundation.org) has a mission to facilitate global interoperability of verifiable credentials.
 
 To this end, the Open Wallet Foundation has [been chartered to](https://cdn.platform.linuxfoundation.org/agreements/openwalletfoundation.pdf):
+
 > - develop and maintain open source code for wallets to enable and ensure wallet
-interoperability,
+>   interoperability,
 > - advocate for the adoption of the interoperable digital wallet technology, and
 > - collaborate with Standards Development Organizations (SDOs) in the development and
-proliferation of open standards related to digital wallets
-The OWF will not publish a publicly available wallet (including into any application stores).
+>   proliferation of open standards related to digital wallets
+>   The OWF will not publish a publicly available wallet (including into any application stores).
 
 OWF, has also taken on around two dozen [open source codebases](https://github.com/orgs/openwallet-foundation/repositories?q=visibility%3Apublic+archived%3Afalse) in support of this mission.
 
@@ -433,7 +439,6 @@ ISO/IEC 23220-2: ISO/IEC 23220-2 defines a data model for interoperability betwe
 
 <!-- This kind of governance yields very stable, vetted standards but not very agile in response to new tech – which is why ISO is now looking to incorporate things like W3C's work after the fact. -->
 
-
 ## Regulation Driving Data Wallets
 
 ### European Digital Identity (EUDI) Regulation
@@ -441,15 +446,15 @@ ISO/IEC 23220-2: ISO/IEC 23220-2 defines a data model for interoperability betwe
 After [three years in the making](https://commission.europa.eu/strategy-and-policy/priorities-2019-2024/europe-fit-digital-age/european-digital-identity_en), the EUDI (European Digital Identity) wallet officially came into force on May 20, 2024 - through the eIDAS (Electronic Identification, Authentication, and Trust Services) 2 regulation. EUDI promises to make "EU Digital Identity [...] available to EU citizens, residents, and businesses who want to identify themselves or provide confirmation of certain personal information." By 2026, every EU Member State will be [required to make](https://ec.europa.eu/digital-building-blocks/sites/display/EUDIGITALIDENTITYWALLET/The+Digital+Identity+Regulation+Enters+into+Force) at least one Digital Identity Wallet available to all citizens and residents.
 
 There are three core types of credentials that are to be made available under eIDAS 2 regulation:
- - Electronic Attestation of Attributes (EAA) - which can be issued by *any* organisation that wants to make statements about a particular entity (e.g., they have a concert ticket, gym membership, or student card)
- - Qualified Electronic Attestation of Attributes (QEAA) - which can be issued *only* by [Qualified Trust Service Providers](https://eidas.ec.europa.eu/efda/trust-services/browse/eidas/tls) to create legally binding credentials such as professional qualifications, birth cetificates, marriage licenses, property deeds and business operating licenses. 
- - Personal Identification Data (PID) - which can be issued *only* by government authorities and serve as a proof of identity.
+
+- Electronic Attestation of Attributes (EAA) - which can be issued by *any* organisation that wants to make statements about a particular entity (e.g., they have a concert ticket, gym membership, or student card)
+- Qualified Electronic Attestation of Attributes (QEAA) - which can be issued *only* by [Qualified Trust Service Providers](https://eidas.ec.europa.eu/efda/trust-services/browse/eidas/tls) to create legally binding credentials such as professional qualifications, birth cetificates, marriage licenses, property deeds and business operating licenses.
+- Personal Identification Data (PID) - which can be issued *only* by government authorities and serve as a proof of identity.
 
 The European Union has produced an [Architecture and Reference Framework](https://digital-strategy.ec.europa.eu/en/library/european-digital-identity-wallet-architecture-and-reference-framework), details of which are available [here](https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/1.1.0/arf/#4114-qualified-and-non-qualified-electronic-attestation-of-attributes-schema-providers). This reference architecture specifies:
- - [How to issue PID data](https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/1.1.0/annexes/annex-06-pid-rulebook.pdf) using both the ISO mDL specification and the IEEE SD-JWT specification can be used to format the data, and how verifiers can request data using [OID4VP](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html).
- - That (Q)EAA's [MUST be issued](https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/1.1.0/arf/#631-issuing-requirements-for-qeaa) in accordance with either the ISO mDL data model or the W3C Verifiable Credential Data Model.
 
-
+- [How to issue PID data](https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/1.1.0/annexes/annex-06-pid-rulebook.pdf) using both the ISO mDL specification and the IEEE SD-JWT specification can be used to format the data, and how verifiers can request data using [OID4VP](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html).
+- That (Q)EAA's [MUST be issued](https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/1.1.0/arf/#631-issuing-requirements-for-qeaa) in accordance with either the ISO mDL data model or the W3C Verifiable Credential Data Model.
 
 <!-- electronic identification, authentication, and trust services (eIDAS)
 
@@ -488,18 +493,19 @@ The upcoming European Digital Identity (EUDI) wallet will support use cases acro
 
 ### Data (Use and Access) Bill
 
-The [Data Use and Access Bill](https://bills.parliament.uk/bills/3825/) is proposed legislation currently at committee stage in the House of Commons. One mandate of the bill is to create a Digital Verification Services (DVS) Trust Framework - driven by the Secretary of State maintaining a register of *service providers* accredited to provide some "digital verification services" in the UK. 
+The [Data Use and Access Bill](https://bills.parliament.uk/bills/3825/) is proposed legislation currently at committee stage in the House of Commons. One mandate of the bill is to create a Digital Verification Services (DVS) Trust Framework - driven by the Secretary of State maintaining a register of *service providers* accredited to provide some "digital verification services" in the UK.
 
-The [Digital Identity and Attributes Framework (DIATF)](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04) has been created by the [Department of Science and Technology (DSIT)](https://www.gov.uk/government/organisations/department-for-science-innovation-and-technology) in the UK, as a framework defining the *services* that different service providers in the UK can implement and become registered as a DVS service. 
+The [Digital Identity and Attributes Framework (DIATF)](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04) has been created by the [Department of Science and Technology (DSIT)](https://www.gov.uk/government/organisations/department-for-science-innovation-and-technology) in the UK, as a framework defining the *services* that different service providers in the UK can implement and become registered as a DVS service.
 
 The DVS may be seen as the UK's equivalent to eIDAS regulation, whilst the DIATF may be seen as requivalent to the EU's [Architecture and Reference Framework](https://digital-strategy.ec.europa.eu/en/library/european-digital-identity-wallet-architecture-and-reference-framework).
 
 Notably, the DIATF is less prescriptive of which standards must be used - and places more of a focus on the roles of different service providers. In the latest iteration of this framework, 5 service providers were defined:
- - [Identity Service Providers](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04/uk-digital-identity-and-attributes-trust-framework-gamma-04-pre-release#rules-for-identity-service-providers)
- - [Attribute Service Providers](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04/uk-digital-identity-and-attributes-trust-framework-gamma-04-pre-release#rules-for-attribute-service-providers)
-  - [Holder Service Providers](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04/uk-digital-identity-and-attributes-trust-framework-gamma-04-pre-release#rules-for-holder-service-providers)
-  - [Orchestration Service Providers](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04/uk-digital-identity-and-attributes-trust-framework-gamma-04-pre-release#rules-for-orchestration-service-providers), and
-  - [Component Service Providers](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04/uk-digital-identity-and-attributes-trust-framework-gamma-04-pre-release#rules-for-component-service-providers)
+
+- [Identity Service Providers](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04/uk-digital-identity-and-attributes-trust-framework-gamma-04-pre-release#rules-for-identity-service-providers)
+- [Attribute Service Providers](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04/uk-digital-identity-and-attributes-trust-framework-gamma-04-pre-release#rules-for-attribute-service-providers)
+- [Holder Service Providers](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04/uk-digital-identity-and-attributes-trust-framework-gamma-04-pre-release#rules-for-holder-service-providers)
+- [Orchestration Service Providers](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04/uk-digital-identity-and-attributes-trust-framework-gamma-04-pre-release#rules-for-orchestration-service-providers), and
+- [Component Service Providers](https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04/uk-digital-identity-and-attributes-trust-framework-gamma-04-pre-release#rules-for-component-service-providers)
 
 ![](/daub.jpg)
 
@@ -511,9 +517,9 @@ Source: [GOV.UK: What the data bill means for digital identity](https://enabling
 
 Source: [GOV.UK: Digital driving license coming this year](https://www.gov.uk/government/news/digital-driving-licence-coming-this-year)
 
-In January, the UK announced the [Digital Driver's License](https://www.gov.uk/government/news/digital-driving-licence-coming-this-year) that will be made available through a new [GOV.UK](https://www.gov.uk) App - planned to launch in the summer of 2025. Further, it is expected that there will be a digital form of *all* UK documents made available by 2027.
+In January, the UK announced the [Digital Driver&#39;s License](https://www.gov.uk/government/news/digital-driving-licence-coming-this-year) that will be made available through a new [GOV.UK](https://www.gov.uk) App - planned to launch in the summer of 2025. Further, it is expected that there will be a digital form of *all* UK documents made available by 2027.
 
-The core infrastructure backing this will be the [ISO mobile Driver's License (MDL)](https://www.iso.org/standard/69084.html) standard.
+The core infrastructure backing this will be the [ISO mobile Driver&#39;s License (MDL)](https://www.iso.org/standard/69084.html) standard.
 
 ### Whatever is happening in Australia
 
@@ -535,7 +541,7 @@ Solid has three key features: [Solid-OIDC](https://solidproject.org/TR/oidc) ena
 
 ### The Disclaimer
 
-Now let me be upfront about the bias here. I work with Solid - *a lot*. 
+Now let me be upfront about the bias here. I work with Solid - *a lot*.
 
 I [lead work](https://theodi.org/profile/jesse-wright/) on Solid at the [Open Data Institute](https://theodi.org) which [stewards](https://theodi.org/news-and-events/news/odi-and-solid-come-together-to-give-individuals-greater-control-over-personal-data/) all opensource work on the Solid Project, am a [Doctoral Student](https://www.cs.ox.ac.uk/people/jesse.wright/) in the [Ethical Web and Data Architectures (EWADA)](https://ewada.ox.ac.uk) Group at the [University of Oxford](https://www.ox.ac.uk), independently contribute to [opensource projects](https://github.com/jeswr) for Solid technologies, and formerly worked as an Enterprise Software Engineer at [Inrupt](https://www.inrupt.com) - a commercial implementor of Solid.
 
@@ -544,7 +550,6 @@ I [lead work](https://theodi.org/profile/jesse-wright/) on Solid at the [Open Da
 <!-- Throughline for all 3 of these sections needs to be that Solid is /simpler/ and /extensible to other datatypes/ -->
 
 I am of the view that the Solid Pods are ideal for use as *holder services* in the verifiable credential ecosystem, it is certainly *possible* as a [Solid Wallet](https://github.com/openwallet-foundation-labs/solid-data-wallet) has already been donated to the [Open Wallet Foundation](https://openwallet.foundation) demonstrating how this can be implemented.
-
 
 The advantages of using Solid as a Holder service are as follows:
 
@@ -558,33 +563,36 @@ In direct relation to Solid/LWS, we recommended that it should be possible for h
 
 [Socially Aware Cloud Storage, Design Issues, Tim Berners-Lee](https://www.w3.org/DesignIssues/CloudStorage.html)
 
-We've become accustomed to living in a world of [data silo's](https://www.w3.org/DesignIssues/CloudStorage.html) - so much so that we barely notice it anymore. On most websites we find ourselves entering and re-entering the same basic mobile, email and date-of-birth to every website that we visit; and we find ourselves reconstructing the same set of contacts across Instagram, Facebook, Twitter, LinkedIn, Whatsapp, the list goes on ...
+We've become accustomed to living in a world of [data silo&#39;s](https://www.w3.org/DesignIssues/CloudStorage.html) - so much so that we barely notice it anymore. On most websites we find ourselves entering and re-entering the same basic mobile, email and date-of-birth to every website that we visit; and we find ourselves reconstructing the same set of contacts across Instagram, Facebook, Twitter, LinkedIn, Whatsapp, the list goes on ...
 
 Solid was created to solve this problem, providing a standard way of reading and writing data to personal cloud storage. The way it works is simple: when you log in to a Solid-compatible website with Single Sign On - all the personal data that you create gets saved to the store - and are made accessible to any other Solid-compatible applications that you use the second you hit "consent for data usage." Much easier!
 
 The existing Apple Wallet gives us a pretty good sense of the current trajectory for digital wallets and credentials, which is:
- - I buy a GWR train ticket on my [GWR App](https://www.gwr.com/your-tickets/smart-tickets/mobile-app),
- - I click *add to my Apple Wallet*
+
+- I buy a GWR train ticket on my [GWR App](https://www.gwr.com/your-tickets/smart-tickets/mobile-app),
+- I click *add to my Apple Wallet*
 
 Easy! But what if I:
- - Bought the ticket with a PC, and saved it to Google Wallet instead? or,
- - Your phone dies, and you want to access the ticket from a friends phone?
+
+- Bought the ticket with a PC, and saved it to Google Wallet instead? or,
+- Your phone dies, and you want to access the ticket from a friends phone?
 
 Then life is going to be a lot more difficult, because companies such as Apple want to keep these tickets closed within their ecosystem - just as they don't want your contacts or photo's to leave their ecosystem.
 
 ![](/apple-wallet.png)
 
-The good news :tada: is that the Solid specification can be used here too - so we have a chance to intervene before this even becomes a problem.
+The good news 🎉 is that the Solid specification can be used here too - so we have a chance to intervene before this even becomes a problem.
 
 #### Standard Web interface for transferring credentials
 
 There are a *lot* of ways that credentials can be transferred. The [ISO Mobile driving licence (mDL)](https://www.iso.org/standard/69084.html) standard alone defines the following credential exchange mechanisms within its standards document:
- - [QR Code](https://en.wikipedia.org/wiki/QR_code)
- - [Near-field communication (NFC)](https://en.wikipedia.org/wiki/Near-field_communication)
- - [Bluetooth Low Energy (BLE)](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy)
- - [Wi-Fi Aware](https://www.wi-fi.org/file/wi-fi-aware-specification)
- - [OpenID Connect (OIDC)](https://openid.net/developers/how-connect-works/), or
- - WebAPI - an HTTP interface defined within the mobile Drivers License (mDL) specification, specifically defining how these mobile Drivers License's can be transported.
+
+- [QR Code](https://en.wikipedia.org/wiki/QR_code)
+- [Near-field communication (NFC)](https://en.wikipedia.org/wiki/Near-field_communication)
+- [Bluetooth Low Energy (BLE)](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy)
+- [Wi-Fi Aware](https://www.wi-fi.org/file/wi-fi-aware-specification)
+- [OpenID Connect (OIDC)](https://openid.net/developers/how-connect-works/), or
+- WebAPI - an HTTP interface defined within the mobile Drivers License (mDL) specification, specifically defining how these mobile Drivers License's can be transported.
 
 Additionally, the [OpenID Foundation](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html) has defined flows for credential issuance ([OID4VCI](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html)) - which supports *issuers* sending data to *holders*; and presentation ([OID4VP](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html)) - which defines how *verifiers* can request credentials from *holders*. These OpenID flows are designed to support the transfer *any* form of W3C or ISO Verifiable Credential.
 
@@ -641,9 +649,10 @@ Given this diaspora of transfer standards for digital credentials - it begs the 
 <!-- TODO: Improve this seciton -->
 
 Well there are a few:
+
 1. The Solid APIs are symmetric with the file system. This means that you can view your credentials through a file-system like interface - whilst they are living in cloud storage that you manage.
-2. Whilst credentials can be made available both through the Credentials Handling API in the browser - they can also be accessed directly from personal cloud storage by service providers who have been granted consent to access the credential. 
-3. Solid provides a means to completely decouple consent management interfaces from the holder of credentials - because of the standardised Access Control mechanisms that it has. 
+2. Whilst credentials can be made available both through the Credentials Handling API in the browser - they can also be accessed directly from personal cloud storage by service providers who have been granted consent to access the credential.
+3. Solid provides a means to completely decouple consent management interfaces from the holder of credentials - because of the standardised Access Control mechanisms that it has.
 
 <!-- So the play here in the shorter term is:
  - Credentials live in Solid Pod which allows you to view the credentials,
@@ -672,8 +681,9 @@ E.g.
 Let me again present my bias' upfront. The last 5 years of my work and research have revolved around [Semantic Web Technologies](https://en.wikipedia.org/wiki/Semantic_Web) - and my current research is on the very topic of [Queryable Credentials](https://github.com/jeswr/queryable-credentials), and I recently [gave a talk on this topic at FOSDEM](https://fosdem.org/2025/schedule/event/fosdem-2025-5970-are-current-standards-enough-towards-verifiable-credentials-with-expressive-zero-knowledge-query/) (video below).
 
 So [when I heard](https://github.com/jeswr/queryable-credentials?tab=readme-ov-file#but-dont-query-apis-for-credentials-already-exist) that there was a [Digital Credentials Query Language (DCQL)](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html#name-digital-credentials-query-l) as part of the [OID4VP](https://openid.net/sg/openid4vc/) specification I was thrilled - but sadly that was short-lived. This is because the expressivity of DQCL is largely restricted to filtering operations to determine:
- - Which Verifiable Credentials to include as part of a [Verifiable Presentation](https://www.w3.org/TR/vc-data-model-2.0/#presentations)
- - Which subset of attributes to from those Credentials to include in the Verifiable Presentation
+
+- Which Verifiable Credentials to include as part of a [Verifiable Presentation](https://www.w3.org/TR/vc-data-model-2.0/#presentations)
+- Which subset of attributes to from those Credentials to include in the Verifiable Presentation
 
 Ok, but surely there must be a little more capability to the current specifications than this - after all, it is promised that you can prove your age without revealing your date of birth when using digital drivers licenses - so there must be some way of querying for age ...
 
@@ -693,9 +703,10 @@ Ok, but surely there must be a little more capability to the current specificati
 ```
 
 This means that:
- - I have to tell the issuer (DVLA) that I want to prove I'm over 18 - when this isn't something they need to know.
- - I am *reliant* on the *issuer* (DVLA) to issue these statements - so if my driving authority doesn't want to issue `is_over_21` statements; I may be forced to reveal my age. Whilst this is less problematic - and less likely - in the case of age; it is an issue when trying to any *non-standard* derivation. For example, proving non-caucasian ethnicity, without revealing the minority population that you belong to.
- - I cannot tell the verifier (e.g. my future employer at the tomato farm) about information that can be derived from multiple credentials. Want to prove to a car hire agency that you can drive in the UK without giving them details from your license, visa and passport; then you're out of luck! 
+
+- I have to tell the issuer (DVLA) that I want to prove I'm over 18 - when this isn't something they need to know.
+- I am *reliant* on the *issuer* (DVLA) to issue these statements - so if my driving authority doesn't want to issue `is_over_21` statements; I may be forced to reveal my age. Whilst this is less problematic - and less likely - in the case of age; it is an issue when trying to any *non-standard* derivation. For example, proving non-caucasian ethnicity, without revealing the minority population that you belong to.
+- I cannot tell the verifier (e.g. my future employer at the tomato farm) about information that can be derived from multiple credentials. Want to prove to a car hire agency that you can drive in the UK without giving them details from your license, visa and passport; then you're out of luck!
 
 This is a far cry from the kind of derivations that can be performed using the [semantic reasoning and query engines](https://rubenverborgh.github.io/Semantic-Web-Reasoning/). The good news is that it is technically feasible for the *holder* (you) to do deriviations such as [this one](https://github.com/jeswr/queryable-credentials?tab=readme-ov-file#initial-design-thoughts-for-a-queryable-api) and then hand them to the *verifier* - that's what the [below talk](https://video.fosdem.org/2025/aw1126/fosdem-2025-5970-are-current-standards-enough-towards-verifiable-credentials-with-expressive-zero-knowledge-query.mp4) is about.
 
@@ -707,19 +718,21 @@ The bigger challenge is now to get the technology production ready and standardi
 
 ### Does it even make sense to be talking about credentials?
 
-As I discuss further [here](https://github.com/jeswr/queryable-credentials?tab=readme-ov-file#on-abstractions) - whilst it is sensible to talk about credentials to end-users of applications; it is my position that credentials are the wrong object to be working with at a standards level - such as within IEEE and W3C specifications. Instead, we should be talking about [datasets of facts](https://github.com/jeswr/queryable-credentials?tab=readme-ov-file#initial-design-thoughts-for-a-queryable-api), with metadata such as signatures and proofs that attest to their integrity.
+As I discuss further [here](https://github.com/jeswr/queryable-credentials?tab=readme-ov-file#on-abstractions) - whilst it is sensible to talk about credentials to end-users of applications; it is my position that credentials are the wrong object to be working with at a standards level. Instead, we should be talking about [datasets of facts](https://github.com/jeswr/queryable-credentials?tab=readme-ov-file#initial-design-thoughts-for-a-queryable-api), with metadata such as signatures and proofs that attest to their integrity.
 
 <!-- TODO: Elaborate -->
 
 ## Further Reading
 
 In producing this article I came across a number of useful materials, here is my top selection for further reading:
- - [Auth0's take on Verifable Credentials](https://auth0.com/blog/our-take-on-verifiable-credentials/)
- - [Verifiable Credentials and ISO/IEC 18013-5 Based Credentials](https://collateral-library-production.s3.amazonaws.com/uploads/asset_file/attachment/36416/CS676613_-_Digital_Credentials_promotion_campaign-White_Paper_R3.pdf)
- - [Verifiable Credential Formats in the EUDI Wallet: W3C VC DM and ISO 18013-5 mDL/mDoc](https://www.linkedin.com/pulse/verifiable-credential-formats-eudi-wallet-w3c-vc-dm-iso-18013-5-kbcmf/)
- - [Decentralized Identity Standards, PingIdentity](https://www.pingidentity.com/en/resources/identity-fundamentals/decentralized-identity-management/decentralized-identity-standards.html)
- - [EUDI Wallet and eIDAS 2](https://talao.io/blog/eudi-wallet-understanding-credentials-in-eidas-2-eaa-qeaa-and-pid/)
- - [GPT 4.5 Researchers' take on the topic](https://chatgpt.com/share/67cdaacf-5728-800c-ac59-137d7d1aeec9)
+
+- [Auth0&#39;s take on Verifable Credentials](https://auth0.com/blog/our-take-on-verifiable-credentials/)
+- [Verifiable Credentials and ISO/IEC 18013-5 Based Credentials](https://collateral-library-production.s3.amazonaws.com/uploads/asset_file/attachment/36416/CS676613_-_Digital_Credentials_promotion_campaign-White_Paper_R3.pdf)
+- [Verifiable Credential Formats in the EUDI Wallet: W3C VC DM and ISO 18013-5 mDL/mDoc](https://www.linkedin.com/pulse/verifiable-credential-formats-eudi-wallet-w3c-vc-dm-iso-18013-5-kbcmf/)
+- [Decentralized Identity Standards, PingIdentity](https://www.pingidentity.com/en/resources/identity-fundamentals/decentralized-identity-management/decentralized-identity-standards.html)
+- [EUDI Wallet and eIDAS 2](https://talao.io/blog/eudi-wallet-understanding-credentials-in-eidas-2-eaa-qeaa-and-pid/)
+- [GPT 4.5 Researchers&#39; take on the topic](https://chatgpt.com/share/67cdaacf-5728-800c-ac59-137d7d1aeec9)
 
 [^1]: Trust me - Software Engineers will think about becoming a farmer at least once a day.
+    
 [^2]: ^^ Yes, really.
