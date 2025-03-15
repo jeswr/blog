@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Reclaiming data autonomy: The role of Solid in a safer Web</title>
+    <meta name="description" content="Blog of a Software Engineer and Researcher"/>
+    <meta name="keywords" content="blog,developer blog,engineering blog,research blog,oxford,oxford university"/>
+    <link rel="alternate" type="application/rss+xml" title="Jesse Wright" href="/rss.xml" />
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Alegreya:400,400i|Lato:400,400i,700,900|Roboto+Mono:400,300">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/shades-of-purple.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+
+    <link rel="stylesheet" href="/css/normalize.css"/>
+    <link rel="stylesheet" href="/css/theme.css"/>
+</head>
+<body>
+<nav class="nav">
+    <div class="nav__left">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+    </div>
+    <div class="nav__right">
+        <a target="_blank" href="https://github.com/jeswr" class="link-github">GitHub</a>
+        <a target="_blank" href="https://twitter.com/" class="link-twitter">Twitter</a>
+        <a href="mailto:jesse@jeswr.org" class="link-email">Email</a>
+        <a href="/rss.xml" class="link-rss">RSS</a>
+    </div>
+</nav>
+
+<article class="mar-b-7">
+    <header class="text-center">
+        <time class="mar-b-6" datetime="Tue, February 06, 2024">Tue, February 06, 2024</time>
+        <h1 class="mar-b-7">Reclaiming data autonomy: The role of Solid in a safer Web</h1>
+    </header>
+    <p><strong>This article was originally for the Oxford University department of Computer Science as part of the <a href="https://www.cs.ox.ac.uk/news/2287-full.html">DPhil the future</a> series.</strong></p>
+<p>The modern Web has seen a significant erosion of data privacy and control. User-generated data, stored in <a href="https://www.w3.org/DesignIssues/CloudStorage.html">centralised data silos</a>, is often used without the knowledge or control of the individuals it belongs to.</p>
+<blockquote>
+  <p>In the age of AI and Big Data, this lack of data autonomy becomes increasingly detrimental to both individuals and society.</p>
+</blockquote>
+<p>A striking example is a recent <a href="https://www.nytimes.com/2023/10/24/technology/states-lawsuit-children-instagram-facebook.html">lawsuit</a> against Meta by U.S. states, alleging the unlawful collection of minors' personal data without parental consent and exposing them to harmful content. This is but a glimpse into the dangers posed by emerging technologies such as <a href="https://ruben.verborgh.org/blog/2013/01/31/what-web-agents-want/">personal AI agents</a> if they are not designed to “legally, ethically and algorithmically” work for you and with data you control (<a href="https://www.w3.org/DesignIssues/Charlie.html">Charlie works for Bob</a>, Berners-Lee 2023).</p>
+<p><strong>Celebrating Safer Internet Day</strong>&nbsp;&nbsp;</p>
+<p>Today, we celebrate the 20th anniversary of <a href="https://www.saferinternetday.org/about">Safer Internet Day</a>, with a theme that resonates deeply with our current digital challenges: “<em>Inspiring change? Making a difference, managing influence and navigating change online.</em>” This aligns with the mission of the <a href="https://ewada.ox.ac.uk/">The Ethical Web and Data Architectures</a> (EWADA) programme funded by the <a href="https://www.oxfordmartin.ox.ac.uk/">Oxford Martin School</a>. EWADA aims to address the concentration of power on the World Wide Web by developing new technical and legal infrastructures.&nbsp;</p>
+<p><strong>Solid Project - A Beacon of Hope</strong>&nbsp;</p>
+<p>In the context of data autonomy, EWADA is putting a spotlight on Sir Tim Berners-Lee’s <a href="http://emansour.com/research/lusail/solid_protocols.pdf"><em>Solid</em> project</a> which was created with the aim of revitalising the Web. Where the current system of centralised data silos creates an ecosystem of limited integration, availability and innovation, Solid brings a course correction for the Web. Based on the <a href="https://solidlabresearch.github.io/WhatsInAPod/"><em>separation of data and applications</em></a>, the vision defines an ecosystem that facilitates the integration of data in different applications, while keeping people in direct control of their data.&nbsp;</p>
+<p><strong>Understanding Solid Pods</strong>&nbsp;</p>
+<p>At Solid's core is the ‘pod’ - a personal online data store. Utilising the <a href="https://www.w3.org/TR/ldp/">Linked Data Platform (LDP)</a>, pods offer an HTTP interface for access-controlled storage of documents to a <a href="https://communitysolidserver.github.io/CommunitySolidServer/latest/usage/starting-server/">personal server</a> or <a href="https://www.inrupt.com/blog/data-decoupling-and-cloud-services-a-new-way-to-ensure-data-privacy">trusted cloud storage</a>. Coupled with <a href="https://auth0.com/intro-to-iam/what-is-oauth-2">OAuth</a> - the same protocol we use every day for <a href="https://www.ox.ac.uk/students/selfservice">SSO login</a> - this system facilitates a global single sign-on across all Solid-compliant web applications.</p>
+<p>Together, these pods form a decentralised Solid ecosystem, from which applications can directly integrate data from people’s Solid pods, after receiving their permission. Solid applications are encouraged to store data using the <a href="https://www.w3.org/RDF/">RDF</a> data model of the <a href="https://www.w3.org/DesignIssues/Semantic.html">Semantic Web</a> (I strongly recommend reading the <a href="https://www.w3.org/DesignIssues/Semantic.html">design issue</a> if you’ve not heard of it before) - and serialised in a syntax such as JSON-LD or <a href="https://www.inrupt.com/videos/readable-turtle">Turtle</a>. By having applications read/write data with explicit <a href="https://en.wikipedia.org/wiki/Semantic_Web">semantics</a> rather than using the typical smorgasbord of JSON, GraphQL and other platform-specific API’s <a href="https://www.datasciencecentral.com/why-json-users-should-learn-turtle/">that modern Web developers are accustomed to</a> it becomes possible for applications to re-use one another's data.&nbsp;</p>
+<p>Such applications include <a href="https://www.bbc.co.uk/together">BBC Together</a>, <a href="https://www.itsme-id.com/">itsme</a>, <a href="https://umai.noeldemartin.com/">Umai</a>, <a href="https://noeldemartin.github.io/solid-focus/">Solid Focus</a>, <a href="https://github.com/KNowledgeOnWebScale/knoodle">KNoodle</a> and <a href="https://github.com/OxfordHCC/solid-media/">SolidFlix,</a>.&nbsp;</p>
+<p>To learn more about the anatomy of a <em>pod</em> - see <a href="https://www.inrupt.com/videos/what-is-a-solid-pod">What is a Solid Pod</a>?&nbsp;</p>
+<p><strong>Benefits and Future of Solid Architecture</strong>&nbsp;</p>
+<p>In 2009, Berners-Lee <a href="https://www.w3.org/DesignIssues/CloudStorage.html">enumerated a number of benefits to this architecture which remain relevant to this day</a> (these come from his <a href="https://www.w3.org/DesignIssues/">design issues;</a> if you’ve never come across these it’s definitely worth a read):&nbsp;</p>
+<ol>
+<li>Users control data access, including the ability to revoke an applications’ access to your data at any point in time.&nbsp;</li>
+<li>It allows the data from various applications to be cross-linked, at great derived extra value. For instance, if I relocate, there's no need to separately inform my bank, insurance agency, and driving authority. By simply updating my address in my personal data pod, any authorised organisation can access the new information instantly.&nbsp;</li>
+<li>It allows innovation in the market for applications, because the bar for launching an app is far lower, as the app can run in the open data cloud.&nbsp;</li>
+<li>The persistence of applications and data may be very different. In some cases, a well-established application which people have grown very familiar with may be used to make an online discussion which is ephemeral, in another case an application may be developed to solve a short-term problem in an enterprise where the life of the data exceeds that of any of the applications the enterprise uses. By decoupling the application and data, these persistences can be managed independently.&nbsp;</li>
+</ol>
+<p><strong>Concluding</strong>&nbsp;</p>
+<p>By reimagining the web as a place where users have sovereignty over their data, initiatives such as Solid pave the way for a more ethical, transparent, and user-centric online world. Realising this ambitious vision demands a collaborative approach that spans various sectors and roles. Whether you're keen on <a href="https://solidproject.org/users/get-a-pod">exploring personal pods</a>, disseminating your research through a Pod, engaging in <a href="https://arxiv.org/abs/2309.16365">privacy-focused computation with Solid</a>, <a href="https://solidproject.org/users/get-a-pod">developing innovative applications</a>, or shaping relevant policies, your contribution is vital. Let's join forces and work together to make this vision a reality!</p>
+</article>
+
+
+
+<footer class="text-center mar-tb-6">
+    © 2025 Jesse Wright, unless otherwise stated.
+</footer>
+
+<script>hljs.highlightAll();</script>
+</body>
+</html>
+
