@@ -733,6 +733,8 @@ In producing this article I came across a number of useful materials, here is my
 - [EUDI Wallet and eIDAS 2](https://talao.io/blog/eudi-wallet-understanding-credentials-in-eidas-2-eaa-qeaa-and-pid/)
 - [GPT 4.5 Researchers&#39; take on the topic](https://chatgpt.com/share/67cdaacf-5728-800c-ac59-137d7d1aeec9)
 
+
+
 <div class="footnotes">
   <hr>
   <ol>
