@@ -244,6 +244,8 @@ Selective Disclosure (SD) which we have already discussed above, is a mechanism 
 As the [Internet Engineering Task Force (IETF)](https://www.ietf.org) is responsible for producing a number of Internet Standards - the [SD-JWT-based Verifiable Credentials](https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-03.html) has been produced with the goal of allowing digital credentials to be easily integrated into existing internet systems - such as OAuth authentication flows - which are commonly used for single sign on.
 
 <!-- TODO: Clean up table -->
+
+
 | Feature | W3C Verifiable Credentials | ISO mDL (18013-5) / ISO 23220 | IETF SD-JWT VC |
 |---------|----------------------------|--------------------------------|----------------|
 | **Data Format** | JSON-LD with specified framing (can be parsed as both RDF and plain JSON) | JSON or CBOR serialization with fixed schema | JSON with JWT (JSON Web Token) structure |
@@ -251,6 +253,7 @@ As the [Internet Engineering Task Force (IETF)](https://www.ietf.org) is respons
 | **Hashing Mechanisms** | Various supported (SHA-256, etc.) depending on proof type | Defined within ISO specifications | SHA-256 and other algorithms supported by JWT |
 | **Attribute Specification** | Semantic, extensible via RDF/JSON-LD context definitions | Fixed schema with predefined attributes | JSON claims with selective disclosure support |
 | **Selective Disclosure** | Supported through various methods (BBS+, etc.) | Limited to predefined attributes (e.g., age verification) | Native support through SD-JWT mechanisms |
+
 
 *This table was generated with the assistance of claude-3.7-sonnet-thinking*
 <!-- | **Credential Structure** | Generic model with extensible types and context-aware attributes | Domain-specific fixed schemas with predefined attributes | JWT-based structure supporting selective disclosure | -->
