@@ -130,7 +130,9 @@ Well that all makes sense ... so what on earth is there to dispute? Quite a bit 
  - How the *hash* of the digital credential should be created, and
  - How to specify what attributes are described within a credential
 
-These are the kinds of battles that we have seen played out *many* times historically. Past [format wars](https://en.wikipedia.org/wiki/Format_war#:~:text=A%20format%20war%20is%20a,recording%20formats%20for%20electronic%20media.) include [VHS vs. BetaMax](https://en.wikipedia.org/wiki/Videotape_format_war), [Blu-Ray vs. HD DVD](https://en.wikipedia.org/wiki/HD_DVD#:~:text=Much%20like%20the%20videotape%20format,format%2C%20Blu%2Dray%20Disc.), and, if we dare venture back to the 1800's - wars over the [size of the rail gauge](https://en.wikipedia.org/wiki/Track_gauge) and [type of electrical current](https://en.wikipedia.org/wiki/War_of_the_currents) we should use.
+These are the kinds of battles that we have seen played out *many* times historically. 
+
+Past [format wars](https://en.wikipedia.org/wiki/Format_war#:~:text=A%20format%20war%20is%20a,recording%20formats%20for%20electronic%20media.) include [VHS vs. BetaMax](https://en.wikipedia.org/wiki/Videotape_format_war), [Blu-Ray vs. HD DVD](https://en.wikipedia.org/wiki/HD_DVD#:~:text=Much%20like%20the%20videotape%20format,format%2C%20Blu%2Dray%20Disc.), and, if we dare venture back to the 1800's - wars over the [size of the rail gauge](https://en.wikipedia.org/wiki/Track_gauge) and [type of electrical current](https://en.wikipedia.org/wiki/War_of_the_currents) we should use.
 
 So - what different formats are there? Who is backing them? How do they compare?
 
@@ -231,7 +233,29 @@ This means that it is very well-defined how to build an infrastructure specifica
 
 ISO is also working on several other Verifiable Credential standards - including [Cards and security devices for personal identification](https://www.iso.org/standard/74910.html) designed to standardize core features for electronic identity document including drivers licenses, passports, residency permits, and building passes. The underlying goal of the standard is to support interoperability between electronic identity (eID) systems. This standard also defines a range of attributes that may be required in different eID systems - extending those attributes found in the mDL license with attributes such as `Business Name`, `Profession`, and `Academic Title` to support workplace passes, as well as other attributes such as `telephone number` and `email address`. This specification also targets JSON and CBOR formats for encoding data in credentials - meaning that there are still interoperability challenges with systems that need to define attributes that are not defined within this document.  
 
-<!-- ### IEEE / IETF Specifications -->
+### IETF Specifications
+
+The IETF is also producing a set of JSON based verifiable credentials called [SD-JWT-based Verifiable Credentials](https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-03.html). 
+
+JSON Web Tokens (JWT's) are commonly used on the Web today for a range of tasks requiring signed data - for instance they are often used to prove to a website that you are logged in and allowed to access private information on a website.
+
+Selective Disclosure (SD) which we have already discussed above, is a mechanism for proving that a subset of information within a credential is true - without revealing the whole credential to a verifier.
+
+As the [Internet Engineering Task Force (IETF)](https://www.ietf.org) is responsible for producing a number of Internet Standards - the [SD-JWT-based Verifiable Credentials](https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-03.html) has been produced with the goal of allowing digital credentials to be easily integrated into existing internet systems - such as OAuth authentication flows - which are commonly used for single sign on.
+
+<!-- TODO: Clean up table -->
+| Feature | W3C Verifiable Credentials | ISO mDL (18013-5) / ISO 23220 | IETF SD-JWT VC |
+|---------|----------------------------|--------------------------------|----------------|
+| **Data Format** | JSON-LD with specified framing (can be parsed as both RDF and plain JSON) | JSON or CBOR serialization with fixed schema | JSON with JWT (JSON Web Token) structure |
+| **Signature Formats** | Multiple supported (Data Integrity, JSON Web Signatures) | ISO-specific cryptographic protocols | JWT signatures (RS256, ES256, etc.) |
+| **Hashing Mechanisms** | Various supported (SHA-256, etc.) depending on proof type | Defined within ISO specifications | SHA-256 and other algorithms supported by JWT |
+| **Attribute Specification** | Semantic, extensible via RDF/JSON-LD context definitions | Fixed schema with predefined attributes | JSON claims with selective disclosure support |
+| **Selective Disclosure** | Supported through various methods (BBS+, etc.) | Limited to predefined attributes (e.g., age verification) | Native support through SD-JWT mechanisms |
+<!-- | **Credential Structure** | Generic model with extensible types and context-aware attributes | Domain-specific fixed schemas with predefined attributes | JWT-based structure supporting selective disclosure | -->
+<!-- | **Interoperability** | High semantic interoperability across domains | Excellent within specific domains (e.g., mDL), limited across domains | Good integration with existing web infrastructure | -->
+<!-- | **Web Integration** | Strong alignment with Semantic Web principles | Limited web-native capabilities | Strong integration with OAuth/OIDC flows | -->
+<!-- | **Complexity** | Higher complexity due to RDF/JSON-LD features | Moderate complexity within domain boundaries | Moderate complexity, leverages existing JWT knowledge | -->
+<!-- | **Adoption** | Growing across various sectors | Strong in government ID (driver's licenses) | Growing in enterprise settings | -->
 
 
 
@@ -265,7 +289,7 @@ There are three key players in the space: The [World Wide Web Consortium (W3C)](
 
 
 
-"Late 2022: International adoption plans emerge. The European Digital Identity Wallet Architecture and Reference Framework (ARF) draft (by the EU’s eIDAS expert group) lists OID4VP, OID4VCI, and SIOPv2 as required protocols for certain digital identity use cases ￼."
+"Late 2022: International adoption plans emerge. The European Digital Identity Wallet Architecture and Reference Framework (ARF) draft (by the EU's eIDAS expert group) lists OID4VP, OID4VCI, and SIOPv2 as required protocols for certain digital identity use cases ￼."
 
 
 Cards and security devices for personal
@@ -295,7 +319,7 @@ Ensure that the 23220-2 data model expressed by the ISO SC17 WG4 community is co
 
 
 Other W3C Notables:
- - [Jan 2025 - W3C Verifiable Credentials for Education Task Force](https://w3c-ccg.github.io/vc-ed/charter/) begins work on chartering
+ - [Jan 2025 - W3C Verifiable Credentials for Education Task Force](https://w3c-ccg.github.io/vc-ed/charter/) begins to create charter
 
 
  - W3C
@@ -371,7 +395,7 @@ ISO/IEC 23220-2: ISO/IEC 23220-2 defines a data model for interoperability betwe
 
 <!-- TODO: Potentially comment on ISO governance -->
 
-<!-- This kind of governance yields very stable, vetted standards but not very agile in response to new tech – which is why ISO is now looking to incorporate things like W3C’s work after the fact. -->
+<!-- This kind of governance yields very stable, vetted standards but not very agile in response to new tech – which is why ISO is now looking to incorporate things like W3C's work after the fact. -->
 
 
 ## Regulation Driving Data Wallets
@@ -519,7 +543,7 @@ The [OID4VP](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html
 
 ... thats a lot of standards!
 
-Whilst this has been happening, W3C groups have also been busy defining better ways for browsers to operate with your confidential data - including digital credentials. The [Credential Management Level 1](https://www.w3.org/TR/credential-management-1/) (creative naming!) "describes an imperative API enabling a website to request a user’s credentials from a user agent, and to help the user agent correctly store user credentials for future use" the credentials in scope for this group include *passwords*, *one time passcodes* and *digital credentials* such as Verifiable Credentials.
+Whilst this has been happening, W3C groups have also been busy defining better ways for browsers to operate with your confidential data - including digital credentials. The [Credential Management Level 1](https://www.w3.org/TR/credential-management-1/) (creative naming!) "describes an imperative API enabling a website to request a user's credentials from a user agent, and to help the user agent correctly store user credentials for future use" the credentials in scope for this group include *passwords*, *one time passcodes* and *digital credentials* such as Verifiable Credentials.
 
 On top of this API specifications such as the [Credentials Handling API (CHAPI)](https://w3c-ccg.github.io/credential-handler-api/#oncredentialrequest-attribute) are being developed.
 
@@ -549,7 +573,7 @@ TL;DR: THE DCQL is used within the request to the `/presentations` endpoint of a
 
 The following is not VC speciifc, defines an API for managing a number of credentials from VC's to otp's and passwords, and defines when to e.g. use those credentials for autocompletion
 
-[Credential Management Level 1](https://www.w3.org/TR/credential-management-1/) "This specification describes an imperative API enabling a website to request a user’s credentials from a user agent, and to help the user agent correctly store user credentials for future use."
+[Credential Management Level 1](https://www.w3.org/TR/credential-management-1/) "This specification describes an imperative API enabling a website to request a user's credentials from a user agent, and to help the user agent correctly store user credentials for future use."
 
 ---
 
