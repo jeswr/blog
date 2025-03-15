@@ -243,17 +243,48 @@ Selective Disclosure (SD) which we have already discussed above, is a mechanism 
 
 As the [Internet Engineering Task Force (IETF)](https://www.ietf.org) is responsible for producing a number of Internet Standards - the [SD-JWT-based Verifiable Credentials](https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-03.html) has been produced with the goal of allowing digital credentials to be easily integrated into existing internet systems - such as OAuth authentication flows - which are commonly used for single sign on.
 
-<!-- TODO: Clean up table -->
-
-
-| Feature | W3C Verifiable Credentials | ISO mDL (18013-5) / ISO 23220 | IETF SD-JWT VC |
-|---------|----------------------------|--------------------------------|----------------|
-| **Data Format** | JSON-LD with specified framing (can be parsed as both RDF and plain JSON) | JSON or CBOR serialization with fixed schema | JSON with JWT (JSON Web Token) structure |
-| **Signature Formats** | Multiple supported (Data Integrity, JSON Web Signatures) | ISO-specific cryptographic protocols | JWT signatures (RS256, ES256, etc.) |
-| **Hashing Mechanisms** | Various supported (SHA-256, etc.) depending on proof type | Defined within ISO specifications | SHA-256 and other algorithms supported by JWT |
-| **Attribute Specification** | Semantic, extensible via RDF/JSON-LD context definitions | Fixed schema with predefined attributes | JSON claims with selective disclosure support |
-| **Selective Disclosure** | Supported through various methods (BBS+, etc.) | Limited to predefined attributes (e.g., age verification) | Native support through SD-JWT mechanisms |
-
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>W3C Verifiable Credentials</th>
+      <th>ISO mDL (18013-5) / ISO 23220</th>
+      <th>IETF SD-JWT VC</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Data Format</strong></td>
+      <td>JSON-LD with specified framing (can be parsed as both RDF and plain JSON)</td>
+      <td>JSON or CBOR serialization with fixed schema</td>
+      <td>JSON with JWT (JSON Web Token) structure</td>
+    </tr>
+    <tr>
+      <td><strong>Signature Formats</strong></td>
+      <td>Multiple supported (Data Integrity, JSON Web Signatures)</td>
+      <td>ISO-specific cryptographic protocols</td>
+      <td>JWT signatures (RS256, ES256, etc.)</td>
+    </tr>
+    <tr>
+      <td><strong>Hashing Mechanisms</strong></td>
+      <td>Various supported (SHA-256, etc.) depending on proof type</td>
+      <td>Defined within ISO specifications</td>
+      <td>SHA-256 and other algorithms supported by JWT</td>
+    </tr>
+    <tr>
+      <td><strong>Attribute Specification</strong></td>
+      <td>Semantic, extensible via RDF/JSON-LD context definitions</td>
+      <td>Fixed schema with predefined attributes</td>
+      <td>JSON claims with selective disclosure support</td>
+    </tr>
+    <tr>
+      <td><strong>Selective Disclosure</strong></td>
+      <td>Supported through various methods (BBS+, etc.)</td>
+      <td>Limited to predefined attributes (e.g., age verification)</td>
+      <td>Native support through SD-JWT mechanisms</td>
+    </tr>
+  </tbody>
+</table>
 
 *This table was generated with the assistance of claude-3.7-sonnet-thinking*
 <!-- | **Credential Structure** | Generic model with extensible types and context-aware attributes | Domain-specific fixed schemas with predefined attributes | JWT-based structure supporting selective disclosure | -->
@@ -664,8 +695,6 @@ The bigger challenge is now to get the technology production ready and standardi
 ### Does it even make sense to be talking about credentials?
 
 As I discuss further [here](https://github.com/jeswr/queryable-credentials?tab=readme-ov-file#on-abstractions) - whilst it is sensible to talk about credentials to end-users of applications; it is my position that credentials are the wrong object to be working with at a standards level - such as within IEEE and W3C specifications. Instead, we should be talking about [datasets of facts](https://github.com/jeswr/queryable-credentials?tab=readme-ov-file#initial-design-thoughts-for-a-queryable-api), with metadata such as signatures and proofs that attest to their integrity.
-
-<!-- TODO: Elaborate -->
 
 ## Further Reading
 
