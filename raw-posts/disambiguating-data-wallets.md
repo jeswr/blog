@@ -527,7 +527,7 @@ The core infrastructure backing this will be the [ISO mobile Driver&#39;s Licens
 
 Meanwhile, Australia has just ... gotten on with the job, in most states you can download their digital driver's license *today* - in [Queensland](https://www.qld.gov.au/transport/projects/digital-licence/about) the license was being piloted back in 2020, and has been available statewide since [November 2023](https://www.abc.net.au/news/2023-11-01/digital-queensland-drivers-licences-statewide-security-testing/103046186). South Australia, the first in the country to launch a digital driver's licence - has had once [since 2017](https://www.thalesgroup.com/en/markets/digital-identity-and-security/government/driving-licence/digital-driver-license)!
 
-## Options for holders
+<!-- ## Options for holders -->
 
 ## Why Solid as a Holder Service should be taken seriously
 
