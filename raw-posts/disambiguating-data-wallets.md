@@ -654,6 +654,8 @@ Well there are a few:
 2. Whilst credentials can be made available both through the Credentials Handling API in the browser - they can also be accessed directly from personal cloud storage by service providers who have been granted consent to access the credential.
 3. Solid provides a means to completely decouple consent management interfaces from the holder of credentials - because of the standardised Access Control mechanisms that it has.
 
+But most importantly **Solid is about far more than just credentials**. In his [recent article in the Financial Times](https://www.ft.com/content/79d2d19a-08df-48fc-9a6f-a9dbef58f642); Sir Tim Berners-Lee discussed how Solid is really about taking back control of *all of your data* - your social media contacts, your financial data, and your health records - to enable you to be empowered with this data. This empowerment can be as simple as revoking access of your data to platforms you no-longer trust, or porting your Facebook contacts on to Reddit through to the use of trusted AI agents that support your wellbeing.
+
 <!-- So the play here in the shorter term is:
  - Credentials live in Solid Pod which allows you to view the credentials,
  - *an exchange protocol* is either fetching data using the Solid API's; or a `derive` endpoint as an addition to a Pod
