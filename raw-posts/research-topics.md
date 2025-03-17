@@ -58,6 +58,11 @@ Possible intermediary points include:
 - Normalised natural language (e.g. application of strict grammar rules and/or reduction to a concise and precise language.)
 - Building hybrid KG / VDB architectures and understanding the internal representation + mapping between the two views may go a long way in assisting with the creation of this intermediate representation.
 
+## Web-aware agents
+In [this paper](https://openaccess.city.ac.uk/id/eprint/34788/) we present a vision of how we can evolve from the current paradigm of Computer Using Agents (CUAs) towards Personal AI Agents reminiscent of the 2001 Semantic Web Vision Paper.
+In [the same paper](https://openaccess.city.ac.uk/id/eprint/34788/), we posit that a migration towards a Web of self-describing agents will only be possible should we make operator style agents Web-aware.
+What this enables is for Web Agents to more feasibly learn what the “action space” of a particular website is, and more efficiently affect operations.
+
 ## Bootstrapping Web Agents
 
 In [this paper](https://openaccess.city.ac.uk/id/eprint/34788/) we present a vision of how we can evolve from the current paradigm of Computer Using Agents (CUAs) towards Personal AI Agents reminiscent of the 2001 Semantic Web Vision Paper.
@@ -70,4 +75,43 @@ In parallel, we create the opportunity to begin to develop more bespoke search e
 
 ## Privacy Preserving Reasoning over Decentralised Ecosystems
 
-See [here](https://jeswr.solidcommunity.net/public/DPhil_Proposal.pdf)
+See [here](https://jeswr.solidcommunity.net/public/DPhil_Proposal.pdf).
+
+## “Belief” in semi-autonomous agents via personalised models of trust
+
+## Extracting ontological models from LLMs
+
+Ontological construction has traditionally been a time consuming, slow and expensive progress – requiring close collaboration between knowledge engineers and domain experts.
+
+In this work package shall test the viability of using LLMs to do a first pass of ontology construction. However, the goal is to investigate whether this can be done using [mind mapping](https://www.anthropic.com/research/mapping-mind-language-model) techniques rather than prompt engineering.
+
+## Hybrid KG & Vector Database architectures
+The core idea here is to build a DB with both a VDB and a KG view. Bergi has already done some work on this topic [here](https://www.bergnet.org/2024/05/unified-landscape/) and [here](https://www.bergnet.org/2024/09/llm-kg-wombat/).
+
+
+The VDB view enables 
+The KB view presents data as a probabilistic KG.
+
+Article on the Graph RAG side of things https://medium.com/towards-data-science/how-to-implement-graph-rag-using-knowledge-graphs-and-vector-databases-60bb69a22759
+
+Deliverables:
+-	A formal specification for calculating points in vector space of knowledge graph concepts
+-	
+
+## Probabilistic RDF 1.2
+
+Following on from the above topic we need to define precise semantics for describing probabilities and performing inference with said probabilities in RDF/SPARQL 1.2. In particular, see Bergi's article on [tackling uncertainty](https://www.bergnet.org/2024/09/llm-kg-wombat/).
+
+This may take the form of a prov-o(?) extension to enable the expression of concepts such as how sure a given entity is that a claim is true.
+
+## Knowledge Graph Memory For LLM-Based Agents
+
+There is emerging work, such as [this](https://arxiv.org/pdf/2309.11696) on LLM memory, which build memory such as SSD access directly into the LLM architecture - rather than needing to perform this via RAG into the LLM prompt.
+
+The goal here is to build specialised architectures for access to graph-structured data.
+
+## Open Research Dashboard
+
+As a way towards having a fully online collaborative environment – encourage researchers to discuss ideas on a topic on a platform that uses Solid and [ActivityPub](https://en.wikipedia.org/wiki/ActivityPub), and have either humans or machines label the topics for each idea.
+
+Then allow one to browse / view who is working on what, as well as their latest progress – e.g. on GH.
