@@ -58,6 +58,10 @@ Possible intermediary points include:
 - Normalised natural language (e.g. application of strict grammar rules and/or reduction to a concise and precise language.)
 - Building hybrid KG / VDB architectures and understanding the internal representation + mapping between the two views may go a long way in assisting with the creation of this intermediate representation.
 
+## Conceptual alignment between agents (including LLM, neurosymbolic, and logical-only)
+
+Work includes evaluating how well LLM-based agents can collboratively describe and build formal conceptual models of the world in order to discuss new concepts on the fly.
+
 ## Web-aware agents
 
 In [this paper](https://openaccess.city.ac.uk/id/eprint/34788/) we present a vision of how we can evolve from the current paradigm of Computer Using Agents (CUAs) towards Personal AI Agents reminiscent of the 2001 Semantic Web Vision Paper.
