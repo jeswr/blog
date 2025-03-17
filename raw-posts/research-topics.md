@@ -5,6 +5,8 @@ permalink: /2025/02/17/research-topics/
 ---
 ... that I'm interested in but don't have time to work on at the moment.
 
+If you're looking for topics specifically related to Solid and data sovereignty look [here](https://github.com/solid/research-topics).
+
 ## Suitable Representations
 
 ```mermaid
@@ -53,3 +55,13 @@ Possible intermediary points include:
 
 - Normalised natural language (e.g. application of strict grammar rules and/or reduction to a concise and precise language.)
 - Building hybrid KG / VDB architectures and understanding the internal representation + mapping between the two views may go a long way in assisting with the creation of this intermediate representation.
+
+## Bootstrapping Web Agents
+
+In [this paper](https://openaccess.city.ac.uk/id/eprint/34788/) we present a vision of how we can evolve from the current paradigm of Computer Using Agents (CUAs) towards Personal AI Agents reminiscent of the 2001 Semantic Web Vision Paper.
+
+In [the same paper paper](https://openaccess.city.ac.uk/id/eprint/34788/), we posit that a migration towards a Web of self-describing agents will only be possible should we first bootstrap a critical mass of such agents from existing Web Services. This is particularly important when interacting with legacy services that may not have any active maintainers.
+The core research questions here are:
+  1. How does one discover the action space of a Website
+  2. How does one describe that action space of said Website, e.g., with Semantic Web Service Descriptions
+In parallel, we create the opportunity to begin to develop more bespoke search engines / indexing engines for a Web of Agents. In the same way that schema.org enabled Google to effectively index information embedded in Websites - including movie schedules - and present aggregate information at the top of a search result, this work creates the possibility to create an index of what range of actions a particular platform supports. 
