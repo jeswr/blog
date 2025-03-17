@@ -7,7 +7,7 @@ permalink: /2025/02/17/research-topics/
 
 If you're looking for topics specifically related to Solid and data sovereignty look [here](https://github.com/solid/research-topics).
 
-If you're looking for some more topics related to semi-autonomous Web Agents look [here](https://jeswr.solidcommunity.net/public/iswc_doctoral_consortium.pdf).
+If you're looking for some more topics related to semi-autonomous Web Agents look [here](https://jeswr.solidcommunity.net/public/iswc_doctoral_consortium.pdf) and for early work on the topic see [here](https://arxiv.org/html/2409.04465v1).
 
 ## Suitable Representations
 
