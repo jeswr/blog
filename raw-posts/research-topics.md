@@ -81,6 +81,11 @@ See [here](https://jeswr.solidcommunity.net/public/DPhil_Proposal.pdf).
 
 ## “Belief” in semi-autonomous agents via personalised models of trust
 
+
+## **Exploring Risk Ontologies and Legal Data Sharing Agreements for Next-Generation Data Governance**
+
+See [here](https://docs.google.com/document/d/1Ilh5H2IkBWeeRVMMtRSrIQ0_w-nBOyZo/edit).
+
 ## Extracting ontological models from LLMs
 
 Ontological construction has traditionally been a time consuming, slow and expensive progress – requiring close collaboration between knowledge engineers and domain experts.
