@@ -59,6 +59,7 @@ Possible intermediary points include:
 - Building hybrid KG / VDB architectures and understanding the internal representation + mapping between the two views may go a long way in assisting with the creation of this intermediate representation.
 
 ## Web-aware agents
+
 In [this paper](https://openaccess.city.ac.uk/id/eprint/34788/) we present a vision of how we can evolve from the current paradigm of Computer Using Agents (CUAs) towards Personal AI Agents reminiscent of the 2001 Semantic Web Vision Paper.
 In [the same paper](https://openaccess.city.ac.uk/id/eprint/34788/), we posit that a migration towards a Web of self-describing agents will only be possible should we make operator style agents Web-aware.
 What this enables is for Web Agents to more feasibly learn what the “action space” of a particular website is, and more efficiently affect operations.
@@ -69,9 +70,10 @@ In [this paper](https://openaccess.city.ac.uk/id/eprint/34788/) we present a vis
 
 In [the same paper paper](https://openaccess.city.ac.uk/id/eprint/34788/), we posit that a migration towards a Web of self-describing agents will only be possible should we first bootstrap a critical mass of such agents from existing Web Services. This is particularly important when interacting with legacy services that may not have any active maintainers.
 The core research questions here are:
-  1. How does one discover the action space of a Website
-  2. How does one describe that action space of said Website, e.g., with Semantic Web Service Descriptions
-In parallel, we create the opportunity to begin to develop more bespoke search engines / indexing engines for a Web of Agents. In the same way that schema.org enabled Google to effectively index information embedded in Websites - including movie schedules - and present aggregate information at the top of a search result, this work creates the possibility to create an index of what range of actions a particular platform supports. 
+
+1. How does one discover the action space of a Website
+2. How does one describe that action space of said Website, e.g., with Semantic Web Service Descriptions
+   In parallel, we create the opportunity to begin to develop more bespoke search engines / indexing engines for a Web of Agents. In the same way that schema.org enabled Google to effectively index information embedded in Websites - including movie schedules - and present aggregate information at the top of a search result, this work creates the possibility to create an index of what range of actions a particular platform supports.
 
 ## Privacy Preserving Reasoning over Decentralised Ecosystems
 
@@ -86,6 +88,7 @@ Ontological construction has traditionally been a time consuming, slow and expen
 In this work package shall test the viability of using LLMs to do a first pass of ontology construction. However, the goal is to investigate whether this can be done using [mind mapping](https://www.anthropic.com/research/mapping-mind-language-model) techniques rather than prompt engineering.
 
 ## Hybrid KG & Vector Database architectures
+
 The core idea here is to build a DB with both a VDB and a KG view. Bergi has already done some work on this topic [here](https://www.bergnet.org/2024/05/unified-landscape/) and [here](https://www.bergnet.org/2024/09/llm-kg-wombat/).
 
 There is further related work [here](https://medium.com/towards-data-science/how-to-implement-graph-rag-using-knowledge-graphs-and-vector-databases-60bb69a22759).
@@ -109,3 +112,11 @@ The goal here is to build specialised architectures for access to graph-structur
 As a way towards having a fully online collaborative environment – encourage researchers to discuss ideas on a topic on a platform that uses Solid and [ActivityPub](https://en.wikipedia.org/wiki/ActivityPub), and have either humans or machines label the topics for each idea.
 
 Then allow one to browse / view who is working on what, as well as their latest progress – e.g. on GH.
+
+## Semantic commitments all the way down
+
+Work towards have transactions on the Web semantically described commitments
+
+## Say goodbye to the cloud and hello to the dataspace
+
+Don't write apps and code agains servers - write them against data instead.
