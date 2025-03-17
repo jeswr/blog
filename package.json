@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:mermaid": "mmdc -i ./raw-posts/disambiguating-data-wallets.md -o ./posts/disambiguating-data-wallets.md -a ./static/generated/ -e png -w 3840 -H 2160"
+    "build:mermaid:wallets": "mmdc -i ./raw-posts/disambiguating-data-wallets.md -o ./posts/disambiguating-data-wallets.md -a ./static/generated/ -e png -w 3840 -H 2160",
+    "build:mermaid:research": "mmdc -i ./raw-posts/research-topics.md -o ./posts/research-topics.md -a ./static/generated/ -e png -w 3840 -H 2160"
   },
   "keywords": [],
   "author": "",
