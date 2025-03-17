@@ -1,5 +1,5 @@
 ---
-title: "Communication in multi agent systems"
+title: "Communication in Multi Agent Systems"
 date: 2025-05-17
 permalink: /2025/05/17/mas-communication/
 ---
