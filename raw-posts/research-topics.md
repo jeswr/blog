@@ -67,3 +67,7 @@ The core research questions here are:
   1. How does one discover the action space of a Website
   2. How does one describe that action space of said Website, e.g., with Semantic Web Service Descriptions
 In parallel, we create the opportunity to begin to develop more bespoke search engines / indexing engines for a Web of Agents. In the same way that schema.org enabled Google to effectively index information embedded in Websites - including movie schedules - and present aggregate information at the top of a search result, this work creates the possibility to create an index of what range of actions a particular platform supports. 
+
+## Privacy Preserving Reasoning over Decentralised Ecosystems
+
+See [here](https://jeswr.solidcommunity.net/public/DPhil_Proposal.pdf)
