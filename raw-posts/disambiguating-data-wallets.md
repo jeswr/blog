@@ -2,7 +2,6 @@
 title: "Disambiguating Data Wallets"
 date: 2025-03-13
 permalink: /2025/02/14/data-wallets/
-status: Draft
 ---
 Data wallets are becoming popular, as this happens the term is becoming increasingly *overloaded* and *confused*. This post is a digestable disambgiuation 🍜 of the standards 📇, regulation ✒️, implementors :screwdriver:, and other players 🙋 in the space.
 
