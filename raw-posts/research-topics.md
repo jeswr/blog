@@ -88,15 +88,9 @@ In this work package shall test the viability of using LLMs to do a first pass o
 ## Hybrid KG & Vector Database architectures
 The core idea here is to build a DB with both a VDB and a KG view. Bergi has already done some work on this topic [here](https://www.bergnet.org/2024/05/unified-landscape/) and [here](https://www.bergnet.org/2024/09/llm-kg-wombat/).
 
+There is further related work [here](https://medium.com/towards-data-science/how-to-implement-graph-rag-using-knowledge-graphs-and-vector-databases-60bb69a22759).
 
-The VDB view enables 
-The KB view presents data as a probabilistic KG.
-
-Article on the Graph RAG side of things https://medium.com/towards-data-science/how-to-implement-graph-rag-using-knowledge-graphs-and-vector-databases-60bb69a22759
-
-Deliverables:
--	A formal specification for calculating points in vector space of knowledge graph concepts
--	
+The first piece of work I would be interested in is a formal specification for calculating points in vector space of knowledge graph concepts.
 
 ## Probabilistic RDF 1.2
 
