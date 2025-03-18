@@ -79,6 +79,8 @@ The core research questions here are:
 2. How does one describe that action space of said Website, e.g., with Semantic Web Service Descriptions
    In parallel, we create the opportunity to begin to develop more bespoke search engines / indexing engines for a Web of Agents. In the same way that schema.org enabled Google to effectively index information embedded in Websites - including movie schedules - and present aggregate information at the top of a search result, this work creates the possibility to create an index of what range of actions a particular platform supports.
 
+For "operationalising the action space" - e.g. going from call to the agent interface to website interaction, we could experiment to evaluate whether we can bootstrap existing Websites into becoming agents using LLMs to generate RML style mappings + potentially playwright interactions for Websites and APIs.
+
 ## Privacy Preserving Reasoning over Decentralised Ecosystems
 
 See [here](https://jeswr.solidcommunity.net/public/DPhil_Proposal.pdf).
@@ -88,7 +90,7 @@ See [here](https://jeswr.solidcommunity.net/public/DPhil_Proposal.pdf).
 
 ## **Exploring Risk Ontologies and Legal Data Sharing Agreements for Next-Generation Data Governance**
 
-See [here](https://docs.google.com/document/d/1Ilh5H2IkBWeeRVMMtRSrIQ0_w-nBOyZo/edit).
+See [here](https://docs.google.com/document/d/1Ilh5H2IkBWeeRVMMtRSrIQ0_w-nBOyZo/edit) and [here](https://share.note.sx/w9hofb5h#c3szRsdAATdEB3sKajWb3AF6iAjBBpRLQ+WPfw1QB4E).
 
 ## Extracting ontological models from LLMs
 
