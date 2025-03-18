@@ -124,6 +124,13 @@ As a way towards having a fully online collaborative environment – encourage r
 
 Then allow one to browse / view who is working on what, as well as their latest progress – e.g. on GH.
 
+## Malleable Software for Solid (read: RDF data structures and Shapes)
+
+ - For Malleable Software see [here](https://www.inkandswitch.com).
+ - For Solid see [here](https://solidproject.org).
+ - For RDF see [here](https://en.wikipedia.org/wiki/Resource_Description_Framework).
+ - For Shapes see [here](https://ruben.verborgh.org/blog/2019/06/17/shaping-linked-data-apps/).
+
 ## Semantic commitments all the way down
 
 Work towards have transactions on the Web semantically described commitments
