@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Impressed by Cursor</title>
+    <meta name="description" content="Blog of a Software Engineer and Researcher"/>
+    <meta name="keywords" content="blog,developer blog,engineering blog,research blog,oxford,oxford university"/>
+    <link rel="alternate" type="application/rss+xml" title="Jesse Wright" href="/rss.xml" />
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Alegreya:400,400i|Lato:400,400i,700,900|Roboto+Mono:400,300">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/shades-of-purple.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+
+    <link rel="stylesheet" href="/css/normalize.css"/>
+    <link rel="stylesheet" href="/css/theme.css"/>
+</head>
+<body>
+<nav class="nav">
+    <div class="nav__left">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+    </div>
+    <div class="nav__right">
+        <a target="_blank" href="https://github.com/jeswr" class="link-github">GitHub</a>
+        <a target="_blank" href="https://twitter.com/" class="link-twitter">Twitter</a>
+        <a href="mailto:jesse@jeswr.org" class="link-email">Email</a>
+        <a href="/rss.xml" class="link-rss">RSS</a>
+    </div>
+</nav>
+
+<article class="mar-b-7">
+    <header class="text-center">
+        <time class="mar-b-6" datetime="Tue, March 18, 2025">Tue, March 18, 2025</time>
+        <h1 class="mar-b-7">Impressed by Cursor</h1>
+    </header>
+    <video autoplay="" class="relative bottom-0 left-1/2 z-10 w-auto -translate-x-1/2 overflow-hidden rounded-t-lg lg:absolute lg:h-[90%]" loop="" playsinline="" preload="auto" src="https://assets.basehub.com/191e7e6d/2c99e8a087f981290dc74d2b621a7192/current-best-for-two-mp4.mp4"></video>
+<p><strong>Credit <a href="https://cursor.com">cursor.com</a></strong></p>
+<p>I've been using <a href="https://www.cursor.com">cursor</a> with <a href="https://www.anthropic.com/news/claude-3-7-sonnet">claude-3.7-sonnet-thinking</a> for the last week for a range of programming tasks. I've been extremely impressed by some of the things it has been able to do - however there is still room to improve.</p>
+<p>Things cursor excelled at:</p>
+<ul>
+<li>Format Conversions: Such as markdown-to-table conversions can be done first-shot by highlighting the thing you want converted and telling it the format you want it converted to. It has for instance done <a href="https://github.com/jeswr/blog/commit/60b8ea96ab72f36fa1ebb5fab4921761f1591b4c">this table conversion</a>, and these <a href="https://github.com/jeswr/blog/blob/f110776806e091c9550effa36d0d563b3653557e/raw-posts/disambiguating-data-wallets.md?plain=1#L739">footer conversions</a>.</li>
+<li>Reasonably complex node.js logic <a href="https://github.com/rdfjs/N3.js/pull/503">like this</a> - though the example provided here was done with the assistance of copilot before I had discovered cursor. It also required me to prompt it describing the exact return types and proxy-based architecture that I was after.</li>
+</ul>
+<p>Places where there is room to improve:</p>
+<ul>
+<li>Full codebase generation: I tried to get it to generate an implementation of the <a href="https://modelcontextprotocol.io/introduction">Model Context Protocol</a> for the <a href="https://solidproject.org/specification">Solid Specification</a>. As can be seen in the attempt <a href="https://github.com/jeswr/solid-mcp/tree/56b951cc9577b36ed1b89540e7b233afbb5f0b4e">here</a>, whilst the docs look <em>lovely</em> it severely over-complicates the implementation; which should look more like <a href="https://github.com/modelcontextprotocol/servers/tree/main/src/gdrive">this Google Drive example</a>. Similar issues were faced in trying to get it to generate a <a href="https://github.com/jeswr/n3proof.rs/tree/7e7e8ceafacc31b0872349d0daf391054831f686">Notation3 Proof Checker in Rust</a>.</li>
+<li>Going <a href="https://github.com/oxigraph/oxigraph/pull/1213#discussion_r1997515722">off topic</a> and <a href="https://github.com/oxigraph/oxigraph/pull/1213#discussion_r1997649834">making up properties of manifest files</a>.</li>
+</ul>
+</article>
+
+
+
+<footer class="text-center mar-tb-6">
+    © 2025 Jesse Wright, unless otherwise stated.
+</footer>
+
+<script>hljs.highlightAll();</script>
+</body>
+</html>
+
