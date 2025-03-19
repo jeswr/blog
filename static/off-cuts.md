@@ -67,3 +67,56 @@ Reference to ZK snarks in real-world use-cases:
 Proposed research plan with this one:
  - https://claude.ai/chat/68bc9724-3e1e-417d-aa08-4c94a92d37d7
 
+
+## Trust
+
+- https://www.turing.ac.uk/sites/default/files/2021-11/technical_briefing_a_conceptual_model_of_trust_and_trustworthiness.pdf
+
+
+## Work Package 2: Semi-Automated Data Sharing & Data Sharing Agreements
+
+Current Status: I think I am better positioned to push on this line of work with the use-cases that we have at the ODI. In particular, CDMC already has a series of catalogues defining the different data governance requirements for different datatypes in different jurisdictions which need to be accounted for.
+We note that the Data (Use and Access) Bill is presently under debate in the House of Lords – amongst other matters, the bill amends Data Protection Regulation in the UK as originally defined in the UK Data Protection Act 2018, adds new provisions to facilitate the sharing of data for research purposes, and makes updates to requirements around Data Subject Access Requests (SAR).
+
+Should this bill is passed prior to the commencement of this work package in February 2025, our work will make a timely contribution to the understanding of, and commentary around, this key piece of legislation.
+Outputs to date:
+-	Me want cookie paper; presenting the vision for semi-automated data governance
+o	https://arxiv.org/abs/2408.09071, in retrospect – this was a good pedagogical exercise for myself, but not particularly impactful research. It pushes on many ideas that were already present in Oshani’s PhD research https://groups.csail.mit.edu/dig/2009/oshani-thesis/main.pdf
+-	Purpose generation work (I *hope* this is done my the time I transfer – note this has similarities to the paper that Rui is currently working on):
+o	https://github.com/jeswr/cookie-analysis
+o	https://github.com/jeswr/cookie-purpose
+Expected Outputs:
+•	(Optional) Implementation of a prototype compliance-checking engine, with contributions from both teams, to automate the creation, negotiation and compliance-checking of machine-readable contracts. The prototype will be available open source under the MIT license.
+•	(Optional) Series of papers in collaboration with legal experts, demonstrating the feasibility of semi-automated, legally binding data-sharing contracts in various jurisdictions. The papers will focus on:
+o	Demonstrating such contracts’ legal enforceability under UK law.
+o	Extending the approach to other jurisdictions and analyzing the differing requirements for compliance.
+Further pointers:
+-	https://hendersoni.substack.com/p/the-very-necessary-shift-from-consent
+-	Projects like CDMC are already creating a set of assets for describing Cloud Controls within industry, which is beginning to include the development of registries which describe the https://edmcouncil.org/frameworks/cdmc/.
+
+## Work Package 6 (Optional): KG’s in LLM Architectures
+Formal semantic languages such as RDF encoded description logics (which in most profiles has a sub first-order expressivity), are a good means of precisely describing information – supporting interpretability and interoperability of data between systems. For much data with clear-cut attributes like the address, DOB, and website of a user – these languages can capture full information.
+
+## Work Package 7.5 (Optional): Suitable representations for agentic alignment
+A pressing challenge of LLM-based agentic research that of conceptual alignment. Fundamentally, this comes down to the question “If we have two agents talking to each other, how do we know they have an aligned understanding of the concepts they talk about.”
+One approach is to have agents share a global “whiteboard” of precise definitions of the topics they use. In the Semantic Web context – the equivalent would be to jointly pick a certain vocabulary to use, which in theory would have a set of “globally understood” Semantics.
+Another approach is to have agents
+In the description logic world this would be more of a conflict resolution process – as opposed to a  
+
+## Actions
+
+Work Package 8 (Optional): Bodies to contact in relation to Solid
+-	https://www.iso.org/committee/601355/x/catalogue/p/0/u/1/w/0/d/0
+-	https://datatracker.ietf.org/doc/html/draft-ietf-gnap-core-protocol
+State of the art multi-agent systems
+-	https://agent-network-protocol.com
+-	https://arxiv.org/abs/2410.11905
+
+## How do we Trust?
+
+One facet of trust is the process of establishing that the entity that you are communicating with, is who they claim they are. In the financial services, there is a billion-dollar market around this – Know Your Customer.
+Within the UK’s Digital Identity and Attributes Framework (DIATF) [1], this also makes an appearance. There four confidence intervals are defined, with further evidence that the entity is who they claim to be at each stage.  
+[1] https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual/how-to-prove-and-verify-someones-identity
+[2] 
+It’s all just data …
+
