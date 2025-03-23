@@ -124,6 +124,12 @@ As a way towards having a fully online collaborative environment – encourage r
 
 Then allow one to browse / view who is working on what, as well as their latest progress – e.g. on GH.
 
+## Search interfaces to discover semantically described data and datasets
+
+This includes:
+ - A good portal which supports the discovery of authoritative entity identifiers such as [WebIds](https://en.wikipedia.org/wiki/WebID) based on a natural language query - this could be for name "Jesse" or a rough description "Australian guy working on AI and Solid."
+ - A good portal to discover semantically described datasets such as those described using [Croissant](https://theodi.org/news-and-events/blog/transforming-ai-data-governance-with-croissant-a-new-standard-for-ml-metadata/) or [DProd](https://ekgf.github.io/dprod/).
+
 ## Malleable Software for Solid (read: RDF data structures and Shapes)
 
  - For Malleable Software see [here](https://www.inkandswitch.com).
