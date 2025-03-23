@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -91,6 +90,7 @@
             padding: 0 2px;
             border-radius: 3px;
             background-color: rgba(0, 123, 255, 0.1);
+            display: inline-block;
         }
         
         .entity:hover {
@@ -100,8 +100,9 @@
         .entity-popup {
             display: none;
             position: absolute;
-            bottom: 30px;
-            left: 0;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
             background-color: white;
             border: 1px solid #ddd;
             border-radius: 8px;
@@ -109,6 +110,7 @@
             width: 250px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             z-index: 100;
+            margin-bottom: 10px;
         }
         
         .entity:hover .entity-popup {
@@ -177,35 +179,31 @@
         </div>
         
         <div class="model-message">
-            <p><span class="high-confidence">The collapse of <span class="entity" id="entity-ltcm">Long-Term Capital Management (LTCM)
-                <div class="entity-popup">
-                    <img class="entity-image" src="https://upload.wikimedia.org/wikipedia/en/7/7f/Long-Term_Capital_theo.gif" alt="LTCM">
+            <p><span class="high-confidence">The collapse of <span class="entity" id="entity-ltcm">Long-Term Capital Management (LTCM)<div class="entity-popup">
+                    <img class="entity-image" src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Long-Term_Capital_Management_%28logo%29.png" alt="LTCM">
                     <p><strong>Long-Term Capital Management L.P.</strong></p>
                     <p>Hedge fund founded in 1994, collapsed in 1998</p>
                     <div class="entity-actions">
                         <button class="entity-confirm">✓ Correct entity</button>
                         <button class="entity-reject">✗ Wrong entity</button>
                     </div>
-                </div>
-            </span> in 1998 was caused by several key factors.</span></p>
+                    
+                </div></span> in 1998 was caused by several key factors.</span></p>
             
             <p><span class="high-confidence">First, LTCM employed an extremely high leverage ratio, borrowing over $124 billion against $4.72 billion of equity, creating a debt-to-equity ratio of more than 25:1.</span></p>
             
-            <p><span class="medium-confidence">Second, LTCM's trading strategy relied heavily on <span class="entity" id="entity-convergence">convergence trades
-                <div class="entity-popup">
+            <p><span class="medium-confidence">Second, LTCM's trading strategy relied heavily on <span class="entity" id="entity-convergence">convergence trades<div class="entity-popup">
                     <p><strong>Convergence Trading</strong></p>
                     <p>A strategy that involves betting that the prices of similar financial securities will converge over time.</p>
                     <div class="entity-actions">
                         <button class="entity-confirm">✓ Correct concept</button>
                         <button class="entity-reject">✗ Wrong concept</button>
                     </div>
-                </div>
-            </span>, based on the assumption that market prices would eventually converge to their theoretical values.</span></p>
+                </div></span>, based on the assumption that market prices would eventually converge to their theoretical values.</span></p>
             
             <p><span class="high-to-medium-confidence">Third, the 1997 Asian financial crisis significantly impacted global markets, while its specific effects on LTCM's portfolio are less documented.</span></p>
             
-            <p><span class="high-confidence">The 1998 <span class="entity" id="entity-russian-crisis">Russian financial crisis
-                <div class="entity-popup">
+            <p><span class="high-confidence">The 1998 <span class="entity" id="entity-russian-crisis">Russian financial crisis<div class="entity-popup">
                     <img class="entity-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Russia_Crisis.jpg/250px-Russia_Crisis.jpg" alt="Russian Financial Crisis">
                     <p><strong>Russian Financial Crisis (1998)</strong></p>
                     <p>Financial crisis when Russia devalued the ruble and defaulted on its domestic debt</p>
@@ -213,13 +211,11 @@
                         <button class="entity-confirm">✓ Correct event</button>
                         <button class="entity-reject">✗ Wrong event</button>
                     </div>
-                </div>
-            </span> when Russia devalued the ruble</span> <span class="medium-confidence">and defaulted on its domestic debt</span> <span class="high-to-low-confidence">caused massive volatility that particularly affected LTCM's positions in certain emerging markets.</span></p>
-            
+                </span> when Russia devalued the ruble</span> <span class="medium-confidence">and defaulted on its domestic debt</span> <span class="high-to-low-confidence">caused massive volatility that particularly affected LTCM's positions in certain emerging markets.</span></p>
+            </div>
             <p><span class="medium-to-low-confidence">Fourth, evidence suggests that major financial institutions became increasingly reluctant to provide additional funding as LTCM's positions deteriorated, though specific institutions' roles in this process remain subject to debate.</span></p>
             
-            <p><span class="medium-confidence">Finally, LTCM's over-reliance on mathematical models developed by Nobel Prize-winning economists <span class="entity" id="entity-merton">Robert C. Merton
-                <div class="entity-popup">
+            <p><span class="medium-confidence">Finally, LTCM's over-reliance on mathematical models developed by Nobel Prize-winning economists <span class="entity" id="entity-merton">Robert C. Merton<div class="entity-popup">
                     <img class="entity-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Robert_C._Merton_2010.jpg/220px-Robert_C._Merton_2010.jpg" alt="Robert C. Merton">
                     <p><strong>Robert C. Merton</strong></p>
                     <p>American economist, Nobel laureate in Economics (1997)</p>
@@ -227,18 +223,15 @@
                         <button class="entity-confirm">✓ Correct person</button>
                         <button class="entity-reject">✗ Wrong person</button>
                     </div>
-                </div>
-            </span> and <span class="entity" id="entity-scholes">Myron Scholes
-                <div class="entity-popup">
-                    <img class="entity-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Myron_Scholes_2008.jpg/220px-Myron_Scholes_2008.jpg" alt="Myron Scholes">
+                </div></span> and <span class="entity" id="entity-scholes">Myron Scholes<div class="entity-popup">
+                    <img class="entity-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Myron_Scholes_2008_in_Lindau.png/440px-Myron_Scholes_2008_in_Lindau.png" alt="Myron Scholes">
                     <p><strong>Myron Scholes</strong></p>
                     <p>Canadian-American economist, Nobel laureate in Economics (1997)</p>
                     <div class="entity-actions">
                         <button class="entity-confirm">✓ Correct person</button>
                         <button class="entity-reject">✗ Wrong person</button>
                     </div>
-                </div>
-            </span> failed to adequately account for liquidity risk and extreme market events.</span></p>
+                </div></span> failed to adequately account for liquidity risk and extreme market events.</span></p>
             
             <div class="action-buttons">
                 <button class="action-button" id="improve-certainty">Improve certainty</button>
