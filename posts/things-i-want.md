@@ -4,6 +4,8 @@ date: 2025-03-18
 permalink: /2025/03/18/things-i-want/
 ---
 
+![](/intent.png)
+
 [Doc Searls' intention economy](https://en.wikipedia.org/wiki/The_Intention_Economy) talks about the idea of sending a "signal into the market" describing to a market what you want.
 
 Some claim that this vision formed some of the initial inspiration to develop [Solid](https://solidproject.org).
