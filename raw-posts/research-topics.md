@@ -130,7 +130,7 @@ This includes:
  - A good portal which supports the discovery of authoritative entity identifiers such as [WebIds](https://en.wikipedia.org/wiki/WebID) based on a natural language query - this could be for name "Jesse" or a rough description "Australian guy working on AI and Solid."
  - A good portal to discover semantically described datasets such as those described using [Croissant](https://theodi.org/news-and-events/blog/transforming-ai-data-governance-with-croissant-a-new-standard-for-ml-metadata/) or [DProd](https://ekgf.github.io/dprod/).
 
-## Operationalizable guidelines on how to comply with regulatory requirements as a host of decentralized infrastructure.
+## Operationalizable guidelines on how to comply with regulatory requirements as a host of decentralized infrastructure
 
 In particular - today - as a host of:
  - Decentralised social media - such as [Mastodon](https://mastodon.social/explore), or
@@ -156,3 +156,17 @@ Work towards have transactions on the Web semantically described commitments
 ## Say goodbye to the cloud and hello to the dataspace
 
 Don't write apps and code agains servers - write them against data instead.
+
+## Model response (may be applicable to Web Agents WG)
+
+One feature that has supported the Web to scale is having publically cacheable resources. I recommend standardising an HTTP interface that can be used to `GET` responses from LLMs in a way that allows these responses to be stored in DNS caches.
+
+For responses that require payment - e.g. because of the size of the model needed to answer the query - then there should be a redirect flow to "unlock" the link and then keep the response cached and public.
+
+## Standard for making per-request payments to LLM providers (may be applicable to Web Agents WG)
+
+So that services relying on those LLMs need to implement the standard rather than create custom flows and deals for each LLM service.
+
+## LLM metadata for discovery (may be applicable to Web Agents WG)
+
+Presumably products that use LLMs - such as cursor - need to manually curate the list of LLMs that they are using in their product. As the number of LLMs that are available proliferates, it may be better for LLMs to provide a `.well-known` description to identify the capabilities, cost and usage mechansim.
