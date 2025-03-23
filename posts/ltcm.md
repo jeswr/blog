@@ -20,6 +20,7 @@ This example has been produced using generative AI can be found [here](/ltcm). N
 This requires advancements beyond current [Large Language Model (LLM)](https://en.wikipedia.org/wiki/Large_language_model) and emergent [Large Concept Models (LCMs)](https://ai.meta.com/research/publications/large-concept-models-language-modeling-in-a-sentence-representation-space/) architectures. In particular, this would require models to:
  - Have in-built mechanisms for entity resolution
  - Have knowledge of the provenance trails of the information it has learned
+ - Discern - from information such as these provenance trails - between *ideas* and *proven results*/*observations* in order to be able to accurately frame what is ground truth and what is conjecture that may or may not have consensus amongst a large group of people.
 
 I am interested in developing architectures that are in support of this vision.
 
