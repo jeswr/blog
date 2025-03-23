@@ -186,6 +186,20 @@ To enable, for instance, groups of personal agents to organize travel plans for 
 
 In the medium term I would think that these are more somethign like "concept whiteboards" - but agent chat rooms are a good place to start.
 
+## Standardize authentication for LLMs to access private resource
+
+Intersects both with goals of MCP, Solid and protocols like OIDC4VP
+
 ## Standard sharing of re-usable context data
 
-Standardise Solid as the way of having agents request and use contextual data.
+Standardise Solid as the way of having agents request and use contextual data. With both:
+ - Access Controls (including which services can access it)
+ - Usage controls (including which services results can be forwarded to, and whether the data can be used for monetization)
+
+## More things to standardise in the LWS-WG
+
+Other Web Agents Group topics could include:
+ - Standardize search interface to support and look up of publically available vectorised data
+ - Taxonomise common services of LLM providers (e.g. embeddings endpoint, what modalities does a provider support etc.)
+
+
