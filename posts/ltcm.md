@@ -15,7 +15,7 @@ In this post I set out the interface that I would like to have in order to get m
 
 <iframe src="/ltcm" width="100%" height="500" frameborder="0"></iframe>
 
-This example can be found [here](/ltcm).
+This example has been produced using generative AI can be found [here](/ltcm). Note only the bottom popup example works at the moment.
 
 This requires advancements beyond current [Large Language Model (LLM)](https://en.wikipedia.org/wiki/Large_language_model) and emergent [Large Concept Models (LCMs)](https://ai.meta.com/research/publications/large-concept-models-language-modeling-in-a-sentence-representation-space/) architectures. In particular, this would require models to:
  - Have in-built mechanisms for entity resolution
