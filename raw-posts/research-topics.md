@@ -98,6 +98,12 @@ Ontological construction has traditionally been a time consuming, slow and expen
 
 In this work package shall test the viability of using LLMs to do a first pass of ontology construction. However, the goal is to investigate whether this can be done using [mind mapping](https://www.anthropic.com/research/mapping-mind-language-model) techniques rather than prompt engineering.
 
+## Symbolic conceptual memory modules for Deep Learning models
+
+For both:
+ - Interpretability purposes
+ - Semantic committment purposes
+
 ## Hybrid KG & Vector Database architectures
 
 The core idea here is to build a DB with both a VDB and a KG view. Bergi has already done some work on this topic [here](https://www.bergnet.org/2024/05/unified-landscape/) and [here](https://www.bergnet.org/2024/09/llm-kg-wombat/).
