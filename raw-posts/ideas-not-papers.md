@@ -29,7 +29,7 @@ Roadmap[^1]:
  - Models actually working with concepts, and generating:
    - Formal commitments where possible
    - Indexes to point to databases containing knowledge required (i.e. look over there for a dataset of patient records that you need to answer this question).
-   - 
+ - Models able to actively identify which concepts they are operating with when performing inference, and able to pull in more information about that concept on-demand[^2].
 
 ---
 
@@ -41,8 +41,11 @@ Near term possibilities for *collaboration* include:
  - Real-time matching of individuals with given skillsets to tasks that need to be done in a project.
 
 Near term possibilities for *consensus* include:
- - Harmonisation of standards
+ - [Harmonisation of standards](https://en.wikipedia.org/wiki/Harmonization_(standards))
  <!-- THIS IS WHAT WE SHOULD TRY AND GET OMS FUNDING FOR -->
- - Topic based consensus amongst large groups - individuals discuss their needs, wants and priorities with their model which goes off to represent their views. This would enable democracy at the level of issues rather than elected representatives.
+ - Topic based consensus amongst large groups - individuals discuss their needs, wants and priorities with their model which goes off to represent their views. This would enable democracy at the level of issues rather than elected representatives. This is crucial since top-down governance results in lack of granular awareness of issues faced by many people - and thus is not able to make the most effective decisions possible - or even make decisions that contradict public desires[^3]. A further indication that this is a sensible path to pursue is in those countries have demonstrated the effectiveness of citizen-led budget planning[^4].
 
 [^1]: Note there is overlap with ideas in work/literature on interpretability of models.
+[^2]: Note that one driver to try and build such architectures is that this would enable core models to be much smaller and to fetch relevant knowledge as needed on demand. This may also remove the need for knowledge cut-off dates if any new information published can quickly be pre-processed into concepts. This would also enable the use of private and other transactional data on-demand without needing to use RAG techniques.
+[^3]: https://www.nbcnews.com/politics/trump-administration/poll-trump-faces-early-challenges-economy-united-gop-backs-big-change-rcna195860?utm_source=NBC&utm_medium=iframely
+[^4]: Discussed in [Humankind: A Hopeful History](https://en.wikipedia.org/wiki/Humankind:_A_Hopeful_History) - I owe a page reference.
