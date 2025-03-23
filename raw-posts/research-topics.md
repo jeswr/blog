@@ -140,6 +140,8 @@ and in the future as a host of e.g. decentralised AI services.
 
 Industry consortia do the work of creating such operationaliseable guidelines within their own domains. For instance, the financial indusry has created the [Cloud Data Management Controls (CDMC)](https://edmcouncil.org/frameworks/cdmc/) which provides a framework for operationalising GDPR when managing financial data in cloud services.
 
+Some writing on the topic specifically in terms of Solid is [here](https://github.com/solid/research-topics?tab=readme-ov-file#data-governance-and-solid).
+
 ## Malleable Software for Solid (read: RDF data structures and Shapes)
 
  - For Malleable Software see [here](https://www.inkandswitch.com).
