@@ -203,4 +203,6 @@ Other Web Agents Group topics could include:
  - Taxonomise common services of LLM providers (e.g. embeddings endpoint, what modalities does a provider support etc.)
  - Describing which models you have deployed where. In particular to allow the discovery of multiple deployments of opensource models; and to allow agentic workflows to define "this model must be used here" but then automatically do things like work out if it is deployed locally, and if not find a trusted remote deployment that can be used.
 
+---
 
+This is a living document
