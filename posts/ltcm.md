@@ -23,5 +23,3 @@ This requires advancements beyond current [Large Language Model (LLM)](https://e
  - Discern - from information such as these provenance trails - between *ideas* and *proven results*/*observations* in order to be able to accurately frame what is ground truth and what is conjecture that may or may not have consensus amongst a large group of people.
 
 I am interested in developing architectures that are in support of this vision.
-
-
