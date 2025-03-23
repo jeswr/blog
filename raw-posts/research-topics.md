@@ -130,6 +130,16 @@ This includes:
  - A good portal which supports the discovery of authoritative entity identifiers such as [WebIds](https://en.wikipedia.org/wiki/WebID) based on a natural language query - this could be for name "Jesse" or a rough description "Australian guy working on AI and Solid."
  - A good portal to discover semantically described datasets such as those described using [Croissant](https://theodi.org/news-and-events/blog/transforming-ai-data-governance-with-croissant-a-new-standard-for-ml-metadata/) or [DProd](https://ekgf.github.io/dprod/).
 
+## Operationalizable guidelines on how to comply with regulatory requirements as a host of decentralized infrastructure.
+
+In particular - today - as a host of:
+ - Decentralised social media - such as [Mastodon](https://mastodon.social/explore), or
+ - Decentralised storage such as a [Solid Pod](https://solidproject.org) provider
+
+and in the future as a host of e.g. decentralised AI services.
+
+Industry consortia do the work of creating such operationaliseable guidelines within their own domains. For instance, the financial indusry has created the [Cloud Data Management Controls (CDMC)](https://edmcouncil.org/frameworks/cdmc/) which provides a framework for operationalising GDPR when managing financial data in cloud services.
+
 ## Malleable Software for Solid (read: RDF data structures and Shapes)
 
  - For Malleable Software see [here](https://www.inkandswitch.com).
