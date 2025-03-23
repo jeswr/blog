@@ -4,8 +4,6 @@ date: 2025-03-22
 permalink: /2025/03/22/conversational-interface-trusted-data/
 ---
 
-<!-- Recently meta announced their work on [Large Concept Models (LCMs)]() -->
-
 In this post I set out the interface that I would like to have in order to get more value out of language models for tasks such as research that require high levels of information accuracy and provenance. These include:
  - Indicate the likelihood of correctness of statements in a response via color coding of the text. This color coding should be personalisable based on whether I:
    - confirm whether entities in a sentence are the ones I want to talk about
@@ -17,7 +15,7 @@ In this post I set out the interface that I would like to have in order to get m
 
 This example has been produced using generative AI can be found [here](/ltcm). Note only the bottom popup example works at the moment.
 
-This requires advancements beyond current [Large Language Model (LLM)](https://en.wikipedia.org/wiki/Large_language_model) and emergent [Large Concept Models (LCMs)](https://ai.meta.com/research/publications/large-concept-models-language-modeling-in-a-sentence-representation-space/) architectures. In particular, this would require models to:
+This requires advancements beyond current [Large Language Models (LLMs)](https://en.wikipedia.org/wiki/Large_language_model) and emergent [Large Concept Models (LCMs)](https://ai.meta.com/research/publications/large-concept-models-language-modeling-in-a-sentence-representation-space/) architectures. In particular, this would require models to:
  - Have in-built mechanisms for entity resolution
  - Have knowledge of the provenance trails of the information it has learned
  - Discern - from information such as these provenance trails - between *ideas* and *proven results*/*observations* in order to be able to accurately frame what is ground truth and what is conjecture that may or may not have consensus amongst a large group of people.
