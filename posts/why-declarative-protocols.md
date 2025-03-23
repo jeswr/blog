@@ -1,8 +1,10 @@
 ---
-title: "Dyanmic and declarative protocols for decentralised AI"
+title: "Dynamic and declarative protocols for decentralised AI"
 date: 2025-03-23
 permalink: /2025/03/23/dynamic-declarative-protocols/
 ---
+
+**ARTICLE IN DRAFT**
 
 ![](/dynamic-protocol.png)
 
@@ -21,6 +23,12 @@ This post discusses why we need to create infrastructure that supports a network
     - other requirements that may be identified in a [W3C Security Review](https://www.w3.org/mission/security/#ping)
 3. Have a means to create or discover and agree to use a protocol on-the-fly that satisfies these set of requirements.
 4. Whilst still allowing for long term planning
-   - For instance, a desirable feature of the ongoing use of HTTP(S) is the ability to use documents cached in DNSs.
+   - For instance, a desirable feature of the ongoing use of HTTP(s) is the ability to use documents cached in DNSs.
+
+We observe that:
+ - this proposal largely reflects my view that we should - for the most part - not need to use Generative AI at the layer of deciding how to transfer data, but instead to declaratively state what data is needed,
+ - this proposal assumes that we are going to have some level of data and compute sovereignty - whilst also moving us towards that world, and
+ - the capability to generate a *proof* that the proposed protocol has a particular set of security properties is critical
+ to enabling all parties to 'buy in' to use the protocol
 
 [^1]: Note that here we are using the term protocol to refer to the sequence of steps that a set of systems should take in order to achieve a joint goal. This includes how to collaboratively transport information (networking protocols), secure data in transport (encryption protocols) and proving the identity of an end user on one system to another system (authentication).
