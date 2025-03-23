@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:mermaid": "npm run build:mermaid:wallets && npm run build:mermaid:research",
     "build:mermaid:wallets": "mmdc -i ./raw-posts/disambiguating-data-wallets.md -o ./posts/disambiguating-data-wallets.md -a ./static/generated/ -e png -w 3840 -H 2160",
-    "build:mermaid:research": "mmdc -i ./raw-posts/research-topics.md -o ./posts/research-topics.md -a ./static/generated/ -e png -w 3840 -H 2160"
+    "build:mermaid:research": "mmdc -i ./raw-posts/research-topics.md -o ./posts/research-topics.md -a ./static/generated/ -e png -w 3840 -H 2160",
+    "build:mermaid:ideas": "mmdc -i ./raw-posts/ideas-not-papers.md -o ./posts/ideas-not-papers.md -a ./static/generated/ -e png -w 3840 -H 2160"
   },
   "keywords": [],
   "author": "",
