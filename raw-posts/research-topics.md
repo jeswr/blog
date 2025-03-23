@@ -159,13 +159,18 @@ Don't write apps and code agains servers - write them against data instead.
 
 ## Model response (may be applicable to Web Agents WG)
 
-One feature that has supported the Web to scale is having publically cacheable resources. I recommend standardising an HTTP interface that can be used to `GET` responses from LLMs in a way that allows these responses to be stored in DNS caches.
+One feature that has supported the Web to scale is having public and cacheable resources. I recommend standardising an HTTP interface that can be used to `GET` responses from LLMs in a way that allows these responses to be stored in DNS caches.
 
-For responses that require payment - e.g. because of the size of the model needed to answer the query - then there should be a redirect flow to "unlock" the link and then keep the response cached and public.
+For responses that require payment - e.g. because of the size of the model needed to answer the query - then there should be a redirect flow to "unlock" the link and then keep the response cached and public. See extension on this thought below.
 
 ## Standard for making per-request payments to LLM providers (may be applicable to Web Agents WG)
 
 So that services relying on those LLMs need to implement the standard rather than create custom flows and deals for each LLM service.
+
+Extending this - directly delegating authorization of payments to a user account - so that they can:
+ - Make use of ongoing subscriptions on existing platforms
+ - Further, delegate the cost directly to their organizations when using services for work
+ - Have a single platform that they connect their bank accounts to and set controls for "LLM usage"
 
 ## LLM metadata for discovery (may be applicable to Web Agents WG)
 
