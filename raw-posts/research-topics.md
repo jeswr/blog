@@ -161,7 +161,7 @@ Don't write apps and code agains servers - write them against data instead.
 
 One feature that has supported the Web to scale is having public and cacheable resources. I recommend standardising an HTTP interface that can be used to `GET` responses from LLMs in a way that allows these responses to be stored in DNS caches.
 
-For responses that require payment - e.g. because of the size of the model needed to answer the query - then there should be a redirect flow to "unlock" the link and then keep the response cached and public. See extension on this thought below.
+For responses that require payment - e.g. because of the size of the model needed to answer the query - then there should be a redirect flow to "unlock" the link and then keep the response cached and public. See extension on this thought in the following topic.
 
 ## Standard for making per-request payments to LLM providers (may be applicable to Web Agents WG)
 
@@ -172,6 +172,20 @@ Extending this - directly delegating authorization of payments to a user account
  - Further, delegate the cost directly to their organizations when using services for work
  - Have a single platform that they connect their bank accounts to and set controls for "LLM usage"
 
+## One Identify for agentic platforms (may be applicable to Web Agents WG)
+
+Largely to achieve the above item
+
 ## LLM metadata for discovery (may be applicable to Web Agents WG)
 
 Presumably products that use LLMs - such as cursor - need to manually curate the list of LLMs that they are using in their product. As the number of LLMs that are available proliferates, it may be better for LLMs to provide a `.well-known` description to identify the capabilities, cost and usage mechansim.
+
+## Agent Chat Rooms (may be applicable to Web Agents WG)
+
+To enable, for instance, groups of personal agents to organize travel plans for a party of 5 people, or distributed tooling agents to negotiate with each other.
+
+In the medium term I would think that these are more somethign like "concept whiteboards" - but agent chat rooms are a good place to start.
+
+## Standard sharing of re-usable context data
+
+Standardise Solid as the way of having agents request and use contextual data.
