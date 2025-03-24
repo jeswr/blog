@@ -39,6 +39,7 @@ Near term possibilities for *collaboration* include:
  - Helping identify when multiple groups of people have a need for the same (e.g. software) infrastructure across multiple projects - and support pooling of resources to create one thing that can be re-used across projects. Note that this comes with the potential risk of loss in hetrogeneity in software - which comes with its own set of downsides and risks.
  - Distribution of shared next steps - identify when multiple groups have overlapping sets of tasks they want to achieve in the future and support them in distributing the workload. This is a very real problem that can be seen in the way that e.g. academic grants are currently managed wherein multiple institutions often try to outcompete each other to present a better grant proposal on similar hot topics of research in order to get funding.
  - Real-time matching of individuals with given skillsets to tasks that need to be done in a project.
+ - There is a statistic that if you have $n$ people in an organisation than $\sqrt{n}$ of the people to $n$ of the work. It would be interesting to see if something like this could be used to induce a more 1:1 scaling - or at least use such metrics to evaluate the efficacy of this idea.
 
 Near term possibilities for *consensus* include:
  - [Harmonisation of standards](https://en.wikipedia.org/wiki/Harmonization_(standards))

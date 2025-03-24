@@ -32,6 +32,7 @@ We observe that:
  to enabling all parties to 'buy in' to use the protocol
 
 The kinds of use-cases which this unlocks include:
+ - 
  - Dynamic Authentication Flows: Currently, the flows for, e.g., authentication are often quite fixed; and require heavy changes to specification documents + flows to evolve. In this use-case we show that the OIDC flow can “emerge” simply by having 2 agents negotiate for data they need to identify one another. A specific example is this [e-reader access use-case](https://github.com/jeswr/queryable-credentials/blob/main/use-cases/e-reader-access.md).
  - Agents performing scheduling: As described in [this paper](https://arxiv.org/abs/2409.04465).
  - Features people care about in the blockchain world: For example, could show how a DAOs could form.
