@@ -13,7 +13,7 @@ timeline
           : LLMs and LCMs style models using vectorised memory
   predicted/proposed (near term): LLMs and LCMs style models using epistemic memory
   predicted/proposed (longer term): LLMs and LCMs style models using epistemic memory with an understanding of the semantic commitments made in statements
-          : A standardised representation of these formal commitments so that they can be understood accross models and shared on the Web 
+          : A standardised representation of these formal commitments so that they can be understood across models and shared on the Web 
 ```
 
 It is my view that we are nearing a point in the research landscape where papers, patents, standards documents, blogs and other long-form documents describing a dense set of ideas are nearing their end-of-life as the best mechanism for describing knowledge.
