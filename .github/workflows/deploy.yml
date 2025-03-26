@@ -38,6 +38,7 @@ jobs:
           npm run build:mermaid
           sed -i 's/\.\/\.\.\/static//g' ./posts/disambiguating-data-wallets.md
           sed -i 's/\.\/\.\.\/static//g' ./posts/research-topics.md
+          sed -i 's/\.\/\.\.\/static//g' ./posts/ideas-not-papers.md
 
       - name: Deploy
         # Custom fork of the action which supports RSS Feeds

@@ -1,2 +1,3 @@
 personalisable
 Declaratively
+referenceable
