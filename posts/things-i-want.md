@@ -28,3 +28,7 @@ I was also taking [GluteGuard](https://gluteguard.com.au) to try and cope with t
 The funny thing about being in that state; is that you'll tend to not realise, or be in denial, about there being a problem in the first place - which in turn means I wasn't trying to resolve the issue anywhere near as actively as I could/should have been.
 
 Advertisers already heavily track minute interactions, how long we spend on particular posts, our reaction time, which links we click on etc. in order to do targeted advertising. I want that same infrastructure to tell me when something is ... off; so that I am validated to go and fix it.
+
+## A balanced news feed
+
+For engagement, most news feeds are weighted to have many alarming or unique stories; whilst less exciting and ongoing things get ignored. An example given in [not the end of the world](https://www.penguin.co.uk/books/453652/not-the-end-of-the-world-by-ritchie-hannah/9781529931242) is the minimal reporting on improvements in renewable technologies in comparison to climate disasters. I want a news feed with an algorithm that is ranked somehow highest impact changes - than most alarmist / engaging.
