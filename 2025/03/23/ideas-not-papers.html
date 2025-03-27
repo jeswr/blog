@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Ideas, not papers</title>
+    <meta name="description" content="Blog of a Software Engineer and Researcher"/>
+    <meta name="keywords" content="blog,developer blog,engineering blog,research blog,oxford,oxford university"/>
+    <link rel="alternate" type="application/rss+xml" title="Jesse Wright" href="/rss.xml" />
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Alegreya:400,400i|Lato:400,400i,700,900|Roboto+Mono:400,300">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/shades-of-purple.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+
+    <link rel="stylesheet" href="/css/normalize.css"/>
+    <link rel="stylesheet" href="/css/theme.css"/>
+</head>
+<body>
+<nav class="nav">
+    <div class="nav__left">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+    </div>
+    <div class="nav__right">
+        <a target="_blank" href="https://github.com/jeswr" class="link-github">GitHub</a>
+        <a target="_blank" href="https://twitter.com/" class="link-twitter">Twitter</a>
+        <a href="mailto:jesse@jeswr.org" class="link-email">Email</a>
+        <a href="/rss.xml" class="link-rss">RSS</a>
+    </div>
+</nav>
+
+<article class="mar-b-7">
+    <header class="text-center">
+        <time class="mar-b-6" datetime="Sun, March 23, 2025">Sun, March 23, 2025</time>
+        <h1 class="mar-b-7">Ideas, not papers</h1>
+    </header>
+    <p><strong>EARLY STAGE DRAFT</strong></p>
+<p><img src="/generated/ideas-not-papers-1.png" alt="diagram" /></p>
+<p>It is my view that we are nearing a point in the research landscape where papers, patents, standards documents, blogs and other long-form documents describing a dense set of ideas are nearing their end-of-life as the best mechanism for describing knowledge.</p>
+<p>Other elements to observe:</p>
+<ul>
+<li>When external sources are not easily referencable, a full story needs to be told up-front. The story whether in a paper or book, is not personalised to an individual consumer - but instead designed to be digestible by a wide audience of readers.</li>
+<li>When external sources are more referenceable - such as on the Web where hyperlinks can be used. Authors have a level of liberty to create shorter documents and link users to external sources which they may consume at their own discretion.</li>
+<li>When explaining something to someone in a conversation, I will piece together ideas that I have or know; but tailor that response to the person I am speaking to - for instance, based on how much they know about a particular topic - which informs what terms I can use vs. what terms I need to define in the process.</li>
+</ul>
+<p>Roadmap[^1]:</p>
+<ul>
+<li>Structured knowledge injection and production via RAG in LLMs</li>
+<li>Model memory with some level of understanding of concepts (similar to LCMs)</li>
+<li>Models actually working with concepts, and generating:</li>
+<li>Formal commitments where possible</li>
+<li>Indexes to point to databases containing knowledge required (i.e. look over there for a dataset of patient records that you need to answer this question).</li>
+<li>Models able to actively identify which concepts they are operating with when performing inference, and able to pull in more information about that concept on-demand[^2].</li>
+</ul>
+<hr />
+<p>Similarly, my view is that we should be developing such capabilities in order to enhance <em>collaboration</em> and <em>consensus</em>.</p>
+<p>Near term possibilities for <em>collaboration</em> include:</p>
+<ul>
+<li>Helping identify when multiple groups of people have a need for the same (e.g. software) infrastructure across multiple projects - and support pooling of resources to create one thing that can be re-used across projects. Note that this comes with the potential risk of loss in hetrogeneity in software - which comes with its own set of downsides and risks.</li>
+<li>Distribution of shared next steps - identify when multiple groups have overlapping sets of tasks they want to achieve in the future and support them in distributing the workload. This is a very real problem that can be seen in the way that e.g. academic grants are currently managed wherein multiple institutions often try to outcompete each other to present a better grant proposal on similar hot topics of research in order to get funding.</li>
+<li>Real-time matching of individuals with given skillsets to tasks that need to be done in a project.</li>
+<li>There is a statistic that if you have $n$ people in an organisation than $\sqrt{n}$ of the people to $n$ of the work. It would be interesting to see if something like this could be used to induce a more 1:1 scaling - or at least use such metrics to evaluate the efficacy of this idea.</li>
+</ul>
+<p>Near term possibilities for <em>consensus</em> include:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Harmonization_(standards)">Harmonisation of standards</a></li>
+</ul>
+ <!-- THIS IS WHAT WE SHOULD TRY AND GET OMS FUNDING FOR -->
+<ul>
+<li>Topic based consensus amongst large groups - individuals discuss their needs, wants and priorities with their model which goes off to represent their views. This would enable democracy at the level of issues rather than elected representatives. This is crucial since top-down governance results in lack of granular awareness of issues faced by many people - and thus is not able to make the most effective decisions possible - or even make decisions that contradict public desires<a href="https://www.nbcnews.com/politics/trump-administration/poll-trump-faces-early-challenges-economy-united-gop-backs-big-change-rcna195860?utm_source=NBC&amp;utm_medium=iframely">^3</a>. A further indication that this is a sensible path to pursue is in those countries have demonstrated the effectiveness of citizen-led budget planning[^4].</li>
+</ul>
+<p>[^1]: Note there is overlap with ideas in work/literature on interpretability of models.
+[^2]: Note that one driver to try and build such architectures is that this would enable core models to be much smaller and to fetch relevant knowledge as needed on demand. This may also remove the need for knowledge cut-off dates if any new information published can quickly be pre-processed into concepts. This would also enable the use of private and other transactional data on-demand without needing to use RAG techniques.
+[^4]: Discussed in <a href="https://en.wikipedia.org/wiki/Humankind:_A_Hopeful_History">Humankind: A Hopeful History</a> - I owe a page reference.</p>
+</article>
+
+
+
+<footer class="text-center mar-tb-6">
+    © 2025 Jesse Wright, unless otherwise stated.
+</footer>
+
+<script>hljs.highlightAll();</script>
+</body>
+</html>
+
