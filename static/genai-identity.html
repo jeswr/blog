@@ -63,6 +63,22 @@
             padding-top: 1rem;
             border-top: 1px solid #eee;
         }
+        /* AI Warning Banner Styles */
+        .ai-warning {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .ai-warning::before {
+            content: "⚠️";
+            font-size: 1.2rem;
+        }
         /* New styles for header links */
         h1 a, h2 a, h3 a {
             color: inherit;
@@ -85,6 +101,9 @@
     </style>
 </head>
 <body>
+    <div class="ai-warning">
+        This content was generated entirely by artificial intelligence. While efforts have been made to ensure accuracy, please verify critical information from authoritative sources.
+    </div>
     <h1><a id="top" href="#top">Comparative Analysis of Digital Identity Architectures</a></h1>
 
     <h2><a id="introduction" href="#introduction">Introduction</a></h2>
