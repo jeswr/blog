@@ -157,6 +157,10 @@ Work towards have transactions on the Web semantically described commitments
 
 Don't write apps and code agains servers - write them against data instead.
 
+## Provenance of ideas
+
+Traceability of who has claimed what where.
+
 ## Model response (may be applicable to Web Agents WG)
 
 One feature that has supported the Web to scale is having public and cacheable resources. I recommend standardising an HTTP interface that can be used to `GET` responses from LLMs in a way that allows these responses to be stored in DNS caches.
