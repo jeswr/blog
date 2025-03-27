@@ -34,7 +34,19 @@ jobs:
           CHROME_DEVEL_SANDBOX: "/opt/google/chrome/chrome-sandbox"
         run: |
           npm i
-          npm run build:mermaid
+          for i in {1..3}; do
+            echo "Attempt $i of 3 to generate Mermaid diagrams"
+            if npm run build:mermaid; then
+              echo "Successfully generated Mermaid diagrams"
+              break
+            else
+              if [ $i -eq 3 ]; then
+                echo "Failed to generate Mermaid diagrams after 3 attempts"
+                exit 1
+              fi
+              echo "Attempt $i failed, retrying..."
+            fi
+          done
           sed -i 's/\.\/\.\.\/static//g' ./posts/disambiguating-data-wallets.md
           sed -i 's/\.\/\.\.\/static//g' ./posts/research-topics.md
           sed -i 's/\.\/\.\.\/static//g' ./posts/ideas-not-papers.md
