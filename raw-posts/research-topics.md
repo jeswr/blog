@@ -163,6 +163,12 @@ Work towards have transactions on the Web semantically described commitments
 
 Don't write apps and code agains servers - write them against data instead.
 
+## Using LLMs to create a densely linked Web
+
+Before we move to a fully fledge web-of-concepts, I believe LLMs have a strong role to play in densely linking the Web. That is, helping us relate all of the knowledge that has been written about so that it is much easier to discover all of the existing research on a given topic - going beyond existing work such as tools:
+ - That link papers based on human annotated links, such as citations of papers that people have discovered that are related, and
+ - OpenAI researcher agents which are able to crawl the web and identify papers which are about a particular topic
+
 ## Model response (may be applicable to Web Agents WG)
 
 One feature that has supported the Web to scale is having public and cacheable resources. I recommend standardising an HTTP interface that can be used to `GET` responses from LLMs in a way that allows these responses to be stored in DNS caches.
