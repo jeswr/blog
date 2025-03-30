@@ -20,8 +20,13 @@ Especially if due to having consumed one of my allergens - which puts me in a de
 
 Not taking one weekend, turns into not taking 10. Because after not taking one I work slowly, which means I need to catch up on the next weekend ... and I let the cycle continue.
 
+## I get stuck in the 'urgent'
+
+The following Eisenhower matrix is common in buisness for task prioritisation. I spend too much time in top left.
+
+![](https://imageio.forbes.com/specials-images/imageserve/63b6f2f05b7782910ab9d298/From-the-book-What-Happens-Now--by-John-Hillen-and-Mark-Nevins/960x0.png?height=594&width=711&fit=bounds)
+__Credit [forbes.com](https://www.forbes.com/sites/hillennevins/2023/01/05/how-to-get-stuff-done-the-eisenhower-matrix-aka-the-urgent-vs-the-important/)__
+
 ## I people please
 
 I always want to make everyone happy. This is impossible, and I need to make sure to put myself first more.
-
-## 
