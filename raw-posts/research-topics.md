@@ -202,6 +202,28 @@ In the medium term I would think that these are more somethign like "concept whi
 
 Intersects both with goals of MCP, Solid and protocols like OIDC4VP
 
+## Re-Architecting the Web for Digital Sovereignty and AI 
+
+We need a principled approach for better supporting digital sovereignty on the Web. Layered data abstractions etc. I don't have time to write this out properly right now.
+
+## Layering or modularisation of privacy preserving architectures
+
+There are lots of Privacy Enhancing Technologies, to name a few:
+ - Fully Homomorphic Encryption (FHE)
+ - Zero Knowledge Proof (ZKP)
+ - Multi-Party Computation (MPC)
+ - Encryption, including End-to-End Encryption (E2EE)
+
+And really the above are classes of PET technologies, rather than individual PETs. However, we face the challenge that there is a lot of "plumbing" that needs to be done to use all of these PETs in conjunction.
+
+We want some way of modularly plugging and playing with these technologies
+
+## Linux for Operating Systems at web scale
+
+Somewhat see above, with fixed configurations for what types of nodes in a network are trusted to do certain things like - retain privacy, compute correctly etc. and what need algorithmic techniques to protect against not doing the trusted thing.
+
+We are somewhat seeing this for individual technologies like Boundless which uses ZKP to try and allow trusted computation across many machines. However, with the challenge that data is still visible to all nodes in a network unless 
+
 ## Standard sharing of re-usable context data
 
 Standardise Solid as the way of having agents request and use contextual data. With both:
