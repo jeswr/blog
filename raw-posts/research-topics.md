@@ -148,6 +148,12 @@ Industry consortia do the work of creating such operationaliseable guidelines wi
 
 Some writing on the topic specifically in terms of Solid is [here](https://github.com/solid/research-topics?tab=readme-ov-file#data-governance-and-solid).
 
+## Machine-readable definition of RDF syntaxes (probably boring topic for most people)
+
+Not just ANTLR grammar definitions for syntax for lexers; also prescribing how this maps to triples for parsers.
+
+Starting point [here](https://chatgpt.com/share/67e95686-c7a8-800c-8d97-9f02e345c418) 
+
 ## Malleable Software for Solid (read: RDF data structures and Shapes)
 
  - For Malleable Software see [here](https://www.inkandswitch.com).
