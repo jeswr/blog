@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Research topics ...</title>
+    <meta name="description" content="Blog of a Software Engineer and Researcher"/>
+    <meta name="keywords" content="blog,developer blog,engineering blog,research blog,oxford,oxford university"/>
+    <link rel="alternate" type="application/rss+xml" title="Jesse Wright" href="/rss.xml" />
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Alegreya:400,400i|Lato:400,400i,700,900|Roboto+Mono:400,300">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/shades-of-purple.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+
+    <link rel="stylesheet" href="/css/normalize.css"/>
+    <link rel="stylesheet" href="/css/theme.css"/>
+</head>
+<body>
+<nav class="nav">
+    <div class="nav__left">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+    </div>
+    <div class="nav__right">
+        <a target="_blank" href="https://github.com/jeswr" class="link-github">GitHub</a>
+        <a target="_blank" href="https://twitter.com/" class="link-twitter">Twitter</a>
+        <a href="mailto:jesse@jeswr.org" class="link-email">Email</a>
+        <a href="/rss.xml" class="link-rss">RSS</a>
+    </div>
+</nav>
+
+<article class="mar-b-7">
+    <header class="text-center">
+        <time class="mar-b-6" datetime="Mon, March 17, 2025">Mon, March 17, 2025</time>
+        <h1 class="mar-b-7">Research topics ...</h1>
+    </header>
+    <p>… that I'm interested in but don't have time to work on at the moment.</p>
+<p>If you're looking for topics specifically related to Solid and data sovereignty look <a href="https://github.com/solid/research-topics">here</a>.</p>
+<p>If you're looking for some more topics related to semi-autonomous Web Agents look <a href="https://jeswr.solidcommunity.net/public/iswc_doctoral_consortium.pdf">here</a> and for early work on the topic see <a href="https://arxiv.org/html/2409.04465v1">here</a>.</p>
+<h2 id="suitablerepresentations">Suitable Representations</h2>
+<p><img src="/generated/research-topics-1.png" alt="diagram" /></p>
+<p><em>Kind-of-ok LLM generated mermaid diagram</em></p>
+<p>Formal semantic languages such as RDF encoded description logics (which in most profiles has a sub first-order expressivity), are a good means of precisely describing information – supporting interpretability and interoperability of data between systems. For much data with clear-cut attributes like the address, DOB, and website of a user – these languages can capture full information.</p>
+<p>However, the fact that these languages are constrained to a particular logical profile, (e.g. First Order Logic) means that there – by definition - is a limitation to what they can express. In contrast, natural languages such as English are highly expressive – and have no formal ruleset to describe how the language should be interpreted and executed. Instead, the only systems to date that can operate upon the full spectrum of natural language (including the human brain, LLMs and other machine learning systems) are those which have learned by example; and thus, will have contextually dependent interpretations and reactions to the language. Moreover, multilingual speakers often attest to the idea that there are gaps in the expressible concepts between different languages – thus indicating that contemporary natural language does not effectively capture of all concepts relevant to daily life – let alone all concepts that could be communicated by a human or machine.
+In the context of communication between LLMs, there is an emergent discussion of whether it would be appropriate to communicate using intermediate token representations rather than natural language. In theory this may improve expressivity but will nevertheless remain restricted to the conceptual model that lives within LLMs.</p>
+<p>If we are to work towards a Web of Agents that accurately and effectively <a href="https://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/imas/IMAS2e.html">negotiate, communicate and cooperate</a> with maximal versatility, efficiency and unambiguity (where versatility and efficiency are defined as per Section 3 of <a href="https://arxiv.org/pdf/2410.11905">this paper</a>) then we must work towards the design of a lingua franca for inter-system communication that encapsulates all of these different language modalities.</p>
+<p>Moreover, we observe that the process of describing a concept in a higher-order modality, may be seen as conceptual alignment to allow that concept to be operationalised across systems in a lower-order modality. We already see this today in the way that RDF taxonomies are created – the Data Privacy Vocabulary for instance creates a taxonomy of terms defining a range of purposes for which data may be used.  However, the definition of the purpose is still described using the natural language rdfs:description.</p>
+<p>This means that whilst, for instance, an ODRL policy can be formalised using a first-order-logic calculus description with the ODRL data model and DPV terms; the implementation of a policy engine operationalising that description will still require a human (or LLM) to interpret the natural language and codify the actions the system should take when, for instance, one is permitted to use data for dpv:Marketing which is defined in natural language as “Purposes associated with conducting marketing in relation to organisation or products or services e.g. promoting, selling, and distributing”.
+There is also a question of what, if anything, sits between formal-logic and natural language. <a href="https://chatgpt.com/share/67abac98-8de0-800c-9114-2e72ac12164f">We are not the first to pose such a question</a>.</p>
+<p>I’m sure there is some interesting Thery of Mind type stuff to investigate in here if one was to start properly digging – but I am going to withhold from that until I decide if I am going to do research in this direction.
+Guidance note I don’t think it is going to be possible to invent much of this in a top-down manner. Would start first in a use-case driven manner.</p>
+<p>Possible intermediary points include:</p>
+<ul>
+<li>Normalised natural language (e.g. application of strict grammar rules and/or reduction to a concise and precise language.)</li>
+<li>Building hybrid KG / VDB architectures and understanding the internal representation + mapping between the two views may go a long way in assisting with the creation of this intermediate representation.</li>
+</ul>
+<h2 id="conceptualalignmentbetweenagentsincludingllmneurosymbolicandlogicalonly">Conceptual alignment between agents (including LLM, neurosymbolic, and logical-only)</h2>
+<p>Work includes evaluating how well LLM-based agents can collboratively describe and build formal conceptual models of the world in order to discuss new concepts on the fly.</p>
+<h2 id="webawareagents">Web-aware agents</h2>
+<p>In <a href="https://openaccess.city.ac.uk/id/eprint/34788/">this paper</a> we present a vision of how we can evolve from the current paradigm of Computer Using Agents (CUAs) towards Personal AI Agents reminiscent of the 2001 Semantic Web Vision Paper.
+In <a href="https://openaccess.city.ac.uk/id/eprint/34788/">the same paper</a>, we posit that a migration towards a Web of self-describing agents will only be possible should we make operator style agents Web-aware.
+What this enables is for Web Agents to more feasibly learn what the “action space” of a particular website is, and more efficiently affect operations.</p>
+<h2 id="bootstrappingwebagents">Bootstrapping Web Agents</h2>
+<p>In <a href="https://openaccess.city.ac.uk/id/eprint/34788/">this paper</a> we present a vision of how we can evolve from the current paradigm of Computer Using Agents (CUAs) towards Personal AI Agents reminiscent of the 2001 Semantic Web Vision Paper.</p>
+<p>In <a href="https://openaccess.city.ac.uk/id/eprint/34788/">the same paper paper</a>, we posit that a migration towards a Web of self-describing agents will only be possible should we first bootstrap a critical mass of such agents from existing Web Services. This is particularly important when interacting with legacy services that may not have any active maintainers.
+The core research questions here are:</p>
+<ol>
+<li>How does one discover the action space of a Website</li>
+<li>How does one describe that action space of said Website, e.g., with Semantic Web Service Descriptions
+In parallel, we create the opportunity to begin to develop more bespoke search engines / indexing engines for a Web of Agents. In the same way that schema.org enabled Google to effectively index information embedded in Websites - including movie schedules - and present aggregate information at the top of a search result, this work creates the possibility to create an index of what range of actions a particular platform supports.</li>
+</ol>
+<p>For "operationalising the action space" - e.g. going from call to the agent interface to website interaction, we could experiment to evaluate whether we can bootstrap existing Websites into becoming agents using LLMs to generate RML style mappings + potentially playwright interactions for Websites and APIs.</p>
+<h2 id="privacypreservingreasoningoverdecentralisedecosystems">Privacy Preserving Reasoning over Decentralised Ecosystems</h2>
+<p>See <a href="https://jeswr.solidcommunity.net/public/DPhil_Proposal.pdf">here</a>.</p>
+<h2 id="beliefinsemiautonomousagentsviapersonalisedmodelsoftrust">“Belief” in semi-autonomous agents via personalised models of trust</h2>
+<h2 id="exploringriskontologiesandlegaldatasharingagreementsfornextgenerationdatagovernance"><strong>Exploring Risk Ontologies and Legal Data Sharing Agreements for Next-Generation Data Governance</strong></h2>
+<p>See <a href="https://docs.google.com/document/d/1Ilh5H2IkBWeeRVMMtRSrIQ0_w-nBOyZo/edit">here</a> and <a href="https://share.note.sx/w9hofb5h#c3szRsdAATdEB3sKajWb3AF6iAjBBpRLQ+WPfw1QB4E">here</a>.</p>
+<h2 id="extractingontologicalmodelsfromllms">Extracting ontological models from LLMs</h2>
+<p>Ontological construction has traditionally been a time consuming, slow and expensive progress – requiring close collaboration between knowledge engineers and domain experts.</p>
+<p>In this work package shall test the viability of using LLMs to do a first pass of ontology construction. However, the goal is to investigate whether this can be done using <a href="https://www.anthropic.com/research/mapping-mind-language-model">mind mapping</a> techniques rather than prompt engineering.</p>
+<h2 id="symbolicconceptualmemorymodulesfordeeplearningmodels">Symbolic conceptual memory modules for Deep Learning models</h2>
+<p>For both:</p>
+<ul>
+<li>Interpretability purposes</li>
+<li>Semantic committment purposes</li>
+</ul>
+<h2 id="hybridkgvectordatabasearchitectures">Hybrid KG &amp; Vector Database architectures</h2>
+<p>The core idea here is to build a DB with both a VDB and a KG view. Bergi has already done some work on this topic <a href="https://www.bergnet.org/2024/05/unified-landscape/">here</a> and <a href="https://www.bergnet.org/2024/09/llm-kg-wombat/">here</a>.</p>
+<p>There is further related work <a href="https://medium.com/towards-data-science/how-to-implement-graph-rag-using-knowledge-graphs-and-vector-databases-60bb69a22759">here</a>.</p>
+<p>The first piece of work I would be interested in is a formal specification for calculating points in vector space of knowledge graph concepts.</p>
+<h2 id="probabilisticrdf12">Probabilistic RDF 1.2</h2>
+<p>Following on from the above topic we need to define precise semantics for describing probabilities and performing inference with said probabilities in RDF/SPARQL 1.2. In particular, see Bergi's article on <a href="https://www.bergnet.org/2024/09/llm-kg-wombat/">tackling uncertainty</a>.</p>
+<p>This may take the form of a prov-o(?) extension to enable the expression of concepts such as how sure a given entity is that a claim is true.</p>
+<h2 id="knowledgegraphmemoryforllmbasedagents">Knowledge Graph Memory For LLM-Based Agents</h2>
+<p>There is emerging work, such as <a href="https://arxiv.org/pdf/2309.11696">this</a> on LLM memory, which build memory such as SSD access directly into the LLM architecture - rather than needing to perform this via RAG into the LLM prompt.</p>
+<p>The goal here is to build specialised architectures for access to graph-structured data.</p>
+<h2 id="openresearchdashboard">Open Research Dashboard</h2>
+<p>As a way towards having a fully online collaborative environment – encourage researchers to discuss ideas on a topic on a platform that uses Solid and <a href="https://en.wikipedia.org/wiki/ActivityPub">ActivityPub</a>, and have either humans or machines label the topics for each idea.</p>
+<p>Then allow one to browse / view who is working on what, as well as their latest progress – e.g. on GH.</p>
+<h2 id="searchinterfacestodiscoversemanticallydescribeddataanddatasets">Search interfaces to discover semantically described data and datasets</h2>
+<p>This includes:</p>
+<ul>
+<li>A good portal which supports the discovery of authoritative entity identifiers such as <a href="https://en.wikipedia.org/wiki/WebID">WebIds</a> based on a natural language query - this could be for name "Jesse" or a rough description "Australian guy working on AI and Solid."</li>
+<li>A good portal to discover semantically described datasets such as those described using <a href="https://theodi.org/news-and-events/blog/transforming-ai-data-governance-with-croissant-a-new-standard-for-ml-metadata/">Croissant</a> or <a href="https://ekgf.github.io/dprod/">DProd</a>.</li>
+</ul>
+<h2 id="operationalizableguidelinesonhowtocomplywithregulatoryrequirementsasahostofdecentralizedinfrastructure">Operationalizable guidelines on how to comply with regulatory requirements as a host of decentralized infrastructure</h2>
+<p>In particular - today - as a host of:</p>
+<ul>
+<li>Decentralised social media - such as <a href="https://mastodon.social/explore">Mastodon</a>, or</li>
+<li>Decentralised storage such as a <a href="https://solidproject.org">Solid Pod</a> provider</li>
+</ul>
+<p>and in the future as a host of e.g. decentralised AI services.</p>
+<p>Industry consortia do the work of creating such operationaliseable guidelines within their own domains. For instance, the financial indusry has created the <a href="https://edmcouncil.org/frameworks/cdmc/">Cloud Data Management Controls (CDMC)</a> which provides a framework for operationalising GDPR when managing financial data in cloud services.</p>
+<p>Some writing on the topic specifically in terms of Solid is <a href="https://github.com/solid/research-topics?tab=readme-ov-file#data-governance-and-solid">here</a>.</p>
+<h2 id="machinereadabledefinitionofrdfsyntaxesprobablyboringtopicformostpeople">Machine-readable definition of RDF syntaxes (probably boring topic for most people)</h2>
+<p>Not just ANTLR grammar definitions for syntax for lexers; also prescribing how this maps to triples for parsers.</p>
+<p>Starting point <a href="https://chatgpt.com/share/67e95686-c7a8-800c-8d97-9f02e345c418">here</a> </p>
+<h2 id="malleablesoftwareforsolidreadrdfdatastructuresandshapes">Malleable Software for Solid (read: RDF data structures and Shapes)</h2>
+<ul>
+<li>For Malleable Software see <a href="https://www.inkandswitch.com">here</a>.</li>
+<li>For Solid see <a href="https://solidproject.org">here</a>.</li>
+<li>For RDF see <a href="https://en.wikipedia.org/wiki/Resource_Description_Framework">here</a>.</li>
+<li>For Shapes see <a href="https://ruben.verborgh.org/blog/2019/06/17/shaping-linked-data-apps/">here</a>.</li>
+</ul>
+<h2 id="semanticcommitmentsallthewaydown">Semantic commitments all the way down</h2>
+<p>Work towards have transactions on the Web semantically described commitments</p>
+<h2 id="saygoodbyetothecloudandhellotothedataspace">Say goodbye to the cloud and hello to the dataspace</h2>
+<p>Don't write apps and code agains servers - write them against data instead.</p>
+<h2 id="usingllmstocreateadenselylinkedweb">Using LLMs to create a densely linked Web</h2>
+<p>Before we move to a fully fledge web-of-concepts, I believe LLMs have a strong role to play in densely linking the Web. That is, helping us relate all of the knowledge that has been written about so that it is much easier to discover all of the existing research on a given topic - going beyond existing work such as tools:</p>
+<ul>
+<li>That link papers based on human annotated links, such as citations of papers that people have discovered that are related, and</li>
+<li>OpenAI researcher agents which are able to crawl the web and identify papers which are about a particular topic</li>
+</ul>
+<h2 id="modelresponsemaybeapplicabletowebagentswg">Model response (may be applicable to Web Agents WG)</h2>
+<p>One feature that has supported the Web to scale is having public and cacheable resources. I recommend standardising an HTTP interface that can be used to <code>GET</code> responses from LLMs in a way that allows these responses to be stored in DNS caches.</p>
+<p>For responses that require payment - e.g. because of the size of the model needed to answer the query - then there should be a redirect flow to "unlock" the link and then keep the response cached and public. See extension on this thought in the following topic.</p>
+<h2 id="standardformakingperrequestpaymentstollmprovidersmaybeapplicabletowebagentswg">Standard for making per-request payments to LLM providers (may be applicable to Web Agents WG)</h2>
+<p>So that services relying on those LLMs need to implement the standard rather than create custom flows and deals for each LLM service.</p>
+<p>Extending this - directly delegating authorization of payments to a user account - so that they can:</p>
+<ul>
+<li>Make use of ongoing subscriptions on existing platforms</li>
+<li>Further, delegate the cost directly to their organizations when using services for work</li>
+<li>Have a single platform that they connect their bank accounts to and set controls for "LLM usage"</li>
+</ul>
+<h2 id="oneidentifyforagenticplatformsmaybeapplicabletowebagentswg">One Identify for agentic platforms (may be applicable to Web Agents WG)</h2>
+<p>Largely to achieve the above item</p>
+<h2 id="llmmetadatafordiscoverymaybeapplicabletowebagentswg">LLM metadata for discovery (may be applicable to Web Agents WG)</h2>
+<p>Presumably products that use LLMs - such as cursor - need to manually curate the list of LLMs that they are using in their product. As the number of LLMs that are available proliferates, it may be better for LLMs to provide a <code>.well-known</code> description to identify the capabilities, cost and usage mechansim.</p>
+<h2 id="agentchatroomsmaybeapplicabletowebagentswg">Agent Chat Rooms (may be applicable to Web Agents WG)</h2>
+<p>To enable, for instance, groups of personal agents to organize travel plans for a party of 5 people, or distributed tooling agents to negotiate with each other.</p>
+<p>In the medium term I would think that these are more somethign like "concept whiteboards" - but agent chat rooms are a good place to start.</p>
+<h2 id="standardizeauthenticationforllmstoaccessprivateresource">Standardize authentication for LLMs to access private resource</h2>
+<p>Intersects both with goals of MCP, Solid and protocols like OIDC4VP</p>
+<h2 id="standardsharingofreusablecontextdata">Standard sharing of re-usable context data</h2>
+<p>Standardise Solid as the way of having agents request and use contextual data. With both:</p>
+<ul>
+<li>Access Controls (including which services can access it)</li>
+<li>Usage controls (including which services results can be forwarded to, and whether the data can be used for monetization)</li>
+</ul>
+<h2 id="morethingstostandardiseinthelwswg">More things to standardise in the LWS-WG</h2>
+<p>Other Web Agents Group topics could include:</p>
+<ul>
+<li>Standardize search interface to support and look up of publically available vectorised data</li>
+<li>Taxonomise common services of LLM providers (e.g. embeddings endpoint, what modalities does a provider support etc.)</li>
+<li>Describing which models you have deployed where. In particular to allow the discovery of multiple deployments of opensource models; and to allow agentic workflows to define "this model must be used here" but then automatically do things like work out if it is deployed locally, and if not find a trusted remote deployment that can be used.</li>
+</ul>
+<hr />
+<p>This is a living document</p>
+</article>
+
+
+
+<footer class="text-center mar-tb-6">
+    © 2025 Jesse Wright, unless otherwise stated.
+</footer>
+
+<script>hljs.highlightAll();</script>
+</body>
+</html>
+

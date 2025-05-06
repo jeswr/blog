@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Proposal: A Conversational Interface for trusted data</title>
+    <meta name="description" content="Blog of a Software Engineer and Researcher"/>
+    <meta name="keywords" content="blog,developer blog,engineering blog,research blog,oxford,oxford university"/>
+    <link rel="alternate" type="application/rss+xml" title="Jesse Wright" href="/rss.xml" />
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Alegreya:400,400i|Lato:400,400i,700,900|Roboto+Mono:400,300">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/shades-of-purple.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+
+    <link rel="stylesheet" href="/css/normalize.css"/>
+    <link rel="stylesheet" href="/css/theme.css"/>
+</head>
+<body>
+<nav class="nav">
+    <div class="nav__left">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+    </div>
+    <div class="nav__right">
+        <a target="_blank" href="https://github.com/jeswr" class="link-github">GitHub</a>
+        <a target="_blank" href="https://twitter.com/" class="link-twitter">Twitter</a>
+        <a href="mailto:jesse@jeswr.org" class="link-email">Email</a>
+        <a href="/rss.xml" class="link-rss">RSS</a>
+    </div>
+</nav>
+
+<article class="mar-b-7">
+    <header class="text-center">
+        <time class="mar-b-6" datetime="Sat, March 22, 2025">Sat, March 22, 2025</time>
+        <h1 class="mar-b-7">Proposal: A Conversational Interface for trusted data</h1>
+    </header>
+    <p>In this post I set out the interface that I would like to have in order to get more value out of language models for tasks such as research that require high levels of information accuracy and provenance. These include:</p>
+<ul>
+<li>Indicate the likelihood of correctness of statements in a response via color coding of the text. This color coding should be personalisable based on whether I:</li>
+<li>confirm whether entities in a sentence are the ones I want to talk about</li>
+<li>confirm that I trust information sources from which the answer was derived</li>
+<li>confirm further background questions that the model has if I ask it to "improve its certainty"</li>
+<li>Hyperlinking entities (things such as people, places, objects etc.) in a response, so I can confirm that this is the entity I care about. If I hover over the hyperlink I should be able to see extra information about the entity, such as a picture, full name and other key details and have the option to say "this is not what I'm after" or hit a green check mark in the top right corner to allow the interface to update its accuracy color-codings.</li>
+</ul>
+<iframe src="/ltcm" width="100%" height="500" frameborder="0"></iframe>
+<p>This example has been produced using generative AI can be found <a href="/ltcm">here</a>. Note only the bottom popup example works at the moment.</p>
+<p>This requires advancements beyond current <a href="https://en.wikipedia.org/wiki/Large_language_model">Large Language Models (LLMs)</a> and emergent <a href="https://ai.meta.com/research/publications/large-concept-models-language-modeling-in-a-sentence-representation-space/">Large Concept Models (LCMs)</a> architectures. In particular, this would require models to:</p>
+<ul>
+<li>Have in-built mechanisms for entity resolution</li>
+<li>Have knowledge of the provenance trails of the information it has learned</li>
+<li>Discern - from information such as these provenance trails - between <em>ideas</em> and <em>proven results</em>/<em>observations</em> in order to be able to accurately frame what is ground truth and what is conjecture that may or may not have consensus amongst a large group of people.</li>
+</ul>
+<p>I am interested in developing architectures that are in support of this vision.</p>
+</article>
+
+
+
+<footer class="text-center mar-tb-6">
+    © 2025 Jesse Wright, unless otherwise stated.
+</footer>
+
+<script>hljs.highlightAll();</script>
+</body>
+</html>
+
