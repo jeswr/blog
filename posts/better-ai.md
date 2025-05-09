@@ -28,6 +28,8 @@ Enter the Semantic Web, a long-standing vision of a machine-readable web that en
 
 One of the key challenges with LLMs is ensuring the quality and truthfulness of their responses. By grounding LLMs with high-quality data represented in a knowledge graph (KG), we can significantly improve the accuracy and reliability of their outputs. Knowledge graphs, a core component of the Semantic Web, provide a structured and interconnected representation of data, allowing LLMs to reason over and draw insights from this information. Industry is rapidly adopting this approach, with companies like [Ontotext](https://www.ontotext.com/knowledgehub/fundamentals/what-is-graph-rag/) and [Neo4J](https://www.youtube.com/watch?v=ftlZ0oeXYRE) offering out-of-the-box solutions for performing Retrieval Augmented Generation (RAG) with Knowledge Graphs. The interest in grounding LLMs using information from Knowledge Graphs extends beyond companies run by Semantic Web enthusiasts. [Andrew Ng](https://twitter.com/AndrewYNg/status/1767941813820862655), a prominent figure in the AI community, has co-developed a course on RAG with Knowledge Graphs. Furthermore, during [Langchain's Memory Hackathon](https://medium.com/enterprise-rag/knowledge-graphs-memory-semantic-structure-in-rag-takeaways-from-langchains-memory-hackathon-6630f8bb98c0), 30% of the participating teams sought to implement knowledge graphs in their architectures, highlighting the growing recognition of their potential in enhancing LLM performance.
 
+## Multiple Applications and AI Agents running on the same knowledge base
+
 ## Protecting User Privacy and Ensuring Ethical Data Usage
 
 <!-- Coming soon ... -->
