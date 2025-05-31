@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Machine Dialogues on the Web</title>
+    <meta name="description" content="Blog of a Software Engineer and Researcher"/>
+    <meta name="keywords" content="blog,developer blog,engineering blog,research blog,oxford,oxford university"/>
+    <link rel="alternate" type="application/rss+xml" title="Jesse Wright" href="/rss.xml" />
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Alegreya:400,400i|Lato:400,400i,700,900|Roboto+Mono:400,300">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/shades-of-purple.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+
+    <link rel="stylesheet" href="/css/normalize.css"/>
+    <link rel="stylesheet" href="/css/theme.css"/>
+</head>
+<body>
+<nav class="nav">
+    <div class="nav__left">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+    </div>
+    <div class="nav__right">
+        <a target="_blank" href="https://github.com/jeswr" class="link-github">GitHub</a>
+        <a target="_blank" href="https://twitter.com/" class="link-twitter">Twitter</a>
+        <a href="mailto:jesse@jeswr.org" class="link-email">Email</a>
+        <a href="/rss.xml" class="link-rss">RSS</a>
+    </div>
+</nav>
+
+<article class="mar-b-7">
+    <header class="text-center">
+        <time class="mar-b-6" datetime="Thu, April 18, 2024">Thu, April 18, 2024</time>
+        <h1 class="mar-b-7">Machine Dialogues on the Web</h1>
+    </header>
+    <p>A large part of my personal research focus explores how we can facilitate structured <em>dialogues</em> and <em>negotiations</em> between these agents in a decentralised setting in order to enable them to work autonomously on our behalf. For instance, if I’m booked to present a talk on the 15th of February in Boston, how can we enable <a href="https://www.w3.org/DesignIssues/Charlie.html">Charlie</a> to <em>safely</em> discover the best travel options to suit my personal needs, book it on my behalf and then organise dinner reservations with my colleagues in the area at a restaurant that can cater to my coeliac allergy as well as my colleagues’ dietary requirements without my input.</p>
+<p>Let's break it down!</p>
+<p>Firstly, we need to make sure that all of our agents are able to effectively communicate (interoperate) with one another, and talk about any topic we could imagine. Since we don’t want to create a new HTTP <a href="https://en.wikipedia.org/wiki/API">API</a> for every type of exchange - the typical smorgasbord of JSON, GraphQL and other interfaces <a href="https://www.datasciencecentral.com/why-json-users-should-learn-turtle/">that modern Web developers are accustomed to</a>, is not up to scratch. Instead we need a <a href="https://ruben.verborgh.org/blog/2013/01/31/what-web-agents-want/#a-uniform-interface">uniform interface</a> that ‘understands’ <a href="https://en.wikipedia.org/wiki/Semantic_Web">semantics</a>; thankfully, the <a href="https://www.w3.org/RDF/">RDF</a> data model of the <a href="https://www.w3.org/DesignIssues/Semantic.html">Semantic Web</a> (I strongly recommend reading the <a href="https://www.w3.org/DesignIssues/Semantic.html">design issue</a> if you’ve not heard of it before), and which is used by Solid fit’s the bill. In particular, our agents communicate with one another by exchanging <a href="https://github.com/josd/DataPack">data packages</a> documents serialised in a RDF syntax such as <a href="https://www.inrupt.com/videos/readable-turtle">Turtle</a>.</p>
+<p>The next challenge is ensuring that my agent only interacts within a <em>safe</em> network and is not operating on false claims. To achieve this, we need to actively include the complementary concepts of <strong>proof</strong> and <strong>trust</strong> in our negotiations.</p>
+<h2 id="trustinsociety">Trust in Society</h2>
+<p>Life is full of unknowns, so interpersonal and institutional trust is required for society function. Just to get my morning coffee I need to trust that the driver at the traffic light won’t try and run me over as I cross the road to the cafe, my bank won’t disappear with my money before I tap my card and that the barista won’t poison my drink. Yet I do this everyday without so much as a thought about it. It’s not guaranteed that these things <em>won’t</em> happen: 361 pedestians were killed in the UK in 2021 (<a href="https://www.gov.uk/government/statistics/reported-road-casualties-great-britain-pedestrian-factsheet-2021/reported-road-casualties-great-britain-pedestrian-factsheet-2021">https://www.gov.uk/government/statistics/reported-road-casualties-great-britain-pedestrian-factsheet-2021/reported-road-casualties-great-britain-pedestrian-factsheet-2021</a> ), banks do fail as we saw in the 2008 GFC and millions suffer from food poisoning annually (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5489142/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5489142/</a> ) - but it is unlikely enough that I consider the risk worth it in order to get my daily latte.</p>
+<h2 id="trustontheweb">Trust on the Web</h2>
+<p><a href="https://www.penguin.co.uk/books/304270/who-can-you-trust-by-botsman-rachel/9780241296189">Such trust is just as important on the Web</a> as it is in every other aspect of our lives. This can range from my trust in the information that I read on Wikipedia is <em>reliable enough</em> for most scenarios because of the collaborative editing and review process that it has in place combined with my ongoing positive experience in using the platform. Equally I trust that the British Airways website is going to provide reliable information about flight services; and will not steal my credit card details when I enter them. This time, however, I am trusting the website because it is a reliable company and the damage to their brand identity far outweighs the benefits of them scamming some users' credit cards.</p>
+<h2 id="trustindialogues">Trust in Dialogues</h2>
+<p>Similarly, an agent working on the Web also needs to be able to know what assumptions around trust that it can make. Hence, we need to be able to model our existing notions of <em>interpersonal</em> and <em>institutional</em> trust on the Web. In particular, the agent needs to be able determine <em>can I trust Fred (Denise’s agent) for the purpose of providing a time Denise is free for dinner</em>; or _can I trust Zorb (xalbsoi89213’s agent) for the purpose of determining which heart medication I need to order _(note this is really just situational trust as described in <a href="https://link.springer.com/article/10.1007/s10462-004-0041-5">https://link.springer.com/article/10.1007/s10462-004-0041-5</a>). This can be achieved by having my agent learn the factors that <a href="https://www.researchgate.net/publication/365618702_An_Ontology_Network_in_Finance_and_Economics_Money_Trust_Value_Risk_and_Economic_Exchanges">influence my trust</a>: for instance I might trust people that my friends endorse, or organisations endorsed by government approved certification authorities; and then use this information to make judgements on what information it trusts in a negotiation.</p>
+<h2 id="proofindialogues">Proof in Dialogues</h2>
+<p>Including <a href="https://www.w3.org/DesignIssues/Logic.html">Logical</a> and <a href="https://www.w3.org/TR/vc-data-model-2.0/">Cryptographic</a> proofs can be used to supplement trust by providing further guarantees on data integrity. For instance, I don’t need to trust Bob when he is telling me his birth date is 03/05/1993 if he presents it alongside a signature showing that the UK government also claims his birthday is 03/05/1993. It is also common for agents to perform <a href="https://www.w3.org/DesignIssues/Logic.html">logical inference</a> on the data that is being passed around - in this case any derived facts should include a <a href="https://www.w3.org/2000/10/swap/doc/paper/">proof of their derivation from the source materials</a> in order to avoid needing to trust the intermediary who did the calculation.</p>
+</article>
+
+
+
+<footer class="text-center mar-tb-6">
+    © 2025 Jesse Wright, unless otherwise stated.
+</footer>
+
+<script>hljs.highlightAll();</script>
+</body>
+</html>
+

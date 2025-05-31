@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Communication in Multi Agent Systems</title>
+    <meta name="description" content="Blog of a Software Engineer and Researcher"/>
+    <meta name="keywords" content="blog,developer blog,engineering blog,research blog,oxford,oxford university"/>
+    <link rel="alternate" type="application/rss+xml" title="Jesse Wright" href="/rss.xml" />
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Alegreya:400,400i|Lato:400,400i,700,900|Roboto+Mono:400,300">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/shades-of-purple.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+
+    <link rel="stylesheet" href="/css/normalize.css"/>
+    <link rel="stylesheet" href="/css/theme.css"/>
+</head>
+<body>
+<nav class="nav">
+    <div class="nav__left">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+    </div>
+    <div class="nav__right">
+        <a target="_blank" href="https://github.com/jeswr" class="link-github">GitHub</a>
+        <a target="_blank" href="https://twitter.com/" class="link-twitter">Twitter</a>
+        <a href="mailto:jesse@jeswr.org" class="link-email">Email</a>
+        <a href="/rss.xml" class="link-rss">RSS</a>
+    </div>
+</nav>
+
+<article class="mar-b-7">
+    <header class="text-center">
+        <time class="mar-b-6" datetime="Sat, May 17, 2025">Sat, May 17, 2025</time>
+        <h1 class="mar-b-7">Communication in Multi Agent Systems</h1>
+    </header>
+    <p><img src="/multi-agent-communication.png" alt="" /></p>
+<p>Abstractly, an agent is "a computer system that is situated in some environment, and that is capable of autonomous action in this environment in order to meet its design objective" (<a href="https://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/imas/IMAS2e.html">Wooldridge, 2009, p. 15</a>; <a href="https://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/ker95.pdf">Wooldridge, 1995</a>). Just as humans must negotiate and cooperate to achieve shared goals, so too must agents within multi-agent systems (<a href="https://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/imas/IMAS2e.html">Wooldridge, 2009, p. 24-25</a>). This is only possible if agents have an effective means of communication. To communicate they must have a (<strong>R1</strong>) shared conceptual understanding of the topic on which they communicate (e.g. two agents can only communicate about weather if they both 'know' what it means to be sunny, raining and overcast, and have a notion of temperature and a measure - such as degree celsius - by which to describe it) and (<strong>R2</strong>) a means of sender (resp. reciever) encoding (resp. decoding) messages to transmit these concepts between agents. We shall refer to the requirement that agents are "capable of autonomous action [execution]" (<a href="https://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/imas/IMAS2e.html">Wooldridge, 2009, p. 15</a>) as (<strong>R1E</strong>).</p>
+<p>Since the emergence of autonomous agents in the 1980's (<a href="https://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/imas/IMAS2e.html">Wooldridge, 2009, p. 304</a>) there have been numerous developments in the way in which agents understand (<strong>R1</strong>) and transmit (<strong>R2</strong>) concepts.</p>
+<p>First, came systems where human programmers would encode specific execution semantics in code (<strong>R1E</strong>) for instance the "concept of temperature" would be defined by a function which takes a reading from a temperature sensor and these systems would communicate (<strong>R2</strong>) using a structured encoding such as sending JSON encoded objects over the Web - containing a "temperature" key. In this paradigm, the conceptual understanding (e.g. of temperature) (<strong>R1</strong>) did not fully live within the system, but was rather implicitly communicated between systems in the form of API documentation where the developers implementing each system would explain to each other "the temperature key in the JSON object is a 32bit floating point value representing the temperature, in central London, as measured in degrees celsius". Naturally, these primitive agents had very limited <em>versatility</em> as human developers were required to define the execution semantics and conceptual semantics (documentation) by one exact very precise concept at a time. Moreover, these agents, which are still widespread in the form of Web APIs, face an <em>interoperability</em> problem - as there are countless Web APIs all of which have a "temperature" key in the JSON object they return; but with different meanings due to the implicit semantics of the metric, collection location, collection date etc. encoded in the API documentation. This tightly binds/couples the client-agent to communicate with a single server agent and to communicate with more "agents" the developer must manually write code to decode the different encodings of different server agents and align the conceptual understanding across different documentation.</p>
+<p>Subsequent developments saw attempts to migrate this conceptual understanding (<strong>R1</strong>) from documentation to data which is sent between agents (<a href="https://ruben.verborgh.org/publications/verborgh_web_2013/">Verborgh et al., 2013</a>, <a href="https://ruben.verborgh.org/blog/2013/01/31/what-web-agents-want/">Verborgh, 2013</a>, <a href="https://ruben.verborgh.org/blog/2021/12/23/reflections-of-knowledge/">Verborgh, 2021</a>, webservices). In domains such as the Semantic Web, conceptual understanding is described symbolically using ontologies (<a href="https://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/imas/IMAS2e.html">Wooldridge, 2009, p. 180</a>) and rules (<a href="https://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/avignon91.pdf">Wooldridge, 1991</a>, verborgh2015drawing) (<strong>R1</strong>) - and encoded in highly generic <a href="https://www.w3.org/RDF/">RDF</a> syntaxes (<strong>R2</strong>). With these agents (systems) possessing a symbolic understanding of concepts, they are able to precisely describe and reason about the information they send and receive. This increases agent <em>interoperability</em> and <em>portability</em> by making explicit the semantics that are often implicitly encoded in API documentation; moreover, agent <em>versatility</em> increases with the ability to describe requests and responses on the fly without being constrained to use the finite set of concepts listed in API documentation. However, ontologists are still required to build the vocabularies and rules for concept description (e.g. someone must manually define "degrees celsius" as a "unit of measure" for "temperature"; someone must provide the rules that define the mapping between "degrees celsius" and "fahrenheit" so that systems using two different measures can interoperate) (<strong>R1</strong>) and developers are still required to write code that defines the execution semantics (<strong>R1E</strong>) that is, a system can semantically formulate the question "what is the current temperature in London in degrees Celsius"; but a developer is then still required to write the code that then fetches the temperature from the sensor. Furthermore, in this paradigm "If two agents are to communicate about some domain, then it is necessary for them to agree on the terminology that they use to describe this domain." (<a href="https://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/imas/IMAS2e.html">Wooldridge, 2009</a>), often requiring agents to share the same vocabularies and hence "worldviews".</p>
+<p>Now LLM-powered agents are emerging, with many using LLMs trained upon a textual corpus containing a vast array of human knowledge. Consequently, these agents have been demonstrating a greater <em>breadth</em> and depth of conceptual understanding (<strong>R1</strong>) than human developers could imagine encoding by hand in formal ontologies. Moreover, LLMs can encode and decode these concepts in natural language (as well as, increasingly, <a href="https://platform.openai.com/docs/guides/structured-outputs/introduction">machine syntaxes</a>) (<strong>R2</strong>). Conversational LLMs also possess inherent execution semantics (<strong>R1E</strong>) with the capability to formulate a written response to any input which they are given. These execution semantics, however, do not extend to access of system-level knowledge or resources (such as temperature sensors) and are less reliable/deterministic than production-ready implementations of previous generations of agents. The trade-off of the breadth and depth of LLM understanding; is an increased vagueness of concepts and the presence of internal inconsistencies in LLM conceptualisations - moreover, there is no single worldview, per se, that the language model holds; and, just as with humans, the facts that an LLM claims are highly dependent on the context of the conversation in which they occur.</p>
+</article>
+
+
+
+<footer class="text-center mar-tb-6">
+    © 2025 Jesse Wright, unless otherwise stated.
+</footer>
+
+<script>hljs.highlightAll();</script>
+</body>
+</html>
+

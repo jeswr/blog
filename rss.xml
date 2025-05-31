@@ -1,0 +1,1249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Jesse Wright</title>
+        <link>https://blog.jeswr.org</link>
+        <description>Blog of a Software Engineer and Researcher</description>
+        <lastBuildDate>Sat, 31 May 2025 12:04:49 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <image>
+            <title>Jesse Wright</title>
+            <url>https://blog.jeswr.org/img/logo.png</url>
+            <link>https://blog.jeswr.org</link>
+        </image>
+        <copyright>© 2025 Jesse Wright</copyright>
+        <atom:link href="https://blog.jeswr.org/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[The Old and the New - Using Semantic Web Technologies to Build Better AI]]></title>
+            <link>https://blog.jeswr.org/2024/04/18/better-ai</link>
+            <guid>https://blog.jeswr.org/2024/04/18/better-ai</guid>
+            <pubDate>Thu, 18 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[<!-- **Introduction** -->
+<h2 id="introduction">Introduction</h2>
+<p>As artificial intelligence (AI) continues to advance at a breakneck pace, particularly with the rise of large language models (LLMs...]]></description>
+            <content:encoded><![CDATA[<!-- **Introduction** -->
+<h2 id="introduction">Introduction</h2>
+<p>As artificial intelligence (AI) continues to advance at a breakneck pace, particularly with the rise of large language models (LLMs), it is imperative to ensure that these systems are truthful, trustworthy, accountable, and robust. Without such properties, current LLM-style AI systems will struggle to move beyond their roles as <a href="https://www.forbes.com/sites/rashishrivastava/2024/04/11/inside-the-buzzy-ai-startup-coming-for-googles-lunch/">sophisticated search engines</a> and <a href="/2024/04/18/better-ai/">writing assistants</a>, hindering their ability to autonomously perform tasks such as acting as <a href="https://link.springer.com/journal/10458">web services or agents</a>.</p>
+<p>Enter the Semantic Web, a long-standing vision of a machine-readable web that enables agents to understand and interact with data in a meaningful way (<a href="https://www.scientificamerican.com/article/the-semantic-web/">Berners-Lee et al., 2001</a>). To learn about the original architectural vision of the Semantic Web, see <a href="https://www.w3.org/DesignIssues/Semantic.html">this design issue</a>. In this blog post, we'll explore how Semantic Web technologies can be leveraged to build better AI systems that are more reliable, accountable, and aligned with human values.</p>
+<!--    The Semantic Web provides a framework for representing data in a structured and interoperable format, allowing AI systems to reason over and draw insights from this information ([Feigenbaum et al., 2007](https://www.science.org/doi/10.1126/science.1200831)). In this blog post, we'll explore how Semantic Web technologies can be leveraged to build better AI systems that are more reliable, accountable, and aligned with human values. -->
+<!-- As artificial intelligence (AI) continues to advance at a rapid pace, particularly with the rise of large language models (LLMs), it's essential to ensure that these systems are truthful, trustworthy, accountable, and robust. Without such properties, current LLM-style AI systems will struggle to move beyond their role as glorified Search Engines and Essay Writers [] and autonomously perform tasks such as acting as a Web Service or Agent []. -->
+<!-- Enter the Semantic Web, a long-standing vision of a machine-readable web that enables AI agents to understand and interact with data in a meaningful way [1]. In this blog post, we'll explore how Semantic Web technologies can be leveraged to build better AI systems.
+Enter the Semantic Web, a long-standing vision of a machine-readable web that enables AI agents to understand and interact with data in a meaningful way ([Berners-Lee et al., 2001](https://www.scientificamerican.com/article/the-semantic-web/)). The Semantic Web provides a framework for representing data in a structured and interoperable format, allowing AI systems to reason over and draw insights from this information ([Feigenbaum et al., 2007](https://www.science.org/doi/10.1126/science.1200831)). In this blog post, we'll explore how Semantic Web technologies can be leveraged to build better AI systems that are more reliable, accountable, and aligned with human values.
+
+As artificial intelligence (AI) continues to advance at a rapid pace, particularly with the rise of large language models (LLMs), it's essential to ensure that these systems are truthful, trustworthy, accountable, and robust. Without such properties, current LLM-style AI systems will struggle to move beyond their role as glorified Search Engines and Essay Writers [] and autonomously perform tasks such as acting as a Web Service or Agent [].
+
+Enter the Semantic Web, a long-standing vision of a machine-readable web that enables AI agents to understand and interact with data in a meaningful way [1]. In this blog post, we'll explore how Semantic Web technologies can be leveraged to build better AI systems. -->
+<h2 id="groundingllmswithknowledgegraphs">Grounding LLMs with Knowledge Graphs</h2>
+<p>One of the key challenges with LLMs is ensuring the quality and truthfulness of their responses. By grounding LLMs with high-quality data represented in a knowledge graph (KG), we can significantly improve the accuracy and reliability of their outputs. Knowledge graphs, a core component of the Semantic Web, provide a structured and interconnected representation of data, allowing LLMs to reason over and draw insights from this information. Industry is rapidly adopting this approach, with companies like <a href="https://www.ontotext.com/knowledgehub/fundamentals/what-is-graph-rag/">Ontotext</a> and <a href="https://www.youtube.com/watch?v=ftlZ0oeXYRE">Neo4J</a> offering out-of-the-box solutions for performing Retrieval Augmented Generation (RAG) with Knowledge Graphs. The interest in grounding LLMs using information from Knowledge Graphs extends beyond companies run by Semantic Web enthusiasts. <a href="https://twitter.com/AndrewYNg/status/1767941813820862655">Andrew Ng</a>, a prominent figure in the AI community, has co-developed a course on RAG with Knowledge Graphs. Furthermore, during <a href="https://medium.com/enterprise-rag/knowledge-graphs-memory-semantic-structure-in-rag-takeaways-from-langchains-memory-hackathon-6630f8bb98c0">Langchain's Memory Hackathon</a>, 30% of the participating teams sought to implement knowledge graphs in their architectures, highlighting the growing recognition of their potential in enhancing LLM performance.</p>
+<h2 id="protectinguserprivacyandensuringethicaldatausage">Protecting User Privacy and Ensuring Ethical Data Usage</h2>
+<!-- Coming soon ... -->
+<p>As AI systems increasingly rely on user and enterprise data to function, it's crucial to ensure that this data is used ethically and in compliance with legal governance frameworks. Semantic Web, and satellite technologies such as <a href="/2024/02/06/role-of-solid">Solid</a> offer strategies <a href="https://ruben.verborgh.org/blog/2023/11/10/no-more-raw-data/">for attaching access controls, and usage agreements</a> to data in order to <a href="https://www.inrupt.com/blog/safe-ai-101">support responsible data usage</a>.</p>
+<!-- https://www.inrupt.com/blog/safe-ai-101 -->
+ <!-- - https://ruben.verborgh.org/blog/2023/11/10/no-more-raw-data/ -->
+<h2 id="towardstrustworthyandaccountablepersonalaiagents">Towards Trustworthy and Accountable Personal AI Agents</h2>
+<p>The Semantic Web has long envisioned a future where autonomous AI agents work on behalf of users, assisting them with various tasks and decision-making processes. By leveraging Semantic Web technologies, we can build the groundwork protocols that enable conversational agents to negotiate and transact over the web which contain features such as:</p>
+<ol>
+<li>Mechanism for describing the origin and provenance of exchanged data</li>
+<li>Mechanisms to determine the "trustworthiness" of data by modelling which sources / individuals / organisations are reliable, and which are not.</li>
+<li>Unambiguous description of usage restrictions on exchanged data to protect privacy allowing conversational LLM-agents can become more trustworthy, accountable, and compliant with data protection regulations such as GDPR.</li>
+<li>Clear definition of dialogue outcomes that require agreement or transaction</li>
+<li>The ability to discover AI representitives of individuals &amp; organisations using <a href="https://en.wikipedia.org/wiki/WebID">Web Identities</a>.</li>
+</ol>
+<p>More on this topic soon … in the meantime, <a href="/2024/04/18/dialogues">here is my article on machine dialogues</a></p>
+<!-- The protocol also incorporates the concept of WebID, allowing real-world entities (humans, organizations, or devices) to be represented on the web and authorize conversational agents to act on their behalf.
+
+When an LLM-agent is tasked with performing an action, it follows a series of steps:
+
+1. Establish which external entities it needs to converse with and what information needs to be disclosed
+2. Discover the external conversational LLM-agents using WebID-Profiles
+3. Negotiate terms of use for shared data using structured data formats (e.g., RDF, ODRL)
+4. Exchange "packaged data" and conclude the dialogue with an agreed-upon structured result
+
+The proposed protocol offers several key features, including well-defined discovery of conversation agents via WebIDs, declaration of usage and sharing requirements, proof and provenance for establishing data trustworthiness, and the use of RDF to ensure unambiguous outcomes.
+
+The novelty of this approach lies in its ability to express trust between agents, provide a provenance track for trust expressions, package data with provenance and data terms of use expressions, and use RDF to verify outcomes. By implementing this protocol, conversational LLM-agents can become more trustworthy, accountable, and compliant with data protection regulations such as GDPR. -->
+<h2 id="conclusion">Conclusion</h2>
+<p>The Semantic Web, with its rich history and powerful technologies, holds the key to building better AI systems in the age of LLMs. By grounding LLMs with knowledge graphs, ensuring ethical data usage through explicit policies, and laying the foundation for trustworthy personal AI agents, the Semantic Web complements and enhances the capabilities of modern AI. As we continue to push the boundaries of what's possible with AI, it's essential to look to the past and leverage the insights and technologies developed by the Semantic Web community. By combining the old and the new, we can create AI systems that are not only powerful but also accountable, transparent, and aligned with human values.</p>
+<!-- These agents can communicate with each other using standardized protocols, exchange data securely, and make decisions based on user preferences and policies. The use of WebIDs, which are HTTP URIs that denote an agent and resolve to a profile document describing the agent's capabilities and authorization to act on behalf of an entity, facilitates the discovery and identity management of AI agents [11]. -->
+<!-- Coming soon ... -->
+<!-- This approach, known as Retrieval Augmented Generation (RAG), has proven effective in enhancing the performance of conversational AI systems [2]. Recent studies have shown that 30% of teams participating in a memory hackathon were explicitly looking to implement knowledge graphs into their architecture, with teams using knowledge graphs performing well in the judging process [3]. Furthermore, the synergy between RAG and knowledge graphs has been explored in various contexts, such as using GraphDBs' natural language interface to interact with content [4] and leveraging Cypher search in LangChain [5].
+
+Protecting User Privacy and Ensuring Ethical Data Usage:
+As AI systems increasingly rely on user data to function, it's crucial to ensure that this data is used ethically and in compliance with legal governance frameworks. The Semantic Web provides a mechanism for explicitly annotating data with privacy and usage policies, enabling LLMs to understand and adhere to these restrictions [6]. By representing policies using Semantic Web technologies, such as the Web Ontology Language (OWL) and the Resource Description Framework (RDF), AI agents can reason over these policies and ensure that data is used only in ways that users have consented to, promoting trust and accountability [7]. This is particularly relevant in the context of personal data stored in Solid Pods, where access control policies and data terms of use can be automatically generated based on the data and integrated into the standard authorization flow [8].
+
+
+Towards Trustworthy and Accountable Personal AI Agents:
+The Semantic Web has long envisioned a future where autonomous AI agents work on behalf of users, assisting them with various tasks and decision-making processes. This notion aligns closely with the concept of Vendor Relationship Management (VRM) [9], which seeks to empower individuals to manage their relationships with vendors and service providers. By leveraging Semantic Web technologies, we can build the groundwork for trustworthy and accountable personal AI agents and services at a web scale [10]. These agents can communicate with each other using standardized protocols, exchange data securely, and make decisions based on user preferences and policies. The use of WebIDs, which are HTTP URIs that denote an agent and resolve to a profile document describing the agent's capabilities and authorization to act on behalf of an entity, facilitates the discovery and identity management of AI agents [11].
+
+Conclusion:
+The Semantic Web, with its rich history and powerful technologies, holds the key to building better AI systems in the age of LLMs. By grounding LLMs with knowledge graphs, ensuring ethical data usage through explicit policies, and laying the foundation for trustworthy personal AI agents, the Semantic Web complements and enhances the capabilities of modern AI. As we continue to push the boundaries of what's possible with AI, it's essential to look to the past and leverage the insights and technologies developed by the Semantic Web community. By combining the old and the new, we can create AI systems that are not only powerful but also accountable, transparent, and aligned with human values. -->
+<!-- [^1] I even used one to assist in writing this article! -->
+<!-- References:
+[1] Berners-Lee, T., Hendler, J., & Lassila, O. (2001). The Semantic Web. Scientific American, 284(5), 34-43. https://www.scientificamerican.com/article/the-semantic-web/
+
+[2] Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., ... & Kiela, D. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. arXiv preprint arXiv:2005.11401. https://arxiv.org/pdf/2005.11401.pdf
+
+[3] Langchain Memory Hackathon: Takeaways and Insights. (2023). Medium. https://medium.com/enterprise-rag/knowledge-graphs-memory-semantic-structure-in-rag-takeaways-from-langchains-memory-hackathon-6630f8bb98c0
+
+[4] Using GraphDB's Natural Language Interface to Talk with Your Content. (2021). Ontotext. https://www.ontotext.com/blog/using-graphdbs-natural-language-interface-to-talk-with-your-content/
+
+[5] LangChain Has Added Cypher Search. (2023). Towards Data Science. https://towardsdatascience.com/langchain-has-added-cypher-search-cb9d821120d5
+
+[6] Kirrane, S., Fernández, J. D., Dullaert, W., Milosevic, U., Polleres, A., Bonatti, P. A., ... & Wenning, R. (2018). A scalable consent, transparency and compliance architecture. In European Semantic Web Conference (pp. 131-136). Springer, Cham. https://link.springer.com/chapter/10.1007/978-3-319-98192-5_25
+
+[7] Bonatti, P. A., Kirrane, S., Petrova, I. M., Sauro, L., & Schlehahn, E. (2020). The SPECIAL usage policy language, version 1.0. SPECIAL Project Deliverable D2.8. https://www.specialprivacy.eu/images/documents/SPECIAL_D28_M30_V10.pdf
+
+[8] Data Terms of Use Negotiation. (2023). Solid Project. https://docs.google.com/document/d/1icPtGL1fnsQImWyK1tbrwKsKBpKv7s3C0oFwr6J-I-w/edit
+
+[9] Project VRM. (2023). Project VRM. https://cyber.harvard.edu/projectvrm/Main_Page
+
+[10] Solid: Your data, your choice. (2023). Solid Project. https://solidproject.org/
+
+[11] WebID Profile. (2023). Solid Project. https://solidproject.org/TR/webid-profile -->]]></content:encoded>
+            <author>jesse@jeswr.org (Jesse Wright)</author>
+        </item>
+        <item>
+            <title><![CDATA[Practical challenges I see that we should have solutions for by now]]></title>
+            <link>https://blog.jeswr.org/2025/03/30/practical-challenges</link>
+            <guid>https://blog.jeswr.org/2025/03/30/practical-challenges</guid>
+            <pubDate>Sun, 30 Mar 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p><strong>Early draft, rant post stage, written in 2min</strong></p>
+<h2 id="identifyingwhoisbesttoworkonaprojectinacademic">Identifying who is best to work on a project in academic</h2>
+<p>There are...]]></description>
+            <content:encoded><![CDATA[<p><strong>Early draft, rant post stage, written in 2min</strong></p>
+<h2 id="identifyingwhoisbesttoworkonaprojectinacademic">Identifying who is best to work on a project in academic</h2>
+<p>There are increasingly many disparate groups doing many different things. There are perhaps different groups that should be turned to for:</p>
+<ol>
+<li>Helping solve an industry challenge in the medium term</li>
+<li>Working towards a better long term solution</li>
+</ol>
+<p>And the best for either are usually not easily identifiable</p>
+<h2 id="aligningunderstandingwhenmultiplemembersofagrouphavedifferentbackgrounds">Aligning understanding when multiple members of a group have different backgrounds</h2>
+<p>Very much per title</p>
+<h2 id="beaurocraticadmin">Beaurocratic Admin</h2>
+<p>This is a social problem, not a technical one</p>]]></content:encoded>
+            <author>jesse@jeswr.org (Jesse Wright)</author>
+        </item>
+        <item>
+            <title><![CDATA[Data Governance in Data Wallets]]></title>
+            <link>https://blog.jeswr.org/2025/02/14/wallet-governance</link>
+            <guid>https://blog.jeswr.org/2025/02/14/wallet-governance</guid>
+            <pubDate>Fri, 14 Mar 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p><img src="/cookie.webp" alt="" /></p>
+<p>We are about to create another cookie problem :cookie: - with Digital Credentials in Data Wallets.</p>
+<p>My previous article on <a href="/2025/02/14/data-w...]]></description>
+            <content:encoded><![CDATA[<p><img src="/cookie.webp" alt="" /></p>
+<p>We are about to create another cookie problem :cookie: - with Digital Credentials in Data Wallets.</p>
+<p>My previous article on <a href="/2025/02/14/data-wallets/">Data Wallets</a> discussed what Verifiable Credentials were - and where they fit into regulatory frameworks such as eIDAS in Europe and the proposed Digital Verification Scheme (DVS) in the UK. </p>
+<p>Such credentials can contain sensitive personal information, that often requires the <em>verifier</em> to establish a legal basis upon which they can process the data - such as user consent. Within the <a href="https://www.w3.org/TR/vc-data-model-2.0/">W3C Verifiable Credentials Specification</a> this is recognized, and a <a href="https://www.w3.org/TR/vc-data-model-2.0/#terms-of-use"><code>termsOfUse</code></a> entry is supported to support in precisely describing the <em>permissions</em> (e.g. Service Personalization) for which data may be used, what usage of data within the credential is <em>prohibited</em> (e.g. Marketing) and any <em>obligations</em> that must be met when using the data (e.g. report any 3rd parties this data is shared with). The formal language often used to describe these <em>permissions</em>, <em>prohibitions</em> and <em>obligations</em> is known as the <a href="https://www.w3.org/TR/odrl-model/#rule">Open Digital Rights Language (ODRL)</a>.</p>
+<p>However, without the legal infrastructure to recognize the inclusion of this <a href="https://www.w3.org/TR/vc-data-model-2.0/#terms-of-use"><code>termsOfUse</code></a> entry as a valid way of <em>creating</em> a legal basis for data processing - such as being a valid way of proving consent; this entry is relegated to merely being a descriptor of the basis' for processing that have already been established. How are these bases' established? Likely, the mechanism that we know and love - a pop-up consent box, every time you use the credential<sup id="fnref1"><a href="#fn1">1</a></sup>!</p>
+<p>As I discussed in <a href="https://blog.jeswr.org/2025/02/14/data-wallets#datauseandaccessbill">my previous article</a> the <a href="https://www.gov.uk/guidance/digital-identity">Digital Verification Scheme</a> is proposed within the UK's <a href="https://bills.parliament.uk/bills/3825/">Data (use and access) Bill</a>. The DVS provides a mechanism for the Secretary of State to create a list of certified service providers to provide services related to credential issuance, management and verification.</p>
+<p>The <a href="https://www.gov.uk/government/collections/uk-digital-identity-and-attributes-trust-framework">Digital Identity and Attributes Framework (DIATF)</a> is a framework that explicitly describes the different types of service providers that can be implemented under the DVS - including technical roles and responsibilities.</p>
+<p>If we are specifically talking about the <a href="https://www.gov.uk/government/collections/uk-digital-identity-and-attributes-trust-framework">Digital Identity and Attributes Framework (DIATF)</a> in the UK, it could take the form of terms of use term within <a href="https://www.w3.org/TR/vc-data-model-2.0/#terms-of-use">Verifiable Credentials</a>. Specifically in the context of DIATF what regulators could do is state that when a Verifiable Credential is sent from a Holder:</p>
+<ol>
+<li>The Holder is legally obliged to use pre-defined user preferences or ask directly from the user, the privacy terms they wish to apply to the data. These would likely be described as a set of permissions, obligations, and prohibitions within an <a href="https://www.w3.org/TR/odrl-model/#rule">ODRL Rule</a></li>
+<li>The service receiving the data is legally obliged to adhere to the stated privacy preferences.</li>
+</ol>
+<p>In most cases - the rules would largely enumerate the <a href="https://w3c.github.io/dpv/2.0/dpv/">DPV Purposes</a> for which the user consents their data to be used.</p>
+<div class="footnotes">
+  <hr/>
+  <ol>
+    <li id="fn1">This is a little exaggerated since data processing for <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/legitimate-interests/what-is-the-legitimate-interests-basis/">legitimate interests</a> does not require such a flow. <a href="#fnref1">↩</a></li>
+  </ol>
+</div>]]></content:encoded>
+            <author>jesse@jeswr.org (Jesse Wright)</author>
+        </item>
+        <item>
+            <title><![CDATA[Machine Dialogues on the Web]]></title>
+            <link>https://blog.jeswr.org/2024/04/18/dialogues</link>
+            <guid>https://blog.jeswr.org/2024/04/18/dialogues</guid>
+            <pubDate>Thu, 18 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p>A large part of my personal research focus explores how we can facilitate structured <em>dialogues</em> and <em>negotiations</em> between these agents in a decentralised setting in order to enable ...]]></description>
+            <content:encoded><![CDATA[<p>A large part of my personal research focus explores how we can facilitate structured <em>dialogues</em> and <em>negotiations</em> between these agents in a decentralised setting in order to enable them to work autonomously on our behalf. For instance, if I’m booked to present a talk on the 15th of February in Boston, how can we enable <a href="https://www.w3.org/DesignIssues/Charlie.html">Charlie</a> to <em>safely</em> discover the best travel options to suit my personal needs, book it on my behalf and then organise dinner reservations with my colleagues in the area at a restaurant that can cater to my coeliac allergy as well as my colleagues’ dietary requirements without my input.</p>
+<p>Let's break it down!</p>
+<p>Firstly, we need to make sure that all of our agents are able to effectively communicate (interoperate) with one another, and talk about any topic we could imagine. Since we don’t want to create a new HTTP <a href="https://en.wikipedia.org/wiki/API">API</a> for every type of exchange - the typical smorgasbord of JSON, GraphQL and other interfaces <a href="https://www.datasciencecentral.com/why-json-users-should-learn-turtle/">that modern Web developers are accustomed to</a>, is not up to scratch. Instead we need a <a href="https://ruben.verborgh.org/blog/2013/01/31/what-web-agents-want/#a-uniform-interface">uniform interface</a> that ‘understands’ <a href="https://en.wikipedia.org/wiki/Semantic_Web">semantics</a>; thankfully, the <a href="https://www.w3.org/RDF/">RDF</a> data model of the <a href="https://www.w3.org/DesignIssues/Semantic.html">Semantic Web</a> (I strongly recommend reading the <a href="https://www.w3.org/DesignIssues/Semantic.html">design issue</a> if you’ve not heard of it before), and which is used by Solid fit’s the bill. In particular, our agents communicate with one another by exchanging <a href="https://github.com/josd/DataPack">data packages</a> documents serialised in a RDF syntax such as <a href="https://www.inrupt.com/videos/readable-turtle">Turtle</a>.</p>
+<p>The next challenge is ensuring that my agent only interacts within a <em>safe</em> network and is not operating on false claims. To achieve this, we need to actively include the complementary concepts of <strong>proof</strong> and <strong>trust</strong> in our negotiations.</p>
+<h2 id="trustinsociety">Trust in Society</h2>
+<p>Life is full of unknowns, so interpersonal and institutional trust is required for society function. Just to get my morning coffee I need to trust that the driver at the traffic light won’t try and run me over as I cross the road to the cafe, my bank won’t disappear with my money before I tap my card and that the barista won’t poison my drink. Yet I do this everyday without so much as a thought about it. It’s not guaranteed that these things <em>won’t</em> happen: 361 pedestians were killed in the UK in 2021 (<a href="https://www.gov.uk/government/statistics/reported-road-casualties-great-britain-pedestrian-factsheet-2021/reported-road-casualties-great-britain-pedestrian-factsheet-2021">https://www.gov.uk/government/statistics/reported-road-casualties-great-britain-pedestrian-factsheet-2021/reported-road-casualties-great-britain-pedestrian-factsheet-2021</a> ), banks do fail as we saw in the 2008 GFC and millions suffer from food poisoning annually (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5489142/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5489142/</a> ) - but it is unlikely enough that I consider the risk worth it in order to get my daily latte.</p>
+<h2 id="trustontheweb">Trust on the Web</h2>
+<p><a href="https://www.penguin.co.uk/books/304270/who-can-you-trust-by-botsman-rachel/9780241296189">Such trust is just as important on the Web</a> as it is in every other aspect of our lives. This can range from my trust in the information that I read on Wikipedia is <em>reliable enough</em> for most scenarios because of the collaborative editing and review process that it has in place combined with my ongoing positive experience in using the platform. Equally I trust that the British Airways website is going to provide reliable information about flight services; and will not steal my credit card details when I enter them. This time, however, I am trusting the website because it is a reliable company and the damage to their brand identity far outweighs the benefits of them scamming some users' credit cards.</p>
+<h2 id="trustindialogues">Trust in Dialogues</h2>
+<p>Similarly, an agent working on the Web also needs to be able to know what assumptions around trust that it can make. Hence, we need to be able to model our existing notions of <em>interpersonal</em> and <em>institutional</em> trust on the Web. In particular, the agent needs to be able determine <em>can I trust Fred (Denise’s agent) for the purpose of providing a time Denise is free for dinner</em>; or _can I trust Zorb (xalbsoi89213’s agent) for the purpose of determining which heart medication I need to order _(note this is really just situational trust as described in <a href="https://link.springer.com/article/10.1007/s10462-004-0041-5">https://link.springer.com/article/10.1007/s10462-004-0041-5</a>). This can be achieved by having my agent learn the factors that <a href="https://www.researchgate.net/publication/365618702_An_Ontology_Network_in_Finance_and_Economics_Money_Trust_Value_Risk_and_Economic_Exchanges">influence my trust</a>: for instance I might trust people that my friends endorse, or organisations endorsed by government approved certification authorities; and then use this information to make judgements on what information it trusts in a negotiation.</p>
+<h2 id="proofindialogues">Proof in Dialogues</h2>
+<p>Including <a href="https://www.w3.org/DesignIssues/Logic.html">Logical</a> and <a href="https://www.w3.org/TR/vc-data-model-2.0/">Cryptographic</a> proofs can be used to supplement trust by providing further guarantees on data integrity. For instance, I don’t need to trust Bob when he is telling me his birth date is 03/05/1993 if he presents it alongside a signature showing that the UK government also claims his birthday is 03/05/1993. It is also common for agents to perform <a href="https://www.w3.org/DesignIssues/Logic.html">logical inference</a> on the data that is being passed around - in this case any derived facts should include a <a href="https://www.w3.org/2000/10/swap/doc/paper/">proof of their derivation from the source materials</a> in order to avoid needing to trust the intermediary who did the calculation.</p>]]></content:encoded>
+            <author>jesse@jeswr.org (Jesse Wright)</author>
+        </item>
+        <item>
+            <title><![CDATA[Disambiguating Data Wallets]]></title>
+            <link>https://blog.jeswr.org/2025/02/14/data-wallets</link>
+            <guid>https://blog.jeswr.org/2025/02/14/data-wallets</guid>
+            <pubDate>Thu, 13 Mar 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Data wallets are becoming popular, as this happens the term is becoming increasingly <em>overloaded</em> and <em>confused</em>. This post is a digestable disambgiuation 🍜 of the standards 📇, regu...]]></description>
+            <content:encoded><![CDATA[<p>Data wallets are becoming popular, as this happens the term is becoming increasingly <em>overloaded</em> and <em>confused</em>. This post is a digestable disambgiuation 🍜 of the standards 📇, regulation ✒️, implementors :screwdriver:, and other players 🙋 in the space.</p>
+<h2 id="thestandards">The Standards</h2>
+<p>As an engineer, I like to start by talking about the technology and standards behind data wallets. From there, we can point to which standards that regulators do - or don't - choose.</p>
+<p>Don't worry - the tech is <em>not hard to understand</em>. As you'll soon see the confusion comes from having many players who want <strong>their solution</strong> to win out.</p>
+<h3 id="thegoal">The goal</h3>
+<p><img src="/vc.webp" alt="" />
+<em>Credit: <a href="https://www.dock.io/post/verifiable-credentials">dock.io</a></em></p>
+<p>The common goal of data wallets is to allow you to prove that <em>someone</em> said <em>something</em> - for instance that the <em>University of Oxford</em> says that you earned a DPhil in Computer Science, or that <em>TicketMaster</em> says they issued you with a valid ticked for tonights Taylor Swift concert.</p>
+<p>To do this the <em>someone</em> (which we will now call an <em>issuer</em>) gives you, or more specifically an application on your device like Google Wallet (which we will call the <em>holder</em>) a digital Verifiable Credential. Examples include the <a href="https://www.gov.uk/government/news/digital-driving-licence-coming-this-year">UK digital drivers license</a> 💳 and <a href="https://athumi.be/en/blog/news/athumi-and-itsme-launch-groundbreaking-digital-student-certificate-first-implemented-by-dibbs-en-be">Digital Student Certificates</a>.</p>
+<p>This digital credential can then be forwarded to someone else (which we call a <em>verifier</em>) - such as an employer who wants to confirm that you have a valid Doctorate. Et. ✨voila✨ you now have that dream job <a href="https://engineerdog.com/2023/05/29/why-do-so-many-programmers-want-to-be-farmers-how-to-build-a-corrugated-steel-garden-box/">growing cherry tomatoes</a><sup id="footnote1-ref"><a href="#footnote1" aria-label="Read footnote">1</a></sup>.</p>
+<h3 id="thetech">The tech</h3>
+<!-- TODO: Insert the diagram -->
+<p>Now I said the tech wasn't that hard - so let's take a look at what is going on under the hood of these credentials.</p>
+<p>Here is an example using <em>one</em> of the credential standards, specifically <a href="https://www.w3.org/TR/vc-data-model-2.0/">W3C Verifiable Credentials</a> - we'll come to the rest later. In this example, I have been issued with a "DPhil in Computer Science" from the University of Oxford.</p>
+<pre><code class="json language-json">{
+  "@context": "https://www.w3.org/ns/credentials/v2",
+  "id": "http://www.ox.ac.uk/credentials/58473",
+  "type": ["VerifiableCredential", "DPhilAwardCredential"],
+  "issuer": "http://www.ox.ac.uk/",
+  "credentialSubject": {
+    "id": "https://www.jeswr.org/#me",
+    "awarded": {
+      "id": "http://www.cs.ox.ac.uk/awards/DPhil",
+      "name": "DPhil in Computer Science"
+    }
+  }
+}
+</code></pre>
+<p><em>A <a href="https://json-ld.org">JSON-LD</a> representation of a <a href="https://www.w3.org/TR/vc-data-model-2.0/">W3C Verifiable Credential</a> for a DPhil Award</em></p>
+<p>But there is one problem, <em>I just made this up</em>. So how is this supposed to be useful in my job application to become a farm hand<sup id="footnote2-ref"><a href="#footnote2" aria-label="Read footnote">2</a></sup>.</p>
+<!-- TODO: Survey whether this section helps or adds confusion -->
+<p>Well, what would help is for Oxford to <em>digitally sign</em> this credential.</p>
+<p>The concept of digital signatures has existed for <em>decades</em> and whether you're aware of it or not - is already in many parts of your digital life, including being the backbone of the HTTPS security. More recently, if you've found yourself using passkeys to log into websites - then you've been using digital signatures to <em>sign</em> a message saying "I own this account, please let me in!"</p>
+<p><img src="/passkey.jpg" alt="" /></p>
+<h4 id="signatures">Signatures</h4>
+<p>So how do these signatures actually work?</p>
+<p>First, a <em>hash</em> of the digital credential document is created - and is a unique fingerprint 🐾 for the document. For the DPhil Award Credential, this is what the hash looks like:</p>
+<pre><code>4sSXDN7iEw2niW96vPWNPJVeiwWe6VR77jl+wRnA6bk=
+</code></pre>
+<p>You can try generating it for yourself <a href="https://emn178.github.io/online-tools/sha256.html?input=%7B%0A%20%20%22%40context%22%3A%20%22https%3A%2F%2Fwww.w3.org%2Fns%2Fcredentials%2Fv2%22%2C%0A%20%20%22id%22%3A%20%22http%3A%2F%2Fwww.ox.ac.uk%2Fcredentials%2F58473%22%2C%0A%20%20%22type%22%3A%20%5B%22VerifiableCredential%22%2C%20%22DPhilAwardCredential%22%5D%2C%0A%20%20%22issuer%22%3A%20%22http%3A%2F%2Fwww.ox.ac.uk%2F%22%2C%0A%20%20%22credentialSubject%22%3A%20%7B%0A%20%20%20%20%22id%22%3A%20%22https%3A%2F%2Fwww.jeswr.org%2F%23me%22%2C%0A%20%20%20%20%22awarded%22%3A%20%7B%0A%20%20%20%20%20%20%22id%22%3A%20%22http%3A%2F%2Fwww.cs.ox.ac.uk%2Fawards%2FDPhil%22%2C%0A%20%20%20%20%20%20%22name%22%3A%20%22DPhil%20in%20Computer%20Science%22%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D&input_type=utf-8&output_type=base64&hmac_enabled=0&hmac_input_type=utf-8">here</a>. It is not important for this article to understand <em>how</em> this hash is generated, but if you're curious - <a href="https://blog.boot.dev/cryptography/how-sha-2-works-step-by-step-sha-256/#how-does-the-sha-256-algorithm-work">look here</a>.</p>
+<p>The <em>issuer</em> (i.e. Oxford) then <em>signs</em> this hash using something called public-private key cryptography. The way this works is that the <em>issuer</em> uses some <a href="https://en.wikipedia.org/wiki/Public-key_cryptography">mathemagic</a> to generate a pair of files - one of which is called a <strong>public key</strong>, and the other which is called a <strong>private key</strong>. Below are real examples of these files:</p>
+<pre><code>-----BEGIN RSA PRIVATE KEY-----
+MIIBOgIBAAJBAKj34GkxFhD90vcNLYLInFEX6Ppy1tPf9Cnzj4p4WGeKLs1Pt8Qu
+KUpRKfFLfRYC9AIKjbJTWit+CqvjWYzvQwECAwEAAQJAIJLixBy2qpFoS4DSmoEm
+o3qGy0t6z09AIJtH+5OeRV1be+N4cDYJKffGzDa88vQENZiRm0GRq6a+HPGQMd2k
+TQIhAKMSvzIBnni7ot/OSie2TmJLY4SwTQAevXysE2RbFDYdAiEBCUEaRQnMnbp7
+9mxDXDf6AU0cN/RPBjb9qSHDcWZHGzUCIG2Es59z8ugGrDY+pxLQnwfotadxd+Uy
+v/Ow5T0q5gIJAiEAyS4RaI9YG8EWx/2w0T67ZUVAw8eOMB6BIUg0Xcu+3okCIBOs
+/5OiPgoTdSy7bcF9IGpSE8ZgGKzgYQVZeN97YE00
+-----END RSA PRIVATE KEY-----
+</code></pre>
+<pre><code>-----BEGIN RSA PUBLIC KEY-----
+MEgCQQCo9+BpMRYQ/dL3DS2CyJxRF+j6ctbT3/Qp84+KeFhnii7NT7fELilKUSnx
+S30WAvQCCo2yU1orfgqr41mM70MBAgMBAAE=
+-----END RSA PUBLIC KEY-----
+</code></pre>
+<p>What is special about the letters and numbers in these two files, is that a <a href="https://cryptobook.nakov.com/digital-signatures/rsa-signatures">mathematical function</a> can be used to combine the private key and the hash to generate a <em>signature</em> like this one:</p>
+<pre><code>z58DAdFfa9SkqZMVPxAQp...jQCrfFPP2oumHKtz
+</code></pre>
+<p>The <em>issuer</em> keeps the private key a secret so that no-one can forge the signature. The <em>issuer</em> (Oxford) also tells <em>everyone</em> about their public key, for instance, by putting it on their website in a <a href="https://www.w3.org/TR/cid-1.0/">Controller Identifier Document (CID)</a>. Putting this all together, we add the following information to the DPhil Award Credential:</p>
+<pre><code class="json language-json">{
+  ...
+  "proof": {
+    ...
+    "verificationMethod": "http://www.ox.ac.uk/pubkey",
+    "proofValue": "z58DAdFfa9SkqZMVPxAQp...jQCrfFPP2oumHKtz"
+  }
+}
+</code></pre>
+<p>How does this help the <em>verifier</em> (my prospective farming employer) confirm that my DPhil Award Credential was <em>actually</em> stated by the <em>issuer</em> (Oxford)?</p>
+<p>The <em>verifier</em> can use different mathematical function to convert a signature and public key into a hash. If that hash, is the same as the hash of my DPhil Award Credential, then they know that the award <em>must</em> have been signed by the private key that the <em>issuer</em> (Oxford) created.</p>
+<h4 id="selectivedisclosure">Selective disclosure</h4>
+<p><img src="/document.svg" alt="" /></p>
+<p>Many headlines surrounding digital credentials - such as <a href="https://www.gov.uk/government/news/pubgoers-given-choice-to-prove-age-with-phones-next-year-in-boost-for-high-street-and-hospitality-sectors">this UK press release</a> - promise the ability to "prove your age without revealing any other information."</p>
+<p>To enable this, some Verifiable Credentials are built with the capacity to perform Selective Disclosure. In short, this allows you to take a Verifiable Credential containing lots of information, such as <a href="https://www.w3.org/TR/vc-data-model-2.0/#example-verifiable-credential-using-the-data-integrity-bbs-cryptosuite-with-a-base-proof">this Resident Card credential</a> - and forward only part of the information, such as your <code>birthDate</code> to the <em>verifier</em>, whilst enabling the <em>verifier</em> to confirm that the date of birth was contained in a validly signed Verifiable Credential.</p>
+<h3 id="standardswars">Standards Wars</h3>
+<p>Well that all makes sense … so what on earth is there to dispute? Quite a bit as it turns out! Broadly speaking the debate is around:</p>
+<ul>
+<li>What the <em>format</em> of the information inside the digital credential should be</li>
+<li>What mathematical function should be used for creating the signature,</li>
+<li>How the <em>hash</em> of the digital credential should be created, and</li>
+<li>How to specify what attributes are described within a credential</li>
+</ul>
+<p>These are the kinds of battles that we have seen played out <em>many</em> times historically.</p>
+<p>Past <a href="https://en.wikipedia.org/wiki/Format_war#:~:text=A%20format%20war%20is%20a,recording%20formats%20for%20electronic%20media.">format wars</a> include <a href="https://en.wikipedia.org/wiki/Videotape_format_war">VHS vs. BetaMax</a>, <a href="https://en.wikipedia.org/wiki/HD_DVD#:~:text=Much%20like%20the%20videotape%20format,format%2C%20Blu%2Dray%20Disc.">Blu-Ray vs. HD DVD</a>, and, if we dare venture back to the 1800's - wars over the <a href="https://en.wikipedia.org/wiki/Track_gauge">size of the rail gauge</a> and <a href="https://en.wikipedia.org/wiki/War_of_the_currents">type of electrical current</a> we should use.</p>
+<p>So - what different formats are there? Who is backing them? How do they compare?</p>
+<p>There are three key players in the space: The <a href="https://www.w3.org">World Wide Web Consortium (W3C)</a>, the <a href="https://www.iso.org/home.html">International Standards Organisation (ISO)</a>, and the <a href="https://www.ietf.org/">Internet Engineering Task Force (IETF)</a>.</p>
+<p><img src="/generated/disambiguating-data-wallets-1.png" alt="diagram" /></p>
+<h4 id="w3cspecifications">W3C Specifications</h4>
+<p>The W3C were first to work on many standards around Digital Credentials, after the formation of a <a href="https://www.w3.org/community/credentials/">Credentials Community Group</a> in 2014. By 2017, this group had published their <a href="https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/">Verifiable Claims Data Model and Representations 1.0</a> which <a href="https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-expressing-identity-credentials-in-json-ld">defined how to express signed credentials</a> similar to the one shown in our earlier discussion of <a href="#the-tech">the tech</a>. This specification was prescriptive of core functionality such as <em>how to sign</em> credentials, describe core "metadata" such as <em>who issued the credential</em>, <em>when the credential was issued</em> and <em>who the credential is about</em>. The specification intentionally left the task of defining the data structures of domain specific credentials - such as a <em>diploma credential</em> or <em>digital driver's license</em> out of scope. Instead, allowing arbitrary credential <a href="https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-identity-profile-model"><code>type</code>s</a> to be listed.</p>
+<p>Even <em>within</em> this <a href="https://www.w3.org">W3C</a> specification there is a tension in the <em>format</em> that should be used to describe the content of credentials. The specification provided a description of how to describe credentials using both <a href="https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#expressing-identity-profiles-entity-credentials-and-verifiable-claims-in-json">JSON</a> and <a href="https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-expressing-identity-credentials-in-json-ld">JSON-LD</a>. The <a href="https://www.ontotext.com/knowledgehub/fundamentals/linked-data-linked-open-data/">Linked Data</a> community advocated for the use of an <a href="https://en.wikipedia.org/wiki/Resource_Description_Framework">RDF</a> data model for its semantic richness, extensibility, and <a href="https://noeldemartin.com/blog/interoperable-serendipity">interoperability</a>, aligning credentials with the broader <a href="https://www.ontotext.com/knowledgehub/fundamentals/what-is-the-semantic-web/">Semantic Web vision</a> - and compromised to use JSON-LD as the encoding for this data model.</p>
+<p>This data model is what backs <a href="https://www.stardog.com/knowledge-graph/">Enterprise Knowledge Graphs</a> such as the <a href="https://support.google.com/knowledgepanel/answer/9787176?hl=en">Google Knowledge Graph</a>. A key feature of this data model, is that it supports <em>contextual understanding</em>. Suppose I have the <a href="https://www.w3.org/TR/vc-data-model-2.0/#example-a-verifiable-credential-with-a-custom-extension">following credential</a>:</p>
+<pre><code class="json language-json">{
+  ...
+  "type": ["VerifiableCredential", "CustomExt12"],
+  "referenceNumber": 83294847,
+  ...
+}
+</code></pre>
+<p>This reference number could refer to any number of things; a customer support ticket, a product identifier, or a transaction receipt. So in order to understand how to use this information, I need to have a pre-defined understanding of what a <code>CustomExt12</code> credential describes. This also makes it difficult to <em>integrate</em> information from multiple credentials; as we need to keep track of the contextual information of which credential they were extracted from.</p>
+<p>The use of RDF - encoded as JSON-LD - within Verifiable Credential standards provides another option. Here, all of this context is applied to the <code>referenceNumber</code> term - in JSON-LD this can be done as follows:</p>
+<pre><code class="json language-json">{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://www.w3.org/ns/credentials/examples/v2",
+    "https://extension.example/my-contexts/v1"
+  ],
+  ...
+  "type": ["VerifiableCredential", "CustomExt12"],
+  "referenceNumber": 83294847,
+  ...
+}
+</code></pre>
+<p>The effect of adding this <code>@context</code> is to establish a <em>URI</em> defining <code>referenceNumber</code>, e.g. http://example.org/schema/receipts/tesco/referenceNumber. This URL can be <em>dereferenced</em> (looked up) to discover a contextual description e.g.:</p>
+<pre><code class="ttl language-ttl">@prefix tesco: &lt;http://example.org/schema/receipts/tesco/&gt; .
+@prefix recepits: &lt;http://example.org/schema/receipts/&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+
+tesco:referenceNumber rdfs:subClassOf receipts:referenceNumber ;
+  rdfs:name "Tesco Receipt Reference Number" ;
+  rdfs:description "A unique reference number for receipt of purchasing a set of products at tesco" ;
+  rdfs:domain tesco:purchase ;
+  rdfs:range xsd:int .
+</code></pre>
+<p>This built in contextual information is especially useful when, for instance, we want to integrate data from many credentials that each may use the term <code>referenceNumber</code> to discuss different concepts (e.g. reference numbers from different types of purchases, shops etc.).</p>
+<p>Conversely, the Security and Cryptography community pushed for plain JSON with JWT (JSON Web Tokens), to reduce implementation complexity and ease security analyses.</p>
+<blockquote>
+  <p>GPT-4.5 does a decent job of providing a slightly longer presentation of this history - which you can find <a href="/gpt-jsonld-vs-json.md">here</a>.</p>
+</blockquote>
+<p>By 2019 this work had evolved to having the formation of a W3C endorsed working group which produced the <a href="https://www.w3.org/TR/2019/REC-vc-data-model-20191119/">Verifiable Credentials Data Model 1.0</a>. This specification struck a <em>new compromise</em> to the data model; in particular requiring all credentials to be JSON-LD with a <em>particular framing</em> so that the document could be parsed both <a href="https://www.w3.org/TR/json-ld11/">as RDF</a> or as plain JSON. <a href="https://github.com/w3c/vc-data-model/issues/929">This approach comes with its own set of challenges</a>.</p>
+<h3 id="isospecifications">ISO Specifications</h3>
+<p>Instead of defining generic credential formats, ISO has instead taken the approach of defining credentials for specific domains.</p>
+<p>The first Verifiable Credential specification published by ISO is the <a href="https://www.iso.org/standard/69084.html">Mobile driving license (mDL)</a> specification - published in 2021. This specification defines a fixed schema for describing approximately 30 attributes in digital driver's license's - such as the drivers <code>name</code>, <code>address</code>, <code>date of birth</code> and the <code>expiry date</code> of the license. The specification expects attributes to be serialized using JSON or <a href="https://cbor.io">CBOR</a> and thus lacks the out-of-the-box interoperability that comes with linked-data formats.</p>
+<p>As we shall discuss in later sections, this digital driver's license specification also defines a series of bespoke <em>transmission</em> and <em>query</em> mechanisms.</p>
+<p>This means that it is very well-defined how to build an infrastructure specifically for mDL licenses. The trade-off is that implementors need to build custom transmission flows, and query engines to support the specification. This both increases implementation burden, and hinders interoperability with non-mDL credentials.</p>
+<p>ISO is also working on several other Verifiable Credential standards - including <a href="https://www.iso.org/standard/74910.html">Cards and security devices for personal identification</a> designed to standardize core features for electronic identity document including drivers licenses, passports, residency permits, and building passes. The underlying goal of the standard is to support interoperability between electronic identity (eID) systems. This standard also defines a range of attributes that may be required in different eID systems - extending those attributes found in the mDL license with attributes such as <code>Business Name</code>, <code>Profession</code>, and <code>Academic Title</code> to support workplace passes, as well as other attributes such as <code>telephone number</code> and <code>email address</code>. This specification also targets JSON and CBOR formats for encoding data in credentials - meaning that there are still interoperability challenges with systems that need to define attributes that are not defined within this document.</p>
+<h3 id="ietfspecifications">IETF Specifications</h3>
+<p>The IETF is also producing a set of JSON based verifiable credentials called <a href="https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-03.html">SD-JWT-based Verifiable Credentials</a>.</p>
+<p>JSON Web Tokens (JWT's) are commonly used on the Web today for a range of tasks requiring signed data - for instance they are often used to prove to a website that you are logged in and allowed to access private information on a website.</p>
+<p>Selective Disclosure (SD) which we have already discussed above, is a mechanism for proving that a subset of information within a credential is true - without revealing the whole credential to a verifier.</p>
+<p>As the <a href="https://www.ietf.org">Internet Engineering Task Force (IETF)</a> is responsible for producing a number of Internet Standards - the <a href="https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-03.html">SD-JWT-based Verifiable Credentials</a> has been produced with the goal of allowing digital credentials to be easily integrated into existing internet systems - such as OAuth authentication flows - which are commonly used for single sign on.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>W3C Verifiable Credentials</th>
+      <th>ISO mDL (18013-5) / ISO 23220</th>
+      <th>IETF SD-JWT VC</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Data Format</strong></td>
+      <td>JSON-LD with specified framing (can be parsed as both RDF and plain JSON)</td>
+      <td>JSON or CBOR serialization with fixed schema</td>
+      <td>JSON with JWT (JSON Web Token) structure</td>
+    </tr>
+    <tr>
+      <td><strong>Signature Formats</strong></td>
+      <td>Multiple supported (Data Integrity, JSON Web Signatures)</td>
+      <td>ISO-specific cryptographic protocols</td>
+      <td>JWT signatures (RS256, ES256, etc.)</td>
+    </tr>
+    <tr>
+      <td><strong>Hashing Mechanisms</strong></td>
+      <td>Various supported (SHA-256, etc.) depending on proof type</td>
+      <td>Defined within ISO specifications</td>
+      <td>SHA-256 and other algorithms supported by JWT</td>
+    </tr>
+    <tr>
+      <td><strong>Attribute Specification</strong></td>
+      <td>Semantic, extensible via RDF/JSON-LD context definitions</td>
+      <td>Fixed schema with predefined attributes</td>
+      <td>JSON claims with selective disclosure support</td>
+    </tr>
+    <tr>
+      <td><strong>Selective Disclosure</strong></td>
+      <td>Supported through various methods (BBS+, etc.)</td>
+      <td>Limited to predefined attributes (e.g., age verification)</td>
+      <td>Native support through SD-JWT mechanisms</td>
+    </tr>
+  </tbody>
+</table>
+<p><em>This table was generated with the assistance of claude-3.7-sonnet-thinking</em></p>
+<!-- | **Credential Structure** | Generic model with extensible types and context-aware attributes | Domain-specific fixed schemas with predefined attributes | JWT-based structure supporting selective disclosure | -->
+<!-- | **Interoperability** | High semantic interoperability across domains | Excellent within specific domains (e.g., mDL), limited across domains | Good integration with existing web infrastructure | -->
+<!-- | **Web Integration** | Strong alignment with Semantic Web principles | Limited web-native capabilities | Strong integration with OAuth/OIDC flows | -->
+<!-- | **Complexity** | Higher complexity due to RDF/JSON-LD features | Moderate complexity within domain boundaries | Moderate complexity, leverages existing JWT knowledge | -->
+<!-- | **Adoption** | Growing across various sectors | Strong in government ID (driver's licenses) | Growing in enterprise settings | -->
+<!-- Even within this specification there is a tension in the *format* that should be used to describe the content of credentials. The specification provided a description of how to describe credentials using both [JSON](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#expressing-identity-profiles-entity-credentials-and-verifiable-claims-in-json) and [JSON-LD](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-expressing-identity-credentials-in-json-ld) ... TODO "There is a crucial distinction" ...
+
+How did this come to be? These credential specifications were largely driven by members of communities with distinctive priorities and training; in particular, the [Linked Data / Semantic Web community]() and the [Security / Cryptography]() community. 
+
+Please help me finish this paragraph discussing the different priorities of the Linked Data and Security communities, and the advantages / disadvantages that each see with the JSON and JSON-LD versions of the specification -->
+<!-- ---
+
+The W3C were first to work on many standards around Digital Credentials, after the formation of a [Credentials Community Group](https://www.w3.org/community/credentials/) in 2014. By 2017, this group had published their [Verifiable Claims Data Model and Representations 1.0](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/) which [defined how to express signed credentials](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-expressing-identity-credentials-in-json-ld) similar to the one shown in our earlier discussion of [the tech](#the-tech). This specification was prescriptive of core functionality such as *how to sign* credentials, describe core "metadata" such as *who issued the credential*, *when the credential was issued* and *who the credential is about*. The specification intentionally left the task of defining the data structures of domain specific credentials - such as a *diploma credential* or *digital driver's license* out of scope. Instead, allowing arbitrary credential [`type`s](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-identity-profile-model) to be listed.
+
+Even within this specification there is a tension in the *format* that should be used to describe the content of credentials. The specification provided a description of how to describe credentials using both [JSON](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#expressing-identity-profiles-entity-credentials-and-verifiable-claims-in-json) and [JSON-LD](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-expressing-identity-credentials-in-json-ld). The [Linked Data](https://www.ontotext.com/knowledgehub/fundamentals/linked-data-linked-open-data/) community advocated JSON-LD for its semantic richness, extensibility, and [interoperability](https://noeldemartin.com/blog/interoperable-serendipity), aligning credentials with the broader [Semantic Web vision](https://www.ontotext.com/knowledgehub/fundamentals/what-is-the-semantic-web/). JSON-LD enabled decentralized extensions of credential schemas, essential for diverse and evolving credential ecosystems. Conversely, the Security and Cryptography community emphasized the simplicity, clarity, and robustness of plain JSON with JWT (JSON Web Tokens), highlighting its straightforward cryptographic verification and reduced implementation complexity. Historical discussions in W3C mailing lists reveal significant concerns about JSON-LD's complexity in signature canonicalization, reminiscent of XML signature challenges, and practical adoption issues due to limited tooling. This fundamental divergence in priorities—semantic interoperability versus simplicity and security—ultimately resulted in a dual-path approach, legitimizing both JSON-LD credentials with Linked Data proofs and simpler JWT-secured JSON credentials, allowing developers to select the approach best suited to their needs. -->
+<!-- Even within this specification, there is tension concerning the format used to describe the content of credentials. The specification provided descriptions for expressing credentials using both JSON and JSON-LD. There is a crucial distinction: JSON-LD, rooted in Linked Data principles, prioritizes semantic interoperability, data reuse, and linking entities across diverse contexts, leveraging URIs to create meaningful connections on the Semantic Web. Conversely, the Security and Cryptography community favors simpler, less ambiguous serializations such as plain JSON, focusing on straightforward cryptographic operations, minimal complexity, and robust security guarantees. The JSON-LD approach provides rich semantics and extensibility at the cost of additional complexity in processing and increased potential for implementation errors, whereas plain JSON offers simplicity, ease of cryptographic verification, and better predictability, but at the expense of reduced semantic clarity and interoperability across heterogeneous systems. These distinct priorities have led to ongoing discussions and occasional friction within the credential standards communities. -->
+<!-- Proposed by: https://chatgpt.com/share/67d188e2-58a4-800c-98ab-dc5e40c55d68 -->
+<!-- 
+The W3C was among the first to establish standards around Digital Credentials, starting with the formation of a [Credentials Community Group](https://www.w3.org/community/credentials/) in 2014. By 2017, this group published the [Verifiable Claims Data Model and Representations 1.0](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/), defining core functionality such as credential signing, metadata describing the issuer, issuance date, and credential subject. The data structures for specific credentials like diplomas or driver's licenses were intentionally left out of scope, allowing flexibility through arbitrary credential [`type`s](https://www.w3.org/2017/05/vc-data-model/CGFR/2017-05-01/#h-identity-profile-model).
+
+From the outset, a significant tension existed regarding the credential content formats—JSON versus JSON-LD. The Linked Data community advocated JSON-LD for its semantic richness, extensibility, and interoperability, aligning credentials with the broader Semantic Web vision. JSON-LD enabled decentralized extensions of credential schemas, essential for diverse and evolving credential ecosystems. Conversely, the Security and Cryptography community emphasized the simplicity, clarity, and robustness of plain JSON with JWT (JSON Web Tokens), highlighting its straightforward cryptographic verification and reduced implementation complexity. Historical discussions in W3C mailing lists reveal significant concerns about JSON-LD's complexity in signature canonicalization, reminiscent of XML signature challenges, and practical adoption issues due to limited tooling. This fundamental divergence in priorities—semantic interoperability versus simplicity and security—ultimately resulted in a dual-path approach, legitimizing both JSON-LD credentials with Linked Data proofs and simpler JWT-secured JSON credentials, allowing developers to select the approach best suited to their needs.
+ -->
+<!-- GPT-4.5 does an ok job of providing a slightly longer presentation of this history - which you can find [here](/gpt-jsonld-vs-json.md). -->
+<!-- W3C Timeline:
+
+There are three key players in the space: The [World Wide Web Consortium (W3C)](https://www.w3.org), the [International Standards Organisation (ISO)](https://www.iso.org/home.html), and the [Internet Engineering Task Force (IETF)](https://www.ietf.org/).
+
+
+
+"Late 2022: International adoption plans emerge. The European Digital Identity Wallet Architecture and Reference Framework (ARF) draft (by the EU's eIDAS expert group) lists OID4VP, OID4VCI, and SIOPv2 as required protocols for certain digital identity use cases ￼."
+
+
+Cards and security devices for personal
+identification — Building blocks for identity
+management via mobile devices
+
+ISO Timeline:
+ - 
+
+Note the following from the 2020 WG Charter
+
+Internet Engineering Task Force
+The Working Group will seek security review from the IETF, coordinated through the Liaison.
+
+Decentralized Identity Foundation Interoperability Working Group
+To coordinate on broad horizontal review and integration of the specifications developed by the Working Group into the Decentralized Identity Foundation's ecosystem.
+
+European Telecommunications Standards Institute - Electronic Signatures and Infrastructure Technical Committee
+To coordinate in ensuring that eIDAS-compliant systems can be built on top of the specifications developed by the Working Group.
+
+ISO/IEC JTC 1/SC 17/WG 10
+Ensure that the mobile driving licenses being modeled and expressed by the ISO SC17 WG10 community are compatible with the work of the Verifiable Credentials WG.
+
+ISO/IEC JTC 1/SC 17/WG 4
+Ensure that the 23220-2 data model expressed by the ISO SC17 WG4 community is compatible with the work of the Verifiable Credentials WG.
+
+
+
+Other W3C Notables:
+ - [Jan 2025 - W3C Verifiable Credentials for Education Task Force](https://w3c-ccg.github.io/vc-ed/charter/) begins to create charter
+
+
+ - W3C
+   - VC 2.0
+ - ISO
+   - mDL (ISO/IEC 18013-5:2021)
+    - To achieve
+this, the mDL contains age attestation identifiers. An age attestation identifier has the format age_over_
+NN where NN is a value from 00 to 99. The value of an age attestation identifier can be TRUE or FALSE.
+   - MDL *does specify some transmission mechanisms, e.g., via NFC, BLE/GATT, WIFI Aware and QR code*
+   - ISO/IEC touches upon *many* layers of the networking stack; e.g. touching upon discussion of which TLS method required.
+   - ISO/IEC DTS 23220-4:
+     - Defines largely domain specific attributes
+     - Also has the ability to include biometric information
+     - Also *repeats* information from the mDL specification; e.g., for age attestation
+
+ - IETF
+   - https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-03.html
+  - OpenID
+    - OIDC4VP
+    - OIDC4VCI
+    - 
+
+Include discussion fo JSON-LD vs. CBOR
+
+OpenID4VCI:
+ - https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html
+ - 
+
+
+SIOPv2:
+ - https://openid.net/specs/openid-connect-self-issued-v2-1_0.html
+
+
+
+In fact, multiple alternatives exist for credential data formats (e.g. ISO mDL and W3C), protocols (e.g. OpenID for Verifiable Credentials, DIDComm and ISO mDL), wallets, and verifiable data registries.
+
+
+https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-03.html
+
+... and then there is OpenID4VP (https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html) which supports all(?) of them
+https://openid.net/specs/openid4vc-high-assurance-interoperability-profile-sd-jwt-vc-1_0-00.html
+
+https://openid.net/wg/digital-credentials-protocols/charter/
+
+### The (big) missing piece
+
+Websites for instance need HTML to tell you how a Website is displayed - but also need HTTP(S) to tell your browser *where* that website document is, and how to get it. -->
+<h3 id="apushforalignment">A push for alignment</h3>
+<p><img src="/openwallet.png" alt="" /></p>
+<p>The <a href="https://openwallet.foundation">Open Wallet Foundation</a>, hosted by the <a href="https://www.linuxfoundation.org">Linux Foundation</a> has a mission to facilitate global interoperability of verifiable credentials.</p>
+<p>To this end, the Open Wallet Foundation has <a href="https://cdn.platform.linuxfoundation.org/agreements/openwalletfoundation.pdf">been chartered to</a>:</p>
+<blockquote>
+  <ul>
+  <li>develop and maintain open source code for wallets to enable and ensure wallet
+  interoperability,</li>
+  <li>advocate for the adoption of the interoperable digital wallet technology, and</li>
+  <li>collaborate with Standards Development Organizations (SDOs) in the development and
+  proliferation of open standards related to digital wallets
+  The OWF will not publish a publicly available wallet (including into any application stores).</li>
+  </ul>
+</blockquote>
+<p>OWF, has also taken on around two dozen <a href="https://github.com/orgs/openwallet-foundation/repositories?q=visibility%3Apublic+archived%3Afalse">open source codebases</a> in support of this mission.</p>
+<p>A number of other alignment/harmonization efforts are also under way within standards organisations. <a href="https://www.iso.org/standard/86782.html">The draft ISO/IEC 23220-2 specification</a>, for instance, defines a "Common Development and Distribution License data model" to support mapping ISO defined credentials to the W3C Verifiable Credentials format.</p>
+<!-- Note that ISO has a very  -->
+<!-- Also to note:
+
+ISO/IEC 23220-2: ISO/IEC 23220-2 defines a data model for interoperability between mobile eID-systems via data format translation. For example, -2 lists a Common Development and Distribution License data model mapping fields across different data formats used by mobile driver's licenses, JSON, W3C Verifiable Credentials and Verifiable Presentations, etc. This standard is still in draft form. -->
+<!-- TODO: Potentially comment on ISO governance -->
+<!-- This kind of governance yields very stable, vetted standards but not very agile in response to new tech – which is why ISO is now looking to incorporate things like W3C's work after the fact. -->
+<h2 id="regulationdrivingdatawallets">Regulation Driving Data Wallets</h2>
+<h3 id="europeandigitalidentityeudiregulation">European Digital Identity (EUDI) Regulation</h3>
+<p>After <a href="https://commission.europa.eu/strategy-and-policy/priorities-2019-2024/europe-fit-digital-age/european-digital-identity_en">three years in the making</a>, the EUDI (European Digital Identity) wallet officially came into force on May 20, 2024 - through the eIDAS (Electronic Identification, Authentication, and Trust Services) 2 regulation. EUDI promises to make "EU Digital Identity […] available to EU citizens, residents, and businesses who want to identify themselves or provide confirmation of certain personal information." By 2026, every EU Member State will be <a href="https://ec.europa.eu/digital-building-blocks/sites/display/EUDIGITALIDENTITYWALLET/The+Digital+Identity+Regulation+Enters+into+Force">required to make</a> at least one Digital Identity Wallet available to all citizens and residents.</p>
+<p>There are three core types of credentials that are to be made available under eIDAS 2 regulation:</p>
+<ul>
+<li>Electronic Attestation of Attributes (EAA) - which can be issued by <em>any</em> organisation that wants to make statements about a particular entity (e.g., they have a concert ticket, gym membership, or student card)</li>
+<li>Qualified Electronic Attestation of Attributes (QEAA) - which can be issued <em>only</em> by <a href="https://eidas.ec.europa.eu/efda/trust-services/browse/eidas/tls">Qualified Trust Service Providers</a> to create legally binding credentials such as professional qualifications, birth cetificates, marriage licenses, property deeds and business operating licenses.</li>
+<li>Personal Identification Data (PID) - which can be issued <em>only</em> by government authorities and serve as a proof of identity.</li>
+</ul>
+<p>The European Union has produced an <a href="https://digital-strategy.ec.europa.eu/en/library/european-digital-identity-wallet-architecture-and-reference-framework">Architecture and Reference Framework</a>, details of which are available <a href="https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/1.1.0/arf/#4114-qualified-and-non-qualified-electronic-attestation-of-attributes-schema-providers">here</a>. This reference architecture specifies:</p>
+<ul>
+<li><a href="https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/1.1.0/annexes/annex-06-pid-rulebook.pdf">How to issue PID data</a> using both the ISO mDL specification and the IEEE SD-JWT specification can be used to format the data, and how verifiers can request data using <a href="https://openid.net/specs/openid-4-verifiable-presentations-1_0.html">OID4VP</a>.</li>
+<li>That (Q)EAA's <a href="https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/1.1.0/arf/#631-issuing-requirements-for-qeaa">MUST be issued</a> in accordance with either the ISO mDL data model or the W3C Verifiable Credential Data Model.</li>
+</ul>
+<!-- electronic identification, authentication, and trust services (eIDAS)
+
+
+
+
+
+Inlude discussion of eIDAS popularit
+
+Qualified Electronic Attestation of Attributes (QEAA)
+
+(Q)EAA schema providers publish schemas and vocabularies describing (Q)EAA structure and semantics
+
+PID = Personal Identification Data | A set of data enabling the identity of a natural person to be established.
+
+[Architecture and Reference Framework](https://digital-strategy.ec.europa.eu/en/library/european-digital-identity-wallet-architecture-and-reference-framework)
+
+"Note that Flows 3 and 4 from section 6.4 mandarte the ability to transfer credentials over the internet"
+
+6.5.1
+
+**Ideally this means a very small number of technical solutions to limit complexity**
+
+Last page points to main relevant specs
+
+[GitHub of Reference Framework](https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/1.1.0/arf/#4114-qualified-and-non-qualified-electronic-attestation-of-attributes-schema-providers)
+
+Note that  -->
+<p><img src="/eidas.png" alt="" /></p>
+<!-- https://www.criipto.com/blog/verifiable-credentials-vs-iso-18013-5#:~:text=The%20Verifiable%20Credential%20Data%20Model,%2C%20financial%20transactions%2C%20and%20more.
+"""
+The upcoming European Digital Identity (EUDI) wallet will support use cases across sectors like education, social security, financial transactions, and more. The wallet will leverage the VC Data Model, and its Architecture and Reference Framework explicitly mentions the W3C and ISO standards as part of its vision for a unified digital identity ecosystem.
+""" -->
+<h3 id="datauseandaccessbill">Data (Use and Access) Bill</h3>
+<p>The <a href="https://bills.parliament.uk/bills/3825/">Data Use and Access Bill</a> is proposed legislation currently at committee stage in the House of Commons. One mandate of the bill is to create a Digital Verification Services (DVS) Trust Framework - driven by the Secretary of State maintaining a register of <em>service providers</em> accredited to provide some "digital verification services" in the UK.</p>
+<p>The <a href="https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04">Digital Identity and Attributes Framework (DIATF)</a> has been created by the <a href="https://www.gov.uk/government/organisations/department-for-science-innovation-and-technology">Department of Science and Technology (DSIT)</a> in the UK, as a framework defining the <em>services</em> that different service providers in the UK can implement and become registered as a DVS service.</p>
+<p>The DVS may be seen as the UK's equivalent to eIDAS regulation, whilst the DIATF may be seen as requivalent to the EU's <a href="https://digital-strategy.ec.europa.eu/en/library/european-digital-identity-wallet-architecture-and-reference-framework">Architecture and Reference Framework</a>.</p>
+<p>Notably, the DIATF is less prescriptive of which standards must be used - and places more of a focus on the roles of different service providers. In the latest iteration of this framework, 5 service providers were defined:</p>
+<ul>
+<li><a href="https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04/uk-digital-identity-and-attributes-trust-framework-gamma-04-pre-release#rules-for-identity-service-providers">Identity Service Providers</a></li>
+<li><a href="https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04/uk-digital-identity-and-attributes-trust-framework-gamma-04-pre-release#rules-for-attribute-service-providers">Attribute Service Providers</a></li>
+<li><a href="https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04/uk-digital-identity-and-attributes-trust-framework-gamma-04-pre-release#rules-for-holder-service-providers">Holder Service Providers</a></li>
+<li><a href="https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04/uk-digital-identity-and-attributes-trust-framework-gamma-04-pre-release#rules-for-orchestration-service-providers">Orchestration Service Providers</a>, and</li>
+<li><a href="https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-04/uk-digital-identity-and-attributes-trust-framework-gamma-04-pre-release#rules-for-component-service-providers">Component Service Providers</a></li>
+</ul>
+<p><img src="/daub.jpg" alt="" /></p>
+<p>Source: <a href="https://enablingdigitalidentity.blog.gov.uk/2024/10/28/what-the-data-bill-means-for-digital-identity/">GOV.UK: What the data bill means for digital identity</a></p>
+<h3 id="ukdigitaldriverslicense">UK Digital Driver's License</h3>
+<p><img src="/govuk.png" alt="" /></p>
+<p>Source: <a href="https://www.gov.uk/government/news/digital-driving-licence-coming-this-year">GOV.UK: Digital driving license coming this year</a></p>
+<p>In January, the UK announced the <a href="https://www.gov.uk/government/news/digital-driving-licence-coming-this-year">Digital Driver&#39;s License</a> that will be made available through a new <a href="https://www.gov.uk">GOV.UK</a> App - planned to launch in the summer of 2025. Further, it is expected that there will be a digital form of <em>all</em> UK documents made available by 2027.</p>
+<p>The core infrastructure backing this will be the <a href="https://www.iso.org/standard/69084.html">ISO mobile Driver&#39;s License (MDL)</a> standard.</p>
+<h3 id="whateverishappeninginaustralia">Whatever is happening in Australia</h3>
+<p><img src="/auswallet.jpg" alt="" /></p>
+<p>Meanwhile, Australia has just … gotten on with the job, in most states you can download their digital driver's license <em>today</em> - in <a href="https://www.qld.gov.au/transport/projects/digital-licence/about">Queensland</a> the license was being piloted back in 2020, and has been available statewide since <a href="https://www.abc.net.au/news/2023-11-01/digital-queensland-drivers-licences-statewide-security-testing/103046186">November 2023</a>. South Australia, the first in the country to launch a digital driver's licence - has had once <a href="https://www.thalesgroup.com/en/markets/digital-identity-and-security/government/driving-licence/digital-driver-license">since 2017</a>!</p>
+<!-- ## Options for holders -->
+<h2 id="whysolidasaholderserviceshouldbetakenseriously">Why Solid as a Holder Service should be taken seriously</h2>
+<p><img src="/solid.svg" alt="" /></p>
+<h3 id="whatissolid">What is Solid</h3>
+<p><a href="https://solidproject.org">Solid</a> is a standard for data storage on the Web - primarily created to allow <em>individuals</em> to store their personal data <em>separately</em> from websites. This enables re-use of data across platforms, and better control over consent management. Solid is now becoming an official W3C Standard under the <a href="https://www.w3.org/groups/wg/lws/">Linked Web Storage Working Group</a>.</p>
+<p>Solid has three key features: <a href="https://solidproject.org/TR/oidc">Solid-OIDC</a> enabling Single Sign On similar to the way we "Sign in with Google", a <a href="https://solidproject.org/TR/protocol#storage-resource">standard HTTP interface</a> for applications to read and write data to a Personal Online Datastore (Pod), and <a href="https://solidproject.org/TR/protocol#auxiliary-resources-web-access-control">access controls</a> so users can manage <em>who</em> can read and write data to their Pod.</p>
+<h3 id="thedisclaimer">The Disclaimer</h3>
+<p>Now let me be upfront about the bias here. I work with Solid - <em>a lot</em>.</p>
+<p>I <a href="https://theodi.org/profile/jesse-wright/">lead work</a> on Solid at the <a href="https://theodi.org">Open Data Institute</a> which <a href="https://theodi.org/news-and-events/news/odi-and-solid-come-together-to-give-individuals-greater-control-over-personal-data/">stewards</a> all opensource work on the Solid Project, am a <a href="https://www.cs.ox.ac.uk/people/jesse.wright/">Doctoral Student</a> in the <a href="https://ewada.ox.ac.uk">Ethical Web and Data Architectures (EWADA)</a> Group at the <a href="https://www.ox.ac.uk">University of Oxford</a>, independently contribute to <a href="https://github.com/jeswr">opensource projects</a> for Solid technologies, and formerly worked as an Enterprise Software Engineer at <a href="https://www.inrupt.com">Inrupt</a> - a commercial implementor of Solid.</p>
+<h3 id="solidasacredentialholder">Solid as a Credential Holder</h3>
+<!-- Throughline for all 3 of these sections needs to be that Solid is /simpler/ and /extensible to other datatypes/ -->
+<p>I am of the view that the Solid Pods are ideal for use as <em>holder services</em> in the verifiable credential ecosystem, it is certainly <em>possible</em> as a <a href="https://github.com/openwallet-foundation-labs/solid-data-wallet">Solid Wallet</a> has already been donated to the <a href="https://openwallet.foundation">Open Wallet Foundation</a> demonstrating how this can be implemented.</p>
+<p>The advantages of using Solid as a Holder service are as follows:</p>
+<!-- Solid specification is ideally placed to act as a *holder
+
+In direct relation to Solid/LWS, we recommended that it should be possible for holder storages and holder applications to be distinct services, this would allow implementations of the Solid/LWS specification to be certified against the framework without necessarily needing to be the implementor of the user-facing application for managing consent of the credentials. -->
+<h4 id="portabilityofcredentials">Portability of credentials</h4>
+<p><img src="/simondseconoart-small.png" alt="" /></p>
+<p><a href="https://www.w3.org/DesignIssues/CloudStorage.html">Socially Aware Cloud Storage, Design Issues, Tim Berners-Lee</a></p>
+<p>We've become accustomed to living in a world of <a href="https://www.w3.org/DesignIssues/CloudStorage.html">data silo&#39;s</a> - so much so that we barely notice it anymore. On most websites we find ourselves entering and re-entering the same basic mobile, email and date-of-birth to every website that we visit; and we find ourselves reconstructing the same set of contacts across Instagram, Facebook, Twitter, LinkedIn, Whatsapp, the list goes on …</p>
+<p>Solid was created to solve this problem, providing a standard way of reading and writing data to personal cloud storage. The way it works is simple: when you log in to a Solid-compatible website with Single Sign On - all the personal data that you create gets saved to the store - and are made accessible to any other Solid-compatible applications that you use the second you hit "consent for data usage." Much easier!</p>
+<p>The existing Apple Wallet gives us a pretty good sense of the current trajectory for digital wallets and credentials, which is:</p>
+<ul>
+<li>I buy a GWR train ticket on my <a href="https://www.gwr.com/your-tickets/smart-tickets/mobile-app">GWR App</a>,</li>
+<li>I click <em>add to my Apple Wallet</em></li>
+</ul>
+<p>Easy! But what if I:</p>
+<ul>
+<li>Bought the ticket with a PC, and saved it to Google Wallet instead? or,</li>
+<li>Your phone dies, and you want to access the ticket from a friends phone?</li>
+</ul>
+<p>Then life is going to be a lot more difficult, because companies such as Apple want to keep these tickets closed within their ecosystem - just as they don't want your contacts or photo's to leave their ecosystem.</p>
+<p><img src="/apple-wallet.png" alt="" /></p>
+<p>The good news 🎉 is that the Solid specification can be used here too - so we have a chance to intervene before this even becomes a problem.</p>
+<h4 id="standardwebinterfacefortransferringcredentials">Standard Web interface for transferring credentials</h4>
+<p>There are a <em>lot</em> of ways that credentials can be transferred. The <a href="https://www.iso.org/standard/69084.html">ISO Mobile driving licence (mDL)</a> standard alone defines the following credential exchange mechanisms within its standards document:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/QR_code">QR Code</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Near-field_communication">Near-field communication (NFC)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Bluetooth_Low_Energy">Bluetooth Low Energy (BLE)</a></li>
+<li><a href="https://www.wi-fi.org/file/wi-fi-aware-specification">Wi-Fi Aware</a></li>
+<li><a href="https://openid.net/developers/how-connect-works/">OpenID Connect (OIDC)</a>, or</li>
+<li>WebAPI - an HTTP interface defined within the mobile Drivers License (mDL) specification, specifically defining how these mobile Drivers License's can be transported.</li>
+</ul>
+<p>Additionally, the <a href="https://openid.net/specs/openid-4-verifiable-presentations-1_0.html">OpenID Foundation</a> has defined flows for credential issuance (<a href="https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html">OID4VCI</a>) - which supports <em>issuers</em> sending data to <em>holders</em>; and presentation (<a href="https://openid.net/specs/openid-4-verifiable-presentations-1_0.html">OID4VP</a>) - which defines how <em>verifiers</em> can request credentials from <em>holders</em>. These OpenID flows are designed to support the transfer <em>any</em> form of W3C or ISO Verifiable Credential.</p>
+<p>The <a href="https://openid.net/specs/openid-4-verifiable-presentations-1_0.html">OID4VP</a> specification even supports the <a href="https://openid.net/specs/openid-4-verifiable-presentations-1_0.html#name-digital-credentials-query-l">Digital Credentials Query Language (DCQL)</a> to allow the <em>verifier</em> to query for and filter the contents of credentials - producing a particular <a href="https://www.w3.org/TR/vc-data-model-2.0/#presentations"><em>presentation</em></a> that confroms to the verifiers query.</p>
+<p>… thats a lot of standards!</p>
+<p>Whilst this has been happening, W3C groups have also been busy defining better ways for browsers to operate with your confidential data - including digital credentials. The <a href="https://www.w3.org/TR/credential-management-1/">Credential Management Level 1</a> (creative naming!) "describes an imperative API enabling a website to request a user's credentials from a user agent, and to help the user agent correctly store user credentials for future use" the credentials in scope for this group include <em>passwords</em>, <em>one time passcodes</em> and <em>digital credentials</em> such as Verifiable Credentials.</p>
+<p>On top of this API specifications such as the <a href="https://w3c-ccg.github.io/credential-handler-api/#oncredentialrequest-attribute">Credentials Handling API (CHAPI)</a> are being developed.</p>
+<!-- #### Standard Web interface for requesting access to credentials
+
+A key throughline should be:
+ - Things like DCQL __very specifically__ target access of credentials; Solid is built with the view of supporting an arbitrary range of data types and we should be doing that ""furure proofing
+
+Important Questions to answer:
+ - Why don't we just use DCQL to fetch the credentials "Digital Credentials Query Language (DCQL) as an alternative, simpler mechanism to request specific credentials, alongside the existing Presentation Exchange format."
+ - 
+
+ https://tac.openwallet.foundation/projects/dcql-ts/
+
+**The Digital Credentials Query Language (DCQL, pronounced [ˈdakl̩]) is a JSON-encoded query language that allows the Verifier to request Verifiable Presentations that match the query. The Verifier MAY encode constraints on the combinations of credentials and claims that are requested. The Wallet evaluates the query against the Verifiable Credentials it holds and returns Verifiable Presentations matching the query.**
+
+
+**The W3C has a Credentials Community Group exploring Browser APIs (so web pages can request VCs from the browser, like how WebAuthn works) and better ways to do secure QR code scans. DIF has the Presentation Exchange format to standardize how verifiers ask for credentials (so that a wallet can automatically find the right credential to respond with). The CHAPI (Credential Handler API) is another browser-based approach to let users pick a wallet to use on a website.**
+
+The [W3C Credentials API Specification](https://w3c-ccg.github.io/vc-api/#design-goals-and-rationale) "provides a set of HTTP Application Programming Interfaces (HTTP APIs) and protocols for issuing, verifying, presenting, and managing Verifiable Credentials" and has a similar goal to "increase market competition and reduce vendor lock-in and switching costs."
+
+For holders, the [following API's are defined](https://w3c-ccg.github.io/vc-api/#holder-service)
+
+TL;DR: THE DCQL is used within the request to the `/presentations` endpoint of a holder service.
+
+---
+
+The following is not VC speciifc, defines an API for managing a number of credentials from VC's to otp's and passwords, and defines when to e.g. use those credentials for autocompletion
+
+[Credential Management Level 1](https://www.w3.org/TR/credential-management-1/) "This specification describes an imperative API enabling a website to request a user's credentials from a user agent, and to help the user agent correctly store user credentials for future use."
+
+---
+
+TODO: Clarify where CHAPI sits in the picture:
+ - https://chatgpt.com/share/67d16c12-3b14-800c-abd8-2ba65480d542
+ - https://w3c-ccg.github.io/credential-handler-api/#oncredentialrequest-attribute
+
+It seems that CHAPI describes *browser API's* that allows access to credentials managed within the browser.
+
+---
+
+https://wicg.github.io/digital-credentials/ then seems to be an attempt to replace CHAPI. -->
+<p>Given this diaspora of transfer standards for digital credentials - it begs the question - why should we propose Solid as yet another set of interfaces for transferring data to and from holder services?</p>
+<!-- TODO: Improve this seciton -->
+<p>Well there are a few:</p>
+<ol>
+<li>The Solid APIs are symmetric with the file system. This means that you can view your credentials through a file-system like interface - whilst they are living in cloud storage that you manage.</li>
+<li>Whilst credentials can be made available both through the Credentials Handling API in the browser - they can also be accessed directly from personal cloud storage by service providers who have been granted consent to access the credential.</li>
+<li>Solid provides a means to completely decouple consent management interfaces from the holder of credentials - because of the standardised Access Control mechanisms that it has.</li>
+</ol>
+<p>But most importantly <strong>Solid is about far more than just credentials</strong>. In his <a href="https://www.ft.com/content/79d2d19a-08df-48fc-9a6f-a9dbef58f642">recent article in the Financial Times</a>; Sir Tim Berners-Lee discussed how Solid is really about taking back control of <em>all of your data</em> - including your social media contacts, your financial data, and your health records - to enable you to be empowered with this data. This empowerment can be as simple as revoking access of your data to platforms you no-longer trust, or porting your Facebook contacts on to Reddit through to the use of trusted AI agents that support your wellbeing.</p>
+<!-- So the play here in the shorter term is:
+ - Credentials live in Solid Pod which allows you to view the credentials,
+ - *an exchange protocol* is either fetching data using the Solid API's; or a `derive` endpoint as an addition to a Pod
+ - a Websites JS code can request those credentials using the Digital Credentials API which under the hood uses [Credential Management Level 1](https://www.w3.org/TR/credential-management-1/)
+ - Because the credentials live in an online data store - the credential also does not need to be passed directly using the browser; instead the credential can be transferred *directly* from the Pod to the Server. -->
+<!-- TODO: re introduce this "thus part into the article" -->
+<!-- Thus:
+ - Solid is *compatible* with the emergent credential handling interfaces where it is assumed the holder is on the browser / or device
+ - Solid provides better consent management options in cases where the credentials are to be transferred directly between webservers (this is the async flows point) -->
+<!-- #### Standardised consent flows
+
+#### Async flows
+
+E.g.
+ - AI agents managing credentials on your behalf
+ -  -->
+<h2 id="queryabilityofverifiablecredentials">Queryability of Verifiable Credentials</h2>
+<p><img src="/sparql.webp" alt="" /></p>
+<p>Let me again present my bias' upfront. The last 5 years of my work and research have revolved around <a href="https://en.wikipedia.org/wiki/Semantic_Web">Semantic Web Technologies</a> - and my current research is on the very topic of <a href="https://github.com/jeswr/queryable-credentials">Queryable Credentials</a>, and I recently <a href="https://fosdem.org/2025/schedule/event/fosdem-2025-5970-are-current-standards-enough-towards-verifiable-credentials-with-expressive-zero-knowledge-query/">gave a talk on this topic at FOSDEM</a> (video below).</p>
+<p>So <a href="https://github.com/jeswr/queryable-credentials?tab=readme-ov-file#but-dont-query-apis-for-credentials-already-exist">when I heard</a> that there was a <a href="https://openid.net/specs/openid-4-verifiable-presentations-1_0.html#name-digital-credentials-query-l">Digital Credentials Query Language (DCQL)</a> as part of the <a href="https://openid.net/sg/openid4vc/">OID4VP</a> specification I was thrilled - but sadly that was short-lived. This is because the expressivity of DQCL is largely restricted to filtering operations to determine:</p>
+<ul>
+<li>Which Verifiable Credentials to include as part of a <a href="https://www.w3.org/TR/vc-data-model-2.0/#presentations">Verifiable Presentation</a></li>
+<li>Which subset of attributes to from those Credentials to include in the Verifiable Presentation</li>
+</ul>
+<p>Ok, but surely there must be a little more capability to the current specifications than this - after all, it is promised that you can prove your age without revealing your date of birth when using digital drivers licenses - so there must be some way of querying for age …</p>
+<p>… right?</p>
+<p><strong>Wrong</strong>. Taking a deeper look at the <a href="https://www.iso.org/standard/69084.html">ISO Mobile driving license (mDL)</a> reveals that the <strong>issuer</strong> (e.g. the DVLA) has to <em>explicitly sign statements</em> about your age; so my digital drivers license might look something like this:</p>
+<pre><code class="json language-json">{
+  ...
+  age: "00-00-2000",
+  is_over_18: true,
+  is_over_21: true,
+  is_over_65: false,
+  ...
+}
+</code></pre>
+<p>This means that:</p>
+<ul>
+<li>I have to tell the issuer (DVLA) that I want to prove I'm over 18 - when this isn't something they need to know.</li>
+<li>I am <em>reliant</em> on the <em>issuer</em> (DVLA) to issue these statements - so if my driving authority doesn't want to issue <code>is_over_21</code> statements; I may be forced to reveal my age. Whilst this is less problematic - and less likely - in the case of age; it is an issue when trying to any <em>non-standard</em> derivation. For example, proving non-caucasian ethnicity, without revealing the minority population that you belong to.</li>
+<li>I cannot tell the verifier (e.g. my future employer at the tomato farm) about information that can be derived from multiple credentials. Want to prove to a car hire agency that you can drive in the UK without giving them details from your license, visa and passport; then you're out of luck!</li>
+</ul>
+<p>This is a far cry from the kind of derivations that can be performed using the <a href="https://rubenverborgh.github.io/Semantic-Web-Reasoning/">semantic reasoning and query engines</a>. The good news is that it is technically feasible for the <em>holder</em> (you) to do deriviations such as <a href="https://github.com/jeswr/queryable-credentials?tab=readme-ov-file#initial-design-thoughts-for-a-queryable-api">this one</a> and then hand them to the <em>verifier</em> - that's what the <a href="https://video.fosdem.org/2025/aw1126/fosdem-2025-5970-are-current-standards-enough-towards-verifiable-credentials-with-expressive-zero-knowledge-query.mp4">below talk</a> is about.</p>
+<p>The bigger challenge is now to get the technology production ready and standardized.</p>
+<video controls>
+  <source src="https://video.fosdem.org/2025/aw1126/fosdem-2025-5970-are-current-standards-enough-towards-verifiable-credentials-with-expressive-zero-knowledge-query.mp4" type="video/mp4">
+</video>
+<h3 id="doesitevenmakesensetobetalkingaboutcredentials">Does it even make sense to be talking about credentials?</h3>
+<p>As I discuss further <a href="https://github.com/jeswr/queryable-credentials?tab=readme-ov-file#on-abstractions">here</a> - whilst it is sensible to talk about credentials to end-users of applications; it is my position that credentials are the wrong object to be working with at a standards level. Instead, we should be talking about <a href="https://github.com/jeswr/queryable-credentials?tab=readme-ov-file#initial-design-thoughts-for-a-queryable-api">datasets of facts</a>, with metadata such as signatures and proofs that attest to their integrity.</p>
+<!-- TODO: Elaborate -->
+<h2 id="furtherreading">Further Reading</h2>
+<p>In producing this article I came across a number of useful materials, here is my top selection for further reading:</p>
+<ul>
+<li><a href="https://auth0.com/blog/our-take-on-verifiable-credentials/">Auth0&#39;s take on Verifable Credentials</a></li>
+<li><a href="https://collateral-library-production.s3.amazonaws.com/uploads/asset_file/attachment/36416/CS676613_-_Digital_Credentials_promotion_campaign-White_Paper_R3.pdf">Verifiable Credentials and ISO/IEC 18013-5 Based Credentials</a></li>
+<li><a href="https://www.linkedin.com/pulse/verifiable-credential-formats-eudi-wallet-w3c-vc-dm-iso-18013-5-kbcmf/">Verifiable Credential Formats in the EUDI Wallet: W3C VC DM and ISO 18013-5 mDL/mDoc</a></li>
+<li><a href="https://www.pingidentity.com/en/resources/identity-fundamentals/decentralized-identity-management/decentralized-identity-standards.html">Decentralized Identity Standards, PingIdentity</a></li>
+<li><a href="https://talao.io/blog/eudi-wallet-understanding-credentials-in-eidas-2-eaa-qeaa-and-pid/">EUDI Wallet and eIDAS 2</a></li>
+<li><a href="https://chatgpt.com/share/67cdaacf-5728-800c-ac59-137d7d1aeec9">GPT 4.5 Researchers&#39; take on the topic</a></li>
+</ul>
+<div class="footnotes">
+  <hr>
+  <ol>
+    <li id="footnote1">
+      Trust me - Software Engineers will think about becoming a farmer at least once a day.
+      <a href="#footnote1-ref" aria-label="Back to content">↩</a>
+    </li>
+    <li id="footnote2">
+      ^^ Yes, really.
+      <a href="#footnote2-ref" aria-label="Back to content">↩</a>
+    </li>
+  </ol>
+</div>]]></content:encoded>
+            <author>jesse@jeswr.org (Jesse Wright)</author>
+        </item>
+        <item>
+            <title><![CDATA[Honours Thesis]]></title>
+            <link>https://blog.jeswr.org/2022/06/06/honours-thesis</link>
+            <guid>https://blog.jeswr.org/2022/06/06/honours-thesis</guid>
+            <pubDate>Mon, 06 Jun 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p>I never got around to properly publishing my Honours Thesis - so putting it <a href="https://jeswr.solidcommunity.net/public/honours-thesis.pdf">here</a> instead.</p>
+<hr />
+<p><embed src="https://...]]></description>
+            <content:encoded><![CDATA[<p>I never got around to properly publishing my Honours Thesis - so putting it <a href="https://jeswr.solidcommunity.net/public/honours-thesis.pdf">here</a> instead.</p>
+<hr />
+<p><embed src="https://jeswr.solidcommunity.net/public/honours-thesis.pdf" width="500" height="375" 
+ type="application/pdf"></p>]]></content:encoded>
+            <author>jesse@jeswr.org (Jesse Wright)</author>
+        </item>
+        <item>
+            <title><![CDATA[Ideas, not papers]]></title>
+            <link>https://blog.jeswr.org/2025/03/23/ideas-not-papers</link>
+            <guid>https://blog.jeswr.org/2025/03/23/ideas-not-papers</guid>
+            <pubDate>Sun, 23 Mar 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p><strong>EARLY STAGE DRAFT</strong></p>
+<p><img src="/generated/ideas-not-papers-1.png" alt="diagram" /></p>
+<p>It is my view that we are nearing a point in the research landscape where papers, pate...]]></description>
+            <content:encoded><![CDATA[<p><strong>EARLY STAGE DRAFT</strong></p>
+<p><img src="/generated/ideas-not-papers-1.png" alt="diagram" /></p>
+<p>It is my view that we are nearing a point in the research landscape where papers, patents, standards documents, blogs and other long-form documents describing a dense set of ideas are nearing their end-of-life as the best mechanism for describing knowledge.</p>
+<p>Other elements to observe:</p>
+<ul>
+<li>When external sources are not easily referencable, a full story needs to be told up-front. The story whether in a paper or book, is not personalised to an individual consumer - but instead designed to be digestible by a wide audience of readers.</li>
+<li>When external sources are more referenceable - such as on the Web where hyperlinks can be used. Authors have a level of liberty to create shorter documents and link users to external sources which they may consume at their own discretion.</li>
+<li>When explaining something to someone in a conversation, I will piece together ideas that I have or know; but tailor that response to the person I am speaking to - for instance, based on how much they know about a particular topic - which informs what terms I can use vs. what terms I need to define in the process.</li>
+</ul>
+<p>Roadmap[^1]:</p>
+<ul>
+<li>Structured knowledge injection and production via RAG in LLMs</li>
+<li>Model memory with some level of understanding of concepts (similar to LCMs)</li>
+<li>Models actually working with concepts, and generating:</li>
+<li>Formal commitments where possible</li>
+<li>Indexes to point to databases containing knowledge required (i.e. look over there for a dataset of patient records that you need to answer this question).</li>
+<li>Models able to actively identify which concepts they are operating with when performing inference, and able to pull in more information about that concept on-demand[^2].</li>
+</ul>
+<hr />
+<p>Similarly, my view is that we should be developing such capabilities in order to enhance <em>collaboration</em> and <em>consensus</em>.</p>
+<p>Near term possibilities for <em>collaboration</em> include:</p>
+<ul>
+<li>Helping identify when multiple groups of people have a need for the same (e.g. software) infrastructure across multiple projects - and support pooling of resources to create one thing that can be re-used across projects. Note that this comes with the potential risk of loss in hetrogeneity in software - which comes with its own set of downsides and risks.</li>
+<li>Distribution of shared next steps - identify when multiple groups have overlapping sets of tasks they want to achieve in the future and support them in distributing the workload. This is a very real problem that can be seen in the way that e.g. academic grants are currently managed wherein multiple institutions often try to outcompete each other to present a better grant proposal on similar hot topics of research in order to get funding.</li>
+<li>Real-time matching of individuals with given skillsets to tasks that need to be done in a project.</li>
+<li>There is a statistic that if you have $n$ people in an organisation than $\sqrt{n}$ of the people to $n$ of the work. It would be interesting to see if something like this could be used to induce a more 1:1 scaling - or at least use such metrics to evaluate the efficacy of this idea.</li>
+</ul>
+<p>Near term possibilities for <em>consensus</em> include:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Harmonization_(standards)">Harmonisation of standards</a></li>
+</ul>
+ <!-- THIS IS WHAT WE SHOULD TRY AND GET OMS FUNDING FOR -->
+<ul>
+<li>Topic based consensus amongst large groups - individuals discuss their needs, wants and priorities with their model which goes off to represent their views. This would enable democracy at the level of issues rather than elected representatives. This is crucial since top-down governance results in lack of granular awareness of issues faced by many people - and thus is not able to make the most effective decisions possible - or even make decisions that contradict public desires<a href="https://www.nbcnews.com/politics/trump-administration/poll-trump-faces-early-challenges-economy-united-gop-backs-big-change-rcna195860?utm_source=NBC&amp;utm_medium=iframely">^3</a>. A further indication that this is a sensible path to pursue is in those countries have demonstrated the effectiveness of citizen-led budget planning[^4].</li>
+</ul>
+<p>[^1]: Note there is overlap with ideas in work/literature on interpretability of models.
+[^2]: Note that one driver to try and build such architectures is that this would enable core models to be much smaller and to fetch relevant knowledge as needed on demand. This may also remove the need for knowledge cut-off dates if any new information published can quickly be pre-processed into concepts. This would also enable the use of private and other transactional data on-demand without needing to use RAG techniques.
+[^4]: Discussed in <a href="https://en.wikipedia.org/wiki/Humankind:_A_Hopeful_History">Humankind: A Hopeful History</a> - I owe a page reference.</p>]]></content:encoded>
+            <author>jesse@jeswr.org (Jesse Wright)</author>
+        </item>
+        <item>
+            <title><![CDATA[Impressed by Cursor]]></title>
+            <link>https://blog.jeswr.org/2025/03/18/impressed-by-cursor</link>
+            <guid>https://blog.jeswr.org/2025/03/18/impressed-by-cursor</guid>
+            <pubDate>Tue, 18 Mar 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[<video autoplay="" class="relative bottom-0 left-1/2 z-10 w-auto -translate-x-1/2 overflow-hidden rounded-t-lg lg:absolute lg:h-[90%]" loop="" playsinline="" preload="auto" src="https://assets.basehub...]]></description>
+            <content:encoded><![CDATA[<video autoplay="" class="relative bottom-0 left-1/2 z-10 w-auto -translate-x-1/2 overflow-hidden rounded-t-lg lg:absolute lg:h-[90%]" loop="" playsinline="" preload="auto" src="https://assets.basehub.com/191e7e6d/2c99e8a087f981290dc74d2b621a7192/current-best-for-two-mp4.mp4"></video>
+<p><strong>Credit <a href="https://cursor.com">cursor.com</a></strong></p>
+<p>I've been using <a href="https://www.cursor.com">cursor</a> with <a href="https://www.anthropic.com/news/claude-3-7-sonnet">claude-3.7-sonnet-thinking</a> for the last week for a range of programming tasks. I've been extremely impressed by some of the things it has been able to do - however there is still room to improve.</p>
+<p>Things cursor excelled at:</p>
+<ul>
+<li>Format Conversions: Such as markdown-to-table conversions can be done first-shot by highlighting the thing you want converted and telling it the format you want it converted to. It has for instance done <a href="https://github.com/jeswr/blog/commit/60b8ea96ab72f36fa1ebb5fab4921761f1591b4c">this table conversion</a>, and these <a href="https://github.com/jeswr/blog/blob/f110776806e091c9550effa36d0d563b3653557e/raw-posts/disambiguating-data-wallets.md?plain=1#L739">footer conversions</a>.</li>
+<li>Reasonably complex node.js logic <a href="https://github.com/rdfjs/N3.js/pull/503">like this</a> - though the example provided here was done with the assistance of copilot before I had discovered cursor. It also required me to prompt it describing the exact return types and proxy-based architecture that I was after.</li>
+</ul>
+<p>Places where there is room to improve:</p>
+<ul>
+<li>Full codebase generation: I tried to get it to generate an implementation of the <a href="https://modelcontextprotocol.io/introduction">Model Context Protocol</a> for the <a href="https://solidproject.org/specification">Solid Specification</a>. As can be seen in the attempt <a href="https://github.com/jeswr/solid-mcp/tree/56b951cc9577b36ed1b89540e7b233afbb5f0b4e">here</a>, whilst the docs look <em>lovely</em> it severely over-complicates the implementation; which should look more like <a href="https://github.com/modelcontextprotocol/servers/tree/main/src/gdrive">this Google Drive example</a>. Similar issues were faced in trying to get it to generate a <a href="https://github.com/jeswr/n3proof.rs/tree/7e7e8ceafacc31b0872349d0daf391054831f686">Notation3 Proof Checker in Rust</a>.</li>
+<li>Going <a href="https://github.com/oxigraph/oxigraph/pull/1213#discussion_r1997515722">off topic</a> and <a href="https://github.com/oxigraph/oxigraph/pull/1213#discussion_r1997649834">making up properties of manifest files</a>.</li>
+</ul>]]></content:encoded>
+            <author>jesse@jeswr.org (Jesse Wright)</author>
+        </item>
+        <item>
+            <title><![CDATA[Proposal: A Conversational Interface for trusted data]]></title>
+            <link>https://blog.jeswr.org/2025/03/22/conversational-interface-trusted-data</link>
+            <guid>https://blog.jeswr.org/2025/03/22/conversational-interface-trusted-data</guid>
+            <pubDate>Sat, 22 Mar 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p>In this post I set out the interface that I would like to have in order to get more value out of language models for tasks such as research that require high levels of information accuracy and prov...]]></description>
+            <content:encoded><![CDATA[<p>In this post I set out the interface that I would like to have in order to get more value out of language models for tasks such as research that require high levels of information accuracy and provenance. These include:</p>
+<ul>
+<li>Indicate the likelihood of correctness of statements in a response via color coding of the text. This color coding should be personalisable based on whether I:</li>
+<li>confirm whether entities in a sentence are the ones I want to talk about</li>
+<li>confirm that I trust information sources from which the answer was derived</li>
+<li>confirm further background questions that the model has if I ask it to "improve its certainty"</li>
+<li>Hyperlinking entities (things such as people, places, objects etc.) in a response, so I can confirm that this is the entity I care about. If I hover over the hyperlink I should be able to see extra information about the entity, such as a picture, full name and other key details and have the option to say "this is not what I'm after" or hit a green check mark in the top right corner to allow the interface to update its accuracy color-codings.</li>
+</ul>
+<iframe src="/ltcm" width="100%" height="500" frameborder="0"></iframe>
+<p>This example has been produced using generative AI can be found <a href="/ltcm">here</a>. Note only the bottom popup example works at the moment.</p>
+<p>This requires advancements beyond current <a href="https://en.wikipedia.org/wiki/Large_language_model">Large Language Models (LLMs)</a> and emergent <a href="https://ai.meta.com/research/publications/large-concept-models-language-modeling-in-a-sentence-representation-space/">Large Concept Models (LCMs)</a> architectures. In particular, this would require models to:</p>
+<ul>
+<li>Have in-built mechanisms for entity resolution</li>
+<li>Have knowledge of the provenance trails of the information it has learned</li>
+<li>Discern - from information such as these provenance trails - between <em>ideas</em> and <em>proven results</em>/<em>observations</em> in order to be able to accurately frame what is ground truth and what is conjecture that may or may not have consensus amongst a large group of people.</li>
+</ul>
+<p>I am interested in developing architectures that are in support of this vision.</p>]]></content:encoded>
+            <author>jesse@jeswr.org (Jesse Wright)</author>
+        </item>
+        <item>
+            <title><![CDATA[Communication in Multi Agent Systems]]></title>
+            <link>https://blog.jeswr.org/2025/05/17/mas-communication</link>
+            <guid>https://blog.jeswr.org/2025/05/17/mas-communication</guid>
+            <pubDate>Sat, 17 May 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p><img src="/multi-agent-communication.png" alt="" /></p>
+<p>Abstractly, an agent is "a computer system that is situated in some environment, and that is capable of autonomous action in this environm...]]></description>
+            <content:encoded><![CDATA[<p><img src="/multi-agent-communication.png" alt="" /></p>
+<p>Abstractly, an agent is "a computer system that is situated in some environment, and that is capable of autonomous action in this environment in order to meet its design objective" (<a href="https://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/imas/IMAS2e.html">Wooldridge, 2009, p. 15</a>; <a href="https://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/ker95.pdf">Wooldridge, 1995</a>). Just as humans must negotiate and cooperate to achieve shared goals, so too must agents within multi-agent systems (<a href="https://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/imas/IMAS2e.html">Wooldridge, 2009, p. 24-25</a>). This is only possible if agents have an effective means of communication. To communicate they must have a (<strong>R1</strong>) shared conceptual understanding of the topic on which they communicate (e.g. two agents can only communicate about weather if they both 'know' what it means to be sunny, raining and overcast, and have a notion of temperature and a measure - such as degree celsius - by which to describe it) and (<strong>R2</strong>) a means of sender (resp. reciever) encoding (resp. decoding) messages to transmit these concepts between agents. We shall refer to the requirement that agents are "capable of autonomous action [execution]" (<a href="https://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/imas/IMAS2e.html">Wooldridge, 2009, p. 15</a>) as (<strong>R1E</strong>).</p>
+<p>Since the emergence of autonomous agents in the 1980's (<a href="https://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/imas/IMAS2e.html">Wooldridge, 2009, p. 304</a>) there have been numerous developments in the way in which agents understand (<strong>R1</strong>) and transmit (<strong>R2</strong>) concepts.</p>
+<p>First, came systems where human programmers would encode specific execution semantics in code (<strong>R1E</strong>) for instance the "concept of temperature" would be defined by a function which takes a reading from a temperature sensor and these systems would communicate (<strong>R2</strong>) using a structured encoding such as sending JSON encoded objects over the Web - containing a "temperature" key. In this paradigm, the conceptual understanding (e.g. of temperature) (<strong>R1</strong>) did not fully live within the system, but was rather implicitly communicated between systems in the form of API documentation where the developers implementing each system would explain to each other "the temperature key in the JSON object is a 32bit floating point value representing the temperature, in central London, as measured in degrees celsius". Naturally, these primitive agents had very limited <em>versatility</em> as human developers were required to define the execution semantics and conceptual semantics (documentation) by one exact very precise concept at a time. Moreover, these agents, which are still widespread in the form of Web APIs, face an <em>interoperability</em> problem - as there are countless Web APIs all of which have a "temperature" key in the JSON object they return; but with different meanings due to the implicit semantics of the metric, collection location, collection date etc. encoded in the API documentation. This tightly binds/couples the client-agent to communicate with a single server agent and to communicate with more "agents" the developer must manually write code to decode the different encodings of different server agents and align the conceptual understanding across different documentation.</p>
+<p>Subsequent developments saw attempts to migrate this conceptual understanding (<strong>R1</strong>) from documentation to data which is sent between agents (<a href="https://ruben.verborgh.org/publications/verborgh_web_2013/">Verborgh et al., 2013</a>, <a href="https://ruben.verborgh.org/blog/2013/01/31/what-web-agents-want/">Verborgh, 2013</a>, <a href="https://ruben.verborgh.org/blog/2021/12/23/reflections-of-knowledge/">Verborgh, 2021</a>, webservices). In domains such as the Semantic Web, conceptual understanding is described symbolically using ontologies (<a href="https://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/imas/IMAS2e.html">Wooldridge, 2009, p. 180</a>) and rules (<a href="https://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/avignon91.pdf">Wooldridge, 1991</a>, verborgh2015drawing) (<strong>R1</strong>) - and encoded in highly generic <a href="https://www.w3.org/RDF/">RDF</a> syntaxes (<strong>R2</strong>). With these agents (systems) possessing a symbolic understanding of concepts, they are able to precisely describe and reason about the information they send and receive. This increases agent <em>interoperability</em> and <em>portability</em> by making explicit the semantics that are often implicitly encoded in API documentation; moreover, agent <em>versatility</em> increases with the ability to describe requests and responses on the fly without being constrained to use the finite set of concepts listed in API documentation. However, ontologists are still required to build the vocabularies and rules for concept description (e.g. someone must manually define "degrees celsius" as a "unit of measure" for "temperature"; someone must provide the rules that define the mapping between "degrees celsius" and "fahrenheit" so that systems using two different measures can interoperate) (<strong>R1</strong>) and developers are still required to write code that defines the execution semantics (<strong>R1E</strong>) that is, a system can semantically formulate the question "what is the current temperature in London in degrees Celsius"; but a developer is then still required to write the code that then fetches the temperature from the sensor. Furthermore, in this paradigm "If two agents are to communicate about some domain, then it is necessary for them to agree on the terminology that they use to describe this domain." (<a href="https://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/imas/IMAS2e.html">Wooldridge, 2009</a>), often requiring agents to share the same vocabularies and hence "worldviews".</p>
+<p>Now LLM-powered agents are emerging, with many using LLMs trained upon a textual corpus containing a vast array of human knowledge. Consequently, these agents have been demonstrating a greater <em>breadth</em> and depth of conceptual understanding (<strong>R1</strong>) than human developers could imagine encoding by hand in formal ontologies. Moreover, LLMs can encode and decode these concepts in natural language (as well as, increasingly, <a href="https://platform.openai.com/docs/guides/structured-outputs/introduction">machine syntaxes</a>) (<strong>R2</strong>). Conversational LLMs also possess inherent execution semantics (<strong>R1E</strong>) with the capability to formulate a written response to any input which they are given. These execution semantics, however, do not extend to access of system-level knowledge or resources (such as temperature sensors) and are less reliable/deterministic than production-ready implementations of previous generations of agents. The trade-off of the breadth and depth of LLM understanding; is an increased vagueness of concepts and the presence of internal inconsistencies in LLM conceptualisations - moreover, there is no single worldview, per se, that the language model holds; and, just as with humans, the facts that an LLM claims are highly dependent on the context of the conversation in which they occur.</p>]]></content:encoded>
+            <author>jesse@jeswr.org (Jesse Wright)</author>
+        </item>
+        <item>
+            <title><![CDATA[The challenge with current researcher agents]]></title>
+            <link>https://blog.jeswr.org/2025/03/09/researcher-agent-challenge</link>
+            <guid>https://blog.jeswr.org/2025/03/09/researcher-agent-challenge</guid>
+            <pubDate>Sun, 09 Mar 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p><i>Draft / mood-post-written-in-10-minutes</i></p>
+<p><img src="/deep-research.png" alt="" /></p>
+<p>I've spent the last few days using <a href="https://openai.com/index/introducing-deep-research/"...]]></description>
+            <content:encoded><![CDATA[<p><i>Draft / mood-post-written-in-10-minutes</i></p>
+<p><img src="/deep-research.png" alt="" /></p>
+<p>I've spent the last few days using <a href="https://openai.com/index/introducing-deep-research/">OpenAI's Deep Research agent</a> with ChatGPT 4.5. I'm quite impressed with the results it produces; and definitely reduces what would have previously been a few hours of browsing - to a 10-minute coffee break whilst I wait for the Researcher Agent to do its thing.</p>
+<p>At the same time - it exacerbates the following challenges of doing research on the Web:</p>
+<ul>
+<li>The most advertised information is that which features in the result; but that doesn't necessarily mean it is the <em>best</em> or most <em>factually correct</em> information</li>
+<li>Unrelated information creeps in under the guise of an answer to the query. A good example of where I saw this is in <a href="https://chatgpt.com/share/67cdaacf-5728-800c-ac59-137d7d1aeec9">this discussion of Verifiable Credentials</a> where the model included a lengthy discussion of <a href="https://en.wikipedia.org/wiki/Self-sovereign_identity"><em>self sovereign identity</em></a> and public key infrastructure such as <a href="https://keri.one"><em>KERI</em></a>. Whilst this often infrastructure often appears in solution architectures with Verifiable Credentials - it was certainly not appropriate to have an entry for <em>KERI</em> in a table comparing different Verifiable Credential Standards.</li>
+</ul>
+<p>I expect (hope) we will see a number of iterative improvements over the next view months to try and:</p>
+<ul>
+<li>where applicable, prioritize academic / authorotative sources; such as those found on Google Scholar and standards documents</li>
+<li>filter out "derived sources"; for instance blog posts and news articles that are just summarizing an article or publication that the model can access</li>
+<li>filter out sources generated by GenAI</li>
+</ul>
+<p>As I briefly touched upon in <a href="/2024/04/25/raw-data-now/">this post</a>; my view is that we can go <em>much further</em> than this by curating a Web of precise and trusted data - where possible using formal semantics, such as in a (RDF) Knowledge Graph. This seems sound given that:</p>
+<ul>
+<li>Graphrag is still increasing popularity for grounding models; including to ground Gemini's answers in google queries, and</li>
+<li>LLMs are getting better at supporting text to structured data conversions</li>
+</ul>
+<p>Beyond soundness - a couple of reasons this is <em>necessary</em> include:</p>
+<ul>
+<li>We can be clearer about the <a href="https://player.vimeo.com/video/186094848?h=87a4e916e7">semantic commitments</a> we're making, and</li>
+<li>We can search for data rather than pages</li>
+</ul>]]></content:encoded>
+            <author>jesse@jeswr.org (Jesse Wright)</author>
+        </item>
+        <item>
+            <title><![CDATA[What do we mean by Personal AI Agents?]]></title>
+            <link>https://blog.jeswr.org/2025/03/16/personal-ai</link>
+            <guid>https://blog.jeswr.org/2025/03/16/personal-ai</guid>
+            <pubDate>Sun, 16 Mar 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p>I recently collaborated on a paper with the Cambridge Service Alliance - for which I wrote a lengthy piece asking "What does it mean for a system to be a Personal AI Agent?"</p>
+<p>Since the full p...]]></description>
+            <content:encoded><![CDATA[<p>I recently collaborated on a paper with the Cambridge Service Alliance - for which I wrote a lengthy piece asking "What does it mean for a system to be a Personal AI Agent?"</p>
+<p>Since the full piece did not make it into the article - I'm posting it <a href="/personal-ai.pdf">here</a> instead!</p>
+<hr />
+<p><embed src="/personal-ai.pdf" width="500" height="375" 
+ type="application/pdf"></p>]]></content:encoded>
+            <author>jesse@jeswr.org (Jesse Wright)</author>
+        </item>
+        <item>
+            <title><![CDATA[Quotes]]></title>
+            <link>https://blog.jeswr.org/2025/03/23/quotes</link>
+            <guid>https://blog.jeswr.org/2025/03/23/quotes</guid>
+            <pubDate>Sun, 23 Mar 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p><img src="https://img.goodfon.com/original/2880x1620/0/34/kavychki-zapiatye-oboi.jpg" alt="" /></p>
+<p>Some quotes I like:</p>
+<ul>
+<li>"Computer Science is the art of abstraction" - <a href="https...]]></description>
+            <content:encoded><![CDATA[<p><img src="https://img.goodfon.com/original/2880x1620/0/34/kavychki-zapiatye-oboi.jpg" alt="" /></p>
+<p>Some quotes I like:</p>
+<ul>
+<li>"Computer Science is the art of abstraction" - <a href="https://www.hyland-wood.org">David Hyland-Wood</a></li>
+<li>"You cannot have no ontology - just bad ontology" <a href="https://www.giancarloguizzardi.com">Giancarlo Guizzardi</a></li>
+</ul>
+<hr />
+<p>This is a living document</p>]]></content:encoded>
+            <author>jesse@jeswr.org (Jesse Wright)</author>
+        </item>
+        <item>
+            <title><![CDATA[Raw (structured) data now: It's time to build the Human Knowledge Graph]]></title>
+            <link>https://blog.jeswr.org/2024/04/25/raw-data-now</link>
+            <guid>https://blog.jeswr.org/2024/04/25/raw-data-now</guid>
+            <pubDate>Thu, 25 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Sir Tim Berners-Lee's invention of the Web was a dramatic milestone in the information age, making vast amounts of human knowledge accessible to everyone. However, we have now reached a point where...]]></description>
+            <content:encoded><![CDATA[<p>Sir Tim Berners-Lee's invention of the Web was a dramatic milestone in the information age, making vast amounts of human knowledge accessible to everyone. However, we have now reached a point where such availability is ironically creating inaccessibility, with humans and machines alike overwhelmed by false and duplicate information.</p>
+<p>In his seminal 2001 article "The Semantic Web", Berners-Lee claimed that "Properly designed, the Semantic Web can assist the evolution of human knowledge as a whole". While this vision has been proven true in limited contexts, from powering <a href="https://www.google.com/search?channel=fs&client=ubuntu-sn&q=sir+tim-berners+lee">Google's Knowledge Panel</a> (example shown below) to enabling biomedical discoveries, the full potential of the Semantic Web for capturing and organizing human knowledge remains largely unrealized.</p>
+<p><img src="/tim-pane.png" alt="" /></p>
+<p>Knowledge representation is a decades-old area of research, originally developed with symbolic reasoning in mind. However, <a href="/2024/04/18/better-ai">as I've previously discussed</a>, knowledge graphs are now playing a crucial role in system 1 reasoning systems, in particular being used to ground LLM queries using Retrieval Augmented Generation (RAG).</p>
+<p>This only works if we have knowledge graphs in the first place. Enterprises have been throwing resources at building out structured databases from which they can generate knowledge graphs for decades. However, in some parts of academia, we are not doing this job so well. It's time to follow the lead of biomedical domains and start modeling our research and results so that humans and machines can better understand what knowledge we, as humanity, have discovered.</p>
+<p>We now have a greater impetus and better means than ever before to create a comprehensive Human Knowledge Graph using Semantic Web technologies. The key is to describe and publish concepts in as granular a manner as possible. </p>
+<p>One promising domain to start with is mathematics, where every theorem, proof, and axiom can be represented as its own entity, with rich semantic links capturing the relationships between them. Efforts to formalize 21st century mathematics provide a foundation to build upon.</p>
+<p>Beyond mathematics, we can extend this approach to other fields like physics, chemistry, and computer science. For example, a knowledge graph could precisely define different graph neural network architectures, link them to the mathematical foundations that characterize their expressivity, and connect them to experimental results on standard datasets. This provides a unified view of both the theoretical and empirical landscape.</p>
+<p>Building such a knowledge graph of human knowledge is valuable for multiple reasons:</p>
+<ol>
+<li><p>It enables AI systems to learn from a clean, structured representation of knowledge, improving their accuracy and grounding their outputs in precise concepts rather than just statistical patterns in raw text.</p></li>
+<li><p>It facilitates research, especially interdisciplinary work, by allowing scientists to search and integrate knowledge at the concept level, across different languages and terminologies.  </p></li>
+<li><p>It avoids information duplication and establishes clear provenance and authorship of ideas.</p></li>
+</ol>
+<p>To realize this vision, we can leverage technologies like Solid, which provides a decentralized protocol for access-controlled linked data. This allows the public knowledge graph to be extended with private layers, enabling use cases like pre-publication research and internal industrial R&amp;D.</p>
+<p>So now is the time to revisit the call for <a href="https://www.wired.com/story/raw-data/">"Raw Data Now"</a> and put resources into generating structured data for each of our domains.</p>
+<p>In conclusion, the Semantic Web has immense untapped potential to revolutionize how we represent, integrate, and leverage human knowledge. By undertaking ambitious collaborative projects to build granular, multi-disciplinary knowledge graphs, we can take a major leap towards realizing this vision and transforming fields from AI to scientific research. The journey will be long, but the benefits are immense.</p>
+<!-- Knowledge representation is a decades-old area of research, originally developed with symbolic reasoning in mind. However, [as I've previously discussed](/2024/04/18/better-ai), knowledge graphs are playing a cruicual role in [system 1 reasoning systems](), in particular being used to ground LLM queries using Retrieval Augmented Generation (RAG).
+
+This only works if we have knowledge graphs in the first place. Enterprises have been throwing resources at building out structued databases from which they can generate knowledge graphs for decades.
+
+However, in some parts academia we are not doing this job so well. It's time to to follow the lead of biomedical domains and start modelling our research and results so that humans and machines can better _understand_ what knowledge, we as humanity, have discovered.
+
+So now is the time to revisit the call for ["Raw Data Now"]() and put resources into generating structured data for each of our domains. -->]]></content:encoded>
+            <author>jesse@jeswr.org (Jesse Wright)</author>
+        </item>
+        <item>
+            <title><![CDATA[Research topics ...]]></title>
+            <link>https://blog.jeswr.org/2025/02/17/research-topics</link>
+            <guid>https://blog.jeswr.org/2025/02/17/research-topics</guid>
+            <pubDate>Mon, 17 Mar 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p>… that I'm interested in but don't have time to work on at the moment.</p>
+<p>If you're looking for topics specifically related to Solid and data sovereignty look <a href="https://github.com/solid/...]]></description>
+            <content:encoded><![CDATA[<p>… that I'm interested in but don't have time to work on at the moment.</p>
+<p>If you're looking for topics specifically related to Solid and data sovereignty look <a href="https://github.com/solid/research-topics">here</a>.</p>
+<p>If you're looking for some more topics related to semi-autonomous Web Agents look <a href="https://jeswr.solidcommunity.net/public/iswc_doctoral_consortium.pdf">here</a> and for early work on the topic see <a href="https://arxiv.org/html/2409.04465v1">here</a>.</p>
+<h2 id="suitablerepresentations">Suitable Representations</h2>
+<p><img src="/generated/research-topics-1.png" alt="diagram" /></p>
+<p><em>Kind-of-ok LLM generated mermaid diagram</em></p>
+<p>Formal semantic languages such as RDF encoded description logics (which in most profiles has a sub first-order expressivity), are a good means of precisely describing information – supporting interpretability and interoperability of data between systems. For much data with clear-cut attributes like the address, DOB, and website of a user – these languages can capture full information.</p>
+<p>However, the fact that these languages are constrained to a particular logical profile, (e.g. First Order Logic) means that there – by definition - is a limitation to what they can express. In contrast, natural languages such as English are highly expressive – and have no formal ruleset to describe how the language should be interpreted and executed. Instead, the only systems to date that can operate upon the full spectrum of natural language (including the human brain, LLMs and other machine learning systems) are those which have learned by example; and thus, will have contextually dependent interpretations and reactions to the language. Moreover, multilingual speakers often attest to the idea that there are gaps in the expressible concepts between different languages – thus indicating that contemporary natural language does not effectively capture of all concepts relevant to daily life – let alone all concepts that could be communicated by a human or machine.
+In the context of communication between LLMs, there is an emergent discussion of whether it would be appropriate to communicate using intermediate token representations rather than natural language. In theory this may improve expressivity but will nevertheless remain restricted to the conceptual model that lives within LLMs.</p>
+<p>If we are to work towards a Web of Agents that accurately and effectively <a href="https://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/imas/IMAS2e.html">negotiate, communicate and cooperate</a> with maximal versatility, efficiency and unambiguity (where versatility and efficiency are defined as per Section 3 of <a href="https://arxiv.org/pdf/2410.11905">this paper</a>) then we must work towards the design of a lingua franca for inter-system communication that encapsulates all of these different language modalities.</p>
+<p>Moreover, we observe that the process of describing a concept in a higher-order modality, may be seen as conceptual alignment to allow that concept to be operationalised across systems in a lower-order modality. We already see this today in the way that RDF taxonomies are created – the Data Privacy Vocabulary for instance creates a taxonomy of terms defining a range of purposes for which data may be used.  However, the definition of the purpose is still described using the natural language rdfs:description.</p>
+<p>This means that whilst, for instance, an ODRL policy can be formalised using a first-order-logic calculus description with the ODRL data model and DPV terms; the implementation of a policy engine operationalising that description will still require a human (or LLM) to interpret the natural language and codify the actions the system should take when, for instance, one is permitted to use data for dpv:Marketing which is defined in natural language as “Purposes associated with conducting marketing in relation to organisation or products or services e.g. promoting, selling, and distributing”.
+There is also a question of what, if anything, sits between formal-logic and natural language. <a href="https://chatgpt.com/share/67abac98-8de0-800c-9114-2e72ac12164f">We are not the first to pose such a question</a>.</p>
+<p>I’m sure there is some interesting Thery of Mind type stuff to investigate in here if one was to start properly digging – but I am going to withhold from that until I decide if I am going to do research in this direction.
+Guidance note I don’t think it is going to be possible to invent much of this in a top-down manner. Would start first in a use-case driven manner.</p>
+<p>Possible intermediary points include:</p>
+<ul>
+<li>Normalised natural language (e.g. application of strict grammar rules and/or reduction to a concise and precise language.)</li>
+<li>Building hybrid KG / VDB architectures and understanding the internal representation + mapping between the two views may go a long way in assisting with the creation of this intermediate representation.</li>
+</ul>
+<h2 id="conceptualalignmentbetweenagentsincludingllmneurosymbolicandlogicalonly">Conceptual alignment between agents (including LLM, neurosymbolic, and logical-only)</h2>
+<p>Work includes evaluating how well LLM-based agents can collboratively describe and build formal conceptual models of the world in order to discuss new concepts on the fly.</p>
+<h2 id="webawareagents">Web-aware agents</h2>
+<p>In <a href="https://openaccess.city.ac.uk/id/eprint/34788/">this paper</a> we present a vision of how we can evolve from the current paradigm of Computer Using Agents (CUAs) towards Personal AI Agents reminiscent of the 2001 Semantic Web Vision Paper.
+In <a href="https://openaccess.city.ac.uk/id/eprint/34788/">the same paper</a>, we posit that a migration towards a Web of self-describing agents will only be possible should we make operator style agents Web-aware.
+What this enables is for Web Agents to more feasibly learn what the “action space” of a particular website is, and more efficiently affect operations.</p>
+<h2 id="bootstrappingwebagents">Bootstrapping Web Agents</h2>
+<p>In <a href="https://openaccess.city.ac.uk/id/eprint/34788/">this paper</a> we present a vision of how we can evolve from the current paradigm of Computer Using Agents (CUAs) towards Personal AI Agents reminiscent of the 2001 Semantic Web Vision Paper.</p>
+<p>In <a href="https://openaccess.city.ac.uk/id/eprint/34788/">the same paper paper</a>, we posit that a migration towards a Web of self-describing agents will only be possible should we first bootstrap a critical mass of such agents from existing Web Services. This is particularly important when interacting with legacy services that may not have any active maintainers.
+The core research questions here are:</p>
+<ol>
+<li>How does one discover the action space of a Website</li>
+<li>How does one describe that action space of said Website, e.g., with Semantic Web Service Descriptions
+In parallel, we create the opportunity to begin to develop more bespoke search engines / indexing engines for a Web of Agents. In the same way that schema.org enabled Google to effectively index information embedded in Websites - including movie schedules - and present aggregate information at the top of a search result, this work creates the possibility to create an index of what range of actions a particular platform supports.</li>
+</ol>
+<p>For "operationalising the action space" - e.g. going from call to the agent interface to website interaction, we could experiment to evaluate whether we can bootstrap existing Websites into becoming agents using LLMs to generate RML style mappings + potentially playwright interactions for Websites and APIs.</p>
+<h2 id="privacypreservingreasoningoverdecentralisedecosystems">Privacy Preserving Reasoning over Decentralised Ecosystems</h2>
+<p>See <a href="https://jeswr.solidcommunity.net/public/DPhil_Proposal.pdf">here</a>.</p>
+<h2 id="beliefinsemiautonomousagentsviapersonalisedmodelsoftrust">“Belief” in semi-autonomous agents via personalised models of trust</h2>
+<h2 id="exploringriskontologiesandlegaldatasharingagreementsfornextgenerationdatagovernance"><strong>Exploring Risk Ontologies and Legal Data Sharing Agreements for Next-Generation Data Governance</strong></h2>
+<p>See <a href="https://docs.google.com/document/d/1Ilh5H2IkBWeeRVMMtRSrIQ0_w-nBOyZo/edit">here</a> and <a href="https://share.note.sx/w9hofb5h#c3szRsdAATdEB3sKajWb3AF6iAjBBpRLQ+WPfw1QB4E">here</a>.</p>
+<h2 id="extractingontologicalmodelsfromllms">Extracting ontological models from LLMs</h2>
+<p>Ontological construction has traditionally been a time consuming, slow and expensive progress – requiring close collaboration between knowledge engineers and domain experts.</p>
+<p>In this work package shall test the viability of using LLMs to do a first pass of ontology construction. However, the goal is to investigate whether this can be done using <a href="https://www.anthropic.com/research/mapping-mind-language-model">mind mapping</a> techniques rather than prompt engineering.</p>
+<h2 id="symbolicconceptualmemorymodulesfordeeplearningmodels">Symbolic conceptual memory modules for Deep Learning models</h2>
+<p>For both:</p>
+<ul>
+<li>Interpretability purposes</li>
+<li>Semantic committment purposes</li>
+</ul>
+<h2 id="hybridkgvectordatabasearchitectures">Hybrid KG &amp; Vector Database architectures</h2>
+<p>The core idea here is to build a DB with both a VDB and a KG view. Bergi has already done some work on this topic <a href="https://www.bergnet.org/2024/05/unified-landscape/">here</a> and <a href="https://www.bergnet.org/2024/09/llm-kg-wombat/">here</a>.</p>
+<p>There is further related work <a href="https://medium.com/towards-data-science/how-to-implement-graph-rag-using-knowledge-graphs-and-vector-databases-60bb69a22759">here</a>.</p>
+<p>The first piece of work I would be interested in is a formal specification for calculating points in vector space of knowledge graph concepts.</p>
+<h2 id="probabilisticrdf12">Probabilistic RDF 1.2</h2>
+<p>Following on from the above topic we need to define precise semantics for describing probabilities and performing inference with said probabilities in RDF/SPARQL 1.2. In particular, see Bergi's article on <a href="https://www.bergnet.org/2024/09/llm-kg-wombat/">tackling uncertainty</a>.</p>
+<p>This may take the form of a prov-o(?) extension to enable the expression of concepts such as how sure a given entity is that a claim is true.</p>
+<h2 id="knowledgegraphmemoryforllmbasedagents">Knowledge Graph Memory For LLM-Based Agents</h2>
+<p>There is emerging work, such as <a href="https://arxiv.org/pdf/2309.11696">this</a> on LLM memory, which build memory such as SSD access directly into the LLM architecture - rather than needing to perform this via RAG into the LLM prompt.</p>
+<p>The goal here is to build specialised architectures for access to graph-structured data.</p>
+<h2 id="openresearchdashboard">Open Research Dashboard</h2>
+<p>As a way towards having a fully online collaborative environment – encourage researchers to discuss ideas on a topic on a platform that uses Solid and <a href="https://en.wikipedia.org/wiki/ActivityPub">ActivityPub</a>, and have either humans or machines label the topics for each idea.</p>
+<p>Then allow one to browse / view who is working on what, as well as their latest progress – e.g. on GH.</p>
+<h2 id="searchinterfacestodiscoversemanticallydescribeddataanddatasets">Search interfaces to discover semantically described data and datasets</h2>
+<p>This includes:</p>
+<ul>
+<li>A good portal which supports the discovery of authoritative entity identifiers such as <a href="https://en.wikipedia.org/wiki/WebID">WebIds</a> based on a natural language query - this could be for name "Jesse" or a rough description "Australian guy working on AI and Solid."</li>
+<li>A good portal to discover semantically described datasets such as those described using <a href="https://theodi.org/news-and-events/blog/transforming-ai-data-governance-with-croissant-a-new-standard-for-ml-metadata/">Croissant</a> or <a href="https://ekgf.github.io/dprod/">DProd</a>.</li>
+</ul>
+<h2 id="operationalizableguidelinesonhowtocomplywithregulatoryrequirementsasahostofdecentralizedinfrastructure">Operationalizable guidelines on how to comply with regulatory requirements as a host of decentralized infrastructure</h2>
+<p>In particular - today - as a host of:</p>
+<ul>
+<li>Decentralised social media - such as <a href="https://mastodon.social/explore">Mastodon</a>, or</li>
+<li>Decentralised storage such as a <a href="https://solidproject.org">Solid Pod</a> provider</li>
+</ul>
+<p>and in the future as a host of e.g. decentralised AI services.</p>
+<p>Industry consortia do the work of creating such operationaliseable guidelines within their own domains. For instance, the financial indusry has created the <a href="https://edmcouncil.org/frameworks/cdmc/">Cloud Data Management Controls (CDMC)</a> which provides a framework for operationalising GDPR when managing financial data in cloud services.</p>
+<p>Some writing on the topic specifically in terms of Solid is <a href="https://github.com/solid/research-topics?tab=readme-ov-file#data-governance-and-solid">here</a>.</p>
+<h2 id="machinereadabledefinitionofrdfsyntaxesprobablyboringtopicformostpeople">Machine-readable definition of RDF syntaxes (probably boring topic for most people)</h2>
+<p>Not just ANTLR grammar definitions for syntax for lexers; also prescribing how this maps to triples for parsers.</p>
+<p>Starting point <a href="https://chatgpt.com/share/67e95686-c7a8-800c-8d97-9f02e345c418">here</a> </p>
+<h2 id="malleablesoftwareforsolidreadrdfdatastructuresandshapes">Malleable Software for Solid (read: RDF data structures and Shapes)</h2>
+<ul>
+<li>For Malleable Software see <a href="https://www.inkandswitch.com">here</a>.</li>
+<li>For Solid see <a href="https://solidproject.org">here</a>.</li>
+<li>For RDF see <a href="https://en.wikipedia.org/wiki/Resource_Description_Framework">here</a>.</li>
+<li>For Shapes see <a href="https://ruben.verborgh.org/blog/2019/06/17/shaping-linked-data-apps/">here</a>.</li>
+</ul>
+<h2 id="semanticcommitmentsallthewaydown">Semantic commitments all the way down</h2>
+<p>Work towards have transactions on the Web semantically described commitments</p>
+<h2 id="saygoodbyetothecloudandhellotothedataspace">Say goodbye to the cloud and hello to the dataspace</h2>
+<p>Don't write apps and code agains servers - write them against data instead.</p>
+<h2 id="usingllmstocreateadenselylinkedweb">Using LLMs to create a densely linked Web</h2>
+<p>Before we move to a fully fledge web-of-concepts, I believe LLMs have a strong role to play in densely linking the Web. That is, helping us relate all of the knowledge that has been written about so that it is much easier to discover all of the existing research on a given topic - going beyond existing work such as tools:</p>
+<ul>
+<li>That link papers based on human annotated links, such as citations of papers that people have discovered that are related, and</li>
+<li>OpenAI researcher agents which are able to crawl the web and identify papers which are about a particular topic</li>
+</ul>
+<h2 id="modelresponsemaybeapplicabletowebagentswg">Model response (may be applicable to Web Agents WG)</h2>
+<p>One feature that has supported the Web to scale is having public and cacheable resources. I recommend standardising an HTTP interface that can be used to <code>GET</code> responses from LLMs in a way that allows these responses to be stored in DNS caches.</p>
+<p>For responses that require payment - e.g. because of the size of the model needed to answer the query - then there should be a redirect flow to "unlock" the link and then keep the response cached and public. See extension on this thought in the following topic.</p>
+<h2 id="standardformakingperrequestpaymentstollmprovidersmaybeapplicabletowebagentswg">Standard for making per-request payments to LLM providers (may be applicable to Web Agents WG)</h2>
+<p>So that services relying on those LLMs need to implement the standard rather than create custom flows and deals for each LLM service.</p>
+<p>Extending this - directly delegating authorization of payments to a user account - so that they can:</p>
+<ul>
+<li>Make use of ongoing subscriptions on existing platforms</li>
+<li>Further, delegate the cost directly to their organizations when using services for work</li>
+<li>Have a single platform that they connect their bank accounts to and set controls for "LLM usage"</li>
+</ul>
+<h2 id="oneidentifyforagenticplatformsmaybeapplicabletowebagentswg">One Identify for agentic platforms (may be applicable to Web Agents WG)</h2>
+<p>Largely to achieve the above item</p>
+<h2 id="llmmetadatafordiscoverymaybeapplicabletowebagentswg">LLM metadata for discovery (may be applicable to Web Agents WG)</h2>
+<p>Presumably products that use LLMs - such as cursor - need to manually curate the list of LLMs that they are using in their product. As the number of LLMs that are available proliferates, it may be better for LLMs to provide a <code>.well-known</code> description to identify the capabilities, cost and usage mechansim.</p>
+<h2 id="agentchatroomsmaybeapplicabletowebagentswg">Agent Chat Rooms (may be applicable to Web Agents WG)</h2>
+<p>To enable, for instance, groups of personal agents to organize travel plans for a party of 5 people, or distributed tooling agents to negotiate with each other.</p>
+<p>In the medium term I would think that these are more somethign like "concept whiteboards" - but agent chat rooms are a good place to start.</p>
+<h2 id="standardizeauthenticationforllmstoaccessprivateresource">Standardize authentication for LLMs to access private resource</h2>
+<p>Intersects both with goals of MCP, Solid and protocols like OIDC4VP</p>
+<h2 id="standardsharingofreusablecontextdata">Standard sharing of re-usable context data</h2>
+<p>Standardise Solid as the way of having agents request and use contextual data. With both:</p>
+<ul>
+<li>Access Controls (including which services can access it)</li>
+<li>Usage controls (including which services results can be forwarded to, and whether the data can be used for monetization)</li>
+</ul>
+<h2 id="morethingstostandardiseinthelwswg">More things to standardise in the LWS-WG</h2>
+<p>Other Web Agents Group topics could include:</p>
+<ul>
+<li>Standardize search interface to support and look up of publically available vectorised data</li>
+<li>Taxonomise common services of LLM providers (e.g. embeddings endpoint, what modalities does a provider support etc.)</li>
+<li>Describing which models you have deployed where. In particular to allow the discovery of multiple deployments of opensource models; and to allow agentic workflows to define "this model must be used here" but then automatically do things like work out if it is deployed locally, and if not find a trusted remote deployment that can be used.</li>
+</ul>
+<hr />
+<p>This is a living document</p>]]></content:encoded>
+            <author>jesse@jeswr.org (Jesse Wright)</author>
+        </item>
+        <item>
+            <title><![CDATA[Reclaiming data autonomy: The role of Solid in a safer Web]]></title>
+            <link>https://blog.jeswr.org/2024/02/06/role-of-solid</link>
+            <guid>https://blog.jeswr.org/2024/02/06/role-of-solid</guid>
+            <pubDate>Tue, 06 Feb 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p><strong>This article was originally for the Oxford University department of Computer Science as part of the <a href="https://www.cs.ox.ac.uk/news/2287-full.html">DPhil the future</a> series.</stron...]]></description>
+            <content:encoded><![CDATA[<p><strong>This article was originally for the Oxford University department of Computer Science as part of the <a href="https://www.cs.ox.ac.uk/news/2287-full.html">DPhil the future</a> series.</strong></p>
+<p>The modern Web has seen a significant erosion of data privacy and control. User-generated data, stored in <a href="https://www.w3.org/DesignIssues/CloudStorage.html">centralised data silos</a>, is often used without the knowledge or control of the individuals it belongs to.</p>
+<blockquote>
+  <p>In the age of AI and Big Data, this lack of data autonomy becomes increasingly detrimental to both individuals and society.</p>
+</blockquote>
+<p>A striking example is a recent <a href="https://www.nytimes.com/2023/10/24/technology/states-lawsuit-children-instagram-facebook.html">lawsuit</a> against Meta by U.S. states, alleging the unlawful collection of minors' personal data without parental consent and exposing them to harmful content. This is but a glimpse into the dangers posed by emerging technologies such as <a href="https://ruben.verborgh.org/blog/2013/01/31/what-web-agents-want/">personal AI agents</a> if they are not designed to “legally, ethically and algorithmically” work for you and with data you control (<a href="https://www.w3.org/DesignIssues/Charlie.html">Charlie works for Bob</a>, Berners-Lee 2023).</p>
+<p><strong>Celebrating Safer Internet Day</strong>&nbsp;&nbsp;</p>
+<p>Today, we celebrate the 20th anniversary of <a href="https://www.saferinternetday.org/about">Safer Internet Day</a>, with a theme that resonates deeply with our current digital challenges: “<em>Inspiring change? Making a difference, managing influence and navigating change online.</em>” This aligns with the mission of the <a href="https://ewada.ox.ac.uk/">The Ethical Web and Data Architectures</a> (EWADA) programme funded by the <a href="https://www.oxfordmartin.ox.ac.uk/">Oxford Martin School</a>. EWADA aims to address the concentration of power on the World Wide Web by developing new technical and legal infrastructures.&nbsp;</p>
+<p><strong>Solid Project - A Beacon of Hope</strong>&nbsp;</p>
+<p>In the context of data autonomy, EWADA is putting a spotlight on Sir Tim Berners-Lee’s <a href="http://emansour.com/research/lusail/solid_protocols.pdf"><em>Solid</em> project</a> which was created with the aim of revitalising the Web. Where the current system of centralised data silos creates an ecosystem of limited integration, availability and innovation, Solid brings a course correction for the Web. Based on the <a href="https://solidlabresearch.github.io/WhatsInAPod/"><em>separation of data and applications</em></a>, the vision defines an ecosystem that facilitates the integration of data in different applications, while keeping people in direct control of their data.&nbsp;</p>
+<p><strong>Understanding Solid Pods</strong>&nbsp;</p>
+<p>At Solid's core is the ‘pod’ - a personal online data store. Utilising the <a href="https://www.w3.org/TR/ldp/">Linked Data Platform (LDP)</a>, pods offer an HTTP interface for access-controlled storage of documents to a <a href="https://communitysolidserver.github.io/CommunitySolidServer/latest/usage/starting-server/">personal server</a> or <a href="https://www.inrupt.com/blog/data-decoupling-and-cloud-services-a-new-way-to-ensure-data-privacy">trusted cloud storage</a>. Coupled with <a href="https://auth0.com/intro-to-iam/what-is-oauth-2">OAuth</a> - the same protocol we use every day for <a href="https://www.ox.ac.uk/students/selfservice">SSO login</a> - this system facilitates a global single sign-on across all Solid-compliant web applications.</p>
+<p>Together, these pods form a decentralised Solid ecosystem, from which applications can directly integrate data from people’s Solid pods, after receiving their permission. Solid applications are encouraged to store data using the <a href="https://www.w3.org/RDF/">RDF</a> data model of the <a href="https://www.w3.org/DesignIssues/Semantic.html">Semantic Web</a> (I strongly recommend reading the <a href="https://www.w3.org/DesignIssues/Semantic.html">design issue</a> if you’ve not heard of it before) - and serialised in a syntax such as JSON-LD or <a href="https://www.inrupt.com/videos/readable-turtle">Turtle</a>. By having applications read/write data with explicit <a href="https://en.wikipedia.org/wiki/Semantic_Web">semantics</a> rather than using the typical smorgasbord of JSON, GraphQL and other platform-specific API’s <a href="https://www.datasciencecentral.com/why-json-users-should-learn-turtle/">that modern Web developers are accustomed to</a> it becomes possible for applications to re-use one another's data.&nbsp;</p>
+<p>Such applications include <a href="https://www.bbc.co.uk/together">BBC Together</a>, <a href="https://www.itsme-id.com/">itsme</a>, <a href="https://umai.noeldemartin.com/">Umai</a>, <a href="https://noeldemartin.github.io/solid-focus/">Solid Focus</a>, <a href="https://github.com/KNowledgeOnWebScale/knoodle">KNoodle</a> and <a href="https://github.com/OxfordHCC/solid-media/">SolidFlix,</a>.&nbsp;</p>
+<p>To learn more about the anatomy of a <em>pod</em> - see <a href="https://www.inrupt.com/videos/what-is-a-solid-pod">What is a Solid Pod</a>?&nbsp;</p>
+<p><strong>Benefits and Future of Solid Architecture</strong>&nbsp;</p>
+<p>In 2009, Berners-Lee <a href="https://www.w3.org/DesignIssues/CloudStorage.html">enumerated a number of benefits to this architecture which remain relevant to this day</a> (these come from his <a href="https://www.w3.org/DesignIssues/">design issues;</a> if you’ve never come across these it’s definitely worth a read):&nbsp;</p>
+<ol>
+<li>Users control data access, including the ability to revoke an applications’ access to your data at any point in time.&nbsp;</li>
+<li>It allows the data from various applications to be cross-linked, at great derived extra value. For instance, if I relocate, there's no need to separately inform my bank, insurance agency, and driving authority. By simply updating my address in my personal data pod, any authorised organisation can access the new information instantly.&nbsp;</li>
+<li>It allows innovation in the market for applications, because the bar for launching an app is far lower, as the app can run in the open data cloud.&nbsp;</li>
+<li>The persistence of applications and data may be very different. In some cases, a well-established application which people have grown very familiar with may be used to make an online discussion which is ephemeral, in another case an application may be developed to solve a short-term problem in an enterprise where the life of the data exceeds that of any of the applications the enterprise uses. By decoupling the application and data, these persistences can be managed independently.&nbsp;</li>
+</ol>
+<p><strong>Concluding</strong>&nbsp;</p>
+<p>By reimagining the web as a place where users have sovereignty over their data, initiatives such as Solid pave the way for a more ethical, transparent, and user-centric online world. Realising this ambitious vision demands a collaborative approach that spans various sectors and roles. Whether you're keen on <a href="https://solidproject.org/users/get-a-pod">exploring personal pods</a>, disseminating your research through a Pod, engaging in <a href="https://arxiv.org/abs/2309.16365">privacy-focused computation with Solid</a>, <a href="https://solidproject.org/users/get-a-pod">developing innovative applications</a>, or shaping relevant policies, your contribution is vital. Let's join forces and work together to make this vision a reality!</p>]]></content:encoded>
+            <author>jesse@jeswr.org (Jesse Wright)</author>
+        </item>
+        <item>
+            <title><![CDATA[Social Impact Assessments]]></title>
+            <link>https://blog.jeswr.org/2025/03/22/social-impact-assessment</link>
+            <guid>https://blog.jeswr.org/2025/03/22/social-impact-assessment</guid>
+            <pubDate>Sat, 22 Mar 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p><img src="/social.jpeg" alt="" /></p>
+<p>Infrastructure projects rightfully require <a href="https://www.gov.uk/guidance/environmental-impact-assessment">Environmental Impact Assessments</a> so tha...]]></description>
+            <content:encoded><![CDATA[<p><img src="/social.jpeg" alt="" /></p>
+<p>Infrastructure projects rightfully require <a href="https://www.gov.uk/guidance/environmental-impact-assessment">Environmental Impact Assessments</a> so that potential harms to the environment are identified - before determining whether infrastructure projects may proceeed.</p>
+<p>Increasingly, it would seem there is a need for an equivalent for both physical and digital infrastructure - given the increase in, e.g., <a href="https://www.gov.uk/government/consultations/online-harms-white-paper/online-harms-white-paper">online harms</a>.</p>
+<p><a href="https://www.iaia.org/wiki-details.php?ID=23">This</a> is the first result that comes up when searching the term "Social Impact Assessment" on Google - so it seems these kinds of ideas have been circulating at least in the space of assessing e.g., policy interventions; but less so it seems for digital infrastructure.</p>]]></content:encoded>
+            <author>jesse@jeswr.org (Jesse Wright)</author>
+        </item>
+        <item>
+            <title><![CDATA[Term Paper]]></title>
+            <link>https://blog.jeswr.org/2024/09/15/term-paper</link>
+            <guid>https://blog.jeswr.org/2024/09/15/term-paper</guid>
+            <pubDate>Sun, 15 Sep 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p><a href="https://jeswr.solidcommunity.net/public/term-paper.pdf">This</a> is the term paper I wrote for my DPhil. Far from the best piece of work I have produced as I still quite ill at the time it...]]></description>
+            <content:encoded><![CDATA[<p><a href="https://jeswr.solidcommunity.net/public/term-paper.pdf">This</a> is the term paper I wrote for my DPhil. Far from the best piece of work I have produced as I still quite ill at the time it was written; but I'm not going to make that a reason to hide my work.</p>
+<hr />
+<p><embed src="https://jeswr.solidcommunity.net/public/term-paper.pdf" width="500" height="375" 
+ type="application/pdf"></p>]]></content:encoded>
+            <author>jesse@jeswr.org (Jesse Wright)</author>
+        </item>
+        <item>
+            <title><![CDATA[Things I want]]></title>
+            <link>https://blog.jeswr.org/2025/03/18/things-i-want</link>
+            <guid>https://blog.jeswr.org/2025/03/18/things-i-want</guid>
+            <pubDate>Tue, 18 Mar 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p><img src="/intent.png" alt="" /></p>
+<p><a href="https://en.wikipedia.org/wiki/The_Intention_Economy">Doc Searls' intention economy</a> talks about the idea of sending a "signal into the market" de...]]></description>
+            <content:encoded><![CDATA[<p><img src="/intent.png" alt="" /></p>
+<p><a href="https://en.wikipedia.org/wiki/The_Intention_Economy">Doc Searls' intention economy</a> talks about the idea of sending a "signal into the market" describing to a market what you want.</p>
+<p>Some claim that this vision formed some of the initial inspiration to develop <a href="https://solidproject.org">Solid</a>.</p>
+<p>This post is me sending a signal to the world describing the things I would like to see built that would improve my life.</p>
+<h2 id="somethingiswronggofixit">Something is wrong - go fix it</h2>
+<p>I've had a fair share of health issues over the last year.</p>
+<p>For instance, I have the following allergens and intolerances:</p>
+<ul>
+<li>Gluten (coeliac)</li>
+<li>Lactose</li>
+<li>Sulphites</li>
+<li>Nuts (at least peanuts and hazelnuts, rest tbd)</li>
+<li>Pesticides(?) … or something else that appears to be on some fruits such as grapes …</li>
+</ul>
+<p>I was also taking <a href="https://gluteguard.com.au">GluteGuard</a> to try and cope with trace elements of gluten that might pop up in meals when I went out … funny thing, it turned out the GluteGuard contained sulphites and I spent the better past of the last year in a state where my brain was barely functioning.</p>
+<p>The funny thing about being in that state; is that you'll tend to not realise, or be in denial, about there being a problem in the first place - which in turn means I wasn't trying to resolve the issue anywhere near as actively as I could/should have been.</p>
+<p>Advertisers already heavily track minute interactions, how long we spend on particular posts, our reaction time, which links we click on etc. in order to do targeted advertising. I want that same infrastructure to tell me when something is … off; so that I am validated to go and fix it.</p>
+<h2 id="abalancednewsfeed">A balanced news feed</h2>
+<p>For engagement, most news feeds are weighted to have many alarming or unique stories; whilst less exciting and ongoing things get ignored. An example given in <a href="https://www.penguin.co.uk/books/453652/not-the-end-of-the-world-by-ritchie-hannah/9781529931242">not the end of the world</a> is the minimal reporting on improvements in renewable technologies in comparison to climate disasters. I want a news feed with an algorithm that is ranked somehow highest impact changes - than most alarmist / engaging.</p>]]></content:encoded>
+            <author>jesse@jeswr.org (Jesse Wright)</author>
+        </item>
+        <item>
+            <title><![CDATA[Transfer of Status]]></title>
+            <link>https://blog.jeswr.org/2025/05/06/transfer-of-status</link>
+            <guid>https://blog.jeswr.org/2025/05/06/transfer-of-status</guid>
+            <pubDate>Tue, 06 May 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p><a href="https://jeswr.solidcommunity.net/public/tos-report-v4-cleaned-2.pdf">This</a> is the transfer of status report that I wrote for my DPhil.</p>
+<hr />
+<p><embed src="https://jeswr.solidcommu...]]></description>
+            <content:encoded><![CDATA[<p><a href="https://jeswr.solidcommunity.net/public/tos-report-v4-cleaned-2.pdf">This</a> is the transfer of status report that I wrote for my DPhil.</p>
+<hr />
+<p><embed src="https://jeswr.solidcommunity.net/public/tos-report-v4-cleaned-2.pdf" width="500" height="375" 
+ type="application/pdf"></p>]]></content:encoded>
+            <author>jesse@jeswr.org (Jesse Wright)</author>
+        </item>
+        <item>
+            <title><![CDATA[Dynamic and declarative protocols for decentralised AI]]></title>
+            <link>https://blog.jeswr.org/2025/03/23/dynamic-declarative-protocols</link>
+            <guid>https://blog.jeswr.org/2025/03/23/dynamic-declarative-protocols</guid>
+            <pubDate>Sun, 23 Mar 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p><strong>ARTICLE IN DRAFT</strong></p>
+<p><img src="/dynamic-protocol.png" alt="" /></p>
+<p><em>Placeholder image <a href="https://chatgpt.com/share/67dffbd1-bfa0-800c-8a7c-c48c0737716e">produced by...]]></description>
+            <content:encoded><![CDATA[<p><strong>ARTICLE IN DRAFT</strong></p>
+<p><img src="/dynamic-protocol.png" alt="" /></p>
+<p><em>Placeholder image <a href="https://chatgpt.com/share/67dffbd1-bfa0-800c-8a7c-c48c0737716e">produced by ChatGPT 4.5</a></em></p>
+<p>This post discusses why we need to create infrastructure that supports a network of systems to:</p>
+<ol>
+<li>Declaratively describe what features they need a protocol[^1] to achieve for them such as:<ul>
+<li>proving that the user of a particular device in the network is a particular entity,</li>
+<li>calculating an aggregate result from data living on multiple devices in the network (think Multi Party Computation, Federated Learning etc.),</li>
+<li>proving that a payment has been made, and</li>
+<li>coordinating to ensure that a payment is made once an action has been performed (think smart contract)</li></ul></li>
+<li>Declaratively describe their acceptable security requirements, including:<ul>
+<li>what operations other systems in the network can be trusted to perform, </li>
+<li>what information can be trusted to come from other systems in the network,</li>
+<li>who in the network do they permit to view particular pieces of information, and</li>
+<li>other requirements that may be identified in a <a href="https://www.w3.org/mission/security/#ping">W3C Security Review</a></li></ul></li>
+<li>Have a means to create or discover and agree to use a protocol on-the-fly that satisfies these set of requirements.</li>
+<li>Whilst still allowing for long term planning</li>
+</ol>
+<ul>
+<li>For instance, a desirable feature of the ongoing use of HTTP(s) is the ability to use documents cached in DNSs.</li>
+</ul>
+<p>We observe that:</p>
+<ul>
+<li>this proposal largely reflects my view that we should - for the most part - not need to use Generative AI at the layer of deciding how to transfer data, but instead to declaratively state what data is needed,</li>
+<li>this proposal assumes that we are going to have some level of data and compute sovereignty - whilst also moving us towards that world, and</li>
+<li>the capability to generate a <em>proof</em> that the proposed protocol has a particular set of security properties is critical
+to enabling all parties to 'buy in' to use the protocol</li>
+</ul>
+<p>The kinds of use-cases which this unlocks include:</p>
+<ul>
+<li><ul>
+<li>Dynamic Authentication Flows: Currently, the flows for, e.g., authentication are often quite fixed; and require heavy changes to specification documents + flows to evolve. In this use-case we show that the OIDC flow can “emerge” simply by having 2 agents negotiate for data they need to identify one another. A specific example is this <a href="https://github.com/jeswr/queryable-credentials/blob/main/use-cases/e-reader-access.md">e-reader access use-case</a>.</li></ul></li>
+<li>Agents performing scheduling: As described in <a href="https://arxiv.org/abs/2409.04465">this paper</a>.</li>
+<li>Features people care about in the blockchain world: For example, could show how a DAOs could form.</li>
+</ul>
+<p>[^1]: Note that here we are using the term protocol to refer to the sequence of steps that a set of systems should take in order to achieve a joint goal. This includes how to collaboratively transport information (networking protocols), secure data in transport (encryption protocols) and proving the identity of an end user on one system to another system (authentication).</p>]]></content:encoded>
+            <author>jesse@jeswr.org (Jesse Wright)</author>
+        </item>
+    </channel>
+</rss>

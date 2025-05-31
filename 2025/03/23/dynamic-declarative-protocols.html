@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Dynamic and declarative protocols for decentralised AI</title>
+    <meta name="description" content="Blog of a Software Engineer and Researcher"/>
+    <meta name="keywords" content="blog,developer blog,engineering blog,research blog,oxford,oxford university"/>
+    <link rel="alternate" type="application/rss+xml" title="Jesse Wright" href="/rss.xml" />
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Alegreya:400,400i|Lato:400,400i,700,900|Roboto+Mono:400,300">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/shades-of-purple.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+
+    <link rel="stylesheet" href="/css/normalize.css"/>
+    <link rel="stylesheet" href="/css/theme.css"/>
+</head>
+<body>
+<nav class="nav">
+    <div class="nav__left">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+    </div>
+    <div class="nav__right">
+        <a target="_blank" href="https://github.com/jeswr" class="link-github">GitHub</a>
+        <a target="_blank" href="https://twitter.com/" class="link-twitter">Twitter</a>
+        <a href="mailto:jesse@jeswr.org" class="link-email">Email</a>
+        <a href="/rss.xml" class="link-rss">RSS</a>
+    </div>
+</nav>
+
+<article class="mar-b-7">
+    <header class="text-center">
+        <time class="mar-b-6" datetime="Sun, March 23, 2025">Sun, March 23, 2025</time>
+        <h1 class="mar-b-7">Dynamic and declarative protocols for decentralised AI</h1>
+    </header>
+    <p><strong>ARTICLE IN DRAFT</strong></p>
+<p><img src="/dynamic-protocol.png" alt="" /></p>
+<p><em>Placeholder image <a href="https://chatgpt.com/share/67dffbd1-bfa0-800c-8a7c-c48c0737716e">produced by ChatGPT 4.5</a></em></p>
+<p>This post discusses why we need to create infrastructure that supports a network of systems to:</p>
+<ol>
+<li>Declaratively describe what features they need a protocol[^1] to achieve for them such as:<ul>
+<li>proving that the user of a particular device in the network is a particular entity,</li>
+<li>calculating an aggregate result from data living on multiple devices in the network (think Multi Party Computation, Federated Learning etc.),</li>
+<li>proving that a payment has been made, and</li>
+<li>coordinating to ensure that a payment is made once an action has been performed (think smart contract)</li></ul></li>
+<li>Declaratively describe their acceptable security requirements, including:<ul>
+<li>what operations other systems in the network can be trusted to perform, </li>
+<li>what information can be trusted to come from other systems in the network,</li>
+<li>who in the network do they permit to view particular pieces of information, and</li>
+<li>other requirements that may be identified in a <a href="https://www.w3.org/mission/security/#ping">W3C Security Review</a></li></ul></li>
+<li>Have a means to create or discover and agree to use a protocol on-the-fly that satisfies these set of requirements.</li>
+<li>Whilst still allowing for long term planning</li>
+</ol>
+<ul>
+<li>For instance, a desirable feature of the ongoing use of HTTP(s) is the ability to use documents cached in DNSs.</li>
+</ul>
+<p>We observe that:</p>
+<ul>
+<li>this proposal largely reflects my view that we should - for the most part - not need to use Generative AI at the layer of deciding how to transfer data, but instead to declaratively state what data is needed,</li>
+<li>this proposal assumes that we are going to have some level of data and compute sovereignty - whilst also moving us towards that world, and</li>
+<li>the capability to generate a <em>proof</em> that the proposed protocol has a particular set of security properties is critical
+to enabling all parties to 'buy in' to use the protocol</li>
+</ul>
+<p>The kinds of use-cases which this unlocks include:</p>
+<ul>
+<li><ul>
+<li>Dynamic Authentication Flows: Currently, the flows for, e.g., authentication are often quite fixed; and require heavy changes to specification documents + flows to evolve. In this use-case we show that the OIDC flow can “emerge” simply by having 2 agents negotiate for data they need to identify one another. A specific example is this <a href="https://github.com/jeswr/queryable-credentials/blob/main/use-cases/e-reader-access.md">e-reader access use-case</a>.</li></ul></li>
+<li>Agents performing scheduling: As described in <a href="https://arxiv.org/abs/2409.04465">this paper</a>.</li>
+<li>Features people care about in the blockchain world: For example, could show how a DAOs could form.</li>
+</ul>
+<p>[^1]: Note that here we are using the term protocol to refer to the sequence of steps that a set of systems should take in order to achieve a joint goal. This includes how to collaboratively transport information (networking protocols), secure data in transport (encryption protocols) and proving the identity of an end user on one system to another system (authentication).</p>
+</article>
+
+
+
+<footer class="text-center mar-tb-6">
+    © 2025 Jesse Wright, unless otherwise stated.
+</footer>
+
+<script>hljs.highlightAll();</script>
+</body>
+</html>
+
