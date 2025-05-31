@@ -97,7 +97,7 @@ What is special about the letters and numbers in these two files, is that a [mat
 z58DAdFfa9SkqZMVPxAQp...jQCrfFPP2oumHKtz
 ```
 
-The *issuer* keeps the private key a secret so that no-one can forge the signature. The *issuer* (Oxford) also tells *everyone* about their public key, for instance, by putting it on their website. Putting this all together, we add the following information to the DPhil Award Credential:
+The *issuer* keeps the private key a secret so that no-one can forge the signature. The *issuer* (Oxford) also tells *everyone* about their public key, for instance, by putting it on their website in a [Controller Identifier Document (CID)](https://www.w3.org/TR/cid-1.0/). Putting this all together, we add the following information to the DPhil Award Credential:
 
 ```json
 {
