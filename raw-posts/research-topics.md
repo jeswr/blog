@@ -87,7 +87,6 @@ See [here](https://jeswr.solidcommunity.net/public/DPhil_Proposal.pdf).
 
 ## “Belief” in semi-autonomous agents via personalised models of trust
 
-
 ## **Exploring Risk Ontologies and Legal Data Sharing Agreements for Next-Generation Data Governance**
 
 See [here](https://docs.google.com/document/d/1Ilh5H2IkBWeeRVMMtRSrIQ0_w-nBOyZo/edit) and [here](https://share.note.sx/w9hofb5h#c3szRsdAATdEB3sKajWb3AF6iAjBBpRLQ+WPfw1QB4E).
@@ -96,7 +95,7 @@ See [here](https://docs.google.com/document/d/1Ilh5H2IkBWeeRVMMtRSrIQ0_w-nBOyZo/
 
 Ontological construction has traditionally been a time consuming, slow and expensive progress – requiring close collaboration between knowledge engineers and domain experts.
 
-In this work package shall test the viability of using LLMs to do a first pass of ontology construction. However, the goal is to investigate whether this can be done using [mind mapping](https://www.anthropic.com/research/mapping-mind-language-model) techniques rather than prompt engineering.
+In this work package shall test the viability of using LLMs to do a first pass of ontology construction. However, the goal is to investigate whether this can be done using [mind mapping](https://www.anthropic.com/research/mapping-mind-language-model) / mechanistic interpretability techniques rather than prompt engineering.
 
 ## Symbolic conceptual memory modules for Deep Learning models
 
@@ -123,6 +122,83 @@ This may take the form of a prov-o(?) extension to enable the expression of conc
 There is emerging work, such as [this](https://arxiv.org/pdf/2309.11696) on LLM memory, which build memory such as SSD access directly into the LLM architecture - rather than needing to perform this via RAG into the LLM prompt.
 
 The goal here is to build specialised architectures for access to graph-structured data.
+
+## A Web of concepts which LCMs can understand
+
+- https://ai.meta.com/blog/meta-fair-updates-agents-robustness-safety-architecture/
+
+  - a method for scaling memory layers that will enable more factual information
+- https://ai.meta.com/blog/meta-fair-updates-agents-robustness-safety-architecture/
+
+  - LCMs
+  - The core idea of the LCM is to decouple reasoning from language representation, and it’s inspired by how humans can plan high-level thoughts to communicate
+  - LCM is trained to predict the next concept or high-level idea, represented by a full sentence in a multimodal and multilingual embedding space.
+  - Memory Layers
+  - a method for scaling memory layers that enables an increase in factuality against commonly used benchmarks
+
+## Truthful AI
+
+AI
+
+## Link traversal in LCMs
+
+- LCMs
+
+For TOS, present the vision of LCMs accessing:
+
+- Protected data from wallets at web scale, GUIDs
+
+Optionion is that we are going to have:
+
+- LCMs (Large Concept Models)
+- LERM (Large Entity Relationship models)
+- LERMEA (Large Entity Relationship models with Epistemic Awarenesss)
+
+
+
+- Towards the Web as as access-controlled epistemic memory for knowledge-centric AI, including LLMs and LCMs- LCMs are emerging in popularity due to their capacity to have a semantic representation layer.
+- Supports self-sovereignty if the model is not required to come with the heavy encodings of all knowledge on the Web
+- To have a web of truth, we want an epistemological global knowledge base from which we can generate and verify content
+
+Diagrams to have:
+
+* Evolution from injecting semantic data e.g. that from data wallets like Charlie today - to having this information processed to be directly used by the memory of, e.g., LCMs
+* Important of modularity and standardisation of model components towards the above goal
+
+Along with understanding the reasoning process of LLMs, there are lots of challenges around interpretibilty to undertand:
+
+- Provenance of infromation used by models
+
+Models like deep research are highly expensive due the fact that it needs to traverse a web of existing links; rather than accessed a pre-processed memory base.
+
+Specific research directions:
+
+
+* An entity-relationship centric memory module for LCMs
+
+Some products that LCMs aready get us part of the way there for, which this architecture would further assist with:
+
+* Personalised presentation of content based on your understanding of different concepts. You ask a question, the model establshes a conceptual answer; then uses a PKG to evaluate how well you understand the concepts within that answer and provides a response using (1) the language that you know, including abbreviations that you're familiar with and (2) in a level of detail appropriate to you. Example
+  * For (1) - the model uses the word "ZKP" for me, "zero-knowlege proof for someone else" and "proof that shows the answer is correct without revealing any further information"
+  * For (2)
+
+Research ideas
+
+* **Unopinionated training sets** - work to generate training sets of language and concepts of "base knowledge" on which there is general consensus / is not opinionated to support in training the core language features of models without introducing biased ideas about particular concepts.
+
+## End Product
+
+- ChatGPT with words highlighted to indicate how likely information is to be correct based on your world view (e.g. somewhere on a spectrum between red and green)
+- Assumption identifier: Calls you out when you're making assumptions that may not be groundeed
+
+## Now the transfer research notes
+
+- An LCM should identify concepts
+
+## Web architectures for models
+
+- Caching mechasnisms for concepts, text generation to describe concepts etc. to reduce enviornmental impact of models
+- 
 
 ## Open Research Dashboard
 
@@ -156,10 +232,10 @@ Starting point [here](https://chatgpt.com/share/67e95686-c7a8-800c-8d97-9f02e345
 
 ## Malleable Software for Solid (read: RDF data structures and Shapes)
 
- - For Malleable Software see [here](https://www.inkandswitch.com).
- - For Solid see [here](https://solidproject.org).
- - For RDF see [here](https://en.wikipedia.org/wiki/Resource_Description_Framework).
- - For Shapes see [here](https://ruben.verborgh.org/blog/2019/06/17/shaping-linked-data-apps/).
+- For Malleable Software see [here](https://www.inkandswitch.com).
+- For Solid see [here](https://solidproject.org).
+- For RDF see [here](https://en.wikipedia.org/wiki/Resource_Description_Framework).
+- For Shapes see [here](https://ruben.verborgh.org/blog/2019/06/17/shaping-linked-data-apps/).
 
 ## Semantic commitments all the way down
 
